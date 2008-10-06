@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+
+<system name="Canopy">
+
+    <channel name="Canopy">
+            <kinematic name="Canopy Control">
+                <input>/controls/flight/canopy</input>
+                <traverse>
+                    <setting>
+                        <position>0.0000</position>
+                        <time>0.0000</time>
+                    </setting>
+                    <setting>
+                        <position>1.0000</position>
+                        <time>5.0000</time>
+                    </setting>
+                </traverse>
+                <output>fcs/canopy-pos-norm</output>
+            </kinematic>
+
+            <pure_gain name="Canopy surface">
+                <input>fcs/canopy-pos-norm</input>
+                <gain>1</gain>
+                <output>/surface-positions/canopy-pos-norm</output>
+            </pure_gain>
+
+
+    </channel>
+
+</system>

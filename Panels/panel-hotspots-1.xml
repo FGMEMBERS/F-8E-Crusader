@@ -1,0 +1,1008 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <name>Panel Hotspots</name>
+ <background>Aircraft/F-8E-Crusader/Panels/Textures/transparent-bg.rgb</background>
+ <w>1024</w>
+ <h>768</h>
+ <y-offset>0</y-offset>
+
+
+ <instruments>
+	<instrument>
+		<name>Control</name>
+		<x>512</x>
+		<y>384</y>
+		<w>1024</w>
+		<h>768</h>
+		<w-base>1024</w-base>
+		<h-base>1024</h-base>
+		<layers>
+			<layer>
+				<name>background</name>
+				<texture>
+					<path>Aircraft/F-8E-Crusader/Panels/Textures/transparent-bg.rgb</path>
+					<!-- <path>Aircraft/F-8E-Crusader/Panels/Textures/hotspotgrid.rgb</path> -->
+				<x1>0.0</x1>
+				<y1>0.0</y1>
+				<x2>1.0</x2>
+				<y2>1.0</y2>
+				</texture>
+			</layer>
+		</layers>
+
+		<actions>
+<!-- **************************************hud************************************-->
+
+		<action>
+			<name>set hud</name>
+			<button>0</button>
+			<x>-40</x>
+			<y>470</y>
+			<w>80</w>
+			<h>50</h>
+			<binding>
+				<command>property-toggle</command>
+				<property>/instrumentation/hud/switch</property>
+			</binding>
+		</action>
+
+<!-- **************************************Temoin Incendie***********************************-->
+
+
+		<action>
+			<name>test alarm fire</name>
+			<button>0</button>
+			<x>-118</x>
+			<y>360</y>
+			<w>15</w>
+			<h>25</h>
+			<binding>
+				<command>property-assign</command>
+				<property>/instrumentation/annunciator/engine-fire</property>
+				<value>1</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>/instrumentation/annunciator/engine-fire</property>
+					<value>0</value>
+			</binding>
+			</mod-up>
+		</action>
+
+<!-- **************************************radar************************************-->
+
+
+
+			<action>
+				<name>set range </name>
+				<button>0</button>
+				<x>-100</x>
+				<y>400</y>
+				<w>36</w>
+				<h>72</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/radar/nm-coef</property>
+					<step>-1</step>
+					<min>1</min>
+					<max>5</max>
+				</binding>
+			</action>
+
+			<action>
+				<name>set range </name>
+				<button>1</button>
+				<x>-100</x>
+				<y>400</y>
+				<w>36</w>
+				<h>72</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/radar/nm-coef</property>
+					<step>1</step>
+					<min>1</min>
+					<max>5</max>
+				</binding>
+			</action>
+
+
+			<action>
+				<name>set altitude scale</name>
+				<button>0</button>
+				<x>-100</x>
+				<!--<y>100</y>-->
+				<y>256</y>
+				<w>36</w>
+				<h>72</h>
+
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/radar/alt-coef</property>
+					<step>1</step>
+					<min>1</min>
+					<max>7</max>
+				</binding>
+			</action>
+			<action>
+				<name>set altitude scale</name>
+				<button>1</button>
+				<x>-100</x>
+				<y>256</y>
+				<w>36</w>
+				<h>72</h>
+
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/radar/alt-coef</property>
+					<step>-1</step>
+					<min>1</min>
+					<max>7</max>
+				</binding>
+			</action>
+
+
+
+
+<!--===========================================================-->
+			<action>
+				<name>set switch +</name>
+				<button>0</button>
+				<x>60</x>
+				<y>400</y>
+				<w>36</w>
+				<h>72</h>
+
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/radar/switch</property>
+					<step>1</step>
+					<min>0</min>
+					<max>6</max>
+				</binding>
+			</action>
+
+			<action>
+				<name>set switch -</name>
+				<button>1</button>
+				<x>60</x>
+				<y>400</y>
+				<w>36</w>
+				<h>72</h>
+
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/radar/switch</property>
+					<step>-1</step>
+					<min>0</min>
+					<max>6</max>
+				</binding>
+			</action>
+
+<!--===========================================================-->
+
+			<!--<action>
+				<name>set mark0</name>
+				<button>0</button>
+				<x>75</x>
+				<y>403</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[0]/radar/select</property>
+				</binding>
+			</action>-->
+			<action>
+				<name>set mark0</name>
+				<button>0</button>
+				<x>75</x>
+				<y>378</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[0]/radar/select</property>
+				</binding>
+			</action>
+			<action>
+				<name>set mark1</name>
+				<button>0</button>
+				<x>75</x>
+				<y>353</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[1]/radar/select</property>
+				</binding>
+			</action>
+
+
+
+			<action>
+				<name>set mark2  MP</name>
+				<button>0</button>
+				<x>75</x>
+				<y>328</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[2]/radar/select</property>
+				</binding>
+			</action>
+
+
+			<action>
+				<name>set mark3  MP</name>
+				<button>0</button>
+				<x>-85</x>
+				<y>378</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[3]/radar/select</property>
+				</binding>
+			</action>
+			<action>
+				<name>set mark4  MP</name>
+				<button>0</button>
+				<x>-85</x>
+				<y>353</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[4]/radar/select</property>
+				</binding>
+			</action>
+			<action>
+				<name>set mark5  MP</name>
+				<button>0</button>
+				<x>-85</x>
+				<y>328</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[5]/radar/select</property>
+				</binding>
+			</action>
+
+
+			<action>
+				<name>set mark6 TACAN</name>
+				<button>0</button>
+				<x>75</x>
+				<y>240</y>
+				<w>10</w>
+				<h>20</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/instrumentation/radar/aircraft[6]/radar/select</property>
+				</binding>
+			</action>
+
+
+
+
+
+<!--*************************************fuel probe********************************-->
+			<action>
+				<name>probe fuel activate</name>
+				<button>0</button>
+				<x>-344</x>
+				<y>100</y>
+				<w>32</w>
+				<h>120</h>
+				<binding>
+					<command>nasal</command>
+					<script>
+						consumable.refuel();
+					</script>
+				</binding>
+			</action>
+
+
+<!--*************************************fuel pump********************************-->
+			<action>
+				<name>pump fuel activate</name>
+				<button>0</button>
+				<x>276</x>
+				<y>100</y>
+				<w>32</w>
+				<h>120</h>
+				<binding>
+					<command>property-toggle</command>
+					<property>/controls/flight/fuel-pump</property>
+				</binding>
+			</action>
+
+
+<!--*************************************altimeter ********************************-->
+			<action>
+				<name>calibrate fine</name>
+				<button>0</button>
+				<x>-227</x>
+				<y>-420</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/setting-inhg</property>
+					<step>-0.01</step>
+					<min>26.0</min>
+					<max>33.0</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate coarse</name>
+				<button>1</button>
+				<x>-227</x>
+				<y>-420</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/setting-inhg</property>
+					<step>-0.1</step>
+					<min>26.0</min>
+					<max>33.0</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate fine</name>
+				<button>0</button>
+				<x>-212</x>
+				<y>-420</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/setting-inhg</property>
+					<step>0.01</step>
+					<min>26.0</min>
+					<max>33.0</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate coarse</name>
+				<button>1</button>
+				<x>-212</x>
+				<y>-420</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/setting-inhg</property>
+					<step>0.1</step>
+					<min>26.0</min>
+					<max>33.0</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+
+
+<!--*************************************agl minimum ********************************-->
+			<action>
+				<name>calibrate fine</name>
+				<button>0</button>
+				<x>-227</x>
+				<y>82</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/agl-min</property>
+					<step>-1</step>
+
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate coarse</name>
+				<button>1</button>
+				<x>-227</x>
+				<y>82</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/agl-min</property>
+					<step>-10</step>
+
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate fine</name>
+				<button>0</button>
+				<x>-212</x>
+				<y>82</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/agl-min</property>
+					<step>1</step>
+
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate coarse</name>
+				<button>1</button>
+				<x>-212</x>
+				<y>82</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/altimeter/agl-min</property>
+					<step>10</step>
+
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+
+
+
+	<!--******************************************ASI*******************************************************-->
+
+			<action>
+				<name>calibrate fine</name>
+				<button>0</button>
+				<x>-227</x>
+				<y>-169</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/airspeed-indicator/landing-speed</property>
+					<step>-1</step>
+					<min>100</min>
+					<max>160</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate coarse</name>
+				<button>1</button>
+				<x>-227</x>
+				<y>-169</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/airspeed-indicator/landing-speed</property>
+					<step>-10</step>
+					<min>100</min>
+					<max>160</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate fine</name>
+				<button>0</button>
+				<x>-212</x>
+				<y>-169</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/airspeed-indicator/landing-speed</property>
+					<step>1</step>
+					<min>100</min>
+					<max>160</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+			<action>
+				<name>calibrate coarse</name>
+				<button>1</button>
+				<x>-212</x>
+				<y>-169</y>
+				<w>15</w>
+				<h>46</h>
+				<binding>
+					<command>property-adjust</command>
+					<property>/instrumentation/airspeed-indicator/landing-speed</property>
+					<step>10</step>
+					<min>100</min>
+					<max>160</max>
+					<wrap>false</wrap>
+				</binding>
+			</action>
+
+
+
+	<!-- *********************************clock **********************************  -->
+		     <action>
+			     <name>adjust left fine</name>
+			     <button>0</button>
+			     <x>226</x>
+			     <y>-75</y>
+			     <w>12</w>
+			     <h>32</h>
+			     <binding>
+				     <command>property-adjust</command>
+				     <property>/instrumentation/clock/offset-sec</property>
+				     <step>-60</step>
+				     <min>0</min>
+				     <max>43200</max>
+				     <wrap>true</wrap>
+			     </binding>
+		     </action>
+
+		     <action>
+			     <name>adjust left coarse</name>
+			     <button>1</button>
+			     <x>226</x>
+			     <y>-75</y>
+			     <w>12</w>
+			     <h>32</h>
+			     <binding>
+				     <command>property-adjust</command>
+				     <property>/instrumentation/clock/offset-sec</property>
+				     <step>-900</step>
+				     <min>0</min>
+				     <max>43200</max>
+				     <wrap>1</wrap>
+			     </binding>
+		     </action>
+
+		     <action>
+			     <name>adjust right fine</name>
+			     <button>0</button>
+			     <x>238</x>
+			     <y>-75</y>
+			     <w>12</w>
+			     <h>32</h>
+			     <binding>
+				     <command>property-adjust</command>
+				     <property>/instrumentation/clock/offset-sec</property>
+				     <step>60</step>
+				     <min>0</min>
+				     <max>43200</max>
+				     <wrap>true</wrap>
+			     </binding>
+		     </action>
+
+		     <action>
+			     <name>adjust right coarse</name>
+			     <button>1</button>
+			     <x>238</x>
+			     <y>-75</y>
+			     <w>12</w>
+			     <h>32</h>
+			     <binding>
+				     <command>property-adjust</command>
+				     <property>/instrumentation/clock/offset-sec</property>
+				     <step>900</step>
+				     <min>0</min>
+				     <max>43200</max>
+				     <wrap>1</wrap>
+			     </binding>
+		     </action>
+
+
+
+
+
+<!--***************HI******************************************************-->
+
+			      <action>
+				      <name></name>
+				      <button>0</button>
+				      <x>112</x>
+				      <y>82</y>
+				      <w>15</w>
+				      <h>46</h>
+				      <binding>
+					      <command>property-adjust</command>
+					      <property>instrumentation/heading-indicator/nav-switch</property>
+					      <step>1</step>
+					      <min>0</min>
+					      <max>3</max>
+				      </binding>
+			      </action>
+
+			      <action>
+				      <name></name>
+				      <button>0</button>
+				      <x>97</x>
+				      <y>82</y>
+				      <w>15</w>
+				      <h>46</h>
+				      <binding>
+					      <command>property-adjust</command>
+					      <property>/instrumentation/heading-indicator/nav-switch</property>
+					      <step>-1</step>
+					      <min>0</min>
+					      <max>3</max>
+				      </binding>
+			      </action>
+
+
+
+	<!--relayed by Nasal    from  command manual heading to   selected   needle    (/instrumentation/heading-indicator/nav-switch= 3  ou autre)-->
+
+			      <action>
+				      <name></name>
+				      <button>0</button>
+				      <x>197</x>
+				      <y>82</y>
+				      <w>15</w>
+				      <h>46</h>
+				      <binding>
+					      <command>property-adjust</command>
+					      <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+					      <step>-1</step>
+					      <min>0</min>
+					      <max>360</max>
+					      <wrap>1</wrap>
+				      </binding>
+			      </action>
+
+
+
+			      <action>
+				      <name></name>
+				      <button>1</button>
+				      <x>197</x>
+				      <y>82</y>
+				      <w>15</w>
+				      <h>46</h>
+				      <binding>
+					      <command>property-adjust</command>
+					      <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+					      <step>-5</step>
+					      <min>0</min>
+					      <max>360</max>
+					      <wrap>1</wrap>
+				      </binding>
+			      </action>
+
+			      <action>
+				      <name></name>
+				      <button>0</button>
+				      <x>212</x>
+				      <y>82</y>
+				      <w>15</w>
+				      <h>46</h>
+				      <binding>
+					      <command>property-adjust</command>
+					      <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+					      <step>1</step>
+					      <min>0</min>
+					      <max>360</max>
+					      <wrap>1</wrap>
+				      </binding>
+			      </action>
+
+			      <action>
+				      <name></name>
+				      <button>1</button>
+				      <x>212</x>
+				      <y>82</y>
+				      <w>15</w>
+				      <h>46</h>
+				      <binding>
+					      <command>property-adjust</command>
+					      <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+					      <step>5</step>
+					      <min>0</min>
+					      <max>360</max>
+					      <wrap>1</wrap>
+				      </binding>
+			      </action>
+
+			      <action>
+				      <name>Acls-Tacan</name>
+				      <button>0</button>
+				      <x>450</x>
+				      <y>-300</y>
+				      <w>50</w>
+				      <h>100</h>
+				      <binding>
+					      <command>property-toggle</command>
+					      <property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+				      </binding>
+				</action>
+
+
+				<action>
+					<name>Jettison Canopy</name>
+					<button>0</button>
+					<x>-435</x>
+					<y>100</y>
+					<w>20</w>
+					<h>40</h>
+					<binding>
+						<command>property-toggle</command>
+						<property>/controls/jettison/canopy</property>
+					</binding>
+				</action>
+
+
+
+
+
+<!-- ===================================Carte coordonées ==============================================-->
+		<!-- **********************************************Centre****************************************** -->
+			<!--<action>
+				<name>C0R</name>
+
+				<x>0</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>-->
+		<!-- ******************************************Ligne Centre Horizontal DROIT*******************************	-->
+			<!--<action>
+				<name>C0R</name>
+				<x>500</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>450</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>400</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>350</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>300</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>250</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>200</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>150</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>100</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>50</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>-->
+		<!--**********************************************Ligne Centre Horizontal Gauche*********************************-->
+			<!--<action>
+				<name>C0R</name>
+				<x>-500</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-450</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-400</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-350</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-300</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-250</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-200</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-150</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C0R</name>
+				<x>-100</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+
+			<action>
+				<name>C0L</name>
+				<x>-50</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>-->
+
+		<!--****************************************Ligne Centre Verticale superieur************************************-->
+			<!--<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>100</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>200</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>300</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>400</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<button>0</button>
+				<x>0</x>
+				<y>500</y>
+				<w>50</w>
+				<h>100</h>
+			</action>-->
+		<!--****************************************Ligne Centre Verticale Inferieur ************************************-->
+			<!--<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>-100</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>-200</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>-300</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<name>C1R</name>
+				<x>0</x>
+				<y>-400</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+			<action>
+				<x>0</x>
+				<y>-500</y>
+				<w>50</w>
+				<h>100</h>
+			</action>-->
+
+		<!--    **********************Ligne Horizontal Haut Gauche*****************************-->
+			<!--<action>
+				<name>CBR</name>
+
+				<x>-50</x>
+				<y>-500</y>
+				<w>50</w>
+				<h>100</h>
+			</action>-->
+		<!--    **********************Ligne Horizontal Bas  Gauche*****************************-->
+			<!--<action>
+				<name>CHR</name>
+
+				<x>-50</x>
+				<y>500</y>
+				<w>50</w>
+				<h>100</h>
+			</action>-->
+		<!--===================================================================================-->
+
+		</actions>
+	</instrument>
+</instruments>
+
+</PropertyList>
+
+
+

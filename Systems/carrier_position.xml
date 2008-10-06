@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<PropertyList>
+
+            <jsbsim>
+                <systems>
+                    <cat1-lat-position  type="double">42.79983827726208</cat1-lat-position>
+                    <cat1-lon-position  type="double">6.325856691993163</cat1-lon-position>
+                    <cat2-lat-position  type="double">42.8002379251812</cat2-lat-position>
+                    <cat2-lon-position  type="double">6.324766361747341</cat2-lon-position>
+
+                    <wire1-lat-position type="double">42.80017749332848</wire1-lat-position>
+                    <wire2-lat-position type="double">42.80019264893459</wire2-lat-position>
+                    <wire3-lat-position type="double">42.80020780446983</wire3-lat-position>
+                    <wire4-lat-position type="double">42.80022164601553</wire4-lat-position>
+                    <wire1-lon-position type="double">6.324550802536729</wire1-lon-position>
+                    <wire2-lon-position type="double">6.324460757888255</wire2-lon-position>
+                    <wire3-lon-position type="double">6.324370713195826</wire3-lon-position>
+                    <wire4-lon-position type="double">6.324280456147222</wire4-lon-position>
+                </systems>
+            </jsbsim>
+
+</PropertyList>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+
+<system name="Propulsion">
+
+     <property>fcs/cutoff-switch</property>
+
+    <channel name="Propulsion">
+
+        <pure_gain name="Throttle0">
+            <input>fcs/throttle-cmd-norm</input>
+            <gain>1.2</gain>
+            <output>fcs/throttle-pos-norm</output>
+        </pure_gain>
+
+        <kinematic name="Cutoff Switch Delay">
+            <input>fcs/cutoff-switch</input>
+            <traverse>
+                <setting>
+                    <position>0.0000</position>
+                    <time>0.0000</time>
+                </setting>
+                <setting>
+                    <position>1.0000</position>
+                    <time>1.0000</time>
+                </setting>
+            </traverse>
+        </kinematic>
+
+
+
+        <pure_gain name="Throttle0 Cmd">
+            <input>fcs/throttle-cmd-norm[0]</input>
+            <gain>fcs/cutoff-switch-delay</gain>
+        </pure_gain>
+
+        <switch name="Fuel Pump0 Cmd">
+            <default value="0"/>
+            <test  logic="AND" value="1">
+                fcs/cutoff-switch == 1
+            </test>
+            <output>/controls/engines/engine[0]/fuel-pump</output>
+        </switch>
+
+        <!--<pure_gain name="Fuel Pump0">
+            <input>fcs/fuel-pump0-cmd</input>
+            <gain>1</gain>
+            <output>/controls/engines/engine[0]/fuel-pump</output>
+        </pure_gain>-->
+
+
+
+        <switch name="Cutoff0 Cmd">
+            <default value="1"/>
+            <test  logic="AND" value="0">
+                fcs/cutoff-switch-delay == 1
+                fcs/fuel-pump0-cmd == 1
+                /systems/electrical/outputs/fuel-pump gt 27
+            </test>
+            <output>/controls/engines/engine[0]/cutoff-cmd</output>
+        </switch>
+
+
+
+
+       <!-- <switch name="systems/propulsion/cutoff-cmd">
+            <default value="0"/>
+            <test value="1">
+               fcs/cutoff0-cmd == 1
+            </test>
+            <output>/controls/engines/engine[0]/cutoff</output>
+        </switch>-->
+
+
+
+    </channel>
+
+</system>

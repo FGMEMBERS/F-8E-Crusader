@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+
+<system name="Global_Hold">
+
+    <channel name="Global Hold">
+
+        <switch name="systems/global-x-hold/value">
+          <default value="0"/>
+          <test value="forces/fbx-gear-lbs">
+                systems/holdback/holdback-cmd == 1
+          </test>
+          <test value="0">
+                gear/unit[1]/WOW == 0
+          </test>
+          <output>external_reactions/global-x-hold/magnitude</output>
+     </switch>
+
+     <switch name="systems/global-y-hold/value">
+          <default value="0"/>
+          <test value="forces/fby-gear-lbs">
+                systems/holdback/holdback-cmd == 1
+          </test>
+          <test value="0">
+                gear/unit[1]/WOW == 0
+          </test>
+          <output>external_reactions/global-y-hold/magnitude</output>
+     </switch>
+
+
+    </channel>
+
+</system>

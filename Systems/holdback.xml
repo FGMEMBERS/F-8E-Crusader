@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+
+<!--Adapted from  F-4N by Dave Culp-->
+<!--additionals for specific F-8E -->
+<system name="holdback">
+
+  <channel name="Holdback_Launchbar">
+
+     <summer name="systems/holdback/total_thrust">
+        <input>propulsion/engine/thrust</input>
+     </summer>
+
+     <switch name="systems/holdback/switch">
+          <default value="0"/>
+          <test value="systems/holdback/total_thrust">
+                systems/holdback/holdback-cmd == 1
+                launchbar/launch-bar-state == 1
+          </test>
+          <test value="0">
+                gear/unit[1]/WOW == 0
+          </test>
+          <output>external_reactions/holdback/magnitude</output>
+     </switch>
+
+
+
+
+     <!--Clemenceau  catapult 1-->
+     <!--Lat 42.79983827726208-->
+     <!--Lon 6.325856691993163-->
+
+     <!--Clemenceau catapult 2-->
+    <!-- lat42.8002379251812-->
+    <!-- lon6.324766361747341-->
+
+    <!--we calculate the diff between the aircraft and the catapult position-->
+
+    <summer name="systems/cat1-lat-diff-position">
+        <input>systems/cat1-lat-position</input>
+        <input>-position/lat-geod-deg</input>
+    </summer>
+
+    <summer name="systems/cat1-lon-diff-position">
+        <input>systems/cat1-lon-position</input>
+        <input>-position/long-gc-deg</input>
+    </summer>
+
+
+
+    <summer name="systems/cat2-lat-diff-position">
+        <input>systems/cat2-lat-position</input>
+        <input>-position/lat-geod-deg</input>
+    </summer>
+
+    <summer name="systems/cat2-lon-diff-position">
+        <input>systems/cat2-lon-position</input>
+        <input>-position/long-gc-deg</input>
+    </summer>
+
+
+
+
+    <!--we estimate if we are in the area of  7 meter square -->
+
+
+     <switch name="systems/cat-onarea">
+          <default value="0"/>
+          <test logic="AND" value="1">
+               systems/cat1-lat-diff-position lt 0.000018
+               systems/cat1-lat-diff-position gt -0.000018
+               systems/cat1-lon-diff-position lt 0.000018
+               systems/cat1-lon-diff-position gt -0.000018
+          </test>
+          <test logic="AND" value="1">
+               systems/cat2-lat-diff-position lt 0.000018
+               systems/cat2-lat-diff-position gt -0.000018
+               systems/cat2-lon-diff-position lt 0.000018
+               systems/cat2-lon-diff-position gt -0.000018
+          </test>
+     </switch>
+
+
+      <switch name="systems/launchbar/switch">
+          <default value="0"/>
+          <test logic="AND" value="1">
+                systems/holdback/holdback-cmd == 1
+                systems/cat-onarea == 1
+          </test>
+          <test value="0">
+                gear/unit[1]/WOW == 0
+          </test>
+          <output>launchbar/launch-bar-engage</output>
+     </switch>
+
+
+     <switch name="systems/cat-hold/weight">
+          <default value="0"/>
+          <test value="5000">
+                launchbar/launch-bar-state == 1
+          </test>
+          <test value="0">
+                gear/unit[1]/WOW == 0
+          </test>
+          <output>external_reactions/cat-hold/magnitude</output>
+     </switch>
+
+  </channel>
+
+</system>

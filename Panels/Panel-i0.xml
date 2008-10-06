@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!-- Gerard Robin  12-12-2005 , License GPL -->
+<!--Some textures Copied from  T-38 instrument panel , David Culp, davidculp2@comcast.net  -->
+
+<!-- Instruments Position -->
+<!--						L3			L2			L1			L0			C			R0			R1			R2			R3
+				H4
+				H3					Probe-3D	Egt-3D											FuPump-3D
+				H2					N1-3D		AOA-3D		AGL-3D		Radar-2D	LSI-3D		Clock-3D
+				H1		Flap-3D		OilP-3D		TURN-3D	ASI-3D		AI- 3D		HSI-3D		FuelF-3D	Tk1-3D
+				H0					Noz-3D		G-3D		Alti-3D					VSI-3D		AI_pt-3D	Tk0-3D
+				H-1														Dme-3D
+-->
+<PropertyList>
+
+	<path>Models/Panel-i0.ac</path>
+	<texture-path>Models/Textures</texture-path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>Panel-Base</object-name>
+	</animation>
+
+
+
+
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>LG-Cde</object-name>
+		<object-name>Hook-Cde</object-name>
+		<object-name>Temoin-Hook-Cde</object-name>
+		<object-name>Rudder-Sec</object-name>
+		<object-name>Rudder-Sec-Bt</object-name>
+		<object-name>Cde-Emgcy-Power</object-name>
+		<object-name>module-AV-DG</object-name>
+	</animation>
+
+	<animation include="../Instruments/Instrument-Light6.xml">
+		<object-name>Cde-Emgcy-Power</object-name>
+	</animation>
+
+	<!--<animation include="../Instruments/Instrument-Light1.xml">
+		<object-name>Panel-Base</object-name>
+	</animation>-->
+
+	<panel>
+		<path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-AV.xml</path>
+		<bottom-left>
+			<x-m>0.050372</x-m>
+			<y-m>-0.478754</y-m>
+			<z-m>-0.0480769</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>0.050372</x-m>
+			<y-m>0.478754</y-m>
+			<z-m>-0.0480769</z-m>
+		</bottom-right>
+		<top-left>
+			<x-m>-0.056315</x-m>
+			<y-m>-0.478754</y-m>
+			<z-m>0.067672</z-m>
+		</top-left>
+     </panel>
+
+
+     <model>
+	     <name>module-AV-DG</name>
+	     <path>Aircraft/F-8E-Crusader/Instruments/MODULE-AV-DG-f8e.xml</path>
+	     <offsets>
+		     <x-m>-0.00285597</x-m>
+		     <y-m>-2.98023e-08</y-m>
+		     <z-m>0.000834446</z-m>
+		     <pitch-deg>50.6</pitch-deg>
+	     </offsets>
+	</model>
+
+	<!--****************************************************Landing Gear********************Train ****************************-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>LG-Cde</object-name>
+		<property>/gear/gear[0]/position-norm</property>
+		<factor>43</factor>
+		<center>
+			<x-m>-0.0599</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.0418308</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!--*************************************Hook********************Crosse *******************************************-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Hook-Cde</object-name>
+		<property>/gear/tailhook/position-norm</property>
+		<factor>53</factor>
+		<center>
+			<x-m>-0.05595</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.0407491</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Temoin-Hook-Cde</object-name>
+		<property>/gear/tailhook/position-norm</property>
+		<factor>53</factor>
+		<center>
+			<x-m>-0.05595</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.0407491</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-Hook-Cde</object-name>
+		<condition>
+			<and>
+				<not-equals>
+					<property>/gear/tailhook/position-norm</property>
+					<value>0</value>
+				</not-equals>
+				<not-equals>
+					<property>/gear/tailhook/position-norm</property>
+					<value>1</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+
+
+
+</PropertyList>

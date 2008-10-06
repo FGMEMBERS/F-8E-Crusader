@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPL
+-->
+
+
+
+<PropertyList>
+	<name>F-8E Panel</name>
+		<background>Aircraft/F-8E-Crusader/Panels/Textures/transparent-bg.rgb</background>
+			<w>1024</w>
+			<h>512</h>
+			<y-offset>0</y-offset>
+			<view-height>768</view-height>
+
+	<instruments>
+
+
+<!--***************CENTER*********************-->
+
+		<!-- postition C, H2-->
+		<!--<instrument include="../Instruments/radar2d.xml">
+			<name>Radar</name>
+			<x>512</x>
+			<y>284</y>
+			<w>150</w>
+			<h>150</h>
+		</instrument>-->
+
+		<instrument include="../Instruments/alpha.xml">
+			<name>Alpha</name>
+			<x>610</x>
+			<y>-70</y>
+			<w>150</w>
+			<h>80</h>
+		</instrument>
+
+
+		<instrument include="../Instruments/forces.xml">
+			<name>Forces</name>
+			<x>670</x>
+			<y>-70</y>
+			<w>150</w>
+			<h>80</h>
+		</instrument>
+
+		<instrument include="../Instruments/lat-lon.xml">
+			<name>Lat-Lon</name>
+			<x>480</x>
+			<y>570</y>
+			<w>150</w>
+			<h>150</h>
+		</instrument>
+
+
+
+	</instruments>
+
+</PropertyList>

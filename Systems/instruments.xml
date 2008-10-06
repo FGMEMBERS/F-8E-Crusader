@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+
+
+<system name="Instruments">
+
+    <channel name="Agl-announciator">
+
+        <summer name="systems/instruments/agl-diff">
+            <input>/position/altitude-agl-ft</input>
+            <input>-/instrumentation/altimeter/agl-min</input>
+        </summer>
+
+        <switch name="systems/instruments/agl-alarm">
+            <default value="0"/>
+            <test  value="1">
+                    systems/instruments/agl-diff  lt 0
+            </test>
+        </switch>
+
+    </channel>
+
+    <channel name="AoA">
+
+        <!--<summer name="">
+            <input></input>
+            <input></input>
+        </summer>-->
+
+
+        <!--<summer name="/instrumentation/airspeed-indicator/landing-speed">
+            <input>/sim/aoa-indicator/speed</input>
+        </summer>
+
+        <summer name="/sim/aoa-indicator/ref-approach-speed">
+            <input>/sim/aoa-indicator/speed</input>
+        </summer>
+
+        <summer name="/sim/aoa-indicator/ref-approach-speed-pls5">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>+5</input>
+        </summer>
+
+        <summer name="/sim/aoa-indicator/ref-approach-speed-pls3">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>+3</input>
+        </summer>
+
+        <summer name="/sim/aoa-indicator/ref-approach-speed-mns3">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>-3</input>
+        </summer>
+
+        <summer name="/sim/aoa-indicator/ref-approach-speed-mns5">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>-5</input>
+        </summer>-->
+
+        <!--<summer name="/sim/aoa-indicator/ref-approach-angle">
+            <input></input>
+            <input></input>
+        </summer>
+
+        <summer name="">
+            <input></input>
+            <input></input>
+        </summer>-->
+
+    </channel>
+
+</system>

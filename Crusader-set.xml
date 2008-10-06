@@ -105,7 +105,7 @@
                         <target-agl-ft type="float">800</target-agl-ft>
                         <target-altitude-ft type="float">5000</target-altitude-ft>
                         <target-aoa-deg type="float">0.3</target-aoa-deg>
-                        <target-pitch-deg type="float">1.5</target-pitch-deg>]
+                        <target-pitch-deg type="float">1.5</target-pitch-deg>
                         <take-off-pitch-deg type="float">9</take-off-pitch-deg>
                         <climb-out-pitch-deg type="float">6.5</climb-out-pitch-deg>
                         <target-speed-kt type="float">500.0</target-speed-kt>

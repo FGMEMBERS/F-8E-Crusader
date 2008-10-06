@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE PropertyList SYSTEM "panel.dtd">
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <name>Radio 5B Hotspots</name>
+ <background>Aircraft/F-8E-Crusader/Panels/Textures/transparent-bg.rgb</background>
+ <w>128</w>
+ <h>256</h>
+ <y-offset>0</y-offset>
+
+
+ <instruments>
+	<instrument>
+		<name>Control</name>
+		<x>0</x>
+		<y>0</y>
+		<w>256</w>
+		<h>256</h>
+		<w-base>256</w-base>
+		<h-base>256</h-base>
+
+		<actions>
+
+			<action>
+				<name>BF1</name>
+				<x>50</x>
+				<y>0</y>
+				<w>50</w>
+				<h>50</h>
+				<!--<binding>
+					<command>property-adjust</command>
+					<property></property>
+					<step>1</step>
+					<min>0</min>
+					<max>9</max>
+				</binding>-->
+			</action>
+
+			<action>
+				<name>BF10</name>
+				<x>50</x>
+				<y>54</y>
+				<w>50</w>
+				<h>50</h>
+				<!--<binding>
+					<command>property-adjust</command>
+					<property></property>
+					<step>1</step>
+					<min>0</min>
+					<max>9</max>
+				</binding>-->
+			</action>
+
+			<action>
+				<name>BF100</name>
+				<x>50</x>
+				<y>108</y>
+				<w>50</w>
+				<h>50</h>
+				<!--<binding>
+					<command>property-adjust</command>
+					<property></property>
+					<step>1</step>
+					<min>0</min>
+					<max>9</max>
+				</binding>-->
+			</action>
+
+			<action>
+				<name>BF1000</name>
+				<x>50</x>
+				<y>162</y>
+				<w>50</w>
+				<h>50</h>
+				<!--<binding>
+					<command>property-adjust</command>
+					<property></property>
+					<step>1</step>
+					<min>0</min>
+					<max>9</max>
+				</binding>-->
+			</action>
+
+			<action>
+				<name>BF10000</name>
+				<x>50</x>
+				<y>216</y>
+				<w>50</w>
+				<h>50</h>
+				<!--<binding>
+					<command>property-adjust</command>
+					<property></property>
+					<step>1</step>
+					<min>0</min>
+					<max>9</max>
+				</binding>-->
+			</action>
+
+		</actions>
+	</instrument>
+</instruments>
+
+</PropertyList>
+
+
+

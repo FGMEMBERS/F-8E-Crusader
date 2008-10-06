@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/module-AV-DG.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>Module-BaseG</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-BaseG</object-name>
+		<object-name>Module-BaseD</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Autopilot-Heading</object-name>
+	</animation>
+
+	<animation include="Instrument-Light6.xml">
+		<object-name>Couronne</object-name>
+		<object-name>Couronne1</object-name>
+		<object-name>Couronne2</object-name>
+	</animation>
+
+	<model>
+		<name>Instrument-Oxygene</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/DMY_pt-f8e.xml</path>
+		<offsets>
+			<x-m>0.0215362</x-m>
+			<y-m>0.389147</y-m>
+			<z-m>0.005</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Temoin-AntiGivre</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Temoin-AntiIce.xml</path>
+		<offsets>
+			<x-m>-0.043587</x-m>
+			<y-m>0.356808</y-m>
+			<z-m>0.029366</z-m>
+			<pitch-deg>-90</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-AutopilotHdg-off</object-name>
+		<condition>
+			<equals>
+				<property>/autopilot/switch-heading</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-AutopilotHdg-on</object-name>
+		<condition>
+			<equals>
+				<property>/autopilot/switch-heading</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Autopilot-Heading</object-name>
+		<property>/autopilot/switch-heading</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-25</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.0174691</x-m>
+			<y-m>0</y-m>
+			<z-m>0.00943811</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Inter-AutopilotMaster</object-name>
+		<property>/autopilot/switch-master</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>0.99</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.0348273</x-m>
+			<y-m>0</y-m>
+			<z-m>0.00773142</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+</PropertyList>

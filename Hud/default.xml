@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!--
+
+-->
+
+<PropertyList>
+
+ <name>Default Aircraft Hud</name>
+
+ <instruments>
+
+  <!--<hudladder>
+   <path>Aircraft/F-8E-Crusader/Hud/hudladder.xml</path>
+  </hudladder>-->
+
+  <!--<hudcard>
+   <path>Aircraft/F-8E-Crusader/Hud/hudcard.xml</path>
+  </hudcard>-->
+
+  <!--<instrlabel>
+   <path>Aircraft/F-8E-Crusader/Hud/instrlabel.xml</path>
+  </instrlabel>-->
+
+  <runway>
+  <path>Aircraft/F-8E-Crusader/Hud/runwayinstr.xml</path>
+  </runway>
+
+  <!--<instrlabel_ing>
+  <path>Aircraft/F-8E-Crusader/Hud/instrlabel_ing.xml</path>
+  </instrlabel_ing>-->
+
+ </instruments>
+
+</PropertyList>

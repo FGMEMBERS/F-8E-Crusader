@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/Module-C1.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name>LeDroop</object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name>Couronne</object-name>
+	</animation>-->
+
+
+
+	<animation>
+		<type>select</type>
+		<object-name>TemoinA-LeDroop</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/surface-positions/leflap-pos-norm</property>
+					<value>0</value>
+				</greater-than>
+				<not-equals>
+					<property>/surface-positions/wings-pos-norm</property>
+					<value>1</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>TemoinA-DuctByP</object-name>
+		<condition>
+				<equals>
+					<property></property>
+					<value>1</value>
+				</equals>
+		</condition>
+	</animation>
+
+
+</PropertyList>

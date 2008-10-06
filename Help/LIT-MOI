@@ -1,0 +1,122 @@
+
+
+
+
+1/DEMARRAGE
+
+
+
+
+Vous êtes assis à la place du pilote
+
+Pour démarrer d'abord envoyer l'électricité en  activant le "switch"
+situé sur la Console de droite  le premier module avant marqué
+ELECT  switch MASTER GEN sur ON (il faut une bonne vue). Avec
+l'électricité le radar s'allume et quelque voyants.(raccourci
+clavier "}"    en toggle donc pour éteindre clic ou "}")
+
+Ne pas oublier de lire  la "Check list"  valable pour tous (surtout le "Harness")
+
+Les ailes sont repliées en position hangar pour les déployer 
+regarder la Console  de droite  et cliquer sur
+la manette, un carré hachuré de jaune et de noir
+l'ensemble se ferme et le verrou se rabat  lorsque les ailes sont en
+position.  (le raccourci  clavier est  "F").
+
+Le cockpit est ouvert pour le fermer toujours sur la Console de droite  activer le verrou
+(un manche avec une boule) cliquer sur la boule, le cockpit
+descend  et le verrou se met en place (le raccourci  clavier est
+ "d", en toggle donc pour ouvrir clic ou "d")
+
+Démarrer le moteur, faire appel au compresseur extérieur en appuyant sur
+la barre espace qui lance la turbine, puis regarder la Console de gauche cliquer sur la manette
+ENGINE MASTER située  à coté du "Trottle"
+elle basculera sur ON     alors     EGT      N1N2   et EPR (engine
+pressure ration valeur 1 au repos) indiquent la montée en régime
+lorsque EPR se colle près de 1.1   le  moteur tourne (le raccourci
+clavier est  "{"en mode toggle donc pour arreter clic ou "{")
+
+Ne pas oublier de positionner l'aile en position haute.
+Sur le coté gauche la manette qui commande (un petit manche placé horizontalement) et son verrou
+placé derrière. Cliquer sur l'avant du manche, le verrou déverrouille,
+et le manche bouge. Lorsque sur la Console centrale   le voyant  WINGS WHEELS
+DROOP est éteint l'avion est près pour le décollage. (le raccourci
+clavier est   "="  en mode toggle donc plus tard pour abaisser l'aile clic ou "=")
+
+Le décollage s'effectuera  en poussant la turbine  au maximum (décollage securisé) en post-combustion.
+A 140 kts tirer sur le manche l'avion décolle.
+
+
+Les raccourcis clavier ")"  et "("  sont  dédiés au speedbrake
+4 positions (dans la réalité s'était un peu plus compliqué    :=)  ).
+
+Après décollage , rentrer le train  ("g")  ou cliquer sur la manette située sur la Console avant et inclinée, coté gauche ,
+le  voyant  WINGS WHEELS DROOP s'allume, placer l'aile en position basse
+("=")  ou cliquer sur le manche, et le voyant WINGS WHEELS DROOP
+s'éteint   prêt pour un vol de croisière. 
+A partir de 270 knots ne pas rester en postcombustion  (le carburant est
+cher  :=(   ).
+
+Pour un décollage Porte Avion  l'option 
+--prop:controls/gear/brake-parking=1, est recommandée, ainsi l'avion restera en place.
+
+Pour activer le LaunchBar se placer en vue extérieur sur le coté et
+appuyer sur "L" majuscule maintenir appuyé le temps de voir, la Bride se placer
+doucement et s' accrocher sous l'avion (environ 5 sec) puis, le
+mouvement de l'avion solidement amarré.
+Il ne reste qu'a appuyer sur la touche "C"  majuscule qui simultanément
+lâche les freins, lance la catapulte et le moteur   
+
+
+Bon vol
+
+
+
+
+2/GESTION DU CARBURANT
+
+
+Le Crusader est doté de deux ensembles de réservoirs, le MAIN SYSTEM  qui alimente
+la turbine, et le TRANSFER SYSTEM  qui alimentera lorsque nécessaire le MAIN SYSTEM
+
+Les jauges dédiées sont placées sur la Console centrale  à droite.
+
+
+Pour effectuer le transfert de fuel vers le MAIN SYSTEM  il faut activer (clic ) l'interrupeur - FUEL TRANSFER placé sur la Console centrale en haut à droite.
+Lors de l'opération la Jauge  Main monte et la Jauge Transfer descend. 
+Cette opération  s'arretera aoutomatiquement lorsque le "MAIN SYSTEM" est plein ou lorsque le "TRANSFER SYSTEM"  est vide.
+Il est possible d'interrompre l'opération en cours par un clic sur le même interrupteur
+
+BIEN ENTENDU: dans la réalité cette gestion était en partie automatique, dans une prochaine version  le Model proposera  cette automatisation
+
+
+Au sol ou en vol il est possible de faire le plein.
+
+En vol , le ravitaillement est simulé soit avec un Tanker (prévu dans l'animation de FlightGear), 
+et alors au contact l'opération de remplissage est activée
+soit tout simplement comme si l'avion était en contact  (même si cela n'est pas le cas), et pour ce faire
+il faut activer la Perche de ravitaillement par un clic  sur l'interrupteur IFR PROBE placé sur la Console centrale en haut a gauche
+Il est possible de visualiser de l'extérieur le déploiement de la perche.
+
+Les réservoirs seront remplis dans l'ordre le "TRANSFER"  puis le "MAIN"
+Cette opération s'arretera automatiquement lorsque les pleins seron effectués.
+Il est possible d'interrompre l'opération en cours par un clic sur le même interrupteur.
+
+
+
+
+Au sol, la même opération est possible, avec comme différence la perche ne se déploie pas.
+
+
+
+3/ANGLE D'ATTAQUE  (AOA).
+
+Deux instrument servent au pilote pour connaitre l'angle d'attaque
+L'instrument lumineux Vert Jaune Rouge qui est situé en haut a gauche et  l'instrument  à aiguille qui est situé sur la Console centrale coté gauche.
+Les indications de couleurs sont également reproduites à l'extérieur sur la porte avant du train avant.
+L'instrument lumineux n'est opérationel que train sorti  et hors contact avec le sol (compression du train egal à zéro).
+Cet instrument  affiche  le résultat de la combinaison logique de deux paramètres,  la vitesse de l'air et l'angle d'attaque.
+L'instrument à aiguille affiche l'angle d'attaque. , exprimé en unités.
+Le modèle est réglé sur 125 kts et 13.14 units.
+
+

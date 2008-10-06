@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList>
+
+ <path>catapulte-f8e.ac</path>
+ <texture-path>Textures/texture12F</texture-path>
+
+ <!--  ********BRIDLE LAUNCHBAR*****HOLDBACK*************BARRE DE CATAPULTE *****ET ******FILIN DE TENSION*************-->
+
+ <animation>
+	 <type>select</type>
+	 <object-name>LaunchBar-cat</object-name>
+	 <condition>
+		 <greater-than>
+			 <property>/fdm/jsbsim/launchbar/launch-bar-engage</property>
+			 <value>0</value>
+		 </greater-than>
+	 </condition>
+ </animation>
+ <animation>
+	 <type>rotate</type>
+	 <object-name>LaunchBar-cat</object-name>
+	 <property>/fdm/jsbsim/launchbar/launch-bar-pos-norm</property>
+	 <interpolation>
+		 <entry>
+			 <ind>0.0</ind>
+			 <dep>-45</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.25</ind>
+			 <dep>-30</dep>
+		 </entry>
+		 <entry>
+			 <ind>0.75</ind>
+			 <dep>-15</dep>
+		 </entry>
+		 <entry>
+			 <ind>1.0</ind>
+			 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.8501</x-m>
+		 <y-m>0</y-m>
+		 <z-m>-1.93774</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>-1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <animation>
+	 <type>select</type>
+	 <object-name>LaunchBar-op</object-name>
+	 <condition>
+		 <equals>
+			 <property>/fdm/jsbsim/launchbar/launch-bar-state</property>
+			 <value>1</value>
+		 </equals>
+	 </condition>
+ </animation>
+
+ <animation>
+	 <type>select</type>
+	 <object-name>HoldBack</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+				 <property>/fdm/jsbsim/launchbar/launch-bar-state</property>
+				 <value>1</value>
+			 </equals>
+			 <not-equals>
+				 <property>/controls/gear/catapult-launch-cmd</property>
+				 <value>1</value>
+			 </not-equals>
+		 </and>
+	 </condition>
+ </animation>
+
+
+</PropertyList>

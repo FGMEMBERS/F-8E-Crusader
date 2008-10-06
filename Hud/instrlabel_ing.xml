@@ -1,0 +1,140 @@
+<PropertyList>
+
+ <labels>
+<!--
+  <i1>
+   <name>machno</name>
+   <x>25</x>
+   <y>130</y> 
+   <width>40</width>
+   <height>30</height>
+   <data_source>mach</data_source>
+   <label_format>%4.2f</label_format>
+   <pre_label_string>blank</pre_label_string>
+   <post_label_string>NULL</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>2</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </i1>
+-->
+  <lat>
+   <name>lattitude</name>
+   <x>250</x>
+   <y>270</y>
+   <width>1</width>
+   <height>10</height>
+   <data_source>latitude</data_source>
+   <label_format>%s%</label_format>
+   <pre_label_string>blank</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>1</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>true</latitude>
+   <longitude>false</longitude>
+  </lat>
+
+  <lon>
+   <name>longitude</name>
+   <x>250</x>
+   <y>260</y>
+   <width>1</width>
+   <height>10</height>
+   <data_source>longitude</data_source>
+   <label_format>%s%</label_format>
+   <pre_label_string>blank</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>1</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>true</longitude>
+  </lon>
+
+  <!--<alpha>
+   <name>alpha</name>
+   <x>300</x>
+   <y>-15</y>
+   <width>1</width>
+   <height>10</height>
+   <data_source>aoa</data_source>
+   <label_format>%5.1f%</label_format>
+   <pre_label_string>alpha:</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </alpha>-->
+<!--
+  <beta>
+   <name>beta</name>
+   <x>530</x>
+   <y>55</y>
+   <width>1</width>
+   <height>10</height>
+   <data_source>sideslip</data_source>
+   <label_format>%4.1f%</label_format>
+   <pre_label_string>beta:</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </beta>
+  
+  <nlf>
+   <name>nlf</name>
+   <x>530</x>
+   <y>40</y>
+   <width>1</width>
+   <height>10</height>
+   <data_source>nlf</data_source>
+   <label_format>%4.1f%</label_format>
+   <pre_label_string>nlf:</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </nlf>
+  
+  <framerate>
+   <name>framerate</name>
+   <x>530</x>
+   <y>25</y>
+   <width>1</width>
+   <height>10</height>
+   <data_source>framerate</data_source>
+   <label_format>%5.1f%</label_format>
+   <pre_label_string>framerate:</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </framerate>
+-->
+</labels>
+
+</PropertyList>

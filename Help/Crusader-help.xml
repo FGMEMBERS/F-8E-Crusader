@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+				<title>Crusader F-8E</title>
+				<key>
+					<name>d</name>
+					<desc>Toggle Canopy</desc>
+				</key>
+				<key>
+					<name>=</name>
+					<desc>Toggle 2 positions Wings Incidence Up/Down</desc>
+				</key>
+				<key>
+					<name>)/(</name>
+					<desc>Assign 4 positions Speed Brake Up/Down</desc>
+				</key>
+				<key>
+					<name>}</name>
+					<desc>toggle Electric Master Switch On/Off</desc>
+				</key>
+				<key>
+					<name>{</name>
+					<desc>toggle Cutoff False/True</desc>
+				</key>
+				<key>
+					<name>O/o</name>
+					<desc>Hook Down/Up</desc>
+				</key>
+				<key>
+					<name>F/f</name>
+					<desc>Wings fold Up/Down</desc>
+				</key>
+				<key>
+					<name>L and C</name>
+					<desc>Activate Launchbar/Go</desc>
+				</key>
+                                <key>
+					<name>D</name>
+					<desc>Probe Refueling On/Off</desc>
+				</key>
+
+				<text>
+				--
+				-================Start Routine=====================-
+				-Electric Master Switch On (depress "}")-
+				-Get the external Air compressor resources  ( "s" )-
+				-The engine will spin up to a maximum of about %25 N2 (%5.2 N1)-
+				-This simulates the action of a pneumatic starter.-
+				-After reaching %15 N2,  Cutoff to False (depress "{")-
+
+                                -==============Take Off ==on Runway or carrier===========
+                                The wings fold must be DOWN  key "f"
+                                The wings incidences must be UP   key (toggle) " ="
+                                your anounciator "WING WHEELS DROOP"  must be light off
+                                The canopy must be closed/locked  key (toggle) "d"
+
+                                -============On Carrier==== Only Clemenceau============-
+                                =Take Off
+                                -Maintain the "L" key depressed the time to activate the launbar (5 seconds)-
+				-You can see that operation with the external view-
+                                -Don't forget to prepare your Aircraft
+                                with ==Start Routine== and with ==Take Off ==on Runway or Carrier==
+				-Then depress the "C" key  to launch
+                                =Landing
+                                -Your approach  is about 130 Knts ( you can help yourself with the AoA indicator)
+                                -The Hook must be down key "O"
+                                -The Aircraft must be prepared with wings incidences UP and gears DOWN
+                                -The Hook will operate only if it is in touch on the deck close to the wires center area
+                                -Beware the Clemenceau deck is little ( against the Nimitz), several training will be necessary.
+
+                                =============Consummables========================
+                                There is two kind of tanks, Main Tank and Transfer Tank
+                                The Main Tank is not full up.
+                                The engine will ONLY pump fuel from that Main Tank.
+                                If you get the alarm "LOW LEVEL", you can transfer fuel from the Transfer Tank,
+                                if there is any fuel in the Transfer Tank (look at the capacity tank instruments) you can transfer the fuel
+                                from Transfer Tank to Main Tank, click the "FUEL TRANSFER" switch  on the front Panel (top right)
+
+                            </text>
+
+</PropertyList>

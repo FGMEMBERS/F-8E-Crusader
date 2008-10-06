@@ -1,0 +1,168 @@
+<PropertyList>
+
+ <labels>
+<!--
+  <kias>
+   <name>KIAS</name>
+   <x>390</x>
+   <y>100</y>
+   <width>2</width>
+   <height>2</height>
+   <data_source>speed</data_source>
+   <label_format>%4.0f</label_format>
+   <pre_label_string>KIAS=</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </kias>
+  -->
+  
+<!--
+  <marker1>
+   <name>kias marker</name>
+   <x>245</x>
+   <y>230</y>
+   <width>50</width>
+   <height>40</height>
+   <data_source></data_source>
+   <label_format></label_format>
+   <pre_label_string>C</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </marker1>
+-->
+  <!--
+  <alt>
+   <name>altitude</name>
+   <x>390</x>
+   <y>90</y>
+   <width>2</width>
+   <height>2</height>
+   <data_source>altitude</data_source>
+   <label_format>%4.0f</label_format>
+   <justification>0</justification>   
+   <pre_label_string>Altitude=</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </alt>
+  -->
+
+  
+  <!--
+  <sim>
+   <name>SIM</name>
+   <x>250</x>
+   <y>160</y>
+   <width>2</width>
+   <height>2</height>
+   <data_source></data_source>
+   <label_format></label_format>
+   <pre_label_string>SIM</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>2</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>true</latitude>
+   <longitude>true</longitude>
+  </sim>
+-->
+  <!--<gload>
+   <name>G Load</name>
+   <x>300</x>
+   <y>-25</y>
+   <width>2</width>
+   <height>2</height>
+   <data_source>anzg</data_source>
+   <label_format>%2.1f</label_format>
+   <pre_label_string>G=</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </gload>-->
+
+  <mach>
+   <name>machno</name>
+   <x>200</x>
+   <y>140</y> 
+   <width>2</width>
+   <height>2</height>
+   <data_source>mach</data_source>
+   <label_format>%4.2f</label_format>
+   <pre_label_string>Mach=</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </mach>
+<!--
+  <heading>
+   <name>heading</name>
+   <x>390</x>
+   <y>80</y>
+   <width>2</width>
+   <height>3</height>
+   <data_source>heading</data_source>
+   <label_format>%4.1f</label_format>
+   <pre_label_string>Heading=</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </heading>
+  -->
+
+<!--
+  <framerate>
+   <name>framerate</name>
+   <x>530</x>
+   <y>25</y>
+   <width>1</width>
+   <height>10</height>
+   <data_source>framerate</data_source>
+   <label_format>%5.1f%</label_format>
+   <pre_label_string>framerate:</pre_label_string>
+   <post_label_string>blank</post_label_string>
+   <scale_data>1.0</scale_data>
+   <options>4</options>
+   <justification>0</justification>
+   <blinking>0</blinking>
+   <working>true</working>
+   <latitude>false</latitude>
+   <longitude>false</longitude>
+  </framerate>
+-->
+</labels>
+
+</PropertyList>

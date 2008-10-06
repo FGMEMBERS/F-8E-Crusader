@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/dummy_pt-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>DMY</object-name>
+	</animation>
+
+
+ 	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel_pt-f8e.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+
+
+</PropertyList>

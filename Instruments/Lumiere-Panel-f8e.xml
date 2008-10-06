@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/panel_light-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>PLIGHT</object-name>
+	</animation>
+
+	<model>
+		<name>Bouton</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bouton-f8e.xml</path>
+		<offsets>
+			<x-m>0.01</x-m>
+			<y-m>-0.01345</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<condition>
+				<greater-than>
+					<property>/sim/time/sun-angle-rad</property>
+					<value>1.7</value>
+				</greater-than>
+		</condition>
+		<object-name>Veilleuse</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>/sim/time/sun-angle-rad</factor-prop>
+			<red>0.1</red>
+			<green>0.007</green>
+			<blue>0.005</blue>
+		</emission>
+	</animation>
+	<animation>
+		<condition>
+			<not>
+			<greater-than>
+				<property>/sim/time/sun-angle-rad</property>
+				<value>1.7</value>
+			</greater-than>
+			</not>
+		</condition>
+		<object-name>Veilleuse</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>/sim/time/sun-angle-rad</factor-prop>
+			<red>0.0</red>
+			<green>0.0</green>
+			<blue>0.0</blue>
+		</emission>
+	</animation>
+
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Bouton</object-name>
+		<property>/controls/lighting/instruments-norm</property>
+		<factor>360</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.01345</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!--<animation>
+		<type>rotate</type>
+		<object-name>Interrupteur</object-name>
+		<property>/controls/lighting/instruments-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.00897331</x-m>
+			<y-m>0.0</y-m>
+			<z-m></z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>-->
+
+</PropertyList>

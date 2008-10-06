@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/module-D1.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+	</animation>
+
+	<animation include="Instrument-Light6.xml">
+		<object-name>Couronne</object-name>
+		<object-name>Couronne1</object-name>
+	</animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Inter-ElecMaitre</object-name>
+		<property>/controls/electric/battery-switch</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>0.99</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+
+		<center>
+			<x-m>-0.00157054</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.00019843</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>TemoinA</object-name>
+		<condition>
+			<equals>
+				<property>/controls/electric/battery-switch</property>
+				<value>1.0</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+
+</PropertyList>

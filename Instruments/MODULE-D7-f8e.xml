@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/module-D7.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Freq-nnn-nX</object-name>
+		<object-name>Freq-nnn-Xn</object-name>
+		<object-name>Freq-nnX-nn</object-name>
+		<object-name>Freq-nXn-nn</object-name>
+		<object-name>Freq-Xnn-nn</object-name>
+	</animation>
+	<animation include="Instrument-Light3.xml">
+		<object-name>Chan-nX</object-name>
+		<object-name>Chan-Xn</object-name>
+	</animation>
+	<animation include="Instrument-Light6.xml">
+		<object-name>Couronne</object-name>
+		<object-name>Couronne1</object-name>
+	</animation>
+
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+	<panel>
+		<path>Aircraft/F-8E-Crusader/Instruments/module-d7-hotspots.xml</path>
+		<bottom-left>
+			<x-m>-0.0507999</x-m>
+			<y-m>-0.0690004</y-m>
+			<z-m>0</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>0.0507999</x-m>
+			<y-m>-0.0690004</y-m>
+			<z-m>-0</z-m>
+		</bottom-right>
+		<top-left>
+			<x-m>-0.0507999</x-m>
+			<y-m>0.069000</y-m>
+			<z-m>0</z-m>
+		</top-left>
+     	</panel>
+
+    <!-- **************************************************************************************************************************************************************-->
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnn-nX</object-name>
+		<property>/preset/input/val-nnn-XX</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnn-Xn</object-name>
+		<property>/preset/input/val-nnn-XX</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnX-nn</object-name>
+		<property>/preset/input/val-nnX-nn</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nXn-nn</object-name>
+		<property>/preset/input/val-XXn-nn</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-Xnn-nn</object-name>
+		<property>/preset/input/val-XXn-nn</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+
+
+	<!--************************************************************************************************************************************************************-->
+
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Chan-nX</object-name>
+		<property>/preset/input/chan-XX</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Chan-Xn</object-name>
+		<property>/preset/input/chan-XX</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>FreqType</object-name>
+		<property>/preset/input/freqtype</property>
+		<factor>0.25</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Sel-FreqType</object-name>
+		<property>/preset/input/freqtype</property>
+		<factor>-45</factor>
+		<center>
+			<x-m>0.0108831</x-m>
+			<y-m>0.0506081</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Sel-ManChan</object-name>
+		<property>/preset/input/selector</property>
+		<factor>60</factor>
+		<center>
+			<x-m>0.0136393</x-m>
+			<y-m>-0.0556185</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>StoreAction</object-name>
+		<property>/preset/input/store</property>
+		<factor>-0.01</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<condition>
+			<equals>
+				<property>/preset/input/modrw</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<type>select</type>
+		<object-name>base-write</object-name>
+ 	</animation>
+
+
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Inter-ModRW</object-name>
+		<property>/preset/input/modrw</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0013260</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Inter-StBy</object-name>
+		<property>/preset/input/sandtby</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-0.0290509</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0013260</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+</PropertyList>

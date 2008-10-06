@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList>
+
+	<path>perche-f8e.ac</path>
+
+	<!--NOTE     RESOLUTION  DEFINITION      -->
+	<!--according to your needs you may choose -->
+	<!-- high resolution  (Textures-hires), or medium resolution (Textures-medres)-->
+	<!-- to do it,  comment out and uncomment out the corresponding following lines-->
+
+
+	<!-- <texture-path>Textures-hires/texture12F</texture-path>-->
+          <texture-path>Textures-medres/texture12F</texture-path>
+
+	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RF-ProbeVerin</object-name>
+		<property>/surface-positions/refueling-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>0.30</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>0.50</ind>
+				<dep>95</dep>
+			</entry>
+			<entry>
+				<ind>0.60</ind>
+				<dep>75</dep>
+			</entry>
+			<entry>
+				<ind>0.70</ind>
+				<dep>55</dep>
+			</entry>
+			<entry>
+				<ind>0.80</ind>
+				<dep>35</dep>
+			</entry>
+			<entry>
+				<ind>0.90</ind>
+				<dep>15</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-3.91649</x-m>
+			<y-m>-0.584621</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>RF-Probe</object-name>
+		<property>/surface-positions/refueling-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>0.30</ind>
+				<dep>105</dep>
+			</entry>
+			<entry>
+				<ind>0.50</ind>
+				<dep>95</dep>
+			</entry>
+			<entry>
+				<ind>0.60</ind>
+				<dep>75</dep>
+			</entry>
+			<entry>
+				<ind>0.70</ind>
+				<dep>55</dep>
+			</entry>
+			<entry>
+				<ind>0.80</ind>
+				<dep>35</dep>
+			</entry>
+			<entry>
+				<ind>0.90</ind>
+				<dep>15</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-3.91649</x-m>
+			<y-m>-0.584621</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>RF-Probe</object-name>
+		<property>/surface-positions/refueling-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>-131.5</dep>
+			</entry>
+			<entry>
+				<ind>0.30</ind>
+				<dep>-131.5</dep>
+			</entry>
+			<entry>
+				<ind>0.50</ind>
+				<dep>-102</dep>
+			</entry>
+			<entry>
+				<ind>0.60</ind>
+				<dep>-60</dep>
+			</entry>
+			<entry>
+				<ind>0.70</ind>
+				<dep>-38</dep>
+			</entry>
+			<entry>
+				<ind>0.80</ind>
+				<dep>-23</dep>
+			</entry>
+			<entry>
+				<ind>0.90</ind>
+				<dep>-9.5</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.17992</x-m>
+			<y-m>-1.58746</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+
+
+
+
+</PropertyList>

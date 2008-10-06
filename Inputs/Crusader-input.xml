@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+    <keyboard >
+            <key n="1">
+            <name>Ctrl-A</name>
+            <desc>Toggle autopilot altitude lock.</desc>
+                    <binding>
+                            <command>property-toggle</command>
+                            <property>/autopilot/switch-altitude</property>
+                    </binding>
+            </key>
+            <key n="8">
+            <name>Ctrl-H</name>
+            <desc>Toggle autopilot heading lock.</desc>
+                    <binding>
+                            <command>property-toggle</command>
+                            <property>/autopilot/switch-heading</property>
+                    </binding>
+            </key>
+
+
+            <key n="125">
+            <name>}</name>
+                    <desc>Master Electric  Switch</desc>
+                            <binding>
+                                    <command>property-toggle</command>
+                                    <property>/controls/electric/master-switch</property>
+                            </binding>
+            </key>
+            <key n="123">
+                    <name>{</name>
+                    <desc>Stop Engine</desc>
+                            <binding>
+                                    <command>property-toggle</command>
+                                    <property>/fdm/jsbsim/fcs/cutoff-switch</property>
+                            </binding>
+                            <binding>
+                                <command>property-assign</command>
+                                <property>/sim/model/mule/linked</property>
+                                <value>0.0</value>
+                            </binding>
+            </key>
+
+
+  <!-- =================FCS=====================-->
+            <key n="41">
+                    <desc>Speed Brake Down</desc>
+                            <name>)</name>
+                            <binding>
+                                    <command>property-adjust</command>
+                                    <property>/controls/flight/speedbrake</property>
+                                    <max type="double">1</max>
+                                    <step type="double">0.25</step>
+                            </binding>
+            </key>
+            <key n="40">
+                    <desc>Speed Brakes Up</desc>
+                    <name>(</name>
+                    <binding>
+                            <command>property-adjust</command>
+                            <property>/controls/flight/speedbrake</property>
+                            <min type="double">0</min>
+                            <step type="double">-0.25</step>
+                    </binding>
+            </key>
+            <key n="93">
+                    <name>]</name>
+                    <desc>Increase ledroopflaps.</desc>
+                    <binding>
+                                <command>property-assign</command>
+                            <property>/fdm/jsbsim/fcs/leflap-cmd-norm</property>
+                            <value>1.0</value>
+                    </binding>
+            </key>
+            <key n="91">
+                    <name>[</name>
+                    <desc>Decrease ledroopflaps.</desc>
+                    <binding>
+                                <command>property-assign</command>
+                            <property>/fdm/jsbsim/fcs/leflap-cmd-norm</property>
+                            <value>0.0</value>
+                    </binding>
+            </key>
+            <key n="61">
+                    <name>=</name>
+                    <desc>Toggle Wing incidence</desc>
+                    <binding>
+                            <command>property-toggle</command>
+                            <property>/controls/flight/wing-incidence</property>
+                    </binding>
+            </key>
+
+
+   <!--============Misc============================-->
+            <key n="68">
+                    <desc>Refueling Probe</desc>
+                    <name>D</name>
+                    <binding>
+                            <command>nasal</command>
+                            <script>
+                                    consumable.refuel();
+                            </script>
+                    </binding>
+            </key>
+            <key n="100">
+            <name>d</name>
+
+
+            <desc>Toggle Canopy</desc>
+                            <binding>
+                                    <command>property-toggle</command>
+                                    <property>/controls/flight/canopy</property>
+                            </binding>
+            </key>
+
+
+    <!--==============Catapult==============-->
+                <key n="67">
+                    <name>C</name>
+                    <desc>Catapult Launch Command.</desc>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>fdm/jsbsim/systems/holdback/holdback-cmd</property>
+                            <value>0.0</value>
+                    </binding>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>fdm/jsbsim/systems/catapult/cat-launch-cmd</property>
+                            <value>1.0</value>
+                    </binding>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/controls/engines/engine[0]/throttle</property>
+                        <value>1</value>
+                    </binding>
+                            <binding>
+                            <command>property-assign</command>
+                            <property>/controls/gear/brake-parking</property>
+                            <value>0.0</value>
+                    </binding>
+            </key>
+
+    <!-- =============launch-bar =================-->
+            <key n="76">
+                    <name>L</name>
+                        <desc>engage holdback</desc>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>fdm/jsbsim/systems/holdback/holdback-cmd</property>
+                        <value>1.0</value>
+                    </binding>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>fdm/jsbsim/systems/catapult/cat-launch-cmd</property>
+                            <value>0.0</value>
+                    </binding>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>/controls/gear/brake-parking</property>
+                            <value>1</value>
+                    </binding>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/controls/engines/engine[0]/throttle</property>
+                        <value>0</value>
+                    </binding>
+            </key>
+
+    <!--================arrester hook =================-->
+            <key n="79">
+                    <name>O</name>
+                    <desc>Hook down.</desc>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>controls/gear/tailhook</property>
+                            <value type="double">1.0</value>
+                    </binding>
+            </key>
+            <key n="111">
+                    <name>o</name>
+                    <desc>Hook Up.</desc>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>controls/gear/tailhook</property>
+                            <value type="double">0.0</value>
+                    </binding>
+            </key>
+
+    <!-- ============wing fold ================-->
+            <key n="70">
+                    <name>F</name>
+                    <desc>Wing Fold Down.</desc>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>controls/flight/wing-fold-cmd</property>
+                            <value type="double">1</value>
+                    </binding>
+            </key>
+            <key n="102">
+                    <name>f</name>
+                    <desc>Wing Fold Up.</desc>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>controls/flight/wing-fold-cmd</property>
+                            <value type="double">0.0</value>
+                    </binding>
+            </key>
+
+    <!--==============mule=================== -->
+            <key n="43">
+                    <name>+</name>
+                    <desc>Mule Magnitude increase</desc>
+                    <repeatable type="bool">true</repeatable>
+                    <binding>
+                            <command>property-adjust</command>
+                            <property>/sim/model/mule/magnitude</property>
+                            <max type="double">3500</max>
+                            <step type="double">100</step>
+                    </binding>
+            </key>
+            <key n="45">
+                    <name>-</name>
+                    <desc>Mule Magnitude decrease</desc>
+                    <repeatable type="bool">true</repeatable>
+                    <binding>
+                            <command>property-adjust</command>
+                            <property>/sim/model/mule/magnitude</property>
+                            <min type="double">-800</min>
+                            <step type="double">-100</step>
+                    </binding>
+            </key>
+            <key n="109">
+                    <name>m</name>
+                    <desc>Mule Linked</desc>
+                    <binding>
+                        <command>property-toggle</command>
+                        <property>/sim/model/mule/linked</property>
+                    </binding>
+                    <binding>
+                            <command>property-assign</command>
+                            <property>/sim/model/mule/magnitude</property>
+                            <value type="double">0</value>
+                    </binding>
+            </key>
+
+    <!--=========Carrier=====================-->
+            <key n="37">
+                    <name>%</name>
+                    <desc>Toggle carrier glide-path</desc>
+                    <binding>
+                            <command>property-toggle</command>
+                            <property>/ai/models/carrier/controls/glide-path</property>
+                    </binding>
+
+            </key>
+
+
+	</keyboard>
+</PropertyList>

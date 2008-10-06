@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/asi-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>ASI</object-name>
+	</animation>
+
+	<animation>
+		<name>Alpha Order Group</name>
+		<object-name>Bezel</object-name>
+		<object-name>Aiguille</object-name>
+		<object-name>Mach-I</object-name>
+		<object-name>Mach</object-name>
+		<object-name>Ktns1</object-name>
+		<object-name>Ktns2</object-name>
+	</animation>
+
+ 	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>Aiguille</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Mach-I</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Mach</object-name>
+		<object-name>Ktns1</object-name>
+		<object-name>Ktns2</object-name>
+	</animation>
+
+ <!-- ***********************************KNOTS Indicator***************************************-->
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille</object-name>
+		<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>50</ind>
+				<dep>37</dep>		<!--37-->
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>74</dep>		<!--37-->
+			</entry>
+			<entry>
+				<ind>120</ind>
+				<dep>89</dep>		<!--15-->
+			</entry>
+			<entry>
+				<ind>150</ind>
+				<dep>118</dep>	<!--29-->
+			</entry>
+			<entry>
+				<ind>200</ind>
+				<dep>150</dep>	<!--32-->
+			</entry>
+			<entry>
+				<ind>300</ind>
+				<dep>210</dep>	<!--60-->
+			</entry>
+			<entry>
+				<ind>400</ind>
+				<dep>270</dep>	<!--60-->
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep>300</dep>	<!--30-->
+			</entry>
+			<entry>
+				<ind>600</ind>
+				<dep>330</dep>	<!--30-->
+			</entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!--******************MACH Indicator******************************************************-->
+	<!-- Must follow the needle -->
+	<animation>
+		<condition>
+			<or>
+			<greater-than>
+				<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+					<value>300</value>
+			</greater-than>
+			<greater-than>
+				<property>/velocities/mach</property>
+				<value>0.5</value>
+			</greater-than>
+			</or>
+		</condition>
+		<type>rotate</type>
+		<object-name>Mach</object-name>
+		<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-135</dep>
+			</entry>
+			<entry>
+				<ind>50</ind>
+				<dep>-98</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>-61</dep>
+			</entry>
+			<entry>
+				<ind>120</ind>
+				<dep>-46</dep>
+			</entry>
+			<entry>
+				<ind>150</ind>
+				<dep>-17</dep>
+			</entry>
+			<entry>
+				<ind>200</ind>
+				<dep>15</dep>
+			</entry>
+			<entry>
+				<ind>300</ind>
+				<dep>75</dep>
+			</entry>
+			<entry>
+				<ind>400</ind>
+				<dep>135</dep>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep>165</dep>
+			</entry>
+			<entry>
+				<ind>600</ind>
+				<dep>195</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	 <!-- Right Mach Value according to the needle -->
+	<animation>
+		<condition>
+			<or>
+			<greater-than>
+				<property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+				<value>300</value>
+			</greater-than>
+			<greater-than>
+				<property>/velocities/mach</property>
+				<value>0.5</value>
+			</greater-than>
+			</or>
+		</condition>
+		<type>rotate</type>
+		<object-name>Mach</object-name>
+		<property>/velocities/mach</property>
+		<factor>150</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+</PropertyList>

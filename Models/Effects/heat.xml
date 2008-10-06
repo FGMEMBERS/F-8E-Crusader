@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!--
+    Usable with FlightGear
+    <property>gerard robin
+    Copyright License:  GPL
+-->
+   <!--       LING-TEMCO-VOUGHT   F-8E Crusader      Auteur :      Gerard ROBIN               GPL        COPYRIGHT-->
+
+
+
+
+<!--<paramsx><heat>Aircraft/F-8E-Crusader/Models/Effects/heat1.osg</heat></paramsx>-->
+
+ <path>heat1.osg</path>
+
+
+ <offsets>
+    <x-m> 0.0 </x-m>
+    <y-m> -0.00 </y-m>
+    <z-m> -0.00 </z-m>
+    <pitch-deg>90</pitch-deg>
+    <z-m>0</z-m>
+ </offsets>
+
+
+
+
+
+
+
+</PropertyList>

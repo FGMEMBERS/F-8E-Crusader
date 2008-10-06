@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+
+<!--
+Usable with FlightGear
+Property of Gerard Robin  12-12-2005
+Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/agl-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>AGL</object-name>
+	</animation>
+
+ 	<model>
+	 <name>Bezel</name>
+	 <path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+	 <offsets>
+		 <x-m>0</x-m>
+		 <y-m>0</y-m>
+		 <z-m>0</z-m>
+		 <pitch-deg>0</pitch-deg>
+	 </offsets>
+	</model>
+
+	<model>
+		<name>Bouton</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bouton-f8e.xml</path>
+		<offsets>
+			<x-m>0.0206361</x-m>
+			<y-m>-0.039</y-m>
+			<z-m>-0.039</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>Aiguille</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Cadran</object-name>
+		<object-name>Ft-cm</object-name>
+		<object-name>Ft-dm</object-name>
+		<object-name>Ft-um</object-name>
+	</animation>
+
+
+ <!-- ********************AGL Announciator******************************************************-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Alarm</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>/fdm/jsbsim/systems/instruments/agl-alarm</property>
+					<value>1.0</value>
+				</equals>
+				<not-equals>
+					<property>/gear/gear/position-norm[0]</property>
+					<value>1.0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+
+
+
+<!-- ********************AGL min******************************************************-->
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Ft-um</object-name>
+		<property>/instrumentation/altimeter/agl-min</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Ft-dm</object-name>
+		<property>/instrumentation/altimeter/agl-min</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Ft-cm</object-name>
+		<property>/instrumentation/altimeter/agl-min</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Bouton</object-name>
+		<property>/instrumentation/altimeter/agl-min</property>
+		<factor>5</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.039</y-m>
+			<z-m>-0.039</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+<!-- ********************AGL Value******************************************************-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille</object-name>
+		<property>/position/altitude-agl-ft</property>
+		<interpolation>
+			<entry>
+				<ind>5</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>105</ind>
+				<dep>90</dep>		<!--90-->
+			</entry>
+			<entry>
+				<ind>205</ind>
+				<dep>140</dep>	<!--50-->
+			</entry>
+			<entry>
+				<ind>405</ind>
+				<dep>176</dep>	<!--36-->
+			</entry>
+			<entry>
+				<ind>1005</ind>
+				<dep>236</dep>	<!--60-->
+			</entry>
+			<entry>
+				<ind>3005</ind>
+				<dep>280</dep>	<!--44-->
+			</entry>
+			<entry>
+				<ind>15005</ind>
+				<dep>324</dep>	<!--44-->
+			</entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+</PropertyList>

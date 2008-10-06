@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+	<path>Models/hi-f8e.ac</path>
+	<texture-path>Models/Textures</texture-path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>HI</object-name>
+	</animation>
+
+	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+
+
+
+	<animation include="Instrument-Light1.xml">
+		<object-name>Rose-I</object-name>
+	</animation>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>Aiguille1</object-name>
+		<object-name>Aiguille1-Tacan</object-name>
+		<object-name>Aiguille1-Adf</object-name>
+		<object-name>Aiguille1-Nav</object-name>
+		<object-name>Aiguille1-Dummy</object-name>
+		<object-name>Aiguille2</object-name>
+		<object-name>Aiguille2-Tacan</object-name>
+		<object-name>Aiguille2-Adf</object-name>
+		<object-name>Aiguille2-Nav</object-name>
+	</animation>
+
+	<animation include="Instrument-Light1.xml">
+		<object-name>Cadran</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Select-Nav</object-name>
+		<object-name>Select-Tacan</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>CDme</object-name>
+		<object-name>DDme</object-name>
+		<object-name>UDme</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>CTacan</object-name>
+		<object-name>DTacan</object-name>
+		<object-name>UTacan</object-name>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Cadran</object-name>
+		<property>/orientation/heading-magnetic-deg</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+	<!--     switch    ACLS = 1, Tacan = 0,              .-->
+	<!--nav-switch    Manuel = 0 ,3   ADF  = 1  NAV =2  Dummy = 9-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille1</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>1</value>
+				</equals>
+				<or>
+					<equals>
+						<property>/instrumentation/heading-indicator/nav-switch</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/instrumentation/heading-indicator/nav-switch</property>
+						<value>3</value>
+					</equals>
+				</or>
+			</and>
+		</condition>
+ 	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille1-Tacan</object-name>
+		<condition>
+			<equals>
+				<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+				<value>0</value>
+			</equals>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille1-Adf</object-name>
+		<condition>
+			<and>
+			<equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+				<value>1</value>
+			</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille1-Nav</object-name>
+		<condition>
+			<and>
+			<equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>2</value>
+			</equals>
+			<equals>
+				<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+				<value>1</value>
+			</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille1-Dummy</object-name>
+		<condition>
+				<equals>
+					<property>instrumentation/heading-indicator/nav-switch</property>
+					<value>9</value>
+				</equals>
+		</condition>
+ 	</animation>
+
+	<!--<animation>
+		<type>select</type>
+		<object-name>Aiguille2</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille2-Tacan</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>9</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille2-Adf</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>9</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Aiguille2-Nav</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/nav-switch</property>
+				<value>9</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+
+<!--*******************************************************Heading***********************************************************-->
+
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille1</object-name>
+		<property>/orientation/heading-magnetic-deg</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille1</object-name>
+		<property>/instrumentation/heading-indicator/course-pointer</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+<!--*******************************************************Tacan Heading***********************************************************	-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille1-Tacan</object-name>
+		<property>/orientation/heading-magnetic-deg</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille1-Tacan</object-name>
+		<property>/instrumentation/heading-indicator/course-pointer</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+<!--*******************************************************Adf Heading***********************************************************	-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille1-Adf</object-name>
+		<property>/instrumentation/adf/indicated-bearing-deg</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+<!--*******************************************************Nav Heading***********************************************************-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille1-Nav</object-name>
+		<property>/orientation/heading-magnetic-deg</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille1-Nav</object-name>
+		<property>/instrumentation/nav[0]/heading-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+
+
+<!--*******************************************************Heading-Bug***********************************************************	-->
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille2</object-name>
+		<property>/orientation/heading-magnetic-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille2</object-name>
+		<property>/instrumentation/heading-indicator/heading-marker</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+	<!--<animation>
+		<type>rotate</type>
+		<object-name>Aiguille2-Adf</object-name>
+		<property>/instrumentation/adf/indicated-bearing-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille2-Adf</object-name>
+		<property>/orientation/heading-magnetic-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>-->
+
+
+	<animation>
+		<type>select</type>
+		<object-name>CDme</object-name>
+		<object-name>DDme</object-name>
+		<object-name>UDme</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>CTacan</object-name>
+		<object-name>DTacan</object-name>
+		<object-name>UTacan</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/switch-tacan-acls</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>UDme</object-name>
+		<property>/instrumentation/dme/indicated-distance-nm</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>DDme</object-name>
+		<property>/instrumentation/dme/indicated-distance-nm</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>CDme</object-name>
+		<property>/instrumentation/dme/indicated-distance-nm</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>UTacan</object-name>
+		<property>/instrumentation/tacan/indicated-distance-nm</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>DTacan</object-name>
+		<property>/instrumentation/tacan/indicated-distance-nm</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>CTacan</object-name>
+		<property>/instrumentation/tacan/indicated-distance-nm</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Select-Tacan</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/switch-tacan-acls</property>
+				<value>0</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Select-Nav</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/heading-indicator/switch-tacan-acls</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Select-Nav</object-name>
+		<property>/instrumentation/heading-indicator/nav-switch</property>
+		<factor>0.2</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+</PropertyList>
+
+

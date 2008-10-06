@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+
+<PropertyList>
+
+	<path>Models/boitier-radio-5b-f8e.ac</path>
+	<texture-path>Models/Textures</texture-path>
+
+
+	<!--******************** Hotspots ******************************-->
+	<panel>
+		<path>Aircraft/F-8E-Crusader/Instruments/radio-5b-hotspots.xml</path>
+		<bottom-left>
+			<x-m>0</x-m>
+			<y-m>-0.031258</y-m>
+			<z-m>-0.0929344</z-m>
+		</bottom-left>
+		<bottom-right>
+			<x-m>0</x-m>
+			<y-m>0.031257</y-m>
+			<z-m>-0.0929344</z-m>
+		</bottom-right>
+		<top-left>
+			<x-m>0</x-m>
+			<y-m>-0.031258</y-m>
+			<z-m>0.0929336</z-m>
+		</top-left>
+	</panel>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>BR5</object-name>
+	</animation>
+
+
+	<!--<animation include="Instrument-Light3.xml">
+
+	</animation>-->
+
+	<model>
+		<name>BoutonF10000</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/BoutonRadio-f8e.xml</path>
+		<offsets>
+			<x-m>0.028</x-m>
+			<y-m>-0.0123542</y-m>
+			<z-m>0.0737281</z-m>
+			<pitch-deg>0</pitch-deg>
+			<roll-deg>-90</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>BoutonF1000</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/BoutonRadio-f8e.xml</path>
+		<offsets>
+			<x-m>0.028</x-m>
+			<y-m>-0.0123542</y-m>
+			<z-m>0.0367281</z-m>
+			<pitch-deg>0</pitch-deg>
+			<roll-deg>-90</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>BoutonF100</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/BoutonRadio-f8e.xml</path>
+		<offsets>
+			<x-m>0.028</x-m>
+			<y-m>-0.0123542</y-m>
+			<z-m>-0.000271901</z-m>
+			<pitch-deg>0</pitch-deg>
+			<roll-deg>-90</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>BoutonF10</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/BoutonRadio-f8e.xml</path>
+		<offsets>
+			<x-m>0.028</x-m>
+			<y-m>-0.0123542</y-m>
+			<z-m>-0.0372719</z-m>
+			<pitch-deg>0</pitch-deg>
+			<roll-deg>-90</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>BoutonF10</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/BoutonRadio-f8e.xml</path>
+		<offsets>
+			<x-m>0.028</x-m>
+			<y-m>-0.0123542</y-m>
+			<z-m>-0.0742719</z-m>
+			<pitch-deg>0</pitch-deg>
+			<roll-deg>-90</roll-deg>
+		</offsets>
+	</model>
+
+
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>BoutonF10000</object-name>
+		<property></property>
+		<factor>5</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m></y-m>
+			<z-m></z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!--ne marche pas -->
+	<!--<name>Radio</name>
+	<w-base>64</w-base>
+ 	<h-base>256</h-base>
+	<y-offset>0</y-offset>
+	<instruments>
+	<instrument>
+		<actions>
+			<action>
+				<name>C0R</name>
+				<x>0</x>
+				<y>0</y>
+				<w>50</w>
+				<h>100</h>
+			</action>
+		</actions>
+	</instrument>
+	</instruments>-->
+
+
+
+
+</PropertyList>

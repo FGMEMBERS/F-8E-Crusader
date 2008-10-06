@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/uhf-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>UHF</object-name>
+	</animation>
+
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Freq-nnn-nX</object-name>
+		<object-name>Freq-nnn-Xn</object-name>
+		<object-name>Freq-nnX-nn</object-name>
+		<object-name>Freq-nXn-nn</object-name>
+		<object-name>Freq-Xnn-nn</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Cadran</object-name>
+	</animation>
+
+ 	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel_pt-f8e.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnn-nX</object-name>
+		<property>/preset/input/val-nnn-XX</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnn-Xn</object-name>
+		<property>/preset/input/val-nnn-XX</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnX-nn</object-name>
+		<property>/preset/input/val-nnX-nn</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nXn-nn</object-name>
+		<property>/preset/input/val-XXn-nn</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-Xnn-nn</object-name>
+		<property>/preset/input/val-XXn-nn</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+</PropertyList>

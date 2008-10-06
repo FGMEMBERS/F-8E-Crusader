@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+ <path>Models/module-G2.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Cde-Engine-Verrou</object-name>
+		<object-name>Cde-Fuel-Verrou</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-Actif</object-name>
+		<condition>
+			<greater-than>
+				<property></property>
+				<value>27</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Cde-Engine-Verrou</object-name>
+		<property>/controls/engines/engine[0]/fuel-pump</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-40</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-0.0819892</x-m>
+			<y-m>0</y-m>
+			<z-m>0.00768864</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+</PropertyList>

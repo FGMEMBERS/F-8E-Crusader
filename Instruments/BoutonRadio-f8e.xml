@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPL
+-->
+<PropertyList>
+
+	<path>Models/bouton-radio-f8e.ac</path>
+	<texture-path>Models/Textures</texture-path>
+
+		<animation>
+			<type>noshadow</type>
+			<object-name>B_R</object-name>
+		</animation>
+
+		<animation include="Instrument-Light3.xml">
+			<object-name>Couronne</object-name>
+		</animation>
+
+		<animation include="Instrument-Light4.xml">
+			<object-name>Roue</object-name>
+		</animation>
+
+
+</PropertyList>

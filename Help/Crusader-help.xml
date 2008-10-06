@@ -80,7 +80,14 @@
                                 If you get the alarm "LOW LEVEL", you can transfer fuel from the Transfer Tank,
                                 if there is any fuel in the Transfer Tank (look at the capacity tank instruments) you can transfer the fuel
                                 from Transfer Tank to Main Tank, click the "FUEL TRANSFER" switch  on the front Panel (top right)
-
+                                
+                                =============The Mule=============================
+                                You may want to experiment the Taxiing with Mule
+                                To do it:
+                                1/ You must have Cutoff to True =>   toggle key "{"   if you are Cutoff False
+                                2/ With "m" key  you will notice a mule in front of the Aircraft
+                                3/ Key "+" or "-" will operate the force of the Mula
+                                4/ The usual direction Key, Mouse, Joysyick,  will give the direction of the Mule
                             </text>
 
 </PropertyList>

@@ -1,4 +1,5 @@
 # By G ROBIN   navigation  instruments
+# this is an old and tricky fashion nasal script which wants to be rewriten or to be replaced by some generic ones
 
 #========SAISIE=====================================
 

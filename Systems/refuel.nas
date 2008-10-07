@@ -1,5 +1,5 @@
 # By G ROBIN  
-
+# That script must rewriten with feature which ought to be into the FDM (tank management)
 # $Id$
 # refueling ===========================================================
 # we presume a pump capacity of 8 galon_us per second ===== =======

@@ -1,5 +1,6 @@
 # $Id$
 # By G ROBIN  , 
+# # this is an old and tricky fashion nasal script which wants to be rewriten or to be replaced by some generic ones
 
 #===========================Radar ==================
 

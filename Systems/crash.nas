@@ -1,7 +1,7 @@
-# By G ROBIN  , that nasal code must not be modified
+# By G ROBIN  , 
 #<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<CRASH_ANIMATION_WITH_JSBSim_FDM>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-
+#We must study a better integration of that feature,  which include the crash management into the FDM itself
 
 #===========================INITIALIZATION================================
 

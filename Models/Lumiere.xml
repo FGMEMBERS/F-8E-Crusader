@@ -19,6 +19,18 @@
                 </less-than>
             </condition>
         </animation>
+        
+        
+        <animation>
+            <type>select</type>
+            <object-name>phare-faisceau</object-name>
+            <condition>
+                <less-than>
+                    <property>position/altitude-agl-ft</property>
+                    <value>50</value>
+                </less-than>
+            </condition>
+        </animation>
 
         <animation>
             <type>noshadow</type>

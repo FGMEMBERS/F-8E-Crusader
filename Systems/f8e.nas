@@ -44,13 +44,15 @@ setlistener("/fdm/jsbsim/launchbar/launch-bar-state",JBD_op);
 
 
 #INIT au démarrage================================================
+#INIT OFF==============
 
 init_f8e=func{
 setprop("/controls/flight/wing-fold-cmd",1);
 }
 
 
-setprop("/controls/flight/elevator-timer",0);
+
+#INIT ON==============
 
 init_f8eflight=func{
 setprop("/controls/electric/master-switch",1);
@@ -63,10 +65,12 @@ setprop("/controls/flight/brake-parking",0);
 setprop("/controls/flight/wing-fold",1);
 
 
-interpolate("/controls/flight/elevator-timer",200,1);
+#interpolate("/controls/flight/elevator-timer",200,1);
+#adjust_elevator();
+}
 
-adjust_elevator();
-}	
+#Only to simulate a landing, FIX ME===========================
+	
 adjust_elevator=func{
 if (getprop("/controls/flight/elevator-timer") > 120){
 setprop("/controls/flight/elevator",-0.0);

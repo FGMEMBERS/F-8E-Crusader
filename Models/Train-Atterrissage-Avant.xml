@@ -22,6 +22,12 @@
 		<type>noshadow</type>
 		<object-name></object-name>
 	</animation>-->
+        
+        <!-- MP Animation :
+             <property>sim/multiplay/generic/float[0]</property>
+             instead of
+             <property>surface-positions/gear-pos-norm</property>-->
+    
 
 <!--  *************FRONT GEAR******************TRAIN AVANT ****************************-->
 
@@ -30,7 +36,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-JambeMobile</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -63,7 +69,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -96,7 +102,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -129,7 +135,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Jambe</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -163,7 +169,7 @@
 		<type>rotate</type>
 		<object-name>AVTrain-Bielle</object-name>
 		<object-name>AVTrain-JambeBase</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -196,7 +202,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Verin</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -229,7 +235,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Verin</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>

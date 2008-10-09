@@ -843,10 +843,8 @@
 						<value>0</value>
 					</equals>
 				</not>
-				<equals>
-					<property>engines/engine[0]/running</property>
-					<value>true</value>
-				</equals>
+                                    <property>sim/multiplay/generic/float[5]</property>
+					<!--<property>engines/engine[0]/running</property>-->
 			</and>
                     </or>
 		</condition>
@@ -1636,7 +1634,7 @@
 		<object-name>AOA-Rouge-A</object-name>
 		<object-name>AOA-Vert-N</object-name>
 		<object-name>AOA-Vert-A</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1670,7 +1668,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>AVTrain-GPorte</object-name>
-	<property>surface-positions/gear-pos-norm</property>
+	<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1703,7 +1701,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>AVTrain-DPorte</object-name>
-	<property>surface-positions/gear-pos-norm</property>
+	<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -1756,7 +1754,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-INPorte</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 			<interpolation>
 				<entry>
 					<ind>0.0</ind>
@@ -1789,7 +1787,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>GTrain-SUPorte</object-name>
-	<property>surface-positions/gear-pos-norm</property>
+	<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1822,7 +1820,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>GTrain-ARPorte</object-name>
-	<property>surface-positions/gear-pos-norm</property>
+	<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1863,7 +1861,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-INPorte</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1897,7 +1895,7 @@
 		<type>rotate</type>
 		<object-name>DTrain-SUPorte</object-name>
 		<object-name>DTrain-Phare</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1931,7 +1929,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-ARPorte</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 
 		<interpolation>
 			<entry>
@@ -1978,7 +1976,7 @@
 	<condition>
 		<not>
 			<equals>
-				<property>surface-positions/gear-pos-norm</property>
+				<property>sim/multiplay/generic/float[0]</property>
 				<value type="double">0</value>
 			</equals>
 		</not>
@@ -1990,7 +1988,7 @@
 	 <condition>
 		 <not>
 			 <equals>
-				 <property>surface-positions/gear-pos-norm</property>
+				 <property>sim/multiplay/generic/float[0]</property>
 				 <value type="double">0</value>
 			 </equals>
 		 </not>
@@ -2002,7 +2000,7 @@
 	 <condition>
 		 <not>
 			 <equals>
-				 <property>surface-positions/gear-pos-norm</property>
+				 <property>sim/multiplay/generic/float[0]</property>
 				 <value type="double">0</value>
 			 </equals>
 		 </not>
@@ -2390,7 +2388,7 @@
 		<condition>
 			<and>
 				<equals>
-					<property>surface-positions/gear-pos-norm</property>
+					<property>sim/multiplay/generic/float[0]</property>
 					<value>1</value>
 				</equals>
 				<equals>

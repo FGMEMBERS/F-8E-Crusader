@@ -22,6 +22,11 @@
 		<type>noshadow</type>
 		<object-name></object-name>
 	</animation>-->
+        
+        <!-- MP Animation :
+             <property>sim/multiplay/generic/float[0]</property>
+             instead of
+             <property>surface-positions/gear-pos-norm</property>-->
 
 
 <!-- *********LEFT GEAR*********************TRAIN COTE GAUCHE*******************************-->
@@ -31,7 +36,7 @@
 		<type>rotate</type>
 		<object-name>GTrain-Tambour</object-name>
 		<object-name>GTrain-JambeInf</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -64,7 +69,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-Roue</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -97,7 +102,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-JambeSup</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -130,7 +135,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-Verin</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -163,7 +168,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-Verin</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -421,7 +426,7 @@
 		<type>rotate</type>
 		<object-name>DTrain-Tambour</object-name>
 		<object-name>DTrain-JambeInf</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -454,7 +459,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-Roue</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -487,7 +492,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-JambeSup</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -520,7 +525,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-Verin</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -553,7 +558,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-Verin</object-name>
-		<property>surface-positions/gear-pos-norm</property>
+		<property>sim/multiplay/generic/float[0]</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>

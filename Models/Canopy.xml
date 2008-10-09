@@ -70,7 +70,8 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Canopy</object-name>
-		<property>surface-positions/canopy-pos-norm</property>
+                <property>sim/multiplay/generic/float[1]</property>
+		<!--<property>surface-positions/canopy-pos-norm</property>-->
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>

@@ -1090,7 +1090,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Group_Ailes</object-name>
-		<property>surface-positions/wings-pos-norm</property>
+		<property>surface-positions/wing-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1119,7 +1119,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Ailes-Verin</object-name>
-		<property>surface-positions/wings-pos-norm</property>
+		<property>surface-positions/wing-pos-norm</property>
 		<factor>0.35</factor>
 		<axis>
 			<x>0</x>

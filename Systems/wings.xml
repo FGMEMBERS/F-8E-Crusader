@@ -84,7 +84,7 @@
             <pure_gain name="Wings surface">
                 <input>fcs/wings-pos-norm</input>
                 <gain>1</gain>
-                <output>/surface-positions/wings-pos-norm</output>
+                <output>/surface-positions/wing-pos-norm</output>
             </pure_gain>
 
             <!--Some automatic correction for FCS during UP/DOWN -->

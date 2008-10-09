@@ -763,7 +763,7 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>fcs/speedbrake-pos-deg</property>
-                    <value>0.0000</value>
+                    <value>0.0008</value>
                 </product>
             </function>
             <function name="aero/coefficient/dCLwf">

@@ -28,29 +28,6 @@
              <pitch-deg>-0.30</pitch-deg>   <!--pour FG-0.9.9 et FG 0.9.10-->
           </offsets>
 
-	  <!--TEMPORAIRE  NE PAS METTRE POUR CVS-->
-<!--
-	<model>
-		<path>Aircraft/A6-tanker/a6tanker.xml</path>
-		<offsets>
-			<x-m>-15.1936</x-m>
-			<y-m>-2.13309</y-m>
-			<z-m>2.72725</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-	<animation>
-		<type>select</type>
-		<object-name>a6-tanker</object-name>
-		<condition>
-			<equals>
-				<property>/surface-positions/refueling-pos-norm</property>
-				<value>1</value>
-			</equals>
-		</condition>
-	</animation>
--->
-      <!-- TEMPORAIRE -->
 
       <model>
                 <name>Mule</name>
@@ -916,96 +893,7 @@
 		</offsets>
 	</model>
 
-	<!--<animation>
-		<type>select</type>
-		<object-name>Canopy</object-name>
-		<condition>
-				<not-equals>
-					<property>/controls/jettison/canopy</property>
-					<value>true</value>
-				</not-equals>
-		</condition>
- 	</animation>
-
-	<animation>
-	<type>rotate</type>
-	<object-name>Canopy</object-name>
-	<property>/surface-positions/canopy-pos-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.1</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.15</ind>
-				<dep>1.5</dep>
-			</entry>
-			<entry>
-				<ind>0.23</ind>
-				<dep>9.0</dep>
-			</entry>
-			<entry>
-				<ind>0.38</ind>
-				<dep>20</dep>
-			</entry>
-			<entry>
-				<ind>0.55</ind>
-				<dep>32.0</dep>
-			</entry>
-			<entry>
-				<ind>0.75</ind>
-				<dep>39.0</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>41.0</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>-4.30</x-m>
-			<y-m>0.0</y-m>
-			<z-m>0.73</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-		<object-name>Canopy-Verrou</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.1</ind>
-				<dep>-30</dep>
-			</entry>
-			<entry>
-				<ind>1</ind>
-				<dep>-30</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>-5.51513</x-m>
-			<y-m>0.0</y-m>
-			<z-m>0.349593</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>-->
+	
 
 
  <!--*********************Refueling*********************"Le plein SVP"****************-->
@@ -1055,153 +943,7 @@
 		</axis>
 	</animation>
 
-	<!--<animation>
-		<type>rotate</type>
-		<object-name>RF-ProbeVerin</object-name>
-		<property>/surface-positions/refueling-pos-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>105</dep>
-			</entry>
-			<entry>
-				<ind>0.30</ind>
-				<dep>105</dep>
-			</entry>
-			<entry>
-				<ind>0.50</ind>
-				<dep>95</dep>
-			</entry>
-			<entry>
-				<ind>0.60</ind>
-				<dep>75</dep>
-			</entry>
-			<entry>
-				<ind>0.70</ind>
-				<dep>55</dep>
-			</entry>
-			<entry>
-				<ind>0.80</ind>
-				<dep>35</dep>
-			</entry>
-			<entry>
-				<ind>0.90</ind>
-				<dep>15</dep>
-			</entry>
-			<entry>
-				<ind>1</ind>
-				<dep>0</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>-3.91649</x-m>
-			<y-m>-0.584621</y-m>
-			<z-m>0</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>RF-Probe</object-name>
-		<property>/surface-positions/refueling-pos-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>105</dep>
-			</entry>
-			<entry>
-				<ind>0.30</ind>
-				<dep>105</dep>
-			</entry>
-			<entry>
-				<ind>0.50</ind>
-				<dep>95</dep>
-			</entry>
-			<entry>
-				<ind>0.60</ind>
-				<dep>75</dep>
-			</entry>
-			<entry>
-				<ind>0.70</ind>
-				<dep>55</dep>
-			</entry>
-			<entry>
-				<ind>0.80</ind>
-				<dep>35</dep>
-			</entry>
-			<entry>
-				<ind>0.90</ind>
-				<dep>15</dep>
-			</entry>
-			<entry>
-				<ind>1</ind>
-				<dep>0</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>-3.91649</x-m>
-			<y-m>-0.584621</y-m>
-			<z-m>0</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>RF-Probe</object-name>
-		<property>/surface-positions/refueling-pos-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>-131.5</dep>
-			</entry>
-			<entry>
-				<ind>0.30</ind>
-				<dep>-131.5</dep>
-			</entry>
-			<entry>
-				<ind>0.50</ind>
-				<dep>-102</dep>
-			</entry>
-			<entry>
-				<ind>0.60</ind>
-				<dep>-60</dep>
-			</entry>
-			<entry>
-				<ind>0.70</ind>
-				<dep>-38</dep>
-			</entry>
-			<entry>
-				<ind>0.80</ind>
-				<dep>-23</dep>
-			</entry>
-			<entry>
-				<ind>0.90</ind>
-				<dep>-9.5</dep>
-			</entry>
-			<entry>
-				<ind>1</ind>
-				<dep>0</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>-4.17992</x-m>
-			<y-m>-1.58746</y-m>
-			<z-m>0</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>-->
+	
 
 
 	<!--***********************************Rudder*****************Palonnier************************************************-->
@@ -2185,39 +1927,7 @@
 			<z>0.0</z>
 		</axis>
 	</animation>
-        <!--<animation>
-                <type>rotate</type>
-                <object-name>Phare-faisceau</object-name>
-                <property>surface-positions/gear-pos-norm</property>
-                <interpolation>
-                        <entry>
-                                <ind>0.0</ind>
-                                <dep>0.0</dep>
-                        </entry>
-                        <entry>
-                                <ind>0.25</ind>
-                                <dep>90.0</dep>
-                        </entry>
-                        <entry>
-                                <ind>0.75</ind>
-                                <dep>90.0</dep>
-                        </entry>
-                        <entry>
-                                <ind>1.0</ind>
-                                <dep>60.0</dep>
-                        </entry>
-                </interpolation>
-                <center>
-                        <x-m>0</x-m>
-                        <y-m>0.77</y-m>
-                        <z-m>-0.34</z-m>
-                </center>
-                <axis>
-                        <x>1</x>
-                        <y>0.0</y>
-                        <z>0.0</z>
-                </axis>
-	</animation>-->
+        
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-ARPorte</object-name>
@@ -2259,18 +1969,7 @@
 
 	<!--Voir flap-nozzle.xml-->
 
- <!--  ********************* Afterburner*************************Postcombustion *********************** -->
-
-	<!--<animation>
-		<type>select</type>
-		<object-name>Post-Combustion2</object-name>
-		<condition>
-			<equals>
-				<property>engines/engine[0]/augmentation</property>
-   				 <value>true</value>
-			</equals>
-		</condition>
-	</animation>-->
+ 
 
 
 <!--***********Deselect Gear Components when hiden ***********  Desactive les element de train cachés***************-->

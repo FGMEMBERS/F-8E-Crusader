@@ -75,6 +75,7 @@
  	</animation>
 
 	<animation>
+            <!--FIXME revoir la logique avec nasal ne marche pas completement-->
 		<type>rotate</type>
 		<object-name>Tacan-Channel-XY</object-name>
 		<property>/instrumentation/tacan/frequencies/valueXY</property>

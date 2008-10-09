@@ -183,8 +183,8 @@
                     <frequencies>
                             <selected-channel n="1">0</selected-channel>
                             <selected-channel n="2">2</selected-channel>
-                            <selected-channel n="3">7</selected-channel>
-                            <selected-channel n="4">X</selected-channel>
+                            <selected-channel n="3">6</selected-channel>
+                            <selected-channel n="4">Y</selected-channel>
                     </frequencies>
                 </tacan>
                 <heading-indicator>

@@ -25,7 +25,7 @@
 
 
         <kinematic name="Speedbrake Position">
-            <input>fcs/speedbrake-cmd-norm</input>
+            <input>/controls/flight/speedbrake</input>
             <traverse>
                 <setting>
                     <position>0.0000</position>

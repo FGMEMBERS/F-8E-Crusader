@@ -97,7 +97,7 @@
 		<object-name>DFeu-Nav</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/electrical/outputs/beacon</property>
+				<property>systems/electrical/outputs/beacon</property>
 				<value>27</value>
 			</greater-than>
 		</condition>
@@ -109,7 +109,7 @@
 		<object-name>BFeu-Actif</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/electrical/outputs/beacon</property>
+				<property>systems/electrical/outputs/beacon</property>
 				<value>27</value>
 			</greater-than>
 		</condition>
@@ -121,7 +121,7 @@
 		<object-name>ARGFeu-Nav</object-name>
 		<condition>
 			<greater-than>
-				<property>/systems/electrical/outputs/beacon</property>
+				<property>systems/electrical/outputs/beacon</property>
 				<value>27</value>
 			</greater-than>
 		</condition>
@@ -316,7 +316,7 @@
 	<animation>
 		<condition>
 			<greater-than>
-				<property>/position/altitude-agl-ft</property>
+				<property>position/altitude-agl-ft</property>
 				<value>950</value>
 				<!--value alias="../../params/aglnoshad/value"/-->
 			</greater-than>
@@ -328,7 +328,7 @@
 	<animation>
 		<condition>
 			<greater-than>
-				<property>/position/altitude-agl-ft</property>
+				<property>position/altitude-agl-ft</property>
 				<value>950</value>
 			</greater-than>
 		</condition>
@@ -339,7 +339,7 @@
 	<animation>
 		<condition>
 			<greater-than>
-				<property>/position/altitude-agl-ft</property>
+				<property>position/altitude-agl-ft</property>
 				<value>950</value>
 			</greater-than>
 		</condition>
@@ -350,7 +350,7 @@
 	<animation>
 		<condition>
 			<greater-than>
-				<property>/position/altitude-agl-ft</property>
+				<property>position/altitude-agl-ft</property>
 				<value>950</value>
 			</greater-than>
 		</condition>
@@ -361,7 +361,7 @@
 	<animation>
 		<condition>
 			<greater-than>
-				<property>/position/altitude-agl-ft</property>
+				<property>position/altitude-agl-ft</property>
 				<value>950</value>
 			</greater-than>
 		</condition>
@@ -372,7 +372,7 @@
 	<animation>
 		<condition>
 			<greater-than>
-				<property>/position/altitude-agl-ft</property>
+				<property>position/altitude-agl-ft</property>
 				<value>950</value>
 			</greater-than>
 		</condition>
@@ -423,7 +423,7 @@
 					</equals>
 				</not>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>50</value>
 				</less-than>
 			</or>
@@ -468,7 +468,7 @@
 					</equals>
 				</not>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>50</value>
 				</less-than>
 			</or>
@@ -719,11 +719,11 @@
 		<condition>
 			<and>
 			<greater-than>
-				<property>/systems/electrical/outputs/instr-ignition-switch</property>
+				<property>systems/electrical/outputs/instr-ignition-switch</property>
 				<value>27</value>
 			</greater-than>
 			<equals>
-				<property>/instrumentation/hud/switch</property>
+				<property>instrumentation/hud/switch</property>
 				<value>1</value>
 			</equals>
 			</and>
@@ -747,11 +747,11 @@
 		<condition>
 			<and>
 			<greater-than>
-				<property>/systems/electrical/outputs/instr-ignition-switch</property>
+				<property>systems/electrical/outputs/instr-ignition-switch</property>
 				<value>27</value>
 			</greater-than>
 			<not-equals>
-				<property>/instrumentation/hud/switch</property>
+				<property>instrumentation/hud/switch</property>
 				<value>1</value>
 			</not-equals>
 			</and>
@@ -912,7 +912,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>RF-Porte</object-name>
-		<property>/surface-positions/refueling-pos-norm</property>
+		<property>surface-positions/refueling-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -951,7 +951,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>GPalonnier</object-name>
-		<property>/controls/flight/rudder</property>
+		<property>controls/flight/rudder</property>
 		<factor>0.050</factor>
 		<axis>
 			<x>1</x>
@@ -963,7 +963,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>GPalonnier</object-name>
-		<property>/controls/gear/brake-left</property>
+		<property>controls/gear/brake-left</property>
 		<factor>-5</factor>
 		<center>
 			<x-m>-6.14267</x-m>
@@ -982,7 +982,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>DPalonnier</object-name>
-		<property>/controls/flight/rudder</property>
+		<property>controls/flight/rudder</property>
 		<factor>-0.050</factor>
 		<axis>
 			<x>1</x>
@@ -994,7 +994,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DPalonnier</object-name>
-		<property>/controls/gear/brake-right</property>
+		<property>controls/gear/brake-right</property>
 		<factor>-5</factor>
 		<center>
 			<x-m>-6.14267</x-m>
@@ -1014,7 +1014,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Manche</object-name>
-		<property>/surface-positions/elevator-pos-norm</property>
+		<property>surface-positions/elevator-pos-norm</property>
 		<factor>-15</factor>
 		<center>
 			<x-m>-5.75686</x-m>
@@ -1053,7 +1053,7 @@
 		<type>rotate</type>
 		<object-name>VGouv</object-name>
 		<object-name>VGouv-bi</object-name>
-		<property>/surface-positions/rudder-pos-norm</property>
+		<property>surface-positions/rudder-pos-norm</property>
 		<factor>30</factor>
 		<center>
 			<x-m>6.40261</x-m>         <!--7.66135-->
@@ -1072,7 +1072,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>HGouv</object-name>
-		<property>/surface-positions/elevator-pos-norm</property>
+		<property>surface-positions/elevator-pos-norm</property>
 		<factor>25</factor>
 		<center>
 			<x-m>6.379</x-m>
@@ -1092,7 +1092,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Group_Ailes</object-name>
-		<property>/surface-positions/wings-pos-norm</property>
+		<property>surface-positions/wings-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1121,7 +1121,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Ailes-Verin</object-name>
-		<property>/surface-positions/wings-pos-norm</property>
+		<property>surface-positions/wings-pos-norm</property>
 		<factor>0.35</factor>
 		<axis>
 			<x>0</x>
@@ -1298,7 +1298,7 @@
 		<type>rotate</type>
 		<object-name>GBec-Int</object-name>
 		<object-name>GBec-Int-bi</object-name>
-		<property>/surface-positions/leflap-pos-norm</property>
+		<property>surface-positions/leflap-pos-norm</property>
 		<factor>0.7</factor>
 		<center>
 			<x-m>-1.0603</x-m>    <!--4.64482-->
@@ -1316,7 +1316,7 @@
 		<object-name>GBec-Ext</object-name>
 		<object-name>GBec-Ext-bi</object-name>
 		<object-name>Feu-Gauche</object-name>
-		<property>/surface-positions/leflap-pos-norm</property>
+		<property>surface-positions/leflap-pos-norm</property>
 		<factor>1.4</factor>
 		<center>
 			<x-m>-1.0603</x-m>    <!--4.64482-->
@@ -1333,7 +1333,7 @@
 		<type>rotate</type>
 		<!--<object-name>GFeu-Lampe</object-name>-->
 		<object-name>GFeu-Nav</object-name>
-		<property>/surface-positions/leflap-pos-norm</property>
+		<property>surface-positions/leflap-pos-norm</property>
 		<factor>1.4</factor>
 		<center>
 			<x-m>-1.0603</x-m>    <!--4.64482-->
@@ -1352,7 +1352,7 @@
 		<type>rotate</type>
 		<object-name>DBec-Int</object-name>
 		<object-name>DBec-Int-bi</object-name>
-		<property>/surface-positions/leflap-pos-norm</property>
+		<property>surface-positions/leflap-pos-norm</property>
 		<factor>-0.7</factor>
 		<center>
 			<x-m>-1.0603</x-m>    <!--4.64482-->
@@ -1370,7 +1370,7 @@
 		<object-name>DBec-Ext</object-name>
 		<object-name>DBec-Ext-bi</object-name>
 		<object-name>Feu-Droit</object-name>
-		<property>/surface-positions/leflap-pos-norm</property>
+		<property>surface-positions/leflap-pos-norm</property>
 		<factor>-1.4</factor>
 		<center>
 			<x-m>-1.0603</x-m>    <!--4.64482-->
@@ -1387,7 +1387,7 @@
 		<type>rotate</type>
 		<!--<object-name>DFeu-Lampe</object-name>-->
 		<object-name>DFeu-Nav</object-name>
-		<property>/surface-positions/leflap-pos-norm</property>
+		<property>surface-positions/leflap-pos-norm</property>
 		<factor>-1.4</factor>
 		<center>
 			<x-m>-1.0603</x-m>    <!--4.64482-->
@@ -1405,7 +1405,7 @@
 		<type>rotate</type>
 		<object-name>GFlaperon</object-name>
 		<object-name>GFlaperon-bi</object-name>
-		<property>/surface-positions/flaps-pos-norm</property>
+		<property>surface-positions/flaps-pos-norm</property>
 		<factor>-25</factor>
 		<center>
 			<x-m>1.84821</x-m>  <!-- 3.88825 -->
@@ -1423,7 +1423,7 @@
 		<type>rotate</type>
 		<object-name>DFlaperon</object-name>
 		<object-name>DFlaperon-bi</object-name>
-		<property>/surface-positions/flaps-pos-norm</property>
+		<property>surface-positions/flaps-pos-norm</property>
 		<factor>25</factor>
 		<center>
 			<x-m>1.84821</x-m>  <!-- 3.88825 -->
@@ -1443,7 +1443,7 @@
 		<type>rotate</type>
 		<object-name>DFlap-Int</object-name>
 		<object-name>DFlap-Int-bi</object-name>
-		<property>/surface-positions/flaps-pos-norm</property>
+		<property>surface-positions/flaps-pos-norm</property>
 		<factor>32</factor>
 		<center>
 			<x-m>1.84821</x-m>  <!-- 3.88825 -->
@@ -1461,7 +1461,7 @@
 		<type>rotate</type>
 		<object-name>GFlap-Int</object-name>
 		<object-name>GFlap-Int-bi</object-name>
-		<property>/surface-positions/flaps-pos-norm</property>
+		<property>surface-positions/flaps-pos-norm</property>
 		<factor>-32</factor>
 		<center>
 			<x-m>1.84821</x-m>  <!-- 3.88825 -->
@@ -1523,7 +1523,7 @@
 		<type>rotate</type>
 		<object-name>AirBrake</object-name>
 		<object-name>AirBrake-Verin</object-name>
-		<property>/surface-positions/speed_brake-pos-norm</property>
+		<property>surface-positions/speed_brake-pos-norm</property>
 		<factor>1</factor>
 		<center>
 			<x-m>-1.28</x-m>
@@ -1539,7 +1539,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>AirBrake-Verin</object-name>
-	<property>/surface-positions/speed_brake-pos-norm</property>
+	<property>surface-positions/speed_brake-pos-norm</property>
 	<factor>-0.72</factor>
 		<center>
 			<x-m>-0.527</x-m>
@@ -1636,7 +1636,7 @@
 		<object-name>AOA-Rouge-A</object-name>
 		<object-name>AOA-Vert-N</object-name>
 		<object-name>AOA-Vert-A</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1670,7 +1670,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>AVTrain-GPorte</object-name>
-	<property>/surface-positions/gear-pos-norm</property>
+	<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1703,7 +1703,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>AVTrain-DPorte</object-name>
-	<property>/surface-positions/gear-pos-norm</property>
+	<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 		<entry>
 			<ind>0.0</ind>
@@ -1822,7 +1822,7 @@
 	<animation>
 	<type>rotate</type>
 	<object-name>GTrain-ARPorte</object-name>
-	<property>/surface-positions/gear-pos-norm</property>
+	<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1931,7 +1931,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-ARPorte</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 
 		<interpolation>
 			<entry>
@@ -2040,7 +2040,7 @@
  <animation>
          <condition>
                  <greater-than>
-                         <property>/position/altitude-agl-ft</property>
+                         <property>position/altitude-agl-ft</property>
                          <value>950</value>
                  </greater-than>
          </condition>
@@ -2051,7 +2051,7 @@
  <animation>
          <condition>
                  <greater-than>
-                         <property>/position/altitude-agl-ft</property>
+                         <property>position/altitude-agl-ft</property>
                          <value>950</value>
                  </greater-than>
          </condition>
@@ -2062,7 +2062,7 @@
  <animation>
          <condition>
                  <greater-than>
-                         <property>/position/altitude-agl-ft</property>
+                         <property>position/altitude-agl-ft</property>
                          <value>950</value>
                  </greater-than>
          </condition>
@@ -2073,7 +2073,7 @@
  <animation>
          <condition>
                  <greater-than>
-                         <property>/position/altitude-agl-ft</property>
+                         <property>position/altitude-agl-ft</property>
                          <value>950</value>
                  </greater-than>
          </condition>
@@ -2091,7 +2091,7 @@
 		<object-name>HFeu-Inactif</object-name>
 		<condition>
 			<not>
-				<property>/instrumentation/lights/beacon-on</property>
+				<property>instrumentation/lights/beacon-on</property>
 			</not>
 		</condition>
 	</animation>
@@ -2100,7 +2100,7 @@
 		<type>select</type>
 		<object-name>HFeu-Actif</object-name>
 		<condition>
-			<property>/instrumentation/lights/beacon-on</property>
+			<property>instrumentation/lights/beacon-on</property>
 		</condition>
 	</animation>
 
@@ -2129,7 +2129,7 @@
 	<animation>
 		<type>scale</type>
 		<object-name>HFeu-Actif</object-name>
-		<property>/sim/time/sun-angle-rad</property>
+		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
 			<x-min>1</x-min>
 			<y-min>1</y-min>
@@ -2153,7 +2153,7 @@
 		<object-name>BFeu-Inactif</object-name>
 		<condition>
 			<not>
-				<property>/instrumentation/lights/beacon-on</property>
+				<property>instrumentation/lights/beacon-on</property>
 			</not>
 		</condition>
 	</animation>
@@ -2162,7 +2162,7 @@
 		<type>select</type>
 		<object-name>BFeu-Actif</object-name>
 		<condition>
-			<property>/instrumentation/lights/beacon-on</property>
+			<property>instrumentation/lights/beacon-on</property>
 		</condition>
 	</animation>
 
@@ -2191,7 +2191,7 @@
 	<animation>
 		<type>scale</type>
 		<object-name>BFeu-Actif</object-name>
-		<property>/sim/time/sun-angle-rad</property>
+		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
 			<x-min>1</x-min>
 			<y-min>1</y-min>
@@ -2216,7 +2216,7 @@
 		<object-name>GFeu-Lampe</object-name>
 		<condition>
 			<not>
-				<property>/instrumentation/lights/blinker-kinemat-in</property>
+				<property>instrumentation/lights/blinker-kinemat-in</property>
 			</not>
 		</condition>
 	</animation>
@@ -2225,7 +2225,7 @@
 		<type>select</type>
 		<object-name>GFeu-Nav</object-name>
 		<condition>
-			<property>/instrumentation/lights/blinker-kinemat-in</property>
+			<property>instrumentation/lights/blinker-kinemat-in</property>
 		</condition>
 	</animation>
 	<animation>
@@ -2242,7 +2242,7 @@
 	<animation>
 		<type>scale</type>
 		<object-name>GFeu-Nav</object-name>
-		<property>/sim/time/sun-angle-rad</property>
+		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
@@ -2260,7 +2260,7 @@
 		<object-name>DFeu-Lampe</object-name>
 		<condition>
 			<not>
-				<property>/instrumentation/lights/blinker-kinemat-in</property>
+				<property>instrumentation/lights/blinker-kinemat-in</property>
 			</not>
 		</condition>
 	</animation>
@@ -2269,7 +2269,7 @@
 		<type>select</type>
 		<object-name>DFeu-Nav</object-name>
 		<condition>
-			<property>/instrumentation/lights/blinker-kinemat-in</property>
+			<property>instrumentation/lights/blinker-kinemat-in</property>
 		</condition>
 	</animation>
 	<animation>
@@ -2286,7 +2286,7 @@
 	<animation>
 		<type>scale</type>
 		<object-name>DFeu-Nav</object-name>
-		<property>/sim/time/sun-angle-rad</property>
+		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
@@ -2302,7 +2302,7 @@
 		<object-name>ARGFeu-Lampe</object-name>
 		<condition>
 			<not>
-				<property>/sim/model/f8e/lighting/nav-lights</property>
+				<property>sim/model/f8e/lighting/nav-lights</property>
 			</not>
 		</condition>
 	</animation>-->
@@ -2311,7 +2311,7 @@
 		<type>select</type>
 		<object-name>ARGFeu-Nav</object-name>
 		<condition>
-			<property>/instrumentation/lights/blinker-kinemat-in</property>
+			<property>instrumentation/lights/blinker-kinemat-in</property>
 		</condition>
 	</animation>
 	<animation>
@@ -2328,7 +2328,7 @@
 	<animation>
 		<type>scale</type>
 		<object-name>ARGFeu-Nav</object-name>
-		<property>/sim/time/sun-angle-rad</property>
+		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
@@ -2343,7 +2343,7 @@
 		<object-name>ARDFeu-Lampe</object-name>
 		<condition>
 			<not>
-				<property>/sim/model/f8e/lighting/nav-lights</property>
+				<property>sim/model/f8e/lighting/nav-lights</property>
 			</not>
 		</condition>
 	</animation>-->
@@ -2352,7 +2352,7 @@
 		<type>select</type>
 		<object-name>ARDFeu-Nav</object-name>
 		<condition>
-			<property>/instrumentation/lights/blinker-kinemat-in</property>
+			<property>instrumentation/lights/blinker-kinemat-in</property>
 		</condition>
 	</animation>
 	<animation>
@@ -2369,7 +2369,7 @@
 	<animation>
 		<type>scale</type>
 		<object-name>ARDFeu-Nav</object-name>
-		<property>/sim/time/sun-angle-rad</property>
+		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
 		<x-min>1</x-min>
 		<y-min>1</y-min>
@@ -2390,11 +2390,11 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/surface-positions/gear-pos-norm</property>
+					<property>surface-positions/gear-pos-norm</property>
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/gear/gear[1]/compression-norm</property>
+					<property>gear/gear[1]/compression-norm</property>
 					<value>0</value>
 				</equals>
 			</and>
@@ -2416,17 +2416,17 @@
 		<condition>
 			<or>
 				<greater-than>
-					<property>/velocities/airspeed-kt</property>
-					<property>/sim/aoa-indicator/ref-approach-speed-pls5</property>
+					<property>velocities/airspeed-kt</property>
+					<property>sim/aoa-indicator/ref-approach-speed-pls5</property>
 				</greater-than>
 				<and>
 					<greater-than>
-						<property>/velocities/airspeed-kt</property>
-						<property>/sim/aoa-indicator/ref-approach-speed-mns3</property>
+						<property>velocities/airspeed-kt</property>
+						<property>sim/aoa-indicator/ref-approach-speed-mns3</property>
 					</greater-than>
 					<greater-than>
-						<property>/orientation/alpha-deg</property>
-						<property>/sim/aoa-indicator/ref-approach-angle-pls05</property>
+						<property>orientation/alpha-deg</property>
+						<property>sim/aoa-indicator/ref-approach-angle-pls05</property>
 					</greater-than>
 				</and>
 			</or>
@@ -2450,17 +2450,17 @@
 
 			<or>
 				<less-than-equals>
-					<property>/velocities/airspeed-kt</property>
-					<property>/sim/aoa-indicator/ref-approach-speed-mns5</property>
+					<property>velocities/airspeed-kt</property>
+					<property>sim/aoa-indicator/ref-approach-speed-mns5</property>
 				</less-than-equals>
 				<and>
 					<less-than-equals>
-						<property>/velocities/airspeed-kt</property>
-						<property>/sim/aoa-indicator/ref-approach-speed-pls3</property>
+						<property>velocities/airspeed-kt</property>
+						<property>sim/aoa-indicator/ref-approach-speed-pls3</property>
 					</less-than-equals>
 					<less-than-equals>
-						<property>/orientation/alpha-deg</property>
-						<property>/sim/aoa-indicator/ref-approach-angle-mns05</property>
+						<property>orientation/alpha-deg</property>
+						<property>sim/aoa-indicator/ref-approach-angle-mns05</property>
 					</less-than-equals>
 				</and>
 			</or>
@@ -2480,21 +2480,21 @@
 		<condition>
 			<and>
 				<greater-than>
-					<property>/velocities/airspeed-kt</property>
-					<property>/sim/aoa-indicator/ref-approach-speed-mns3</property>
+					<property>velocities/airspeed-kt</property>
+					<property>sim/aoa-indicator/ref-approach-speed-mns3</property>
 				</greater-than>
 				<less-than-equals>
-					<property>/velocities/airspeed-kt</property>
-					<property>/sim/aoa-indicator/ref-approach-speed-pls3</property>
+					<property>velocities/airspeed-kt</property>
+					<property>sim/aoa-indicator/ref-approach-speed-pls3</property>
 				</less-than-equals>
 
 				<greater-than>
-					<property>/orientation/alpha-deg</property>
-					<property>/sim/aoa-indicator/ref-approach-angle-mns05</property>
+					<property>orientation/alpha-deg</property>
+					<property>sim/aoa-indicator/ref-approach-angle-mns05</property>
 				</greater-than>
 				<less-than-equals>
-					<property>/orientation/alpha-deg</property>
-					<property>/sim/aoa-indicator/ref-approach-angle-pls05</property>
+					<property>orientation/alpha-deg</property>
+					<property>sim/aoa-indicator/ref-approach-angle-pls05</property>
 				</less-than-equals>
 			</and>
 		</condition>

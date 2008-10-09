@@ -28,7 +28,7 @@
 		<object-name>Canopy</object-name>
 		<condition>
 			<not-equals>
-				<property>/controls/jettison/canopy</property>
+				<property>controls/jettison/canopy</property>
 				<value>true</value>
 			</not-equals>
 		</condition>
@@ -39,7 +39,7 @@
 		<object-name>TemoinD-Verrou</object-name>
 		<condition>
 			<not-equals>
-				<property>/controls/jettison/canopy</property>
+				<property>controls/jettison/canopy</property>
 				<value>true</value>
 			</not-equals>
 		</condition>
@@ -50,7 +50,7 @@
 		<object-name>TemoinG-Verrou</object-name>
 		<condition>
 			<not-equals>
-				<property>/controls/jettison/canopy</property>
+				<property>controls/jettison/canopy</property>
 				<value>true</value>
 			</not-equals>
 		</condition>
@@ -61,7 +61,7 @@
 		<object-name>Temoin-Marquage</object-name>
 		<condition>
 			<not-equals>
-				<property>/controls/jettison/canopy</property>
+				<property>controls/jettison/canopy</property>
 				<value>true</value>
 			</not-equals>
 		</condition>
@@ -70,7 +70,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Canopy</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
+		<property>surface-positions/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -120,7 +120,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Temoin-Marquage</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
+		<property>surface-positions/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -170,7 +170,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TemoinD-Verrou</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
+		<property>surface-positions/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -220,7 +220,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TemoinG-Verrou</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
+		<property>surface-positions/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -270,7 +270,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Canopy-Verrou</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
+		<property>surface-positions/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -300,7 +300,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TemoinD-Verrou</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
+		<property>surface-positions/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -328,7 +328,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>TemoinG-Verrou</object-name>
-		<property>/surface-positions/canopy-pos-norm</property>
+		<property>surface-positions/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>

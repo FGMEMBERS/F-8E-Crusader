@@ -16,7 +16,7 @@
 		<object-name>Tube</object-name>
 		<condition>
 			<equals>
-				<property>/fdm/jsbsim/fcs/canopy-pos-norm</property>
+				<property>fdm/jsbsim/fcs/canopy-pos-norm</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -25,7 +25,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Masque</object-name>
-		<property>/fdm/jsbsim/fcs/canopy-pos-norm</property>
+		<property>fdm/jsbsim/fcs/canopy-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>

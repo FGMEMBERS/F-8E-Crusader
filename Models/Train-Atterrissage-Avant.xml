@@ -30,7 +30,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-JambeMobile</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -63,7 +63,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -96,7 +96,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -129,7 +129,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Jambe</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -163,7 +163,7 @@
 		<type>rotate</type>
 		<object-name>AVTrain-Bielle</object-name>
 		<object-name>AVTrain-JambeBase</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -196,7 +196,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Verin</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -229,7 +229,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Verin</object-name>
-		<property>/surface-positions/gear-pos-norm</property>
+		<property>surface-positions/gear-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -336,7 +336,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>AVTrain-JambeMobile</object-name>
-		<property>/position/altitude-agl-ft</property>
+		<property>position/altitude-agl-ft</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -368,7 +368,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>/position/altitude-agl-ft</property>
+		<property>position/altitude-agl-ft</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -405,7 +405,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>/position/altitude-agl-ft</property>
+		<property>position/altitude-agl-ft</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -443,7 +443,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>/position/altitude-agl-ft</property>
+		<property>position/altitude-agl-ft</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -475,7 +475,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>/position/altitude-agl-ft</property>
+		<property>position/altitude-agl-ft</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -512,18 +512,18 @@
 		<condition>
 			<and>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>6.5</value>
 				</less-than>
 				<equals>
-					<property>/controls/gear/gear-down</property>
+					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
 			</and>
 		</condition>
 		<type>rotate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>/orientation/pitch-deg</property>
+		<property>orientation/pitch-deg</property>
 		<interpolation>
 			<entry>
 				<ind>-8</ind>
@@ -561,18 +561,18 @@
 		<condition>
 			<and>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>6.5</value>
 				</less-than>
 				<equals>
-					<property>/controls/gear/gear-down</property>
+					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
 			</and>
 		</condition>
 		<type>rotate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>/orientation/pitch-deg</property>
+		<property>orientation/pitch-deg</property>
 		<interpolation>
 			<entry>
 				<ind>-8</ind>
@@ -611,18 +611,18 @@
 		<condition>
 			<and>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>6.5</value>
 				</less-than>
 				<equals>
-					<property>/controls/gear/gear-down</property>
+					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
 			</and>
 		</condition>
 		<type>translate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>/orientation/pitch-deg</property>
+		<property>orientation/pitch-deg</property>
 		<interpolation>
 			<entry>
 				<ind>-8</ind>
@@ -655,18 +655,18 @@
 		<condition>
 			<and>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>6.5</value>
 				</less-than>
 				<equals>
-					<property>/controls/gear/gear-down</property>
+					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
 			</and>
 		</condition>
 		<type>translate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>/orientation/pitch-deg</property>
+		<property>orientation/pitch-deg</property>
 		<interpolation>
 			<entry>
 				<ind>-8</ind>
@@ -701,18 +701,18 @@
 		<condition>
 			<and>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>6.5</value>
 				</less-than>
 				<equals>
-					<property>/controls/gear/gear-down</property>
+					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
 			</and>
 		</condition>
 		<type>translate</type>
 		<object-name>AVTrain-JambeMobile</object-name>
-		<property>/orientation/pitch-deg</property>
+		<property>orientation/pitch-deg</property>
 		<interpolation>
 			<entry>
 				<ind>-8</ind>
@@ -750,18 +750,18 @@
 		<condition>
 			<and>
 				<equals>
-					<property>/controls/gear/gear-down</property>
+					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
 				<less-than>
-					<property>/position/altitude-agl-ft</property>
+					<property>position/altitude-agl-ft</property>
 					<value>5.5</value>
 				</less-than>
 			</and>
 		</condition>
 		<type>spin</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>/velocities/uBody-fps</property>
+		<property>velocities/uBody-fps</property>
 		<factor>-10.00</factor>
 		<center>
 			<x-m>-3.58282</x-m>

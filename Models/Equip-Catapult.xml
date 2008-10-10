@@ -17,7 +17,8 @@
 	 <object-name>LaunchBar-cat</object-name>
 	 <condition>
 		 <greater-than>
-			 <property>fdm/jsbsim/launchbar/launch-bar-engage</property>
+                        <property>sim/multiplay/generic/float[7]</property>
+			 <!--<property>fdm/jsbsim/launchbar/launch-bar-engage</property>-->
 			 <value>0</value>
 		 </greater-than>
 	 </condition>
@@ -25,7 +26,8 @@
  <animation>
 	 <type>rotate</type>
 	 <object-name>LaunchBar-cat</object-name>
-	 <property>fdm/jsbsim/launchbar/launch-bar-pos-norm</property>
+         <property>sim/multiplay/generic/float[8]</property>
+	 <!--<property>fdm/jsbsim/launchbar/launch-bar-pos-norm</property>-->
 	 <interpolation>
 		 <entry>
 			 <ind>0.0</ind>
@@ -61,7 +63,8 @@
 	 <object-name>LaunchBar-op</object-name>
 	 <condition>
 		 <equals>
-			 <property>fdm/jsbsim/launchbar/launch-bar-state</property>
+                        <property>sim/multiplay/generic/float[9]</property>
+			<!-- <property>fdm/jsbsim/launchbar/launch-bar-state</property>-->
 			 <value>1</value>
 		 </equals>
 	 </condition>
@@ -73,13 +76,16 @@
 	 <condition>
 		 <and>
 			 <equals>
-				 <property>fdm/jsbsim/launchbar/launch-bar-state</property>
+                                <property>sim/multiplay/generic/float[9]</property>
+				<!-- <property>fdm/jsbsim/launchbar/launch-bar-state</property>-->
 				 <value>1</value>
 			 </equals>
-			 <not-equals>
-				 <property>controls/gear/catapult-launch-cmd</property>
-				 <value>1</value>
-			 </not-equals>
+                         <equals>
+                                <property>sim/multiplay/generic/float[10]</property>
+                               <!-- <property>fdm/jsbsim/systems/holdback/holdback-cmd</property>-->
+                                <value>1</value>
+                         </equals> 
+			
 		 </and>
 	 </condition>
  </animation>

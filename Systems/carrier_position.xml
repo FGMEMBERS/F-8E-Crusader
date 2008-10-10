@@ -16,6 +16,7 @@
                     <wire2-lon-position type="double">6.324460757888255</wire2-lon-position>
                     <wire3-lon-position type="double">6.324370713195826</wire3-lon-position>
                     <wire4-lon-position type="double">6.324280456147222</wire4-lon-position>
+                    <holdback><holdback-cmd type="double">0</holdback-cmd></holdback>
                 </systems>
             </jsbsim>
 

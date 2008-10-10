@@ -34,7 +34,7 @@
 		<condition>
 			<and>
 			<equals>
-                                <property><!--/surface-positions/wings-pos-norm--></property>
+                                <property><!--/fdm/jsbsim/fcs/wings-pos-norm--></property>
 				<value>1</value>
 			</equals>
 			<equals>
@@ -58,11 +58,11 @@
 			<or>
 			<and>
 				<not-equals>
-                                        <property>/surface-positions/wings-pos-norm</property>
+                                        <property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 					<value>0</value>
 				</not-equals>
 				<not-equals>
-                                        <property>/surface-positions/wings-pos-norm</property>
+                                        <property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 					<value>1</value>
 				</not-equals>
 			</and>
@@ -88,7 +88,7 @@
 			</and>
 			<and>
 				<equals>
-					<property>/surface-positions/wings-pos-norm</property>
+					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 					<value>0</value>
 				</equals>
 				<equals>
@@ -98,7 +98,7 @@
 			</and>
 			<and>
 				<equals>
-					<property>/surface-positions/wings-pos-norm</property>
+					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 					<value>1</value>
 				</equals>
 				<equals>
@@ -124,11 +124,11 @@
 			<or>
 				<and>
 					<not-equals>
-						<property>/surface-positions/wings-pos-norm</property>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 						<value>0</value>
 					</not-equals>
 					<not-equals>
-						<property>/surface-positions/wings-pos-norm</property>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 						<value>1</value>
 					</not-equals>
 				</and>
@@ -154,7 +154,7 @@
 				</and>
 				<and>
 					<equals>
-						<property>/surface-positions/wings-pos-norm</property>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 						<value>0</value>
 					</equals>
 					<equals>
@@ -164,7 +164,7 @@
 				</and>
 				<and>
 					<equals>
-						<property>/surface-positions/wings-pos-norm</property>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 						<value>1</value>
 					</equals>
 					<equals>

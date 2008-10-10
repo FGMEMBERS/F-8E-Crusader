@@ -84,14 +84,8 @@
             <pure_gain name="Wings surface">
                 <input>fcs/wings-pos-norm</input>
                 <gain>1</gain>
-                <output>/surface-positions/wings-pos-norm</output>
-            </pure_gain>
-            <pure_gain name="Wing surface">
-                <input>/surface-positions/wings-pos-norm</input>
-                <gain>1</gain>
                 <output>/surface-positions/wing-pos-norm</output>
             </pure_gain>
-            
 
             <!--Some automatic correction for FCS during UP/DOWN -->
             <scheduled_gain name="Elevator Wings Position">

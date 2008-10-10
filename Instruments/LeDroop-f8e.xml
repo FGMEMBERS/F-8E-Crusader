@@ -43,7 +43,7 @@
 					<value>0</value>
 				</greater-than>
 				<not-equals>
-					<property>/surface-positions/wings-pos-norm</property>
+					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 					<value>1</value>
 				</not-equals>
 			</and>

@@ -37,7 +37,7 @@
 					<value>0</value>
 				</equals>
 				<equals>
-					<property>/surface-positions/wings-pos-norm</property>
+					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 					<value>0</value>
 				</equals>
 			</and>

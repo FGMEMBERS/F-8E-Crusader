@@ -33,7 +33,7 @@
                 <name>Mule</name>
 		<path>Aircraft/F-8E-Crusader/Models/mule-22.xml</path>
 		<offsets>
-			<x-m>-10.5</x-m>
+			<x-m>-8.5</x-m>
 			<y-m>0</y-m>
 			<z-m>-1.72</z-m>
 			<pitch-deg>0</pitch-deg>

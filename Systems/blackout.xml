@@ -9,9 +9,7 @@
             <summer name="g load">
               <input>accelerations/n-pilot-z-norm</input>
             </summer>
-            
-<!--must be rebuilt in order to say over 5 g => 300 sec and over 9 g => 10 sec-->
-            <!--===Blackout ==Specific part    ====300 secondes to blackout at 5g ====transition 4 secondes=============-->
+            <!--===Blackout ==Specific part    ====300 secondes to blackout at 5g ====and over 9 g => 10 sec- transition 4 secondes===-->
            <!-- ============1 seconde to redout under -4g ===transition 4 secondes ==========================-->
            
            <scheduled_gain name="systems/blackout-delay">

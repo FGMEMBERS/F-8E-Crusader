@@ -4,28 +4,33 @@
 <system name="Blackout">
     <channel name="Blackout">
 
-
+             <property value="1">systems/blackout-cst</property>
+             
             <summer name="g load">
               <input>accelerations/n-pilot-z-norm</input>
             </summer>
+            
 <!--must be rebuilt in order to say over 5 g => 300 sec and over 9 g => 10 sec-->
             <!--===Blackout ==Specific part    ====300 secondes to blackout at 5g ====transition 4 secondes=============-->
            <!-- ============1 seconde to redout under -4g ===transition 4 secondes ==========================-->
            
            <scheduled_gain name="systems/blackout-delay">
-               <input>fcs/g-load</input>
+               <input>systems/blackout-cst</input>
                <table>
-                       -9 10
-                       -5 300
+                   <independentVar>fcs/g-load</independentVar>
+                    <tableData>
+                        -9 10
+                        -5 300
+                    </tableData>
                </table>
             </scheduled_gain>
             
-            <!--<switch name="systems/blackout">
+            <switch name="systems/blackout">
                 <default value="0"/>
                 <test  logic="AND" value="1">
                 fcs/g-load lt -5
                 </test>
-            </switch>-->
+            </switch>
 
             <switch name="systems/redout">
                 <default value="0"/>

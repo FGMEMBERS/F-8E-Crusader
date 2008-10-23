@@ -404,17 +404,17 @@
     <system file="propulsion"/>
     <system file="landing-gear"/>
     <system file="canopy"/>
-    <system file="launchbar-hook"/>
-    <system file="speedbrake"/>
-    <system file="probe-refuel"/>
-    <system file="light-outdoor"/>
-    <system file="electrical"/>
+    <system file="launchbar"/>
     <system file="catapult"/>
     <system file="holdback"/>
     <system file="global-hold"/>
     <system file="hook"/>
     <system file="mule"/>
     <system file="instruments"/>
+    <system file="speedbrake"/>
+    <system file="probe-refuel"/>
+    <system file="light-outdoor"/>
+    <system file="electrical"/>
 
     <flight_control name="FCS: F-8E">
 
@@ -1014,7 +1014,20 @@
         </direction>
         </force>
 
-        <force name="global-x-hold" frame="LOCAL">
+        <force name="global-x-hold" frame="BODY">
+        <location unit="IN">
+            <x>  46 </x>
+            <y>    0.0 </y>
+            <z>  -39.0 </z>
+        </location>
+        <direction>
+            <x>1</x>
+            <y>0</y>
+            <z>0 </z>
+        </direction>
+        </force>
+
+        <force name="global-y-hold" frame="BODY">
         <location unit="IN">
             <x>  46 </x>
             <y>    0.0 </y>
@@ -1023,19 +1036,6 @@
         <direction>
             <x>0</x>
             <y>1</y>
-            <z>0 </z>
-        </direction>
-        </force>
-
-        <force name="global-y-hold" frame="LOCAL">
-        <location unit="IN">
-            <x>  46 </x>
-            <y>    0.0 </y>
-            <z>  -39.0 </z>
-        </location>
-        <direction>
-            <x>0</x>
-            <y>-1</y>
             <z>0 </z>
         </direction>
         </force>

@@ -5,24 +5,16 @@
 <system name="hook">
 
   <property>systems/hook/tailhook-cmd-norm</property>
-  <property>/controls/gear/tailhook</property>
+  <property value="4">systems/hook/tailhook-length-ft</property> 
+  <property value="-5">systems/hook/tailhook-pos-min-deg</property>
+  <property value="40">systems/hook/tailhook-pos-max-deg</property>
+  <property value="210.17">systems/hook/tailhook-offset-x-in</property> 
+  <property value="0">systems/hook/tailhook-offset-y-in</property>
+  <property value="-31.57">systems/hook/tailhook-offset-z-in</property>
 
   <channel name="Hook">
 
-      <kinematic name="Hook Control">
-            <input>/controls/gear/tailhook</input>
-            <traverse>
-                    <setting>
-                            <position>0</position>
-                            <time>0</time>
-                    </setting>
-                    <setting>
-                            <position>1</position>
-                            <time>1</time>
-                    </setting>
-            </traverse>
-            <output>/gear/tailhook/position-norm</output>
-    </kinematic>
+     
 
      <kinematic name="systems/hook/tailhook-control">
        <input>systems/hook/tailhook-cmd-norm</input>
@@ -118,7 +110,7 @@
      <switch name="systems/hook/ready">
           <default value="0"/>
           <test  logic="AND" value="1">
-                /gear/tailhook/position-norm gt 0.99
+              systems/hook/tailhook-control gt 0.99
           </test>
      </switch>
 

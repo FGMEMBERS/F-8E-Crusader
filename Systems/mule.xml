@@ -21,7 +21,7 @@
            <input>inertia/weight-lbs</input>
            <gain>0.1</gain>
        </pure_gain>
-       
+      
        <pure_gain name="systems/mule/mule-forceback">
            <input>inertia/weight-lbs</input>
            <gain>-0.03</gain>
@@ -36,7 +36,6 @@
                /sim/model/mule/magnitude lt  systems/mule/mule-forceback
            </test>
        </switch>
-
 
        <switch name="systems/mule/action">
            <default value="0"/>

@@ -1557,7 +1557,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Crosse</object-name>
-		<property>gear/tailhook/position-norm</property>
+		<property>fdm/jsbsim/systems/hook/tailhook-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0.0</ind>
@@ -1591,7 +1591,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Crosse-Porte</object-name>
-		<property>gear/tailhook/position-norm</property>
+		<property>fdm/jsbsim/systems/hook/tailhook-pos-norm</property>
 		<factor>35</factor>
 		<center>
 			<x-m>5.225</x-m>

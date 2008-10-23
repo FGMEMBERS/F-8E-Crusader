@@ -57,6 +57,7 @@ setprop("/controls/flight/wing-fold-cmd",1);
 init_f8eflight=func{
 setprop("/controls/electric/master-switch",1);
 print("master-switch_true");
+setprop("/controls/lighting/landing-lights",1);
 setprop("/controls/flight/wing-incidence",1);
 setprop("/engines/engine/running",1);
 setprop("/controls/flight/canopy",0);

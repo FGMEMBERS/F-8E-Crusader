@@ -46,7 +46,7 @@
 		<object-name>Temoin2-Actif</object-name>
 		<condition>
 			<equals>
-				<property>/surface-positions/refueling-pos-norm</property>
+				<property><!--/surface-positions/refueling-pos-norm--></property>
 				<value>1</value>
 			</equals>
 		</condition>

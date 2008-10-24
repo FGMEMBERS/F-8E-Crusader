@@ -959,36 +959,36 @@
 
      <external_reactions>
 
-	<!-- LOCAL est Cat1 du Foch-->
-        <force name="catapult1foch-local" frame="LOCAL">
+	<!-- LOCAL est Cat1 du Clem-->
+        <force name="catapult1-clem" frame="LOCAL">
         <location unit="IN">
             <x>  -30 </x>
             <y>    0.0 </y>
             <z>  -39.0 </z>
         </location>
         <direction>
-           <!--Foch heading 110 catapult 1  - Tan 110-->
+           <!--Clem heading 110 catapult 1  - Tan 110-->
             <x>-1</x>
             <y>2.747477419454622569</y>
-            <z>0.2 </z>
+            <z>0.6 </z>
         </direction>
         </force>
 
-        <force name="catapult2foch-local" frame="LOCAL">
+        <force name="catapult2-clem" frame="LOCAL">
         <location unit="IN">
             <x>  -30 </x>
             <y>    0.0 </y>
             <z>  -39.0 </z>
         </location>
         <direction>
-            <!--Foch heading catapult 2  - Tan 105,45-->
+            <!--Clem heading catapult 2  - Tan 105,45-->
             <x>-1</x>
             <y>3.618141479923755696</y>
-            <z>0.2 </z>
+            <z>0.6 </z>
         </direction>
         </force>
 
-        <force name="catapult" frame="BODY">
+        <!--<force name="catapult" frame="BODY">
         <location unit="IN">
             <x>  -30 </x>
             <y>    0.0 </y>
@@ -999,7 +999,7 @@
             <y>0</y>
             <z>0.25</z>
         </direction>
-        </force>
+        </force>-->
 
         <force name="cat-hold" frame="BODY">
         <location unit="IN">
@@ -1008,7 +1008,7 @@
             <z>  -39.0 </z>
         </location>
         <direction>
-            <x>0.2</x>
+            <x>0</x>
             <y>0</y>
             <z>1 </z>
         </direction>
@@ -1055,6 +1055,33 @@
             <y>    0.0 </y>
             <z>    -0.15 </z>
         </direction>
+        </force>
+        
+        <force name="holdback1-clem" frame="LOCAL">
+            <location unit="IN">
+                <x> 0.0 </x>
+                <y>    0.0 </y>
+                <z>  -39.0 </z>
+            </location>
+            <direction>
+                <!--Clem heading 110 catapult 1  - Tan 110-->
+                <x>1</x>
+                <y>-2.747477419454622569</y>
+                <z>-0.15 </z>
+        </direction>
+        </force>
+        
+        <force name="holdback2-clem" frame="LOCAL">
+            <location unit="IN">
+                <x> 0.0 </x>
+                <y>    0.0 </y>
+                <z>  -39.0 </z>
+            </location>
+            <direction>
+                <x>   -1.0 </x>
+                <y>    0.0 </y>
+                <z>    -0.15 </z>
+            </direction>
         </force>
 
 

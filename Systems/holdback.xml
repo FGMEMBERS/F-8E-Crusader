@@ -6,22 +6,7 @@
 
   <channel name="Holdback_Launchbar">
 
-     <summer name="systems/holdback/total_thrust">
-        <input>propulsion/engine/thrust</input>
-     </summer>
-
-     <switch name="systems/holdback/switch">
-          <default value="0"/>
-          <test value="systems/holdback/total_thrust">
-                systems/holdback/holdback-cmd == 1
-                launchbar/launch-bar-state == 1
-          </test>
-          <test value="0">
-                gear/unit[1]/WOW == 0
-          </test>
-          <output>external_reactions/holdback/magnitude</output>
-     </switch>
-
+     
 
 
 
@@ -63,23 +48,43 @@
     <!--we estimate if we are in the area of  7 meter square -->
 
 
-     <switch name="systems/cat-onarea">
-          <default value="0"/>
-          <test logic="AND" value="1">
-               systems/cat1-lat-diff-position lt 0.000018
-               systems/cat1-lat-diff-position gt -0.000018
-               systems/cat1-lon-diff-position lt 0.000018
-               systems/cat1-lon-diff-position gt -0.000018
-          </test>
-          <test logic="AND" value="1">
-               systems/cat2-lat-diff-position lt 0.000018
-               systems/cat2-lat-diff-position gt -0.000018
-               systems/cat2-lon-diff-position lt 0.000018
-               systems/cat2-lon-diff-position gt -0.000018
-          </test>
+     
+     
+     <switch name="systems/cat1-onarea">
+         <default value="systems/cat1-onarea"/>
+         <test logic="AND" value="1">
+             systems/cat1-lat-diff-position lt 0.000018
+             systems/cat1-lat-diff-position gt -0.000018
+             systems/cat1-lon-diff-position lt 0.000018
+             systems/cat1-lon-diff-position gt -0.000018
+         </test>
+         <test logic="AND" value="0">
+             systems/catapult/cat-launch-cmd == 0
+         </test>
      </switch>
-
-
+     
+     <switch name="systems/cat2-onarea">
+         <default value="systems/cat2-onarea"/>
+         <test logic="AND" value="1">
+             systems/cat2-lat-diff-position lt 0.000018
+             systems/cat2-lat-diff-position gt -0.000018
+             systems/cat2-lon-diff-position lt 0.000018
+             systems/cat2-lon-diff-position gt -0.000018
+         </test>
+         <test logic="AND" value="0">
+             systems/catapult/cat-launch-cmd == 0
+         </test>
+     </switch>
+     
+     <switch name="systems/cat-onarea">
+         <default value="0"/>
+         <test logic="OR" value="1">
+             systems/cat1-onarea == 1
+             systems/cat2-onarea == 1
+         </test>
+     </switch>
+     
+     
       <switch name="systems/launchbar/switch">
           <default value="0"/>
           <test logic="AND" value="1">
@@ -91,11 +96,37 @@
           </test>
           <output>launchbar/launch-bar-engage</output>
      </switch>
+     
+    <!-- holdback -->
+     
+     <summer name="systems/holdback/total_thrust">
+         <input>propulsion/engine/thrust</input>
+     </summer>
+     
+     <switch name="systems/holdback/switch">
+         <default value="0"/>
+         <test value="systems/holdback/total_thrust">
+             systems/holdback/holdback-cmd == 1
+             launchbar/launch-bar-state == 1
+         </test>
+         <test value="0">
+             gear/unit[1]/WOW == 0
+         </test>
+         <output>external_reactions/holdback/magnitude</output>
+     </switch>
+
+    <!-- vertical hold -->
+     
+     <!--only a guess , to animate the body when tied, and to avoid pitch during catapulting-->
+     <pure_gain name="systems/cat-hold/weight">
+         <input>inertia/weight-lbs</input>
+         <gain>0.3</gain>
+    </pure_gain>
 
 
-     <switch name="systems/cat-hold/weight">
+     <switch name="systems/cat-hold/magnitudet">
           <default value="0"/>
-          <test value="5000">
+          <test value="systems/cat-hold/weight">
                 launchbar/launch-bar-state == 1
           </test>
           <test value="0">

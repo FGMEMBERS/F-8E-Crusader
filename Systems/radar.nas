@@ -110,7 +110,7 @@ radar = func {
 
 	for(i=0;i<2;i=i+1){
 	
-		in_range[i] = getprop("/ai/models/aircraft["~i~"]/radar/in-range");
+		in_range[i] = getprop("/ai/models/tanker["~i~"]/radar/in-range");
 		if (in_range[i] == 1){
 			setprop("/instrumentation/radar/aircraft["~i~"]/radar/mark",1);
 		} else {
@@ -120,23 +120,23 @@ radar = func {
 		select[i] = getprop("/instrumentation/radar/aircraft["~i~"]/radar/select");
 			
 		if (select[i] == 1){
-			if (props.globals.getNode("/ai/models/aircraft["~i~"]") != nil){		
-				range_nm[i] = getprop("/ai/models/aircraft["~i~"]/radar/range-nm");
+			if (props.globals.getNode("/ai/models/tanker["~i~"]") != nil){		
+				range_nm[i] = getprop("/ai/models/tanker["~i~"]/radar/range-nm");
 				if (in_range[i] != 1){
 					setprop("/instrumentation/radar/aircraft["~i~"]/radar/range-nm",0);
 				} else {
 					setprop("/instrumentation/radar/aircraft["~i~"]/radar/range-nm",range_nm[i]);
 					
-					x_shift[i] = getprop("/ai/models/aircraft["~i~"]/radar/x-shift");
+					x_shift[i] = getprop("/ai/models/tanker["~i~"]/radar/x-shift");
 					setprop("/instrumentation/radar/aircraft["~i~"]/radar/x-shift",x_shift[i]);
 					
-					y_shift[i] = getprop("/ai/models/aircraft["~i~"]/radar/y-shift");
+					y_shift[i] = getprop("/ai/models/tanker["~i~"]/radar/y-shift");
 					setprop("/instrumentation/radar/aircraft["~i~"]/radar/y-shift",y_shift[i]);
 					
-					rotation[i] = getprop("/ai/models/aircraft["~i~"]/radar/rotation");
+					rotation[i] = getprop("/ai/models/tanker["~i~"]/radar/rotation");
 						setprop("/instrumentation/radar/aircraft[1]/radar/rotation",rotation[i]);
 						
-					altitude[i]=getprop("/ai/models/aircraft["~i~"]/position/altitude-ft");
+					altitude[i]=getprop("/ai/models/tanker["~i~"]/position/altitude-ft");
 					altitude_me=getprop("/position/altitude-ft");
 					z_shift[i]=altitude[i]-altitude_me;
 					setprop("/instrumentation/radar/aircraft["~i~"]/radar/z-shift",z_shift[i]);
@@ -159,16 +159,16 @@ radar = func {
 					
 				} else {
 				
-					altitude[i] = getprop("/ai/models/aircraft["~i~"]/position/altitude-ft");
+					altitude[i] = getprop("/ai/models/tanker["~i~"]/position/altitude-ft");
 					setprop("/instrumentation/radar/aircraft-target/altitude-ft",altitude[i]);
 					
-					velocity[i] = getprop("/ai/models/aircraft["~i~"]/velocities/true-airspeed-kt");
+					velocity[i] = getprop("/ai/models/tanker["~i~"]/velocities/true-airspeed-kt");
 					setprop("/instrumentation/radar/aircraft-target/airspeed",velocity[i]);
 					
-					heading[i] = getprop("/ai/models/aircraft["~i~"]/orientation/true-heading-deg");
+					heading[i] = getprop("/ai/models/tanker["~i~"]/orientation/true-heading-deg");
 					setprop("/instrumentation/radar/aircraft-target/true-heading",heading[i]);
 					
-					callsign[i] = getprop("/ai/models/aircraft["~i~"]/callsign");
+					callsign[i] = getprop("/ai/models/tanker["~i~"]/callsign");
 					setprop("/instrumentation/radar/aircraft-target/callsign",callsign[i]);
 					
 					setprop("/instrumentation/radar/aircraft-target/range-nm",range_nm[i]);

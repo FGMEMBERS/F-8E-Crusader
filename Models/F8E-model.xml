@@ -2129,12 +2129,12 @@
 		<object-name>HFeu-Actif</object-name>
 		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
-			<x-min>1</x-min>
-			<y-min>1</y-min>
-			<z-min>1</z-min>
-			<x-factor>4</x-factor>
-			<y-factor>4</y-factor>
-			<z-factor>4</z-factor>
+			<x-min>3</x-min>
+			<y-min>3</y-min>
+			<z-min>3</z-min>
+			<x-factor>6</x-factor>
+			<y-factor>6</y-factor>
+			<z-factor>6</z-factor>
 	</animation>
 
 	<animation>
@@ -2191,12 +2191,12 @@
 		<object-name>BFeu-Actif</object-name>
 		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
-			<x-min>1</x-min>
-			<y-min>1</y-min>
-			<z-min>1</z-min>
-			<x-factor>4</x-factor>
-			<y-factor>4</y-factor>
-			<z-factor>4</z-factor>
+			<x-min>3</x-min>
+			<y-min>3</y-min>
+			<z-min>3</z-min>
+			<x-factor>6</x-factor>
+			<y-factor>6</y-factor>
+			<z-factor>6</z-factor>
 	</animation>
 
 	<animation>
@@ -2242,12 +2242,12 @@
 		<object-name>GFeu-Nav</object-name>
 		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>1.7</x-factor>
-		<y-factor>1.7</y-factor>
-		<z-factor>1.7</z-factor>
+		<x-min>3</x-min>
+		<y-min>3</y-min>
+		<z-min>3</z-min>
+		<x-factor>3.7</x-factor>
+		<y-factor>3.7</y-factor>
+		<z-factor>3.7</z-factor>
 	</animation>
 
 
@@ -2286,12 +2286,12 @@
 		<object-name>DFeu-Nav</object-name>
 		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>1.7</x-factor>
-		<y-factor>1.7</y-factor>
-		<z-factor>1.7</z-factor>
+		<x-min>3</x-min>
+		<y-min>3</y-min>
+		<z-min>3</z-min>
+		<x-factor>3.7</x-factor>
+		<y-factor>3.7</y-factor>
+		<z-factor>3.7</z-factor>
 	</animation>
 
 	<!-- ****************tail navigation  light *****************feu de navigation arriere-->
@@ -2328,12 +2328,12 @@
 		<object-name>ARGFeu-Nav</object-name>
 		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>1.7</x-factor>
-		<y-factor>1.7</y-factor>
-		<z-factor>1.7</z-factor>
+		<x-min>3</x-min>
+		<y-min>3</y-min>
+		<z-min>3</z-min>
+		<x-factor>3.7</x-factor>
+		<y-factor>3.7</y-factor>
+		<z-factor>3.7</z-factor>
 	</animation>
 
 	<!--<animation>
@@ -2369,12 +2369,12 @@
 		<object-name>ARDFeu-Nav</object-name>
 		<property>sim/time/sun-angle-rad</property>
 		<offset>-1.4</offset>
-		<x-min>1</x-min>
-		<y-min>1</y-min>
-		<z-min>1</z-min>
-		<x-factor>1.7</x-factor>
-		<y-factor>1.7</y-factor>
-		<z-factor>1.7</z-factor>
+		<x-min>3</x-min>
+		<y-min>3</y-min>
+		<z-min>3</z-min>
+		<x-factor>3.7</x-factor>
+		<y-factor>3.7</y-factor>
+		<z-factor>3.7</z-factor>
 	</animation>
 
 

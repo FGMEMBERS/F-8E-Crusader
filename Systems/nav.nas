@@ -460,6 +460,8 @@ setlistener("/instrumentation/heading-indicator/nav-switch",survey_nav_switch,3)
 
 
 #Pilote Automatique==================================================================================
+# Attention,  dg-heading-hold ou  true-heading-hold ne se fait que lors de l'activation Autopilote 
+# actuellement dg-heading-hold pour switch-tacan-acls=1  et true-heading-hold  pour switch-tacan-acls=0
 
 setprop("/autopilot/switch-heading",0);
 

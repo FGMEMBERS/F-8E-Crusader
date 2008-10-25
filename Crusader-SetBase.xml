@@ -226,7 +226,6 @@
        <!--these values are only suittable for Clemenceau  with the clemenceau_demo.xml -->
 
         <fdm include="Systems/carrier_position.xml"/>
-        <!--<fdm><jsbsim><systems><holdback><holdback-cmd type="double">0</holdback-cmd></holdback></systems></jsbsim></fdm>-->
 
 </PropertyList>
 

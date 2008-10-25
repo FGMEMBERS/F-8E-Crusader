@@ -246,7 +246,7 @@
             <brake_group> RIGHT </brake_group>
             <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="W_LEFT">
+        <contact type="BOGEY" name="W_LEFT_FOLD">
             <location unit="IN">
                 <x> 171 </x>
                 <y> -213 </y>
@@ -259,13 +259,43 @@
             <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
-            <retractable>0</retractable>
+            <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="W_RIGHT">
+        <contact type="BOGEY" name="W_RIGHT_FOLD">
             <location unit="IN">
                 <x> 171 </x>
                 <y> 213 </y>
                 <z> 7.5 </z>
+            </location>
+            <static_friction> 0.2 </static_friction>
+            <dynamic_friction> 0.2 </dynamic_friction>
+            <rolling_friction> 0.2 </rolling_friction>
+            <spring_coeff unit="LBS/FT"> 100 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
+            <max_steer unit="DEG"> 0.0 </max_steer>
+            <brake_group> NONE </brake_group>
+            <retractable>1</retractable>
+        </contact>
+        <contact type="BOGEY" name="W_LEFT">
+            <location unit="IN">
+                <x> 113</x>
+                <y> -135.3 </y>
+                <z> 15.76 </z>
+            </location>
+            <static_friction> 0.2 </static_friction>
+            <dynamic_friction> 0.2 </dynamic_friction>
+            <rolling_friction> 0.2 </rolling_friction>
+            <spring_coeff unit="LBS/FT"> 100 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
+            <max_steer unit="DEG"> 0.0 </max_steer>
+            <brake_group> NONE </brake_group>
+            <retractable>0</retractable>
+        </contact>
+        <contact type="BOGEY" name="W_RIGHT">
+            <location unit="IN">
+                <x> 113 </x>
+                <y> 135.3 </y>
+                <z> 15.76</z>
             </location>
             <static_friction> 0.2 </static_friction>
             <dynamic_friction> 0.2 </dynamic_friction>

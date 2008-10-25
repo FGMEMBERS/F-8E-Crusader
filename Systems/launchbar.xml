@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+
+<system name="">
+
+    <channel name="">
+        
+        <property>launchbar/launch-bar-engage</property>
+
+             <kinematic name="Launchbar Engage">
+                <input>launchbar/launch-bar-engage</input>
+                <traverse>
+                    <setting>
+                        <position>0.0000</position>
+                        <time>0.0000</time>
+                    </setting>
+                    <setting>
+                        <position>1.0000</position>
+                        <time>2.0000</time>
+                    </setting>
+                </traverse>
+                <output>launchbar/launch-bar-pos-norm</output>
+            </kinematic>
+
+
+            <switch name="systems/launchbar/control">
+                <default value="systems/launchbar/control"/>
+                <test logic="AND" value="1">
+                        launchbar/launch-bar-pos-norm == 1
+                        gear/unit[1]/WOW == 1
+                </test>
+                 <test logic="AND" value="0">
+                        systems/catapult/cat-final  == 0
+                        gear/unit[1]/WOW == 0
+                </test>
+                <output>launchbar/launch-bar-state</output> <!--launch-bar-state était initialisé par l'ancien JSB-->
+            </switch>
+
+
+
+
+           <!--Don't work with string values Done with Nasal-->
+           <!-- <switch name="systems/launchbar/JBD-control">
+                <default value="/sim/model/launchbar-state/engaged" />
+                <test value="/sim/model/launchbar-state/engaged">
+                        launchbar/launch-bar-state == 1
+                </test>
+                <output>/gear/launchbar/state</output>
+            </switch>-->
+
+
+    </channel>
+
+</system>

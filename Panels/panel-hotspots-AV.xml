@@ -52,7 +52,7 @@
 		<h>250</h>
 		<binding>
 			<command>property-toggle</command>
-			<property>/controls/gear/tailhook</property>
+			<property>fdm/jsbsim/systems/hook/tailhook-cmd-norm</property>
 		</binding>
 	</action>
 
@@ -65,7 +65,7 @@
 		<h>300</h>
 		<binding>
 			<command>property-toggle</command>
-			<property>/controls/gear/tailhook</property>
+			<property>fdm/jsbsim/systems/hook/tailhook-cmd-norm</property>
 		</binding>
 	</action>
 

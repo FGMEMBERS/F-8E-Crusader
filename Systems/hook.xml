@@ -7,7 +7,7 @@
   <property>systems/hook/tailhook-cmd-norm</property>
   <property value="4">systems/hook/tailhook-length-ft</property> 
   <property value="-5">systems/hook/tailhook-pos-min-deg</property>
-  <property value="40">systems/hook/tailhook-pos-max-deg</property>
+  <property value="50">systems/hook/tailhook-pos-max-deg</property>
   <property value="210.17">systems/hook/tailhook-offset-x-in</property> 
   <property value="0">systems/hook/tailhook-offset-y-in</property>
   <property value="-31.57">systems/hook/tailhook-offset-z-in</property>
@@ -136,8 +136,8 @@
         <input>systems/holdback/total_thrust</input>
      </summer>
 
-     <switch name="systems/hook/wire-engaged">
-          <default value="systems/hook/wire-engaged"/>
+     <!--<switch name="systems/hook/wire-engaged">
+          <default value="0"/>
           <test  logic="AND" value="1">
                 gear/unit[1]/WOW == 1
                 velocities/ve-kts gt 3.0
@@ -157,7 +157,7 @@
                 systems/hook/wire-engaged == 1
           </test>
           <output>external_reactions/hook/magnitude</output>
-     </switch>
+     </switch>-->
 
   </channel>
 

@@ -99,7 +99,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Hook-Cde</object-name>
-		<property>/gear/tailhook/position-norm</property>
+		<property>fdm/jsbsim/systems/hook/tailhook-pos-norm</property>
 		<factor>53</factor>
 		<center>
 			<x-m>-0.05595</x-m>
@@ -116,7 +116,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Temoin-Hook-Cde</object-name>
-		<property>/gear/tailhook/position-norm</property>
+		<property>fdm/jsbsim/systems/hook/tailhook-pos-norm</property>
 		<factor>53</factor>
 		<center>
 			<x-m>-0.05595</x-m>
@@ -135,11 +135,11 @@
 		<condition>
 			<and>
 				<not-equals>
-					<property>/gear/tailhook/position-norm</property>
+					<property>fdm/jsbsim/systems/hook/tailhook-pos-norm</property>
 					<value>0</value>
 				</not-equals>
 				<not-equals>
-					<property>/gear/tailhook/position-norm</property>
+					<property>fdm/jsbsim/systems/hook/tailhook-pos-norm</property>
 					<value>1</value>
 				</not-equals>
 			</and>

@@ -32,79 +32,6 @@
      </kinematic>
 
 
-<summer name="systems/wire1-lat-diff-position">
-        <input>systems/wire1-lat-position</input>
-        <input>-position/lat-geod-deg</input>
-    </summer>
-
-    <summer name="systems/wire1-lon-diff-position">
-        <input>systems/wire1-lon-position</input>
-        <input>-position/long-gc-deg</input>
-    </summer>
-
-    <summer name="systems/wire2-lat-diff-position">
-        <input>systems/wire2-lat-position</input>
-        <input>-position/lat-geod-deg</input>
-    </summer>
-
-    <summer name="systems/wire2-lon-diff-position">
-        <input>systems/wire2-lon-position</input>
-        <input>-position/long-gc-deg</input>
-    </summer>
-
-    <summer name="systems/wire3-lat-diff-position">
-        <input>systems/wire3-lat-position</input>
-        <input>-position/lat-geod-deg</input>
-    </summer>
-
-    <summer name="systems/wire3-lon-diff-position">
-        <input>systems/wire3-lon-position</input>
-        <input>-position/long-gc-deg</input>
-    </summer>
-
-    <summer name="systems/wire4-lat-diff-position">
-        <input>systems/wire4-lat-position</input>
-        <input>-position/lat-geod-deg</input>
-    </summer>
-
-    <summer name="systems/wire4-lon-diff-position">
-        <input>systems/wire4-lon-position</input>
-        <input>-position/long-gc-deg</input>
-    </summer>
-
-
-
-
-    <!--we estimate if we are in the area of  36 meter square -->
-
-
-     <switch name="systems/hook-onarea">
-          <default value="0"/>
-          <test logic="AND" value="1">
-               systems/wire1-lat-diff-position lt 0.000061
-               systems/wire1-lat-diff-position gt -0.000061
-               systems/wire1-lon-diff-position lt 0.000061
-               systems/wire1-lon-diff-position gt -0.000061
-          </test>
-          <test logic="AND" value="1">
-               systems/wire2-lat-diff-position lt 0.000061
-               systems/wire2-lat-diff-position gt -0.000061
-               systems/wire2-lon-diff-position lt 0.000061
-               systems/wire2-lon-diff-position gt -0.000061
-          </test>
-          <test logic="AND" value="1">
-               systems/wire3-lat-diff-position lt 0.000061
-               systems/wire3-lat-diff-position gt -0.000061
-               systems/wire3-lon-diff-position lt 0.000061
-               systems/wire3-lon-diff-position gt -0.000061
-          </test>
-          <test logic="AND" value="1">
-               systems/wire4-lat-diff-position lt 0.000061
-               systems/wire4-lat-diff-position gt -0.000061
-               systems/wire4-lon-diff-position lt 0.000061
-               systems/wire4-lon-diff-position gt -0.000061
-          </test>
-     </switch>
 
 
      <switch name="systems/hook/ready">
@@ -136,28 +63,7 @@
         <input>systems/holdback/total_thrust</input>
      </summer>
 
-     <!--<switch name="systems/hook/wire-engaged">
-          <default value="0"/>
-          <test  logic="AND" value="1">
-                gear/unit[1]/WOW == 1
-                velocities/ve-kts gt 3.0
-                systems/hook/ready == 1
-                systems/hook-onarea  == 1
-          </test>
-          <test  logic="AND" value="0">
-                gear/unit[1]/WOW == 1
-                velocities/ve-kts lt 3.0
-          </test>
-     </switch>
-
-
-     <switch name="systems/hook/wire-reaction">
-          <default value="0"/>
-          <test  logic="AND" value="systems/hook/force">
-                systems/hook/wire-engaged == 1
-          </test>
-          <output>external_reactions/hook/magnitude</output>
-     </switch>-->
+    
 
   </channel>
 

@@ -67,8 +67,7 @@
             <default value="0"/>
             <test logic="OR" value="systems/cat-hold/weight">
                 launchbar/launch-bar-state == 1
-                systems/catapult/cat1-final gt  100
-                systems/catapult/cat2-final gt  100
+                systems/catapult/cat-final gt  100
             </test>
             <output>external_reactions/cat-hold/magnitude</output>
          </switch>

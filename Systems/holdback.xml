@@ -5,14 +5,6 @@
 <system name="holdback">
 
   <channel name="Holdback_Launchbar">
-
-     
-
-
-
-    
-     
-     
      
       <switch name="systems/launchbar/switch">
           <default value="0"/>
@@ -44,10 +36,6 @@
          <output>external_reactions/holdback/magnitude</output>
      </switch>
 
-    
-
-
-    
 
   </channel>
 

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+
+<system name="cat-workaround">
+
+<!--This system causes the catapult vector to point "straight ahead".
+      According to the Clemenceau deck position -->
+
+  <channel name="Catapult-Externals">
+      
+      
+      <!--Clemenceau  catapult 1-->
+      <!--Lat 42.79983827726208-->
+      <!--Lon 6.325856691993163-->
+      
+      <!--Clemenceau catapult 2-->
+      <!-- lat42.8002379251812-->
+      <!-- lon6.324766361747341-->
+      
+      <!--CATAPULT POSITION-->
+      
+      <!--we calculate the diff between the aircraft and the catapult position-->
+      
+      <summer name="systems/cat1-lat-diff-position">
+          <input>systems/cat1-lat-position</input>
+          <input>-position/lat-geod-deg</input>
+      </summer>
+      
+      <summer name="systems/cat1-lon-diff-position">
+          <input>systems/cat1-lon-position</input>
+          <input>-position/long-gc-deg</input>
+      </summer>
+      
+      
+      
+      <summer name="systems/cat2-lat-diff-position">
+          <input>systems/cat2-lat-position</input>
+          <input>-position/lat-geod-deg</input>
+      </summer>
+      
+      <summer name="systems/cat2-lon-diff-position">
+          <input>systems/cat2-lon-position</input>
+          <input>-position/long-gc-deg</input>
+      </summer>
+      
+      
+      
+      
+      <!--we estimate if we are in the area of  7 meter square -->
+      
+      
+      
+      
+      <switch name="systems/cat1-onarea">
+          <default value="systems/cat1-onarea"/>
+          <test logic="AND" value="1">
+              systems/cat1-lat-diff-position lt 0.000018
+              systems/cat1-lat-diff-position gt -0.000018
+              systems/cat1-lon-diff-position lt 0.000018
+              systems/cat1-lon-diff-position gt -0.000018
+          </test>
+          <test logic="AND" value="0">
+              systems/catapult/cat-launch-cmd == 0
+          </test>
+      </switch>
+      
+      <switch name="systems/cat2-onarea">
+          <default value="systems/cat2-onarea"/>
+          <test logic="AND" value="1">
+              systems/cat2-lat-diff-position lt 0.000018
+              systems/cat2-lat-diff-position gt -0.000018
+              systems/cat2-lon-diff-position lt 0.000018
+              systems/cat2-lon-diff-position gt -0.000018
+          </test>
+          <test logic="AND" value="0">
+              systems/catapult/cat-launch-cmd == 0
+          </test>
+      </switch>
+      
+      <switch name="systems/cat-onarea">
+          <default value="0"/>
+          <test logic="OR" value="1">
+              systems/cat1-onarea == 1
+              systems/cat2-onarea == 1
+          </test>
+     </switch>
+     
+     
+     <!--CATAPULT HEADING-->
+     
+      
+      <switch name="systems/carrier/cat-head">
+          <default value="0"/>
+          <test  logic="AND" value="systems/carrier/cat1-head">
+              systems/cat1-onarea == 1
+          </test>
+          <test  logic="AND" value="systems/carrier/cat2-head">
+              systems/cat2-onarea == 1
+          </test>
+      </switch>
+      
+      
+      
+      <summer name="systems/carrier/cat-real-head">
+          <input>systems/carrier/cat-head</input>
+          <input>systems/carrier/heading</input>
+      </summer>
+      
+      <fcs_function name="Calculate Cat Force X">
+          <function>
+              <cos>
+                  <property>systems/carrier/cat-real-head</property>
+              </cos>
+          </function>
+          <output>external_reactions/catapult/x</output>
+      </fcs_function>
+      
+      <fcs_function name="Calculate Cat Force Y">
+          <function>
+              <sin>
+                  <property>systems/carrier/cat-real-head</property>
+              </sin>
+          </function>
+          <output>external_reactions/catapult/y</output>
+        </fcs_function>
+
+   
+
+
+  </channel>
+
+</system>

@@ -10,79 +10,8 @@
 
 
 
-     <!--Clemenceau  catapult 1-->
-     <!--Lat 42.79983827726208-->
-     <!--Lon 6.325856691993163-->
-
-     <!--Clemenceau catapult 2-->
-    <!-- lat42.8002379251812-->
-    <!-- lon6.324766361747341-->
-
-    <!--we calculate the diff between the aircraft and the catapult position-->
-
-    <summer name="systems/cat1-lat-diff-position">
-        <input>systems/cat1-lat-position</input>
-        <input>-position/lat-geod-deg</input>
-    </summer>
-
-    <summer name="systems/cat1-lon-diff-position">
-        <input>systems/cat1-lon-position</input>
-        <input>-position/long-gc-deg</input>
-    </summer>
-
-
-
-    <summer name="systems/cat2-lat-diff-position">
-        <input>systems/cat2-lat-position</input>
-        <input>-position/lat-geod-deg</input>
-    </summer>
-
-    <summer name="systems/cat2-lon-diff-position">
-        <input>systems/cat2-lon-position</input>
-        <input>-position/long-gc-deg</input>
-    </summer>
-
-
-
-
-    <!--we estimate if we are in the area of  7 meter square -->
-
-
+    
      
-     
-     <switch name="systems/cat1-onarea">
-         <default value="systems/cat1-onarea"/>
-         <test logic="AND" value="1">
-             systems/cat1-lat-diff-position lt 0.000018
-             systems/cat1-lat-diff-position gt -0.000018
-             systems/cat1-lon-diff-position lt 0.000018
-             systems/cat1-lon-diff-position gt -0.000018
-         </test>
-         <test logic="AND" value="0">
-             systems/catapult/cat-launch-cmd == 0
-         </test>
-     </switch>
-     
-     <switch name="systems/cat2-onarea">
-         <default value="systems/cat2-onarea"/>
-         <test logic="AND" value="1">
-             systems/cat2-lat-diff-position lt 0.000018
-             systems/cat2-lat-diff-position gt -0.000018
-             systems/cat2-lon-diff-position lt 0.000018
-             systems/cat2-lon-diff-position gt -0.000018
-         </test>
-         <test logic="AND" value="0">
-             systems/catapult/cat-launch-cmd == 0
-         </test>
-     </switch>
-     
-     <switch name="systems/cat-onarea">
-         <default value="0"/>
-         <test logic="OR" value="1">
-             systems/cat1-onarea == 1
-             systems/cat2-onarea == 1
-         </test>
-     </switch>
      
      
       <switch name="systems/launchbar/switch">
@@ -115,25 +44,10 @@
          <output>external_reactions/holdback/magnitude</output>
      </switch>
 
-    <!-- vertical hold -->
-     
-     <!--only a guess , to animate the body when tied, and to avoid pitch during catapulting-->
-     <pure_gain name="systems/cat-hold/weight">
-         <input>inertia/weight-lbs</input>
-         <gain>0.3</gain>
-    </pure_gain>
+    
 
 
-     <switch name="systems/cat-hold/magnitudet">
-          <default value="0"/>
-          <test value="systems/cat-hold/weight">
-                launchbar/launch-bar-state == 1
-          </test>
-          <test value="0">
-                gear/unit[1]/WOW == 0
-          </test>
-          <output>external_reactions/cat-hold/magnitude</output>
-     </switch>
+    
 
   </channel>
 

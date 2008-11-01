@@ -72,8 +72,8 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>HourHand</object-name>
-		<property>instrumentation/clock/indicated-hour</property>
-		<factor>6</factor>
+		<property>instrumentation/clock/indicated-sec</property>
+                <factor>0.008333333333333333333</factor>
 		<axis>
 			<x>-1</x>
 			<y>0</y>

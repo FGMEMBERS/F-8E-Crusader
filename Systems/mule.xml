@@ -24,7 +24,7 @@
       
        <pure_gain name="systems/mule/mule-forceback">
            <input>inertia/weight-lbs</input>
-           <gain>-0.03</gain>
+           <gain>-0.07</gain>
        </pure_gain>
        
        <switch name="systems/mule/magnitude">

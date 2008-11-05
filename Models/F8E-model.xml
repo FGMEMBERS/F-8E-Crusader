@@ -31,12 +31,13 @@
 
       <model>
                 <name>Mule</name>
-		<path>Aircraft/F-8E-Crusader/Models/mule-22.xml</path>
+		<path>Aircraft/F-8E-Crusader/Models/Tracteur.xml</path>
 		<offsets>
 			<x-m>-8.5</x-m>
 			<y-m>0</y-m>
-			<z-m>-1.72</z-m>
+			<z-m>-1.25</z-m>
 			<pitch-deg>0</pitch-deg>
+                        <heading-deg>180</heading-deg>
 		</offsets>
 	</model>
 

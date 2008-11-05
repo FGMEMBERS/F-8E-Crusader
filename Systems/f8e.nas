@@ -48,6 +48,7 @@ setlistener("/fdm/jsbsim/launchbar/launch-bar-state",JBD_op);
 
 init_f8e=func{
 setprop("/controls/flight/wing-fold-cmd",1);
+setprop("/sim/model/mule/linked",1);
 }
 
 

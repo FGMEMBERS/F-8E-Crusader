@@ -8,7 +8,7 @@
 
     <!--  LING-TEMCO-VOUGHT   F-8E-Crusader Crusader                 Auteur :      Gerard ROBIN                       Update  FDM 1.0 le 24-09-2008 -->
 
-       
+      
         <nasal>
                 <electrical>
                         <file>Aircraft/F-8E-Crusader/Systems/electrical.nas</file>

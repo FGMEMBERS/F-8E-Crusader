@@ -6,6 +6,18 @@
     <channel name="">
         
         <property>launchbar/launch-bar-engage</property>
+        
+        
+            <switch name="systems/launchbar/switch">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    systems/holdback/holdback-cmd == 1
+                </test>
+                <test value="0">
+                    gear/unit[1]/WOW == 0
+                </test>
+                <output>launchbar/launch-bar-engage</output>
+            </switch>
 
              <kinematic name="Launchbar Engage">
                 <input>launchbar/launch-bar-engage</input>
@@ -16,7 +28,7 @@
                     </setting>
                     <setting>
                         <position>1.0000</position>
-                        <time>2.0000</time>
+                        <time>4.0000</time>
                     </setting>
                 </traverse>
                 <output>launchbar/launch-bar-pos-norm</output>
@@ -47,6 +59,49 @@
                 </test>
                 <output>/gear/launchbar/state</output>
             </switch>-->
+            
+            
+            <!--forces in order to keep the aircraft sitting at the right Catapult position-->
+            <!--an empiric value is calculated with "weight-lbs X difference X 300000   for each x and y coordinate--> 
+            
+            <pure_gain name="systems/tension/force_weight">
+                <input>inertia/weight-lbs</input>
+                <gain>300000</gain>
+            </pure_gain>
+            
+            <switch name="systems/tension/force">
+                <default value="0"/>
+                <test logic="AND" value="systems/tension/force_weight">
+                    launchbar/launch-bar-pos-norm gt 0
+                    systems/holdback/holdback-cmd == 1
+                </test>
+            </switch>
+            
+            <!-- Latitude     <force name="tensionx" frame="LOCAL"> -->
+            <pure_gain name="systems/tension/forcex">
+                <input>systems/tension/force</input>
+                <gain>systems/carrier/cat-lat-diff-position</gain>
+            </pure_gain>
+            
+            <pure_gain name="systems/tension/magnitudex">
+                <input>systems/tension/forcex</input>
+                <gain>launchbar/launch-bar-pos-norm</gain>
+                <output>external_reactions/tensionx/magnitude</output>
+            </pure_gain>
+            
+            <!-- Longitude    <force name="tensiony" frame="LOCAL"> -->
+            <pure_gain name="systems/tension/forcey">
+                <input>systems/tension/force</input>
+                <gain>systems/carrier/cat-lon-diff-position</gain>
+            </pure_gain>
+            
+            <pure_gain name="systems/tension/magnitudey">
+                <input>systems/tension/forcey</input>
+                <gain>launchbar/launch-bar-pos-norm</gain>
+                <output>external_reactions/tensiony/magnitude</output>
+            </pure_gain>
+            
+           
 
 
     </channel>

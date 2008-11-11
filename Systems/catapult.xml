@@ -6,9 +6,61 @@
 
     <channel name="Catapult">
         
+        <summer name="systems/carrier/cat-real-head">
+            <input>systems/carrier/cat-head</input>
+            <input>systems/carrier/heading</input>
+        </summer>
+        <summer name="systems/carrier/cat-diff-head">
+            <input>systems/carrier/cat-real-head</input>
+            <input>-attitude/heading-true-rad</input>
+        </summer>
+        <summer name="systems/carrier/cat-force-head">
+            <input>systems/carrier/cat-real-head</input>
+            <input>systems/carrier/cat-diff-head</input>
+        </summer>
+        
+        <!--the force heading  of catapult  will be updated accordingly the real difference between the catapultul heading and the aircraft heading-->
+        
+        <fcs_function name="Calculate Cat Force X">
+            <function>
+                <cos>
+                    <property>systems/carrier/cat-force-head</property>
+                </cos>
+            </function>
+            <output>external_reactions/catapult/x</output>
+        </fcs_function>
+       
+        <fcs_function name="Calculate Cat Force Y">
+            <function>
+                <sin>
+                    <property>systems/carrier/cat-force-head</property>
+                </sin>
+            </function>
+            <output>external_reactions/catapult/y</output>
+        </fcs_function>
+        
+        <!-- Catapult     We recalculate the side force which   should be applied during catapulting -->
+        <summer name="external_reactions/cat-hold-side/x">
+            <input>-external_reactions/catapult/y</input>
+        </summer>
+        
+        <summer name="external_reactions/cat-hold-side/y">
+            <input>external_reactions/catapult/x</input>
+        </summer>
+        
+        <fcs_function name="Calculate Cat Side Force ">
+            <function>
+                <sin>
+                    <property>systems/carrier/cat-diff-head</property>
+                </sin>
+            </function>
+            <output>systems/catapult/side-force</output>
+       </fcs_function>
+        
+        <!--The catapult when acted ( under condition the launch bar must be ON) will be give the force as long as the AC is on the deck -->
+        
         <switch name="systems/catapult/cat-cmd-norm">
             <default value="0"/>
-            
             <test  logic="AND" value="0">
                 systems/catapult/cat-pos-norm gt 0.999
             </test>
@@ -29,7 +81,7 @@
                 </setting>
                 <setting>
                     <position>1.0</position>
-                    <time>2.7</time>
+                    <time>5</time>
                 </setting>
             </traverse>
             <output>systems/catapult/cat-pos-norm</output>
@@ -39,9 +91,6 @@
             <input>inertia/weight-lbs</input>
             <gain>3.5</gain>
         </pure_gain>
-        
-       
-        
         
         <switch name="systems/catapult/cat-final">
             <default value="0"/>
@@ -59,18 +108,32 @@
         <!--only a guess , to animate the body when tied, and to avoid pitch during catapulting-->
         <pure_gain name="systems/cat-hold/weight">
             <input>inertia/weight-lbs</input>
-            <gain>0.3</gain>
+            <gain>0.32</gain>
          </pure_gain>
-        
-        
-        <switch name="systems/cat-hold/magnitudet">
-            <default value="0"/>
-            <test logic="OR" value="systems/cat-hold/weight">
-                launchbar/launch-bar-state == 1
-                systems/catapult/cat-final gt  100
-            </test>
-            <output>external_reactions/cat-hold/magnitude</output>
+         
+         <switch name="systems/cat-hold/magnitudet">
+             <default value="0"/>
+             <test logic="OR" value="systems/cat-hold/weight">
+                 launchbar/launch-bar-state == 1
+                 systems/catapult/cat-final gt  100
+             </test>
+             <output>external_reactions/cat-hold/magnitude</output>
          </switch>
+         
+         <!--This is the side force which will be applied accordingly to the calculated heading difference (see cat_external_data.xml file) -->
+         
+         <pure_gain name="systems/catapult/side-forcecat">
+             <input>systems/catapult/side-force</input>
+             <gain>5</gain>
+         </pure_gain>
+         
+         <pure_gain name="systems/cat-hold-side/force">
+             <input>external_reactions/catapult/magnitude</input>
+             <gain>systems/catapult/side-forcecat</gain>
+             <output>external_reactions/cat-hold-side/magnitude</output>
+         </pure_gain>
+       
+         
         
     </channel>
 

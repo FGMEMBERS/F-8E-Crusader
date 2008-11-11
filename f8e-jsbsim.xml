@@ -438,7 +438,6 @@
     <system file="launchbar"/>
     <system file="catapult"/>
     <system file="holdback"/>
-    <system file="global-hold"/>
     <system file="hook"/>
     <system file="mule"/>
     <system file="instruments"/>
@@ -646,6 +645,8 @@
                       </table>
                 </product>
             </function>
+            
+       
             <function name="aero/coefficient/CDDlef">
                 <description>Drag_due_to_leading_edge_flap_deflection</description>
                 <product>
@@ -661,6 +662,8 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>fcs/flap-pos-norm</property>
+                    
+       
                     <value>0.0100</value>
                 </product>
             </function>
@@ -708,12 +711,33 @@
                     <value>0.0800</value>
                 </product>
             </function>
+            <function name="aero/coefficient/CDgear_water">
+                <description>Drag_due_to_gear_in_water</description>
+                <product>
+                    <property>fcs/drag-gear-in-water-switch</property>
+                    <table>
+                        <independentVar>velocities/vc-kts</independentVar>
+                        <tableData>
+                            0     0
+                            10    1000
+                            30    3000
+                            50    9000
+                            70   27000
+                            90   81000
+                            110  243000
+                            220  6000000
+                        </tableData>
+                    </table>
+                </product>
+            </function>
         </axis>
 
         <axis name="SIDE">
             <function name="aero/coefficient/CYb">
                 <description>Side_force_due_to_beta</description>
                 <product>
+                    
+       
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>aero/beta-rad</property>
@@ -771,6 +795,8 @@
                               0.4300	0.0300
                           </tableData>
                       </table>
+                      
+       
                 </product>
             </function>
             <function name="aero/coefficient/dCLflap">
@@ -785,7 +811,9 @@
             <function name="aero/coefficient/dCLBLC">
             <description>Delta_Lift_due_to_BLC</description>
             <product>
-                    <property>aero/qbar-psf</property>
+                <property>aero/qbar-psf</property>
+                
+       
                     <property>metrics/Sw-sqft</property>
                     <property>systems/BLC/active</property>
                     <property>fcs/flap-pos-norm</property>
@@ -909,6 +937,8 @@
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>metrics/cbarw-ft</property>
+                    
+       
                     <property>fcs/elevator-pos-rad</property>
                       <table>
                           <independentVar>velocities/mach</independentVar>
@@ -989,8 +1019,7 @@
     </aerodynamics>
 
      <external_reactions>
-
-	
+         
         <force name="catapult" frame="LOCAL">
         <location unit="IN">
             <x>  -30 </x>
@@ -1003,8 +1032,23 @@
             <z>0.1</z>
         </direction>
         </force>
+        
+        <!--Catapult   side force when necessary to keep the right heading-->
+        <force name="cat-hold-side" frame="LOCAL">
+            <location unit="IN">
+                <x>  -30.0 </x>
+                <y>    0.0 </y>
+                <z>  -39.0 </z>
+            </location>
+            <direction>
+                <x>0</x>
+                <y>-1</y>
+                <z>0.0 </z>
+            </direction>
+        </force>
+        
 
-        <force name="cat-hold" frame="LOCAL">
+        <force name="cat-hold" frame="BODY">
         <location unit="IN">
             <x>  -30 </x>
             <y>    0.0 </y>
@@ -1016,40 +1060,10 @@
             <z>1 </z>
         </direction>
         </force>
-
-        <force name="global-x-hold" frame="BODY">
+        
+        <force name="holdback" frame="LOCAL">
         <location unit="IN">
-            <x>  46 </x>
-            <y>    0.0 </y>
-            <z>  -39.0 </z>
-        </location>
-        <direction>
-            <x>1</x>
-            <y>0</y>
-            <z>0 </z>
-        </direction>
-        </force>
-
-        <force name="global-y-hold" frame="BODY">
-        <location unit="IN">
-            <x>  46 </x>
-            <y>    0.0 </y>
-            <z>  -39.0 </z>
-        </location>
-        <direction>
-            <x>0</x>
-            <y>1</y>
-            <z>0 </z>
-        </direction>
-        </force>
-
-
-
-
-
-        <force name="holdback" frame="BODY">
-        <location unit="IN">
-            <x> 0.0 </x>
+            <x> 211</x>
             <y>    0.0 </y>
             <z>  -39.0 </z>
         </location>
@@ -1060,7 +1074,48 @@
         </direction>
         </force>
         
-
+        <!--Holdback  side force will keep the heading of the aircraft-->
+        <force name="hb-hold-side" frame="LOCAL">
+            <location unit="IN">
+                <x> 211 </x>
+                <y>    0.0 </y>
+                <z>  -39.0 </z>
+            </location>
+   
+            <direction>
+                <x>0</x>
+                <y>-1</y>
+                <z>2</z>
+            </direction>
+        </force>
+        
+        
+        <!-- keep in place sitting at the catapult lat lon coordinate -->
+        <force name="tensionx" frame="LOCAL">
+            <location unit="IN">
+                <x>0</x>
+                <y>    0.0 </y>
+                <z> -65 </z>
+            </location>
+            <direction>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </direction>
+        </force>
+        
+        <force name="tensiony" frame="LOCAL">
+            <location unit="IN">
+                <x>0</x>
+                <y>    0.0 </y>
+                <z> -65</z>
+            </location>
+            <direction>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </direction>
+        </force>
 
         <force name="hook" frame="BODY">
         <location unit="IN">

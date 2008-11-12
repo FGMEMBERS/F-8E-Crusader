@@ -2,6 +2,8 @@
 
 
 <system name="Landing-Gear">
+    
+    <property>gear/gear-cp0-cmd-norm</property>
 
     <channel name="Landing Gear">
 
@@ -12,9 +14,41 @@
                     position/h-agl-ft lt 40
                     position/h-sl-ft  lt position/h-agl-ft
                 </test>
-                <output>gear/gear-cp-cmd-norm</output>
+                <output>gear/gear-cmd-norm</output>
             </switch>
-            <kinematic name="Gear Control">
+            
+            <actuator name="Gear Nose Actuator">
+                <input>gear/gear-cmd-norm</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[0]/pos-norm</output>
+            </actuator>
+            <actuator name="Gear Left Actuator">
+                <input>gear/gear-cmd-norm</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[1]/pos-norm</output>
+            </actuator>
+            <actuator name="Gear Right Actuator">
+                <input>gear/gear-cmd-norm</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[2]/pos-norm</output>
+            </actuator>
+            
+            
+            <!--<kinematic name="gear/unit[0]/gear-pos-norm">
+                <input>gear/gear-cp0-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>0.3</time>
+                    </setting>
+                </traverse>
+            </kinematic>
+            
+            <kinematic name="gear/unit[1]/gear-pos-norm">
                 <input>gear/gear-cp-cmd-norm</input>
                 <traverse>
                     <setting>
@@ -26,8 +60,23 @@
                         <time>0.3</time>
                     </setting>
                 </traverse>
-                <output>gear/gear-pos-norm</output>
             </kinematic>
+            
+            
+            <kinematic name="gear/unit[2]/gear-pos-norm">
+                <input>gear/gear-cp-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>0.3</time>
+                    </setting>
+                </traverse>
+            </kinematic>
+            -->
 
             <kinematic name="Gear Surface Position">
                 <input>/controls/gear/gear-down</input>
@@ -65,7 +114,7 @@
                 <default value="0"/>
                 <test  logic="AND" value="1">
                     /position/altitude-agl-ft lt 11
-                    gear/gear-pos-norm == 1
+                    gear/unit[0]/gear-pos-norm == 1
                 </test>
             </switch>
 

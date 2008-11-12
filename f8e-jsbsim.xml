@@ -201,7 +201,7 @@
     </mass_balance>
 
     <ground_reactions>
-        <contact type="BOGEY" name="NOSE_LG">
+        <contact type="BOGEY" name="NOSE_LG">  <!--0-->
             <location unit="IN">
                 <x> -139.76 </x>
                 <y> 0 </y>
@@ -216,7 +216,7 @@
             <brake_group> NONE </brake_group>
             <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="LEFT_MLG">
+        <contact type="BOGEY" name="LEFT_MLG"> <!--1-->
             <location unit="IN">
                 <x> 82.44 </x>
                 <y> -58.03 </y>
@@ -231,7 +231,7 @@
             <brake_group> LEFT </brake_group>
             <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="RIGHT_MLG">
+        <contact type="BOGEY" name="RIGHT_MLG"> <!--2-->
             <location unit="IN">
                 <x> 82.44 </x>
                 <y> 58.03 </y>
@@ -246,7 +246,7 @@
             <brake_group> RIGHT </brake_group>
             <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="W_LEFT_FOLD">
+        <contact type="BOGEY" name="W_LEFT_FOLD"> <!--3-->
             <location unit="IN">
                 <x> 171 </x>
                 <y> -213 </y>
@@ -255,13 +255,13 @@
             <static_friction> 0.2 </static_friction>
             <dynamic_friction> 0.2 </dynamic_friction>
             <rolling_friction> 0.2 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 100 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 10000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 200 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="W_RIGHT_FOLD">
+        <contact type="BOGEY" name="W_RIGHT_FOLD"><!-- 4-->
             <location unit="IN">
                 <x> 171 </x>
                 <y> 213 </y>
@@ -270,13 +270,13 @@
             <static_friction> 0.2 </static_friction>
             <dynamic_friction> 0.2 </dynamic_friction>
             <rolling_friction> 0.2 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 100 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 10000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 200 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="W_LEFT">
+        <contact type="BOGEY" name="W_LEFT"> <!--5-->
             <location unit="IN">
                 <x> 113</x>
                 <y> -135.3 </y>
@@ -285,13 +285,13 @@
             <static_friction> 0.2 </static_friction>
             <dynamic_friction> 0.2 </dynamic_friction>
             <rolling_friction> 0.2 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 100 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 10000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 200 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
         </contact>
-        <contact type="BOGEY" name="W_RIGHT">
+        <contact type="BOGEY" name="W_RIGHT"> <!--6-->
             <location unit="IN">
                 <x> 113 </x>
                 <y> 135.3 </y>
@@ -300,13 +300,13 @@
             <static_friction> 0.2 </static_friction>
             <dynamic_friction> 0.2 </dynamic_friction>
             <rolling_friction> 0.2 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 100 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 10000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 200 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
         </contact>
-        <contact type="BOGEY" name="VT">
+        <contact type="BOGEY" name="VT"> <!--7-->
             <location unit="IN">
                 <x> 312 </x>
                 <y> 0 </y>
@@ -315,13 +315,13 @@
             <static_friction> 0.2 </static_friction>
             <dynamic_friction> 0.2 </dynamic_friction>
             <rolling_friction> 0.2 </rolling_friction>
-            <spring_coeff unit="LBS/FT"> 100 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
+            <spring_coeff unit="LBS/FT"> 10000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 200 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
         </contact>
-        <contact type="BOGEY" name="RADOME">
+        <contact type="BOGEY" name="RADOME"> <!--8-->
             <location unit="IN">
                 <x> -172 </x>
                 <y> 0 </y>
@@ -334,9 +334,9 @@
             <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
-            <retractable>0</retractable>
+            <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="BELLY">
+        <contact type="BOGEY" name="BELLY"> <!--9-->
             <location unit="IN">
                 <x> -173 </x>
                 <y> 0 </y>
@@ -349,9 +349,9 @@
             <damping_coeff unit="LBS/FT/SEC"> 3000 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
-            <retractable>0</retractable>
+            <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="NOSE">
+        <contact type="BOGEY" name="NOSE"> <!--10-->
             <location unit="IN">
                 <x> -317 </x>
                 <y> 0 </y>
@@ -361,12 +361,12 @@
             <dynamic_friction> 0.2 </dynamic_friction>
             <rolling_friction> 0.2 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
-            <damping_coeff unit="LBS/FT/SEC"> 2000 </damping_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 2000</damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
-            <retractable>0</retractable>
+            <retractable>1</retractable>
         </contact>
-        <contact type="BOGEY" name="NOZZLE">
+        <contact type="BOGEY" name="NOZZLE"> <!--11-->
             <location unit="IN">
                 <x> 315 </x>
                 <y> 0 </y>
@@ -377,6 +377,21 @@
             <rolling_friction> 0.2 </rolling_friction>
             <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
             <damping_coeff unit="LBS/FT/SEC"> 2000 </damping_coeff>
+            <max_steer unit="DEG"> 0.0 </max_steer>
+            <brake_group> NONE </brake_group>
+            <retractable>1</retractable>
+        </contact>
+        <contact type="BOGEY" name="TOP"> <!--12-->
+            <location unit="IN">
+                <x> 0 </x>
+                <y> 0 </y>
+                <z> 60</z>
+            </location>
+            <static_friction> 0.2 </static_friction>
+            <dynamic_friction> 0.2 </dynamic_friction>
+            <rolling_friction> 0.2 </rolling_friction>
+            <spring_coeff unit="LBS/FT"> 100000 </spring_coeff>
+            <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
             <retractable>0</retractable>
@@ -445,6 +460,7 @@
     <system file="probe-refuel"/>
     <system file="light-outdoor"/>
     <system file="electrical"/>
+    <system file="sinking"/>
 
     <flight_control name="FCS: F-8E">
 
@@ -719,13 +735,13 @@
                         <independentVar>velocities/vc-kts</independentVar>
                         <tableData>
                             0     0
-                            10    1000
-                            30    3000
-                            50    9000
-                            70   27000
-                            90   81000
-                            110  243000
-                            220  6000000
+                            10    100
+                            30    300
+                            50    900
+                            70   2700
+                            90   8100
+                            110  24300
+                            220  600000
                         </tableData>
                     </table>
                 </product>

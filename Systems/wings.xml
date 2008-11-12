@@ -322,20 +322,32 @@
             
            <!-- with folding contact points On/Off-->
             
-            <switch name="Wing Left Fold">
+           <switch name="systems/wings-fold/right-wing">
                 <default value="0"/>
                 <test  value="1">
                     fcs/wing-fold-pos-norm == 0
                 </test>
-                <output>gear/unit[3]/pos-norm</output>
             </switch>
-            <switch name="Wing Right Fold">
-                <default value="0"/>
-                <test  value="1">
-                    fcs/wing-fold-pos-norm == 0
-                </test>
+            
+            <actuator name="Right Wing Fold">
+                <input>systems/wings-fold/right-wing</input>
+                <rate_limit>0.1</rate_limit>
                 <output>gear/unit[4]/pos-norm</output>
+            </actuator>
+            
+            <switch name="systems/wings-fold/left-wing">
+                <default value="0"/>
+                <test  value="1">
+                    fcs/wing-fold-pos-norm == 0
+                </test>
             </switch>
+            
+            <actuator name="Left Wing Fold">
+                <input>systems/wings-fold/left-wing</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[3]/pos-norm</output>
+            </actuator>
+            
 
             <pure_gain name="Wing Fold Position">
                 <input>fcs/wing-fold-pos-norm</input>

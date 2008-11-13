@@ -3,7 +3,7 @@
 
 <system name="">
 
-    <channel name="">
+    <channel name="launchbar">
         
         <property>launchbar/launch-bar-engage</property>
         
@@ -12,6 +12,7 @@
                 <default value="0"/>
                 <test logic="AND" value="1">
                     systems/holdback/holdback-cmd == 1
+                    systems/cat-onarea == 1
                 </test>
                 <test value="0">
                     gear/unit[1]/WOW == 0

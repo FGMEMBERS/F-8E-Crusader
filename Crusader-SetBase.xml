@@ -107,6 +107,15 @@
                     </generic>
                 </multiplay>
 		<help include="Help/Crusader-help.xml"/>
+                <carrier include="Systems/carrier_geometry.xml">
+                    <lat-pos>0</lat-pos>
+                    <lon-pos>0</lon-pos>
+                    <heading-deg>0</heading-deg>
+                    <cat1-heading-rad>0</cat1-heading-rad>
+                    <cat2-heading-rad>0</cat2-heading-rad>
+                    <cat3-heading-rad>0</cat3-heading-rad>
+                    <cat4-heading-rad>0</cat4-heading-rad>
+                </carrier>
         </sim>
         
 
@@ -223,9 +232,9 @@
         </gear>
 
 
-       <!--these values are only suittable for Clemenceau  with the clemenceau_demo.xml -->
+     
 
-        <fdm include="Systems/carrier_position.xml"/>
+        <fdm include="Systems/jsbsim_init.xml"/>
 
 </PropertyList>
 

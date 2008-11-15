@@ -3,7 +3,7 @@
 <system name="cat-workaround">
 
 <!--This system causes the catapult to be .identified  with position and heading
-      Accordingly  Predeffined Carrier (Arromanches) deck position -->
+      According to the predeffined Carrier (Clemenceau) deck position -->
 
 <!--This system should be replaced by an included code within JSBSim which gives in real time the position of of the closest catapult on any Carrier-->
 
@@ -12,6 +12,20 @@
 catapult heading  "systems/carrier/cat-head"
 catapult latitude position "systems/carrier/cat-lat-position"
 catapult longitude position "systems/carrier/cat-lon-position"-->
+
+<property>systems/carrier/cat1-lat-position</property>
+<property>systems/carrier/cat1-lon-position</property>
+
+<property>systems/carrier/cat2-lat-position</property>
+<property>systems/carrier/cat2-lon-position</property>
+
+<property>systems/carrier/cat3-lat-position</property>
+<property>systems/carrier/cat3-lon-position</property>
+
+<property>systems/carrier/cat4-lat-position</property>
+<property>systems/carrier/cat4-lon-position</property>
+
+
 
   <channel name="Catapult-External_data">    
      
@@ -44,8 +58,28 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
           <input>-position/long-gc-deg</input>
       </summer>
       
+      <summer name="systems/carrier/cat3-lat-diff-position">
+          <input>systems/carrier/cat3-lat-position</input>
+          <input>-position/lat-geod-deg</input>
+      </summer>
       
-      <!--we estimate if we are in the area of  7 meter square -->
+      <summer name="systems/carrier/cat3-lon-diff-position">
+          <input>systems/carrier/cat3-lon-position</input>
+          <input>-position/long-gc-deg</input>
+      </summer>
+      
+      <summer name="systems/carrier/cat4-lat-diff-position">
+          <input>systems/carrier/cat4-lat-position</input>
+          <input>-position/lat-geod-deg</input>
+      </summer>
+      
+      <summer name="systems/carrier/cat4-lon-diff-position">
+          <input>systems/carrier/cat4-lon-position</input>
+          <input>-position/long-gc-deg</input>
+      </summer>
+      
+      
+      <!--we estimate if we are in the area of  7 square meter  -->
       
       <switch name="systems/carrier/cat1-onarea">
           <default value="systems/carrier/cat1-onarea"/>
@@ -55,7 +89,7 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
               systems/carrier/cat1-lon-diff-position lt 0.000018
               systems/carrier/cat1-lon-diff-position gt -0.000018
           </test>
-          <test logic="AND" value="0">
+          <test  logic="AND" value="0">
               systems/catapult/cat-launch-cmd == 0
           </test>
       </switch>
@@ -73,6 +107,32 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
           </test>
       </switch>
       
+      <switch name="systems/carrier/cat3-onarea">
+          <default value="systems/carrier/cat3-onarea"/>
+          <test logic="AND" value="1">
+              systems/carrier/cat3-lat-diff-position lt 0.000018
+              systems/carrier/cat3-lat-diff-position gt -0.000018
+              systems/carrier/cat3-lon-diff-position lt 0.000018
+              systems/carrier/cat3-lon-diff-position gt -0.000018
+          </test>
+          <test logic="AND" value="0">
+              systems/catapult/cat-launch-cmd == 0
+          </test>
+      </switch>
+      
+      <switch name="systems/carrier/cat4-onarea">
+          <default value="systems/carrier/cat4-onarea"/>
+          <test logic="AND" value="1">
+              systems/carrier/cat4-lat-diff-position lt 0.000018
+              systems/carrier/cat4-lat-diff-position gt -0.000018
+              systems/carrier/cat4-lon-diff-position lt 0.000018
+              systems/carrier/cat4-lon-diff-position gt -0.000018
+          </test>
+          <test logic="AND" value="0">
+              systems/catapult/cat-launch-cmd == 0
+          </test>
+      </switch>
+      
      
       
       <switch name="systems/cat-onarea">
@@ -82,6 +142,12 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
           </test>
           <test logic="OR" value="1">
               systems/carrier/cat2-onarea == 1
+        </test>
+        <test logic="OR" value="1">
+                systems/carrier/cat3-onarea == 1
+        </test>
+        <test logic="OR" value="1">
+                systems/carrier/cat4-onarea == 1
         </test>
        </switch>
        
@@ -116,17 +182,73 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
             </traverse>
         </kinematic>
      
-     
+        <kinematic name="systems/carrier/cat3-onarea-memory">
+            <input>systems/carrier/cat3-onarea</input>
+            <traverse>
+                <setting>
+                    <position>0.0</position>
+                    <time>0.0</time>
+                </setting>
+                <setting>
+                    <position>1.0</position>
+                    <time>5</time>
+                </setting>
+            </traverse>
+        </kinematic>
+        
+        <kinematic name="systems/carrier/cat4-onarea-memory">
+            <input>systems/carrier/cat4-onarea</input>
+            <traverse>
+                <setting>
+                    <position>0.0</position>
+                    <time>0.0</time>
+                </setting>
+                <setting>
+                    <position>1.0</position>
+                    <time>5</time>
+                </setting>
+            </traverse>
+        </kinematic>
+        
      <!--CATAPULT HEADING-->
     <!-- Select which catapult -->
+    
+   
+    
+        <pure_gain name="systems/carrier/heading-rad">
+            <input>/sim/carrier/heading-deg</input>
+            <gain> 0.017453293</gain>
+         </pure_gain>
+         
+         <switch name="systems/carrier/heading">
+             <default value="0"/>
+             <test  logic="AND" value="systems/carrier/heading-rad">
+                 systems/carrier/cat1-onarea-memory gt 0
+             </test>
+             <test  logic="AND" value="systems/carrier/heading-rad">
+                 systems/carrier/cat2-onarea-memory gt 0
+             </test>
+             <test  logic="AND" value="systems/carrier/heading-rad">
+                 systems/carrier/cat3-onarea-memory gt 0
+             </test>
+             <test  logic="AND" value="systems/carrier/heading-rad">
+                 systems/carrier/cat4-onarea-memory gt 0
+             </test>
+      </switch>
       
       <switch name="systems/carrier/cat-head">
           <default value="0"/>
-          <test  logic="AND" value="systems/carrier/cat1-head">
+          <test value="/sim/carrier/cat1-heading-rad">
               systems/carrier/cat1-onarea-memory gt 0
           </test>
-          <test  logic="AND" value="systems/carrier/cat2-head">
+          <test value="/sim/carrier/cat2-heading-rad">
               systems/carrier/cat2-onarea-memory gt 0
+          </test>
+          <test value="/sim/carrier/cat3-heading-rad">
+              systems/carrier/cat3-onarea-memory gt 0
+          </test>
+          <test value="/sim/carrier/cat4-heading-rad">
+              systems/carrier/cat4-onarea-memory gt 0
           </test>
       </switch>
       
@@ -138,6 +260,12 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
           <test  logic="AND" value="systems/carrier/cat2-lat-diff-position">
               systems/carrier/cat2-onarea-memory gt 0
           </test>
+          <test  logic="AND" value="systems/carrier/cat3-lat-diff-position">
+              systems/carrier/cat3-onarea-memory gt 0
+          </test>
+          <test  logic="AND" value="systems/carrier/cat4-lat-diff-position">
+              systems/carrier/cat4-onarea-memory gt 0
+          </test>
       </switch>
       
       <switch name="systems/carrier/cat-lon-diff-position">
@@ -147,6 +275,12 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
           </test>
           <test  logic="AND" value="systems/carrier/cat2-lon-diff-position">
               systems/carrier/cat2-onarea-memory gt 0
+          </test>
+          <test  logic="AND" value="systems/carrier/cat3-lon-diff-position">
+              systems/carrier/cat3-onarea-memory gt 0
+          </test>
+          <test  logic="AND" value="systems/carrier/cat4-lon-diff-position">
+              systems/carrier/cat4-onarea-memory gt 0
           </test>
       </switch>
    

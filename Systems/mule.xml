@@ -14,17 +14,18 @@
                 /sim/model/mule/linked == 1
                 fcs/cutoff-switch == 0
                 /gear/gear[1]/compression-norm gt 0.15
+                launchbar/launch-bar-state == 0
            </test>
        </switch>
        
        <pure_gain name="systems/mule/mule-force">
            <input>inertia/weight-lbs</input>
-           <gain>0.1</gain>
+           <gain>0.15</gain>
        </pure_gain>
       
        <pure_gain name="systems/mule/mule-forceback">
            <input>inertia/weight-lbs</input>
-           <gain>-0.07</gain>
+           <gain>-0.12</gain>
        </pure_gain>
        
        <switch name="systems/mule/magnitude">

@@ -40,13 +40,14 @@
         </fcs_function>
         
         <!-- Catapult     We recalculate the side force which   should be applied during catapulting -->
-        <summer name="external_reactions/cat-hold-side/x">
+        
+       <!-- <summer name="external_reactions/cat-hold-side/x">
             <input>-external_reactions/catapult/y</input>
         </summer>
         
         <summer name="external_reactions/cat-hold-side/y">
             <input>external_reactions/catapult/x</input>
-        </summer>
+        </summer>-->
         
         <fcs_function name="Calculate Cat Side Force ">
             <function>

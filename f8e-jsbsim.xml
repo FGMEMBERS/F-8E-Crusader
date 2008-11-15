@@ -1049,8 +1049,8 @@
         </direction>
         </force>
         
-        <!--Catapult   side force when necessary to keep the right heading-->
-        <force name="cat-hold-side" frame="LOCAL">
+        <!--Catapult   side force when necessary to keep the right heading--> 
+        <force name="cat-hold-side" frame="BODY">
             <location unit="IN">
                 <x>  -30.0 </x>
                 <y>    0.0 </y>
@@ -1058,7 +1058,7 @@
             </location>
             <direction>
                 <x>0</x>
-                <y>-1</y>
+                <y>1</y>
                 <z>0.0 </z>
             </direction>
         </force>
@@ -1091,7 +1091,7 @@
         </force>
         
         <!--Holdback  side force will keep the heading of the aircraft-->
-        <force name="hb-hold-side" frame="LOCAL">
+        <force name="hb-hold-side" frame="BODY">
             <location unit="IN">
                 <x> 211 </x>
                 <y>    0.0 </y>
@@ -1100,8 +1100,8 @@
    
             <direction>
                 <x>0</x>
-                <y>-1</y>
-                <z>2</z>
+                <y>1</y>
+                <z>1</z>
             </direction>
         </force>
         

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<PropertyList>
+
+            <jsbsim>
+                <systems>
+                    <holdback><holdback-cmd type="double">0</holdback-cmd></holdback>
+                    <blackout-cst type="double">1</blackout-cst>
+                </systems>
+            </jsbsim>
+
+</PropertyList>

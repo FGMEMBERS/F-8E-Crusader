@@ -21,23 +21,15 @@
       
       
       <!-- Holdback We recalculate the side force which   should be applied during catapulting -->
-      <fcs_function name="Calculate HB Side Force X">
-          <function>
-              <sin>
-                  <property>systems/carrier/cat-force-head</property>
-              </sin>
-          </function>
-          <output>external_reactions/hb-hold-side/x</output>
-      </fcs_function>
+     <!-- <summer name="external_reactions/hb-hold-side/x">
+          <input>-external_reactions/holdback/y</input>
+      </summer>
       
-      <fcs_function name="Calculate HB Side Force Y">
-          <function>
-              <cos>
-                  <property>systems/carrier/cat-force-head</property>
-              </cos>
-          </function>
-          <output>external_reactions/hb-hold-side/y</output>
-      </fcs_function>
+      <summer name="external_reactions/hb-hold-side/y">
+          <input>external_reactions/holdback/x</input>
+      </summer>-->
+      
+      
       
       <fcs_function name="Calculate HB Side Force ">
           <function>
@@ -97,10 +89,13 @@
      
      <!--This is the side force on the Holdback which will be applied accordingly to the calculated heading difference (see cat_external_data.xml file) -->
      
-    
+     <pure_gain name="systems/hb-hold-side/force2w">
+         <input>-inertia/weight-lbs</input>
+         <gain>3</gain>
+    </pure_gain>
      
      <pure_gain name="systems/hb-hold-side/force">
-         <input>inertia/weight-lbs</input>
+         <input>systems/hb-hold-side/force2w</input>
          <gain>systems/holdback/side-force</gain>
     </pure_gain>
     

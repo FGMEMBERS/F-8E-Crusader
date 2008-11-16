@@ -8,10 +8,8 @@
             <switch name="systems/carrier-jbd1-cmd-norm">
                 <default value="0"/>
                 <test logic="AND" value="1">
-                         /ai/models/carrier/surface-positions/jbd-pos-norm == 1
-                        launchbar/launch-bar-pos-norm == 1
-                        gear/unit[1]/WOW == 1
-                        systems/carrier/cat1-onarea == 1
+                    launchbar/launch-bar-state == 1
+                    systems/carrier/cat1-onarea == 1
                 </test>
             </switch>
             
@@ -33,9 +31,7 @@
             <switch name="systems/carrier-jbd2-cmd-norm">
                 <default value="0"/>
                 <test logic="AND" value="1">
-                    /ai/models/carrier/surface-positions/jbd-pos-norm == 1
-                    launchbar/launch-bar-pos-norm == 1
-                    gear/unit[1]/WOW == 1
+                    launchbar/launch-bar-state == 1
                     systems/carrier/cat2-onarea == 1
                 </test>
             </switch>

@@ -72,6 +72,7 @@
 #============And loading the corresponding Deck Geometry definition=========
 
                       if (first_contact == 0) { 
+                      setprop ("/sim/carrier/name",contact);
                       print ("WELCOME ON BOARD, CARRIER: => ",contact," <=");
                       first_contact = 1;
                           if ((contact == clem) or (contact == foch)) {

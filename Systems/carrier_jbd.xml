@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+
+<system name="">
+
+    <channel name="carrier_JBD">
+            
+            <switch name="systems/carrier-jbd1-cmd-norm">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                         /ai/models/carrier/surface-positions/jbd-pos-norm == 1
+                        launchbar/launch-bar-pos-norm == 1
+                        gear/unit[1]/WOW == 1
+                        systems/carrier/cat1-onarea == 1
+                </test>
+            </switch>
+            
+            <kinematic name="systems/carrier-jbd1-pos-norm">
+                <input>systems/carrier-jbd1-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0.0000</position>
+                        <time>0.0000</time>
+                    </setting>
+                    <setting>
+                        <position>1.0000</position>
+                        <time>6.0000</time>
+                    </setting>
+                </traverse>
+                <output>/surface-positions/jbd1-pos-norm</output> 
+            </kinematic>
+            
+            <switch name="systems/carrier-jbd2-cmd-norm">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    /ai/models/carrier/surface-positions/jbd-pos-norm == 1
+                    launchbar/launch-bar-pos-norm == 1
+                    gear/unit[1]/WOW == 1
+                    systems/carrier/cat2-onarea == 1
+                </test>
+            </switch>
+
+            <kinematic name="systems/carrier-jbd2-pos-norm">
+                <input>systems/carrier-jbd2-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0.0000</position>
+                        <time>0.0000</time>
+                    </setting>
+                    <setting>
+                        <position>1.0000</position>
+                        <time>6.0000</time>
+                    </setting>
+                </traverse>
+                <output>/surface-positions/jbd2-pos-norm</output> 
+            </kinematic>
+
+    </channel>
+
+</system>

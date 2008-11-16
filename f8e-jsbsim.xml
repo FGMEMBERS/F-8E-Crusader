@@ -461,6 +461,7 @@
     <system file="light-outdoor"/>
     <system file="electrical"/>
     <system file="sinking"/>
+    <system file="carrier_jbd"/>
 
     <flight_control name="FCS: F-8E">
 

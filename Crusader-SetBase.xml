@@ -20,6 +20,7 @@
                         <splash-texture>Aircraft/F-8E-Crusader/Crusader-splash.rgb</splash-texture>
                 </startup>
                 <model>
+                    <carrier-jsbsim>1</carrier-jsbsim>
                         <path archive="y">Aircraft/F-8E-Crusader/Models/F8E-model.xml</path>
                         <mule>
                             <magnitude>0</magnitude>

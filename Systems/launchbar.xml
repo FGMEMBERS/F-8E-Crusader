@@ -8,18 +8,27 @@
         <property>launchbar/launch-bar-engage</property>
         
         
+            <switch name="systems/holdback/holdback-pos">
+                <default value="0"/>
+                <test logic="AND" value="systems/holdback/holdback-cmd">
+                    systems/cat-onarea == 1
+                </test>
+                <test logic="AND" value="1">
+                    launchbar/launch-bar-engage == 1
+                </test>
+            </switch>
+        
             <switch name="systems/launchbar/switch">
                 <default value="0"/>
                 <test logic="AND" value="1">
-                    systems/holdback/holdback-cmd == 1
-                    systems/cat-onarea == 1
+                    systems/holdback/holdback-pos == 1
                 </test>
                 <test value="0">
                     gear/unit[1]/WOW == 0
                 </test>
                 <output>launchbar/launch-bar-engage</output>
             </switch>
-
+            
              <kinematic name="Launchbar Engage">
                 <input>launchbar/launch-bar-engage</input>
                 <traverse>

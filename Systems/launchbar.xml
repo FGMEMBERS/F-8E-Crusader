@@ -9,15 +9,15 @@
         
         
             <switch name="systems/holdback/holdback-pos">
-                <default value="systems/holdback/holdback-pos"/>
+                <default value="0"/>
+                <test logic="AND" value="0">
+                    systems/catapult/cat-launch-cmd == 1
+                </test>
                 <test logic="AND" value="1">
                     launchbar/launch-bar-pos-norm == 1
                 </test>
                 <test logic="AND" value="systems/holdback/holdback-cmd">
                     systems/cat-onarea == 1
-                </test>
-                <test logic="AND" value="0">
-                    systems/catapult/cat-launch-cmd == 1
                 </test>
             </switch>
         

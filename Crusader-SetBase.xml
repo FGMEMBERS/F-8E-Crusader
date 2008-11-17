@@ -100,7 +100,7 @@
                         <float n="4" alias="/engines/engine[0]/augmentation"/>
                         <float n="6" alias="/engines/engine[0]/n2"/>
                         <float n="5" alias="/engines/engine[0]/running"/>
-                        <float n="7" alias="/fdm/jsbsim/launchbar/launch-bar-state"/>
+                        <float n="7" alias="/fdm/jsbsim/launchbar/launch-bar-engage"/>
                         <float n="8" alias="/fdm/jsbsim/launchbar/launch-bar-pos-norm"/>
                         <float n="9" alias="/fdm/jsbsim/launchbar/launch-bar-state"/>
                         <float n="10" alias="/fdm/jsbsim/systems/catapult/cat-launch-cmd/"/>

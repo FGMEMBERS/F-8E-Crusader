@@ -64,7 +64,7 @@
 	 <condition>
 		 <equals>
                         <property>sim/multiplay/generic/float[9]</property>
-			<!-- <property>fdm/jsbsim/launchbar/launch-bar-state</property>-->
+			<!-- <property>fdm/jsbsim/launchbar/launch-bar-pos-norm</property>-->
 			 <value>1</value>
 		 </equals>
 	 </condition>

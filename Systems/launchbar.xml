@@ -9,13 +9,14 @@
         
         
             <switch name="systems/holdback/holdback-pos">
-                <default value="0"/>
+                <default value="systems/holdback/holdback-pos"/>
+                <test logic="AND" value="1">
+                    launchbar/launch-bar-pos-norm == 1
+                </test>
                 <test logic="AND" value="systems/holdback/holdback-cmd">
                     systems/cat-onarea == 1
                 </test>
-                <test logic="AND" value="1">
-                    launchbar/launch-bar-engage == 1
-                </test>
+                
             </switch>
         
             <switch name="systems/launchbar/switch">
@@ -38,7 +39,7 @@
                     </setting>
                     <setting>
                         <position>1.0000</position>
-                        <time>4.0000</time>
+                        <time>2.0000</time>
                     </setting>
                 </traverse>
                 <output>launchbar/launch-bar-pos-norm</output>

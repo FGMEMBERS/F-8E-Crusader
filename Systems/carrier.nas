@@ -72,8 +72,13 @@
 #============And loading the corresponding Deck Geometry definition=========
 
                       if (first_contact == 0) { 
+
                       setprop ("/sim/carrier/name",contact);
                       print ("WELCOME ON BOARD, CARRIER: => ",contact," <=");
+                      #var display = screen.display.new(100, -300);
+                      #display.setcolor(1, 0.8, 0.5);
+                      #display.add("WELCOME_ON_BOARD","/sim/carrier/name");
+
                       first_contact = 1;
                           if ((contact == clem) or (contact == foch)) {
                                 cat1_heading_rad = getprop("sim/carrier/clemenceau/catapult1/heading_rad");
@@ -184,7 +189,7 @@
   } 
                     } 
                 } 
-          } else { first_contact = 0;}
+          } else { first_contact = 0; setprop ("/sim/carrier/name","none"); screen.property_display.reset();}
         }
       settimer(updateCarrier,0.01);
   }

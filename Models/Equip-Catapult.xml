@@ -83,7 +83,7 @@
                          <equals>
                                 <property>sim/multiplay/generic/float[10]</property>
                                <!-- <property>fdm/jsbsim/systems/holdback/holdback-cmd</property>-->
-                                <value>1</value>
+                                <value>0</value>
                          </equals> 
 			
 		 </and>

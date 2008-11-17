@@ -16,7 +16,9 @@
                 <test logic="AND" value="systems/holdback/holdback-cmd">
                     systems/cat-onarea == 1
                 </test>
-                
+                <test logic="AND" value="0">
+                    systems/catapult/cat-launch-cmd == 1
+                </test>
             </switch>
         
             <switch name="systems/launchbar/switch">

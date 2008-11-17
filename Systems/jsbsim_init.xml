@@ -3,7 +3,7 @@
 
             <jsbsim>
                 <systems>
-                    <holdback><holdback-cmd type="double">0</holdback-cmd></holdback>
+                    <launchbar><lock-cmd type="double">0</lock-cmd></launchbar>
                     <blackout-cst type="double">1</blackout-cst>
                 </systems>
             </jsbsim>

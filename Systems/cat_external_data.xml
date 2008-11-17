@@ -140,13 +140,13 @@ catapult longitude position "systems/carrier/cat-lon-position"-->
           <test logic="OR" value="1">
               systems/carrier/cat1-onarea == 1
           </test>
-          <test logic="OR" value="1">
+          <test logic="OR" value="2">
               systems/carrier/cat2-onarea == 1
         </test>
-        <test logic="OR" value="1">
+        <test logic="OR" value="3">
                 systems/carrier/cat3-onarea == 1
         </test>
-        <test logic="OR" value="1">
+        <test logic="OR" value="4">
                 systems/carrier/cat4-onarea == 1
         </test>
        </switch>

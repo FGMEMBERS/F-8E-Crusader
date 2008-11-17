@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 
-<system name="">
+<system name="carrier_jbd">
 
     <channel name="carrier_JBD">
             
@@ -9,7 +9,7 @@
                 <default value="0"/>
                 <test logic="AND" value="1">
                     launchbar/launch-bar-state == 1
-                    systems/carrier/cat1-onarea == 1
+                    systems/cat-onarea == 1
                 </test>
             </switch>
             
@@ -32,7 +32,7 @@
                 <default value="0"/>
                 <test logic="AND" value="1">
                     launchbar/launch-bar-state == 1
-                    systems/carrier/cat2-onarea == 1
+                    systems/cat-onarea == 2
                 </test>
             </switch>
 
@@ -49,6 +49,52 @@
                     </setting>
                 </traverse>
                 <output>/surface-positions/jbd2-pos-norm</output> 
+            </kinematic>
+            
+            <switch name="systems/carrier-jbd3-cmd-norm">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    launchbar/launch-bar-state == 1
+                    systems/cat-onarea == 3
+                </test>
+            </switch>
+            
+            <kinematic name="systems/carrier-jbd3-pos-norm">
+                <input>systems/carrier-jbd3-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0.0000</position>
+                        <time>0.0000</time>
+                    </setting>
+                    <setting>
+                        <position>1.0000</position>
+                        <time>6.0000</time>
+                    </setting>
+                </traverse>
+                <output>/surface-positions/jbd3-pos-norm</output> 
+            </kinematic>
+            
+            <switch name="systems/carrier-jbd4-cmd-norm">
+                <default value="0"/>
+                <test logic="AND" value="1">
+                    launchbar/launch-bar-state == 1
+                    systems/cat-onarea == 4
+                </test>
+            </switch>
+            
+            <kinematic name="systems/carrier-jbd4-pos-norm">
+                <input>systems/carrier-jbd4-cmd-norm</input>
+                <traverse>
+                    <setting>
+                        <position>0.0000</position>
+                        <time>0.0000</time>
+                    </setting>
+                    <setting>
+                        <position>1.0000</position>
+                        <time>6.0000</time>
+                    </setting>
+                </traverse>
+                <output>/surface-positions/jbd4-pos-norm</output> 
             </kinematic>
 
     </channel>

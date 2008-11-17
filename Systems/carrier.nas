@@ -3,18 +3,21 @@
 #Just REMEMBER, we need to know, on line,every catapults, which are available with the selected Carrier.
 #That will be necessary for (coming soon) an automatic positionning (taxiing) of the Aircraft on a choosen catapult.
 
-#Gérard Robin 2008-11-15
+#2008-11-17 v 0.1
+#Copyright (C) 2008  Gerard Robin 
+#This file is licensed under the GPL license v2 or later
+
 
   initialized = 0;
   enabled = 0;
   var first_contact = 0;
-  #var carrier = getprop("sim/carrier/name");
   var clem = "Clemenceau";
   var foch = "Foch";
   var arro = "Arromanches";
   var nimitz = "Nimitz";
   var eisenhower = "Eisenhower";
   var cdg = "Chales_de_Gaulle";
+
   var max_dist_m = 150;
 
   var cat1_head = 0;

@@ -82,10 +82,9 @@
 			 </equals>
                          <equals>
                                 <property>sim/multiplay/generic/float[10]</property>
-                               <!-- <property>fdm/jsbsim/systems/holdback/holdback-cmd</property>-->
+                               <!-- <property>fdm/jsbsim/systems/launchbar/cat-launch-cmd</property>-->
                                 <value>0</value>
                          </equals> 
-			
 		 </and>
 	 </condition>
  </animation>

@@ -7,31 +7,31 @@
         
         <property>launchbar/launch-bar-engage</property>
         
-        
-            <switch name="systems/holdback/holdback-pos">
+        <!--Lock/Unlock Launchbar-->
+            <switch name="systems/launchbar/lock-pos">
                 <default value="0"/>
                 <test logic="AND" value="0">
                     systems/catapult/cat-launch-cmd == 1
                 </test>
                 <test logic="AND" value="1">
-                    launchbar/launch-bar-pos-norm == 1
+                    launchbar/launch-bar-engage == 1
                 </test>
-                <test logic="AND" value="systems/holdback/holdback-cmd">
-                    systems/cat-onarea == 1
+                <test logic="AND" value="systems/launchbar/lock-cmd">
+                    systems/cat-onarea != 0
                 </test>
             </switch>
-        
+       <!-- launchbar engage-->
             <switch name="systems/launchbar/switch">
                 <default value="0"/>
                 <test logic="AND" value="1">
-                    systems/holdback/holdback-pos == 1
+                    systems/launchbar/lock-pos == 1
                 </test>
                 <test value="0">
                     gear/unit[1]/WOW == 0
                 </test>
                 <output>launchbar/launch-bar-engage</output>
             </switch>
-            
+            <!--launchbar, aircraft progressive repositioning delay and animation -->
              <kinematic name="Launchbar Engage">
                 <input>launchbar/launch-bar-engage</input>
                 <traverse>
@@ -41,13 +41,12 @@
                     </setting>
                     <setting>
                         <position>1.0000</position>
-                        <time>2.0000</time>
+                        <time>6.0000</time>
                     </setting>
                 </traverse>
                 <output>launchbar/launch-bar-pos-norm</output>
             </kinematic>
-
-
+            <!--trigger to FlightGear , for message on screen-->
             <switch name="systems/launchbar/control">
                 <default value="systems/launchbar/control"/>
                 <test logic="AND" value="1">
@@ -58,7 +57,7 @@
                         systems/catapult/cat-final  == 0
                         gear/unit[1]/WOW == 0
                 </test>
-                <output>launchbar/launch-bar-state</output> <!--launch-bar-state était initialisé par l'ancien JSB-->
+                <output>launchbar/launch-bar-state</output> 
             </switch>
 
 
@@ -86,7 +85,7 @@
                 <default value="0"/>
                 <test logic="AND" value="systems/tension/force_weight">
                     launchbar/launch-bar-pos-norm gt 0
-                    systems/holdback/holdback-cmd == 1
+                    systems/launchbar/lock-pos == 1
                 </test>
             </switch>
             

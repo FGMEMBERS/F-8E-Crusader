@@ -55,7 +55,7 @@
      <switch name="systems/holdback/switch">
          <default value="0"/>
          <test value="1">
-             systems/holdback/holdback-cmd == 1
+             systems/launchbar/lock-pos == 1
              launchbar/launch-bar-state == 1
          </test>
          <test value="0">

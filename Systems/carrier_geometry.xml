@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <PropertyList>
+    
+    
+    <!--Copyright (C) 2008  Gerard Robin 
+    This file is licensed under the GPL license v2 or later.-->
+
+    
+    <!--The deck carrier geometry is defined with catapults , at least one.
+    Each catapult is defined with heading and  positions.
+    The heading is given in Radian  according to the Zero heading of the carrier model.
+    The position,  is a virtual point  of the catapult on the deck, which position, is mesured according to the carrier reference 0 coordinates and heading of the model.
+    ==> coord_course,  is the orientation of a line, which link the coordinate Zero of the model, and the virtual point of the catapult 
+    ==> coord_dist, is the lengh of that line.-->
+    
+    <!--We don't need to define every carrier only the Class one ,for instance, Eisenhower is not define we will use the Nimitz Class-->
+    
+    <!-- FIXME That file will feed the carrier.nas file, every new carrier which is added here, must be included within the carrier.nas file.
+    We hope to introduce , later on a better flexibility, the carrier.nas file being more independent.-->
+    
                         <clemenceau>
                             <catapult1>
                                 <heading_rad type="double">0</heading_rad>

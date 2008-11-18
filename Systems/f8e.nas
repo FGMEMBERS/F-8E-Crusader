@@ -30,17 +30,6 @@ Loop_update_crusader=func{
         }
 Loop_update_crusader();
 
-#Only for  JBD , the value "Engaged"  is wanted (would be better with boolean value "true" "false) 
-
-JBD_op=func{
-              if(getprop("/fdm/jsbsim/launchbar/launch-bar-state")== 1){
-                setprop("/gear/launchbar/state","Engaged");
-                # print("Engaged");
-                }else{setprop("/gear/launchbar/state","Disengaged");
-                }
-}
-setlistener("/fdm/jsbsim/launchbar/launch-bar-state",JBD_op);
-
 
 
 #INIT au démarrage================================================

@@ -11,10 +11,15 @@
   <property value="210.17">systems/hook/tailhook-offset-x-in</property> 
   <property value="0">systems/hook/tailhook-offset-y-in</property>
   <property value="-31.57">systems/hook/tailhook-offset-z-in</property>
+ 
 
   <channel name="Hook">
 
-     
+      <pure_gain name="Tailhook Cmd Norm">
+          <input>/controls/gear/tailhook</input>
+          <gain>1</gain>
+          <output>systems/hook/tailhook-cmd-norm</output>
+    </pure_gain>
 
      <kinematic name="systems/hook/tailhook-control">
        <input>systems/hook/tailhook-cmd-norm</input>

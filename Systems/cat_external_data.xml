@@ -2,16 +2,25 @@
 
 <system name="cat-workaround">
 
-<!--This system causes the catapult to be .identified  with position and heading
-      According to the predeffined Carrier (Clemenceau) deck position -->
+<!--the following properties are feeded by a nasal script "carrier.nas"
+<property>systems/carrier/cat1-lat-position</property>
+<property>systems/carrier/cat1-lon-position</property>
+<property>systems/carrier/cat2-lat-position</property>
+<property>systems/carrier/cat2-lon-position</property>
+<property>systems/carrier/cat3-lat-position</property>
+<property>systems/carrier/cat3-lon-position</property>
+<property>systems/carrier/cat4-lat-position</property>
+<property>systems/carrier/cat4-lon-position</property>
+<property>/sim/carrier/heading-deg</property>-->
+
+
+<!--the following data are feeded by the "carrier_geometry.xml"  file
+/sim/carrier/cat1-heading-rad
+/sim/carrier/cat2-heading-rad
+/sim/carrier/cat3-heading-rad
+/sim/carrier/cat4-heading-rad-->
 
 <!--This system should be replaced by an included code within JSBSim which gives in real time the position of of the closest catapult on any Carrier-->
-
-<!--the basic properties which are required are :
-
-catapult heading  "systems/carrier/cat-head"
-catapult latitude position "systems/carrier/cat-lat-position"
-catapult longitude position "systems/carrier/cat-lon-position"-->
 
 <property>systems/carrier/cat1-lat-position</property>
 <property>systems/carrier/cat1-lon-position</property>

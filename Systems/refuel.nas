@@ -96,6 +96,7 @@ refuel_ground=func {
 			full_up();	
 		}else{
 		settimer (refuel_air,1);
+#FIXME should be =======settimer (refuel_ground,1)==========================
 		}		
 }
 

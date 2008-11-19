@@ -10,17 +10,31 @@
   
   <channel name="Taxi">
       
-     <!-- <scheduled_gain name="Scheduled Force Taxi">
-          <input>gear/unit[1]/wheel-speed-fps</input>
-          <table>
-              <independentVar>systems/taxi/distance</independentVar>
-              <tableData>
-                 2.00   
-              </tableData>
-          </table>
-          <output>systems/taxi/gain-force</output>
-            </scheduled_gain>-->
-      
+        <scheduled_gain name="Scheduled Force Taxi left">
+            <input>gear/unit[1]/wheel-speed-fps</input>
+            <table>
+                <independentVar>systems/taxi/distance</independentVar>
+                <tableData>
+                    2.00  0.4
+                    10     0.1
+                    20     0
+                </tableData>
+            </table>
+            <output>/controls/gear/brake-left</output>
+        </scheduled_gain>
+        
+        <scheduled_gain name="Scheduled Force Taxi left">
+            <input>gear/unit[1]/wheel-speed-fps</input>
+            <table>
+                <independentVar>systems/taxi/distance</independentVar>
+                <tableData>
+                    2.00  0.4
+                    10     0.1
+                    20     0
+                </tableData>
+            </table>
+            <output>/controls/gear/brake-right</output>
+        </scheduled_gain>
       
       <pure_gain name="/sim/model/taxi/magnitude">
           <input>systems/taxi/distance</input>
@@ -38,21 +52,21 @@
        
        <pure_gain name="systems/taxi/taxi-force">
            <input>inertia/weight-lbs</input>
-           <gain>0.15</gain>
+           <gain>1</gain>
        </pure_gain>
       
        <pure_gain name="systems/taxi/taxi-forceback">
            <input>inertia/weight-lbs</input>
-           <gain>-0.12</gain>
+           <gain>-1</gain>
        </pure_gain>
        
        <switch name="systems/taxi/magnitude">
-           <default value="/sim/model/taxi/magnitude"/>
+           <default value="0"/>
            <test  value="systems/taxi/taxi-force">
-               /sim/model/taxi/magnitude gt  systems/taxi/taxi-force
+               gear/unit[1]/wheel-speed-fps lt 8
            </test>
            <test  value="systems/taxi/taxi-forceback">
-               /sim/model/taxi/magnitude lt  systems/taxi/taxi-forceback
+               gear/unit[1]/wheel-speed-fps gt -3
            </test>
        </switch>
 
@@ -62,9 +76,9 @@
                 systems/taxi/linked == 1
                 gear/unit[1]/wheel-speed-fps lt 8
                 gear/unit[1]/wheel-speed-fps gt -3
-                systems/taxi/distance gt 3
-                fcs/heading-error gt -60
-                fcs/heading-error lt 60
+                systems/taxi/distance gt 1
+                fcs/heading-error gt -90
+                fcs/heading-error lt 90
            </test>
            <test value="0">
                systems/cat-onarea == 1
@@ -72,28 +86,23 @@
            <output>external_reactions/taxi/magnitude</output>
        </switch>
        
-       <!--<switch name="systems/taxi/brake">
-           <default value="/conrols/gear/brake-parking"/>
+       <switch name="systems/taxi/brake">
+           <default value="/controls/gear/brake-parking"/>
            <test logic="AND" value="1">
-               systems/taxi/distance lt 10
+               systems/cat-onarea gt 0
                systems/taxi/linked == 1
+               systems/taxi/distance lt 10
            </test>
-           <output>/conrols/gear/brake-parking</output>
-        </switch>-->
-           
-        
+           <output>/controls/gear/brake-parking</output>
+        </switch>
            
            <summer name="fcs/heading-error">
                <input>-/orientation/heading-deg</input>
                <input>systems/taxi/course</input>
            </summer>
            
-           
-           
            <summer name="fcs/heading-corrected">
-             
                <input> fcs/heading-error </input>
-               
            </summer>
            
            <pure_gain name="fcs/heading-command">
@@ -106,9 +115,24 @@
                <test logic="AND" value="-fcs/heading-command">
                    gear/unit/WOW == 1
                    /sim/model/taxi/linked == 1
-                   /conrols/gear/brake-parking == 0
+                   /controls/gear/brake-parking == 0
                </test>
                <output>fcs/steer_taxi-cmd-norm</output>
+           </switch>
+           
+           <pure_gain name="systems/taxi-steering-command">
+               <input> fcs/heading-command</input>
+               <gain>0.07</gain>
+           </pure_gain>
+           
+           <switch name="systems/taxi-steering">
+               <default value="0"/>
+               <test logic="AND" value="systems/taxi-steering-command">
+                   gear/unit/WOW == 1
+                   /sim/model/taxi/linked == 1
+                   /controls/gear/brake-parking == 0
+               </test>
+               <output>external_reactions/taxi/y</output>
            </switch>
            
            <switch name="fcs/rudder-command-selector-steering">

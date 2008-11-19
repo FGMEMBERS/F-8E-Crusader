@@ -143,7 +143,7 @@
                       var get_coord_lon = geo.Coord.lon();
               #print ("coord ",get_coord_lat," ",get_coord_lon);
 
-#=============First Catapult==========================================
+#=============First Catapult=============FIXME catapults should be stored in an indexed array n 1 to 4  ===============
 
                       var catapult = geo.Coord.new().set_latlon(lat_pos,lon_pos);
                       var Cat1_pos  = catapult.apply_course_distance(cat1_head + heading,cat1_dist);
@@ -215,3 +215,29 @@ JBD_op=func{
 }
 setlistener("/fdm/jsbsim/launchbar/launch-bar-state",JBD_op);
 
+#=========================FIXME catapults should be stored in an indexed array n 1 to 4  ===============
+setprop("/sim/model/taxi/linked",0);
+setprop("/sim/model/taxi/taxi_to",1);
+
+taxi_op=func{
+          var taxi_to = getprop("/sim/model/taxi/taxi_to");
+          if (getprop("/sim/model/taxi/linked") == 1 and taxi_to != 0){
+          if (taxi_to == 1){
+              var dest_lat = getprop("/fdm/jsbsim/systems/carrier/cat1-lat-position");
+              var dest_lon = getprop("/fdm/jsbsim/systems/carrier/cat1-lon-position");
+           }
+           if (taxi_to == 2){
+              var dest_lat = getprop("/fdm/jsbsim/systems/carrier/cat2-lat-position");
+              var dest_lon = getprop("/fdm/jsbsim/systems/carrier/cat2-lon-position");
+           }
+              var pos = geo.Coord.set_latlon(dest_lat,dest_lon);
+              var ac_pos = geo.aircraft_position();
+              var taxi_distance = ac_pos.distance_to(pos);
+              var taxi_course = ac_pos.course_to(pos);
+#print (taxi_to," ",taxi_distance, " ",taxi_course );
+              setprop("/fdm/jsbsim/systems/taxi/distance",taxi_distance);
+              setprop("/fdm/jsbsim/systems/taxi/course",taxi_course);
+settimer(taxi_op,1);
+}
+}
+setlistener("/sim/model/taxi/linked",taxi_op);

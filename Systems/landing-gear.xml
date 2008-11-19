@@ -123,6 +123,13 @@
                 <input>velocities/u-fps</input>
                 <gain>fcs/wheel-rotation-factor</gain>
             </pure_gain>
+            
+            <pure_gain name="Rudder Steering Cmd">
+                <input>fcs/rudder-cmd-norm</input>
+                <gain>-1</gain>
+                <output>fcs/steer-cmd-norm</output>
+            </pure_gain>
+            
 
             <scheduled_gain name="Scheduled Steer Cmd Deg">
                 <input>fcs/steer-cmd-norm</input>

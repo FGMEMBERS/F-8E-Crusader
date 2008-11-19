@@ -44,7 +44,7 @@
       
       <!--Here Catapult 1-->
       
-      <!--we calculate the diff between the aircraft and the catapult position-->
+      <!--we calculate the delta between the aircraft position and the catapult position-->
       <!--this will tell us which catapult we will be working with-->
       
       <summer name="systems/carrier/cat1-lat-diff-position">
@@ -88,7 +88,7 @@
       </summer>
       
       
-      <!--we estimate if we are in the area of  7 square meter  -->
+      <!--we estimate if we are in the area   -->
       
       <switch name="systems/carrier/cat1-onarea">
           <default value="systems/carrier/cat1-onarea"/>
@@ -163,6 +163,7 @@
        
        
      <!--only a timer to keep in in memory the last catapult we were on-->
+     <!--mainly in case of a temporary aircraft moving out of the area-->
         <kinematic name="systems/carrier/cat1-onarea-memory">
             <input>systems/carrier/cat1-onarea</input>
             <traverse>
@@ -221,7 +222,7 @@
         
      <!--CATAPULT HEADING-->
     <!-- Select which catapult -->
-    
+    <!--we store the resulting values -->
    
     
         <pure_gain name="systems/carrier/heading-rad">
@@ -260,6 +261,10 @@
               systems/carrier/cat4-onarea-memory gt 0
           </test>
       </switch>
+      
+      <!--CATAPULT delta position-->
+      <!-- Select which catapult -->
+    <!--we store the resulting values -->
       
       <switch name="systems/carrier/cat-lat-diff-position">
           <default value="0"/>

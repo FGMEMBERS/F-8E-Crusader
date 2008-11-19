@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+
+
+
+<system name="taxiing from to">
+
+    
+  <property >systems/taxi/distance</property>
+  <property value="160">systems/taxi/course</property>
+  
+  <channel name="Taxi">
+      
+     <!-- <scheduled_gain name="Scheduled Force Taxi">
+          <input>gear/unit[1]/wheel-speed-fps</input>
+          <table>
+              <independentVar>systems/taxi/distance</independentVar>
+              <tableData>
+                 2.00   
+              </tableData>
+          </table>
+          <output>systems/taxi/gain-force</output>
+            </scheduled_gain>-->
+      
+      
+      <pure_gain name="/sim/model/taxi/magnitude">
+          <input>systems/taxi/distance</input>
+          <gain>30</gain>
+       </pure_gain>
+
+        <switch name="systems/taxi/linked">
+           <default value="0"/>
+           <test  logic="AND" value="1">
+                /sim/model/taxi/linked == 1
+                /gear/gear[1]/compression-norm gt 0.15
+                launchbar/launch-bar-engage == 0
+           </test>
+       </switch>
+       
+       <pure_gain name="systems/taxi/taxi-force">
+           <input>inertia/weight-lbs</input>
+           <gain>0.15</gain>
+       </pure_gain>
+      
+       <pure_gain name="systems/taxi/taxi-forceback">
+           <input>inertia/weight-lbs</input>
+           <gain>-0.12</gain>
+       </pure_gain>
+       
+       <switch name="systems/taxi/magnitude">
+           <default value="/sim/model/taxi/magnitude"/>
+           <test  value="systems/taxi/taxi-force">
+               /sim/model/taxi/magnitude gt  systems/taxi/taxi-force
+           </test>
+           <test  value="systems/taxi/taxi-forceback">
+               /sim/model/taxi/magnitude lt  systems/taxi/taxi-forceback
+           </test>
+       </switch>
+
+       <switch name="systems/taxi/action">
+           <default value="0"/>
+           <test  logic="AND" value="systems/taxi/magnitude">
+                systems/taxi/linked == 1
+                gear/unit[1]/wheel-speed-fps lt 8
+                gear/unit[1]/wheel-speed-fps gt -3
+                systems/taxi/distance gt 3
+                fcs/heading-error gt -60
+                fcs/heading-error lt 60
+           </test>
+           <test value="0">
+               systems/cat-onarea == 1
+            </test>
+           <output>external_reactions/taxi/magnitude</output>
+       </switch>
+       
+       <!--<switch name="systems/taxi/brake">
+           <default value="/conrols/gear/brake-parking"/>
+           <test logic="AND" value="1">
+               systems/taxi/distance lt 10
+               systems/taxi/linked == 1
+           </test>
+           <output>/conrols/gear/brake-parking</output>
+        </switch>-->
+           
+        
+           
+           <summer name="fcs/heading-error">
+               <input>-/orientation/heading-deg</input>
+               <input>systems/taxi/course</input>
+           </summer>
+           
+           
+           
+           <summer name="fcs/heading-corrected">
+             
+               <input> fcs/heading-error </input>
+               
+           </summer>
+           
+           <pure_gain name="fcs/heading-command">
+               <input> fcs/heading-corrected </input>
+               <gain> 0.05</gain>
+           </pure_gain>
+           
+           <switch name="fcs/rudder-command-steering">
+               <default value="0"/>
+               <test logic="AND" value="-fcs/heading-command">
+                   gear/unit/WOW == 1
+                   /sim/model/taxi/linked == 1
+                   /conrols/gear/brake-parking == 0
+               </test>
+               <output>fcs/steer_taxi-cmd-norm</output>
+           </switch>
+           
+           <switch name="fcs/rudder-command-selector-steering">
+               <default value="fcs/steer_taxi-cmd-norm"/>
+               <test value="fcs/rudder-cmd-norm">
+                   systems/taxi/linked == 0
+               </test>
+               <output>fcs/rudder-cmd-norm</output>
+           </switch>
+
+
+  </channel>
+
+</system>

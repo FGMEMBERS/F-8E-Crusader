@@ -42,7 +42,8 @@
            <default value="0"/>
            <test  logic="AND" value="systems/mule/magnitude">
                 systems/mule/linked == 1
-                gear/unit[1]/wheel-speed-fps lt 10
+                gear/unit[1]/wheel-speed-fps lt 20
+                gear/unit[1]/wheel-speed-fps gt -15
            </test>
            <output>external_reactions/mule/magnitude</output>
        </switch>

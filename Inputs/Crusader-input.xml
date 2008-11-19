@@ -126,11 +126,6 @@
                     <desc>Catapult Launch Command.</desc>
                     <binding>
                             <command>property-assign</command>
-                            <property>/fdm/jsbsim/systems/holdback/holdback-cmd</property>
-                            <value>0.0</value>
-                    </binding>
-                    <binding>
-                            <command>property-assign</command>
                             <property>/fdm/jsbsim/systems/catapult/cat-launch-cmd</property>
                             <value>1.0</value>
                     </binding>
@@ -152,13 +147,8 @@
                         <desc>engage holdback</desc>
                     <binding>
                         <command>property-assign</command>
-                        <property>/fdm/jsbsim/systems/holdback/holdback-cmd</property>
+                        <property>/fdm/jsbsim/systems/launchbar/lock-cmd</property>
                         <value type="double">1</value>
-                    </binding>
-                    <binding>
-                            <command>property-assign</command>
-                            <property>/fdm/jsbsim/systems/catapult/cat-launch-cmd</property>
-                            <value>0</value>
                     </binding>
                     <binding>
                             <command>property-assign</command>
@@ -173,7 +163,7 @@
                     <mod-up>
                         <binding>
                             <command>property-assign</command>
-                            <property>/fdm/jsbsim/systems/holdback/holdback-cmd</property>
+                            <property>/fdm/jsbsim/systems/launchbar/lock-cmd</property>
                             <value type="double">0</value>
                         </binding>
                      </mod-up>
@@ -228,6 +218,7 @@
                             <command>property-adjust</command>
                             <property>/sim/model/mule/magnitude</property>
                             <step type="double">100</step>
+                            <max>4000</max>
                     </binding>
             </key>
             <key n="45">
@@ -238,6 +229,7 @@
                             <command>property-adjust</command>
                             <property>/sim/model/mule/magnitude</property>
                             <step type="double">-100</step>
+                            <min>-3000</min>
                     </binding>
             </key>
             <key n="109">

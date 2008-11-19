@@ -14,6 +14,16 @@
  
 
   <channel name="Hook">
+      
+      <switch name="systems/hook/auto-up">
+          <default value="/controls/gear/tailhook"/>
+          <test  logic="AND" value="0">
+              external_reactions/hook/magnitude lt 200
+              gear/unit[1]/wheel-speed-fps lt 3
+          </test>
+          <output>/controls/gear/tailhook</output>
+     </switch>
+      
 
       <pure_gain name="Tailhook Cmd Norm">
           <input>/controls/gear/tailhook</input>

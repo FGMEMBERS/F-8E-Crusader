@@ -462,6 +462,8 @@
     <system file="electrical"/>
     <system file="sinking"/>
     <system file="carrier_jbd"/>
+    <!--<system file="ap"/>-->
+    <system file="taxi"/>
 
     <flight_control name="FCS: F-8E">
 
@@ -1158,6 +1160,19 @@
             <y>0</y>
             <z>0</z>
         </direction>
+        </force>
+        
+        <force name="taxi" frame="BODY">
+            <location unit="IN">
+                <x>  -139 </x>
+                <y>    0.0 </y>
+                <z>  -71.0 </z>
+            </location>
+            <direction>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </direction>
         </force>
 
 

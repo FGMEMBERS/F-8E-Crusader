@@ -3,7 +3,7 @@
 
 <system name="">
 
-    <channel name="">
+    <channel name="light-outdoor">
 
          <switch name="Landing Light">
                     <default value="0"/>

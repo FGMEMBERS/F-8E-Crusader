@@ -40,6 +40,18 @@
                 <desc>Activate Launchbar/Go</desc>
         </key>
         <key>
+            <name>t</name>
+            <desc>Automatic taxiing</desc>
+        </key>
+        <key>
+            <name>m</name>
+            <desc>Mule</desc>
+        </key>
+        <key>
+            <name> + and - </name>
+            <desc>Mule force +  or  - </desc>
+        </key>
+        <key>
                 <name>D</name>
                 <desc>Probe Refueling On/Off</desc>
         </key>
@@ -87,6 +99,14 @@
         2/ With "m" key  you will notice a mule in front of the Aircraft
         3/ Key "+" or "-" will operate the force of the Mula
         4/ The usual direction Key, Mouse, Joysyick,  will give the direction of the Mule
+        
+        =============The Automatic Taxiinf======================
+        Only experimental first attempt, from somewhere on the rear of the deck, to the catapult one
+        1/ Key"t" (lower case)  Taxi ON
+        2/ Release brake
+        3/Brake when on  catapult
+        Will be improvred Will be improved Will be improved
+        
     </text>
 
 </PropertyList>

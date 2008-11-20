@@ -18,7 +18,7 @@
   var eisenhower = "Eisenhower";
   var cdg = "Chales_de_Gaulle";
 
-  var max_dist_m = 150;
+  var max_dist_m = 200;
 
   var cat1_head = 0;
   var cat1_dist = 0;
@@ -216,8 +216,7 @@ JBD_op=func{
 setlistener("/fdm/jsbsim/launchbar/launch-bar-state",JBD_op);
 
 #=========================FIXME catapults should be stored in an indexed array n 1 to 4  ===============
-setprop("/sim/model/taxi/linked",0);
-setprop("/sim/model/taxi/taxi_to",1);
+
 
 taxi_op=func{
           var taxi_to = getprop("/sim/model/taxi/taxi_to");
@@ -229,6 +228,14 @@ taxi_op=func{
            if (taxi_to == 2){
               var dest_lat = getprop("/fdm/jsbsim/systems/carrier/cat2-lat-position");
               var dest_lon = getprop("/fdm/jsbsim/systems/carrier/cat2-lon-position");
+           }
+           if (taxi_to == 3){
+              var dest_lat = getprop("/fdm/jsbsim/systems/carrier/cat3-lat-position");
+              var dest_lon = getprop("/fdm/jsbsim/systems/carrier/cat3-lon-position");
+           }
+           if (taxi_to == 4){
+              var dest_lat = getprop("/fdm/jsbsim/systems/carrier/cat4-lat-position");
+              var dest_lon = getprop("/fdm/jsbsim/systems/carrier/cat4-lon-position");
            }
               var pos = geo.Coord.set_latlon(dest_lat,dest_lon);
               var ac_pos = geo.aircraft_position();

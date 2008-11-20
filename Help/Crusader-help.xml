@@ -101,8 +101,15 @@
         4/ The usual direction Key, Mouse, Joysyick,  will give the direction of the Mule
         
         =============The Automatic Taxiing======================
-        Only experimental first attempt, from somewhere on the rear of the deck, to the catapult cat-1
-        Key"t" (lower case)  Taxi ON
+        Key"M" (upper case)  Taxi ON/OFF
+        Or better on the menu: F-8E:
+        1/ click on the catapult you want to go to 
+        2/ then click on Go Taxi_to
+        Remember the rules:
+        1/ Nimitz Class has 4 catapults 1,2,3,4
+        2/ Clemenceau Class has 2 catapults only 1,2
+        3/ If you choose a catapult which don't exist the AC will go anywhere.
+        4/ the Aircraft must be, at least parked behind the choosen Taxi_to catapult , NOT in front of.
         =======Will be improvred ===Will be improved =====Will be improved
         
     </text>

@@ -39,7 +39,7 @@
                 </tanker>
                 <carrier>
                     <file>Aircraft/F-8E-Crusader/Systems/carrier.nas</file>
-                    <file>Nasal/geo.nas</file>
+                    <file>Aircraft/F-8E-Crusader/Systems/geo.nas</file>
                 </carrier>
         </nasal>
 

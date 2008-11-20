@@ -10,6 +10,30 @@
   
   <channel name="Taxi">
       
+      <!--Store the "taxi_to catapult"  heading-->
+        <switch name="systems/taxi/cat-wp-head">
+            <default value="0"/>
+            <test value="/sim/carrier/cat1-heading-rad">
+                /sim/model/taxi/taxi_to == 1
+            </test>
+            <test value="/sim/carrier/cat2-heading-rad">
+                /sim/model/taxi/taxi_to == 2
+            </test>
+            <test value="/sim/carrier/cat3-heading-rad">
+                /sim/model/taxi/taxi_to == 3
+            </test>
+            <test value="/sim/carrier/cat4-heading-rad">
+                /sim/model/taxi/taxi_to == 4
+            </test>
+        </switch>
+        
+        <!--calculate the right real time  "taxi_to catapult"  heading-->
+        <summer name="systems/taxi/cat-wp-real-head-rad">
+            <input>systems/taxi/cat-wp-head</input>
+            <input>systems/carrier/heading-rad</input>
+        </summer>
+        
+     <!-- process the braking, speed and distance related-->
         <scheduled_gain name="systems/taxi/control-brake-left">
             <input>gear/unit[1]/wheel-speed-fps</input>
             <table>
@@ -21,7 +45,6 @@
                 </tableData>
             </table>
         </scheduled_gain>
-        
         <scheduled_gain name="systems/taxi/control-brake-right">
             <input>gear/unit[1]/wheel-speed-fps</input>
             <table>
@@ -33,7 +56,6 @@
                 </tableData>
             </table>
         </scheduled_gain>
-        
         <switch name="systems/taxi/brake-left-switch">
             <default value="/controls/gear/brake-left"/>
             <test  logic="AND" value="systems/taxi/control-brake-left">
@@ -41,7 +63,6 @@
             </test>
             <output>/controls/gear/brake-left</output>
        </switch>
-       
        <switch name="systems/taxi/brake-right-switch">
            <default value="/controls/gear/brake-right"/>
            <test  logic="AND" value="systems/taxi/control-brake-right">
@@ -49,31 +70,50 @@
            </test>
            <output>/controls/gear/brake-right</output>
        </switch>
+       <switch name="systems/taxi/brake">
+           <default value="/controls/gear/brake-parking"/>
+           <test logic="AND" value="1">
+               systems/cat-onarea gt 0
+               systems/taxi/linked == 1
+               systems/taxi/distance lt 10
+           </test>
+           <output>/controls/gear/brake-parking</output>
+        </switch>
       
-      <pure_gain name="/sim/model/taxi/magnitude">
-          <input>systems/taxi/distance</input>
-          <gain>10</gain>
-       </pure_gain>
-
-        <switch name="systems/taxi/linked">
+      <!--conditions to start the taxiing-->
+       <switch name="systems/taxi/linked">
            <default value="0"/>
            <test  logic="AND" value="1">
-                /sim/model/taxi/linked == 1
-                /gear/gear[1]/compression-norm gt 0.15
-                launchbar/launch-bar-engage == 0
+               /sim/model/taxi/linked == 1
+               /gear/gear[1]/compression-norm gt 0.15
+               launchbar/launch-bar-engage == 0
            </test>
        </switch>
        
+       <!--define and calculate the force which will be used-->
+       <kinematic name="systems/taxi/force-gain">
+           <input>systems/taxi/linked</input>
+           <traverse>
+               <setting>
+                   <position>0.0</position>
+                   <time>0.0</time>
+               </setting>
+               <setting>
+                   <position>1.0</position>
+                   <time>3</time>
+               </setting>
+           </traverse>
+        </kinematic>
        <pure_gain name="systems/taxi/taxi-force">
            <input>inertia/weight-lbs</input>
-           <gain>1</gain>
+           <gain>systems/taxi/force-gain</gain>
        </pure_gain>
-      
        <pure_gain name="systems/taxi/taxi-forceback">
            <input>inertia/weight-lbs</input>
            <gain>-1</gain>
        </pure_gain>
        
+       <!--conditions to apply or not the force-->
        <switch name="systems/taxi/magnitude">
            <default value="0"/>
            <test  value="systems/taxi/taxi-force">
@@ -83,13 +123,10 @@
                gear/unit[1]/wheel-speed-fps gt -3
            </test>
        </switch>
-
        <switch name="systems/taxi/action">
            <default value="0"/>
            <test  logic="AND" value="systems/taxi/magnitude">
                 systems/taxi/linked == 1
-                gear/unit[1]/wheel-speed-fps lt 8
-                gear/unit[1]/wheel-speed-fps gt -3
                 systems/taxi/distance gt 1
                 fcs/heading-error gt -90
                 fcs/heading-error lt 90
@@ -100,30 +137,64 @@
            <output>external_reactions/taxi/magnitude</output>
        </switch>
        
-       <switch name="systems/taxi/brake">
-           <default value="/controls/gear/brake-parking"/>
-           <test logic="AND" value="1">
-               systems/cat-onarea gt 0
-               systems/taxi/linked == 1
-               systems/taxi/distance lt 10
-           </test>
-           <output>/controls/gear/brake-parking</output>
-        </switch>
-           
+          <!-- process the heading correction-->
            <summer name="fcs/heading-error">
                <input>-/orientation/heading-deg</input>
                <input>systems/taxi/course</input>
            </summer>
+           <pure_gain name="systems/taxi/course-rad">
+               <input>systems/taxi/course</input>
+               <gain>0.017453293</gain>
+           </pure_gain>
+           <summer name="systems/taxi/heading-wp-tune-rad">
+               <input>systems/taxi/cat-wp-real-head-rad</input>
+               <input>-systems/taxi/course-rad</input>
+           </summer>
+           <pure_gain name="systems/taxi/heading-wp-tune-deg">
+               <input>systems/taxi/heading-wp-tune-rad</input>
+               <gain>57.29578</gain>
+           </pure_gain>
            
+           <!--condition to aplly an aditionnal correction, so that the AC is suppose to point to a position behind the right place-->
+           <switch name="systems/taxi/heading-wp-add">
+               <default value="0"/>
+               <test logic="AND" value="0">
+                   systems/taxi/cat-wp-real-head-rad ==  systems/taxi/course-rad
+                   attitude/heading-true-rad  ==  systems/taxi/course-rad
+                </test>
+               <test logic="AND" value="-systems/taxi/heading-wp-tune-deg">
+                   systems/taxi/heading-wp-tune-deg lt  2.5
+                   systems/taxi/heading-wp-tune-deg gt  -2.5
+               </test>
+                <test logic="AND" value="8">
+                    attitude/heading-true-rad gt systems/taxi/cat-wp-real-head-rad 
+                    systems/taxi/course-rad gt systems/taxi/cat-wp-real-head-rad 
+                </test>
+                <test logic="AND" value="-8">
+                    attitude/heading-true-rad gt systems/taxi/cat-wp-real-head-rad 
+                    systems/taxi/course-rad lt systems/taxi/cat-wp-real-head-rad 
+                </test>
+                <test logic="AND" value="-8">
+                    attitude/heading-true-rad lt systems/taxi/cat-wp-real-head-rad 
+                    systems/taxi/course-rad lt systems/taxi/cat-wp-real-head-rad 
+                </test>
+                <test logic="AND" value="8">
+                    attitude/heading-true-rad lt systems/taxi/cat-wp-real-head-rad 
+                    systems/taxi/course-rad gt systems/taxi/cat-wp-real-head-rad 
+                </test>
+            </switch>
+            
+           <!-- sum both, the right heading error and the additionnal correction-->
            <summer name="fcs/heading-corrected">
                <input> fcs/heading-error </input>
+               <input>systems/taxi/heading-wp-add</input>
            </summer>
            
+           <!--enter the right gear steering  correction-->
            <pure_gain name="fcs/heading-command">
                <input> fcs/heading-corrected </input>
                <gain> 0.02</gain>
            </pure_gain>
-           
            <switch name="fcs/rudder-command-steering">
                <default value="0"/>
                <test logic="AND" value="-fcs/heading-command">
@@ -133,10 +204,11 @@
                <output>fcs/steer_taxi-cmd-norm</output>
            </switch>
            
+           <!--an other additionnal steering force on the external_reaction-->
            <scheduled_gain name="systems/taxi/steering-factor">
                <input>systems/taxi/distance</input>
                <table>
-                   <independentVar>fcs/heading-error</independentVar>
+                   <independentVar>fcs/heading-corrected</independentVar>
                    <tableData>
                        02     5
                        10     2
@@ -147,12 +219,10 @@
                    </tableData>
                </table>
         </scheduled_gain>
-           
         <pure_gain name="systems/taxi/steering-command">
             <input>fcs/heading-command</input>
             <abs><gain>systems/taxi/steering-factor</gain></abs>
         </pure_gain>
-        
         <switch name="systems/taxi/steering-switch">
             <default value="0"/>
             <test logic="AND" value="systems/taxi/steering-command">
@@ -166,6 +236,7 @@
             <output>external_reactions/taxi/y</output>
         </switch>
         
+        <!--if not taxiing the usual rudder command is operationnal, if yes it is locked to taxiing-->
         <switch name="fcs/rudder-command-selector-steering">
             <default value="fcs/steer_taxi-cmd-norm"/>
             <test value="fcs/rudder-cmd-norm">
@@ -173,35 +244,7 @@
             </test>
             <output>fcs/rudder-cmd-norm</output>
         </switch>
-        
-        <!--===============-->
-        
-        <!--<pure_gain name="systems/taxi/cat-diff-corr">
-            <input>systems/carrier/cat-diff-head</input>
-            <gain>0.0007</gain>
-        </pure_gain>
-        
-        <pure_gain name="systems/taxi/cat-diff-head-force">
-            <input>systems/taxi/cat-diff-corr</input>
-            <gain>inertia/weight-lbs</gain>
-        </pure_gain>
-        
-        <switch name="systems/taxi/cat-diff-head-correct">
-            <default value="0"/>
-            <test logic="AND" value="systems/taxi/cat-diff-head-force">
-                systems/cat-onarea gt 0
-                systems/taxi/linked == 1
-                systems/taxi/distance lt 10
-            </test>
-            <output>systems/taxi/corr_y</output>
-        </switch>
-        
-        <summer name="systems/taxi/y">
-            <input>systems/taxi/steer_y</input>
-            <input>systems/taxi/corr_y</input>
-            <output>external_reactions/taxi/y</output>
-        </summer>-->
-
+       
   </channel>
 
 </system>

@@ -144,7 +144,7 @@
     <!-- =============launch-bar =================-->
             <key n="76">
                     <name>L</name>
-                        <desc>engage holdback</desc>
+                    <desc>engage holdback</desc>
                     <binding>
                         <command>property-assign</command>
                         <property>/fdm/jsbsim/systems/launchbar/lock-cmd</property>
@@ -158,6 +158,11 @@
                     <binding>
                         <command>property-assign</command>
                         <property>/controls/engines/engine[0]/throttle</property>
+                        <value>0</value>
+                    </binding>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/sim/model/taxi/linked</property>
                         <value>0</value>
                     </binding>
                     <mod-up>
@@ -243,6 +248,19 @@
                             <command>property-assign</command>
                             <property>/sim/model/mule/magnitude</property>
                             <value type="double">0</value>
+                    </binding>
+            </key>
+            <key n="77">
+                <name>M</name>
+                <desc>taxi Linked</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/sim/model/taxi/linked</property>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/controls/gear/brake-parking</property>
+                    <value>0</value>
                     </binding>
             </key>
 

@@ -1171,7 +1171,7 @@
             <direction>
                 <x>1</x>
                 <y>0</y>
-                <z>0</z>
+                <z>0.2</z>
             </direction>
         </force>
 

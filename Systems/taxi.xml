@@ -6,39 +6,53 @@
 
     
   <property >systems/taxi/distance</property>
-  <property value="160">systems/taxi/course</property>
+  <property >systems/taxi/course</property>
   
   <channel name="Taxi">
       
-        <scheduled_gain name="Scheduled Force Taxi left">
+        <scheduled_gain name="systems/taxi/control-brake-left">
             <input>gear/unit[1]/wheel-speed-fps</input>
             <table>
                 <independentVar>systems/taxi/distance</independentVar>
                 <tableData>
-                    2.00  0.4
-                    10     0.1
+                    2.00  0.6
+                    10     0.15
                     20     0
                 </tableData>
             </table>
-            <output>/controls/gear/brake-left</output>
         </scheduled_gain>
         
-        <scheduled_gain name="Scheduled Force Taxi left">
+        <scheduled_gain name="systems/taxi/control-brake-right">
             <input>gear/unit[1]/wheel-speed-fps</input>
             <table>
                 <independentVar>systems/taxi/distance</independentVar>
                 <tableData>
-                    2.00  0.4
-                    10     0.1
+                    2.00  0.6
+                    10     0.15
                     20     0
                 </tableData>
             </table>
-            <output>/controls/gear/brake-right</output>
         </scheduled_gain>
+        
+        <switch name="systems/taxi/brake-left-switch">
+            <default value="/controls/gear/brake-left"/>
+            <test  logic="AND" value="systems/taxi/control-brake-left">
+                systems/taxi/linked == 1
+            </test>
+            <output>/controls/gear/brake-left</output>
+       </switch>
+       
+       <switch name="systems/taxi/brake-right-switch">
+           <default value="/controls/gear/brake-right"/>
+           <test  logic="AND" value="systems/taxi/control-brake-right">
+               systems/taxi/linked == 1
+           </test>
+           <output>/controls/gear/brake-right</output>
+       </switch>
       
       <pure_gain name="/sim/model/taxi/magnitude">
           <input>systems/taxi/distance</input>
-          <gain>30</gain>
+          <gain>10</gain>
        </pure_gain>
 
         <switch name="systems/taxi/linked">
@@ -107,42 +121,86 @@
            
            <pure_gain name="fcs/heading-command">
                <input> fcs/heading-corrected </input>
-               <gain> 0.05</gain>
+               <gain> 0.02</gain>
            </pure_gain>
            
            <switch name="fcs/rudder-command-steering">
                <default value="0"/>
                <test logic="AND" value="-fcs/heading-command">
-                   gear/unit/WOW == 1
                    /sim/model/taxi/linked == 1
                    /controls/gear/brake-parking == 0
                </test>
                <output>fcs/steer_taxi-cmd-norm</output>
            </switch>
            
-           <pure_gain name="systems/taxi-steering-command">
-               <input> fcs/heading-command</input>
-               <gain>0.07</gain>
-           </pure_gain>
+           <scheduled_gain name="systems/taxi/steering-factor">
+               <input>systems/taxi/distance</input>
+               <table>
+                   <independentVar>fcs/heading-error</independentVar>
+                   <tableData>
+                       02     5
+                       10     2
+                       20     0.1
+                       35     0.06
+                       50     0.03
+                       80     0.01
+                   </tableData>
+               </table>
+        </scheduled_gain>
            
-           <switch name="systems/taxi-steering">
-               <default value="0"/>
-               <test logic="AND" value="systems/taxi-steering-command">
-                   gear/unit/WOW == 1
-                   /sim/model/taxi/linked == 1
-                   /controls/gear/brake-parking == 0
-               </test>
-               <output>external_reactions/taxi/y</output>
-           </switch>
-           
-           <switch name="fcs/rudder-command-selector-steering">
-               <default value="fcs/steer_taxi-cmd-norm"/>
-               <test value="fcs/rudder-cmd-norm">
-                   systems/taxi/linked == 0
-               </test>
-               <output>fcs/rudder-cmd-norm</output>
-           </switch>
-
+        <pure_gain name="systems/taxi/steering-command">
+            <input>fcs/heading-command</input>
+            <abs><gain>systems/taxi/steering-factor</gain></abs>
+        </pure_gain>
+        
+        <switch name="systems/taxi/steering-switch">
+            <default value="0"/>
+            <test logic="AND" value="systems/taxi/steering-command">
+                systems/taxi/linked == 1
+                gear/unit[1]/wheel-speed-fps gt 3
+            </test>
+            <test logic="AND" value="systems/taxi/steering-command">
+                systems/taxi/linked == 1
+                gear/unit[2]/wheel-speed-fps gt 3
+            </test>
+            <output>external_reactions/taxi/y</output>
+        </switch>
+        
+        <switch name="fcs/rudder-command-selector-steering">
+            <default value="fcs/steer_taxi-cmd-norm"/>
+            <test value="fcs/rudder-cmd-norm">
+                systems/taxi/linked == 0
+            </test>
+            <output>fcs/rudder-cmd-norm</output>
+        </switch>
+        
+        <!--===============-->
+        
+        <!--<pure_gain name="systems/taxi/cat-diff-corr">
+            <input>systems/carrier/cat-diff-head</input>
+            <gain>0.0007</gain>
+        </pure_gain>
+        
+        <pure_gain name="systems/taxi/cat-diff-head-force">
+            <input>systems/taxi/cat-diff-corr</input>
+            <gain>inertia/weight-lbs</gain>
+        </pure_gain>
+        
+        <switch name="systems/taxi/cat-diff-head-correct">
+            <default value="0"/>
+            <test logic="AND" value="systems/taxi/cat-diff-head-force">
+                systems/cat-onarea gt 0
+                systems/taxi/linked == 1
+                systems/taxi/distance lt 10
+            </test>
+            <output>systems/taxi/corr_y</output>
+        </switch>
+        
+        <summer name="systems/taxi/y">
+            <input>systems/taxi/steer_y</input>
+            <input>systems/taxi/corr_y</input>
+            <output>external_reactions/taxi/y</output>
+        </summer>-->
 
   </channel>
 

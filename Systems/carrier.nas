@@ -78,11 +78,10 @@
 
                       setprop ("/sim/carrier/name",contact);
                       print ("WELCOME ON BOARD, CARRIER: => ",contact," <=");
-                      #var display = screen.display.new(100, -300);
-                      #display.setcolor(1, 0.8, 0.5);
-                      #display.add("WELCOME_ON_BOARD","/sim/carrier/name");
-
                       first_contact = 1;
+                      var text_welcome = "Welcome on board  " ~ contact;
+                      var window = screen.window.new(nil, -100, 3, 30);
+                      window.write(text_welcome);
                           if ((contact == clem) or (contact == foch)) {
                                 cat1_heading_rad = getprop("sim/carrier/clemenceau/catapult1/heading_rad");
                                 cat1_head = getprop("sim/carrier/clemenceau/catapult1/coord_course");
@@ -192,7 +191,7 @@
   } 
                     } 
                 } 
-          } else { first_contact = 0; setprop ("/sim/carrier/name","none"); screen.property_display.reset();}
+          } else { first_contact = 0; setprop ("/sim/carrier/name","none");}
         }
       settimer(updateCarrier,0.01);
   }
@@ -220,7 +219,7 @@ setlistener("/fdm/jsbsim/launchbar/launch-bar-state",JBD_op);
 
 taxi_op=func{
           var taxi_to = getprop("/sim/model/taxi/taxi_to");
-          if (getprop("/sim/model/taxi/linked") == 1 and taxi_to != 0){
+           if (getprop("/sim/model/taxi/linked") == 1 and taxi_to != 0){
           if (taxi_to == 1){
               var dest_lat = getprop("/fdm/jsbsim/systems/carrier/cat1-lat-position");
               var dest_lon = getprop("/fdm/jsbsim/systems/carrier/cat1-lon-position");
@@ -248,3 +247,14 @@ settimer(taxi_op,1);
 }
 }
 setlistener("/sim/model/taxi/linked",taxi_op);
+
+taxi_message=func{
+          if (getprop("/sim/model/taxi/linked") == 1){
+          var taxi_to = getprop("/sim/model/taxi/taxi_to");
+          var text_taxi_to = "Your are going to Catapult number  " ~ taxi_to;
+          var window = screen.window.new(nil, -100, 3, 50);
+                      window.write("");
+                      window.write(text_taxi_to);
+          }
+}
+setlistener("/sim/model/taxi/linked",taxi_message);

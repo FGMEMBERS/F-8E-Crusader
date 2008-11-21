@@ -68,6 +68,7 @@
                 <current-view>
                         <field-of-view type="double">62.0</field-of-view>
                 </current-view>
+                <chase-distance-m type="double">-20.0</chase-distance-m>
                 <systems>
                         <autopilot>
                                 <path>Aircraft/F-8E-Crusader/Systems//FA-18-autopilot.xml</path>

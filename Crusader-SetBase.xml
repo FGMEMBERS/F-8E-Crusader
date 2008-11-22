@@ -15,13 +15,18 @@
                 <version>0.9</version>
 
                 <flight-model>jsb</flight-model>
-                <aero>f8e-jsbsim</aero>
+                <aero>f8e_v1-jsbsim</aero>
                 <startup>
                         <splash-texture>Aircraft/F-8E-Crusader/Crusader-splash.rgb</splash-texture>
                 </startup>
                 <model>
                     <carrier-jsbsim>1</carrier-jsbsim>
                         <path archive="y">Aircraft/F-8E-Crusader/Models/F8E-model.xml</path>
+                        <f8e>
+                            <lighting>
+                                <instrument-lights>0.15</instrument-lights>
+                            </lighting>
+                        </f8e>
                         <mule>
                             <magnitude>0</magnitude>
                             <linked>0</linked>

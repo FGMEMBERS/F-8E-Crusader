@@ -67,7 +67,7 @@
                 </test>
                  <test  logic="AND" value="0">
                         /controls/flight/wing-incidence == 0
-                        fcs/flaps-pos-norm == 0
+                        fcs/flap-pos-norm == 0
                 </test>
             </switch>
 
@@ -225,7 +225,7 @@
                         <time>4.0000</time>
                     </setting>
                 </traverse>
-                <output>fcs/flaps-pos-norm</output>
+                <output>fcs/flap-pos-norm</output>
             </kinematic>
 
 
@@ -233,14 +233,14 @@
 
 
              <pure_gain name="Flaps Surface">
-                <input>fcs/flaps-pos-norm</input>
+                <input>fcs/flap-pos-norm</input>
                 <gain>1</gain>
                 <output>/surface-positions/flaps-pos-norm</output>
             </pure_gain>
 
 
             <!--<pure_gain name="Flaps Deg ">
-                <input>fcs/flaps-pos-norm</input>
+                <input>fcs/flap-pos-norm</input>
                 <gain>25</gain>
                 <output>fcs/flaps-pos-deg</output>
             </pure_gain>-->

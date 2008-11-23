@@ -2,7 +2,7 @@
 
 
 <system name="Wings">
-
+    
     <channel name="Wings">
 
         <!--A filter to avoid any jams during operations, the operation must be achived before starting an other  (UP, DOWN)-->
@@ -33,6 +33,11 @@
                     </setting>
                 </traverse>
             </kinematic>
+            
+            <pure_gain name="fcs/wing-incidence-up">
+                <input>systems/wing-incidence/control</input>
+                <gain>1</gain>
+            </pure_gain>
 
             <pure_gain name="systems/wing-incidence/handle">
                 <input>systems/wing-incidence/control</input>
@@ -88,19 +93,21 @@
             </pure_gain>
 
             <!--Some automatic correction for FCS during UP/DOWN -->
-            <scheduled_gain name="Elevator Wings Position">
+            <!--<scheduled_gain name="Elevator Wings Position">
                 <input>fcs/wings-pos-norm</input>
                 <table>
                     <independentVar>velocities/vc-kts</independentVar>
                     <tableData>
-                        0.0000	0.3500
-                        150.0000	0.3500
-                        250.0000	0.3700
-                        400.0000	0.3500
+                        0.0000	-1
+                        150.00	-0.445
+                        250.00	-0
+                        400.00	0.062
                     </tableData>
                 </table>
                 <output>fcs/balance-wings-pos-norm</output>
-            </scheduled_gain>
+            </scheduled_gain>-->
+            
+           
 
             <pure_gain name="Wings Rad ">
                 <input>fcs/wings-pos-norm</input>

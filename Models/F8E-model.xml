@@ -2,7 +2,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005
-    Copyright License:  GPL
+    Copyright License:  GPL v2
 -->
 <!--  LING-TEMCO-VOUGHT   F-8E-Crusader Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
 
@@ -11,6 +11,7 @@
    	  <path>f8e.ac</path>
 
   <!--NOTE     RESOLUTION  DEFINITION      -->
+  <!--FIXME this must be done with Livery management-->
         <!--according to your needs you may choose -->
         <!-- high resolution  (Textures-hires), or medium resolution (Textures-medres)-->
         <!-- to do it,  comment out and uncomment out the corresponding following lines-->

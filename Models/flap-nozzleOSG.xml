@@ -6,7 +6,7 @@
 -->
 <!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
 <PropertyList>
-	<path>flap-nozzle.ac</path>
+	<path>flap-nozzle_v1.ac</path>
 	<texture-path>Textures/texture12F</texture-path>
 
 	<!--<model>

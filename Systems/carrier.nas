@@ -193,7 +193,7 @@
                 } 
           } else { first_contact = 0; setprop ("/sim/carrier/name","none");}
         }
-      settimer(updateCarrier,0.01);
+      settimer(updateCarrier,0.03);
   }
   init_contact = func {
       var  AI_Enabled = props.globals.getNode("sim/ai/enabled");

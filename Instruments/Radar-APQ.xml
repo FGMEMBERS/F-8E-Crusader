@@ -111,7 +111,7 @@
         
         <animation>
             <type>pick</type>
-            <object-name>Radar-Bt1</object-name>
+            <object-name>Radar-Altitude</object-name>
             <action>
                 <button>1</button>
                 <binding>
@@ -127,7 +127,7 @@
         
         <animation>
             <type>pick</type>
-            <object-name>Radar-Bt1</object-name>
+            <object-name>Radar-Altitude</object-name>
             <action>
                 <button>0</button>
                 <binding>
@@ -1788,7 +1788,7 @@
                 </axis>
 	</animation>
 
-	<!--<animation>
+	<animation>
 		<condition>
 			<greater-than>
 				<property>/systems/electrical/outputs/radar</property>
@@ -1797,19 +1797,19 @@
 		</condition>
 		<type>rotate</type>
 		<object-name>Radar-Altitude</object-name>
-		<property>/instrumentation/radar/</property>
-		<factor></factor>
+		<property>/instrumentation/radar/alt-coef</property>
+		<factor>30</factor>
 		<center>
 			<x-m>0</x-m>
-			<y-m>-0.0583627</y-m>
-			<z-m>-0.0845303</z-m>
+                        <y-m>-0.0583627</y-m>
+                        <z-m>-0.0719548</z-m>
 		</center>
 		<axis>
 			<x>-1</x>
 			<y>0</y>
 			<z>0</z>
 		</axis>
-	</animation>-->
+	</animation>
 
 	<animation>
 		<condition>

@@ -28,145 +28,151 @@ setprop("/instrumentation/annunciator/refuel-overload",0);
 setprop("consumables/fuel/transfer/level-gal_us",0);
 setprop("instrumentation/annunciator/refuel-pump",0);
 
-
-refuel= func {		
-		if(getprop("/position/altitude-agl-ft")>7 and getprop("/instrumentation/airspeed-indicator/indicated-speed-kt")>200){
-		probe_ready= getprop("/surface-positions/refueling-pos-norm");
-			if (probe_ready == 0) {	
-			setprop("/controls/flight/probe-refuel",1);
-			refuel_air();
-			} else {
-			setprop("/controls/flight/probe-refuel",0);
-			ref_switch=0;
-			delete_f();
-			}
-		}
-		elsif
-		(getprop("/position/altitude-agl-ft")<7 and getprop("/instrumentation/airspeed-indicator/indicated-speed-kt")<20){
-		pump_ready = getprop("instrumentation/annunciator/refuel-pump");
-			if (pump_ready == 0) {
-			setprop("instrumentation/annunciator/refuel-pump",1);
-			setprop ("/surface-positions/refueling-pos-norm",0);
-			refuel_ground();
-			}else{
-			setprop("instrumentation/annunciator/refuel-pump",0);
-			ref_switch=0;
-			delete_f();
-			}
-		}
-		else{
-		print("refuel prohibited");
-		return;
-		}
+var calculate_filling= func{
+        now_ready  = getprop("sim/time/elapsed-sec");
+        orig_qty_tk0=getprop("consumables/fuel/tank/level-gal_us");
+        orig_qty_tk1=getprop("consumables/fuel/tank[1]/level-gal_us");
+        now_qty = orig_qty_tk0+orig_qty_tk1;
+        print("new =",new_qty," tk1 =",orig_qty_tk1," tk0 =",orig_qty_tk0);
+        req_qty = capacity - now_qty;	
+        refueling_time = req_qty / sec_qty;
+        print(refueling_time);
 }
 
-
 refuel_air=func {
-		probe_ready= getprop("/surface-positions/refueling-pos-norm");
-		if (probe_ready == 1 and getprop("/systems/refuel/contact") ==1) {
-			setprop("instrumentation/annunciator/refuel-pump",1);
-			print (probe_ready);
-			now_ready  = getprop("sim/time/elapsed-sec");
-			orig_qty_tk0=getprop("consumables/fuel/tank/level-gal_us");
-			orig_qty_tk1=getprop("consumables/fuel/tank[1]/level-gal_us");
-			now_qty = orig_qty_tk0+orig_qty_tk1;
-			print("new =",new_qty," tk1 =",orig_qty_tk1," tk0 =",orig_qty_tk0);
-			req_qty = capacity - now_qty;	
-			refueling_time = req_qty / sec_qty;
-			print(refueling_time);
-			ref_switch=1;	
-			full_up();
+        probe_ready= getprop("/surface-positions/refueling-pos-norm");
+        if (ref_switch==1 and probe_ready==1) {
+        not_filled();
+        }
+        elsif(getprop("/position/altitude-agl-ft")>7 and getprop("/instrumentation/airspeed-indicator/indicated-speed-kt")>200){
+                if (probe_ready == 0) {	
+                setprop("/controls/flight/probe-refuel",1);
+                ref_switch=1;
+                }
+        refuel_contact();
+        }
+        else{
+        print("refuel prohibited");
+        refuel_prohibited();
+        }
+}
+
+var refuel_contact=func {
+                probe_ready= getprop("/surface-positions/refueling-pos-norm");
+                if (probe_ready == 1 and getprop("/systems/refuel/contact") ==1) {
+                    setprop("instrumentation/annunciator/refuel-pump",1);
+                    print (probe_ready);
+                    calculate_filling();
+                    ref_switch=1;	
+                    full_up();
 		}else{
-		settimer (refuel_air,1);
+		settimer (refuel_contact,1);
 		}
 }
 
 refuel_ground=func {
-		pump_ready = getprop("instrumentation/annunciator/refuel-pump");
-		if (pump_ready == 1){
-			now_ready  = getprop("sim/time/elapsed-sec");
-			orig_qty_tk0=getprop("consumables/fuel/tank/level-gal_us");
-			orig_qty_tk1=getprop("consumables/fuel/tank[1]/level-gal_us");
-			now_qty = orig_qty_tk0+orig_qty_tk1;
-			print("new =",new_qty," tk1 =",orig_qty_tk1," tk0 =",orig_qty_tk0);
-			req_qty = capacity - now_qty;	
-			refueling_time = req_qty / sec_qty;
-			print(refueling_time);
-                        var text1_refueling = "Refueling on Ground";
-                        var text2_refueling =  "Time = " ~ refueling_time;
-                        var window = screen.window.new(nil, -100, 3, refueling_time);
-                        window.write("");
-                        window.write(text1_refueling);
-                        window.write(text2_refueling);
-			ref_switch=1;	
-			full_up();	
-		}else{
-		settimer (refuel_air,1);
-#                        ??????????????
-#FIXME should be =======settimer (refuel_ground,1)==========================
-		}		
+        pump_ready = getprop("instrumentation/annunciator/refuel-pump");
+        if (ref_switch==1 and pump_ready==1) {
+        not_filled();
+        }
+        elsif(getprop("/position/altitude-agl-ft")<7 and getprop("/instrumentation/airspeed-indicator/indicated-speed-kt")<20){
+                  if (pump_ready == 0) {
+                  setprop("instrumentation/annunciator/refuel-pump",1);
+                  setprop ("/surface-positions/refueling-pos-norm",0);
+                  }
+                  if (pump_ready == 1){
+                      calculate_filling();
+                      var text1_refueling = "Refueling on Ground";
+                      var text2_refueling =  "Time = " ~ refueling_time;
+                          var window = screen.window.new(nil, -100, 3, refueling_time);
+                          window.write("");
+                          window.write(text1_refueling);
+                          window.write(text2_refueling);
+                      ref_switch=1;	
+                      full_up();	
+                  }else{
+                  settimer (refuel_ground,1);
+                  }
+        }
+        else{
+        print("refuel prohibited");
+        refuel_prohibited();
+        }
 }
 
-full_up=func {
-		if (ref_switch == 0) {
-		not_filled();
-		} else {
-			now  = getprop("sim/time/elapsed-sec");
-			if (now - now_ready > refueling_time ) {
-			filled();
-			} else {
-			durat_time = now - now_ready;
-			fill_qty = sec_qty * durat_time;
-			new_qty = now_qty + fill_qty;
-	#print("new",new_qty,"tk1",orig_qty_tk1,"tk0",orig_qty_tk0,tank_transferfirst);
-			if (new_qty-orig_qty_tk0>=tank_transferfirst){
-			setprop("consumables/fuel/tank[1]/level-gal_us",tank_transferfirst);
-			setprop("consumables/fuel/tank[0]/level-gal_us",new_qty-tank_transferfirst);
-			}else{
-			setprop("consumables/fuel/tank[1]/level-gal_us",new_qty-orig_qty_tk0);
-			}			
-			if (new_qty > capacity-ref_alarm){
-			setprop("/instrumentation/annunciator/refuel-overload",1);
-			}
-			settimer (full_up,1);
-			}
-		} 
-		}
+var full_up=func {
+        if (ref_switch == 1)  {
+                now  = getprop("sim/time/elapsed-sec");
+                if (now - now_ready > refueling_time ) {
+                filled();
+                } else {
+                durat_time = now - now_ready;
+                fill_qty = sec_qty * durat_time;
+                new_qty = now_qty + fill_qty;
+                if (new_qty-orig_qty_tk0>=tank_transferfirst){
+                setprop("consumables/fuel/tank[1]/level-gal_us",tank_transferfirst);
+                setprop("consumables/fuel/tank[0]/level-gal_us",new_qty-tank_transferfirst);
+                }else{
+                setprop("consumables/fuel/tank[1]/level-gal_us",new_qty-orig_qty_tk0);
+                }			
+                if (new_qty > capacity-ref_alarm){
+                setprop("/instrumentation/annunciator/refuel-overload",1);
+                }
+                settimer (full_up,1);
+                }
+        } 
+}
 
-filled=func {
+var filled=func {
 		setprop("consumables/fuel/tank/level-gal_us",tank_mainfirst);
 		setprop("consumables/fuel/tank[1]/level-gal_us",tank_transferfirst);
                 setprop("/controls/flight/probe-refuel",0);
 		setprop("/instrumentation/annunciator/refuel-overload",0);
 		setprop("consumables/fuel/transfer/level-gal_us",0);
 		setprop("instrumentation/annunciator/refuel-pump",0);
+                ref_switch = 0 ;
 		print ("Filled up");
                 var text_filled = "Filled_UP    Good Flight";
-                        var window = screen.window.new(nil, -100, 3, 50);
+                        var window = screen.window.new(nil, -100, 4, 10);
                         window.write("");
                         window.write("");
                         window.write("");
                         window.write(text_filled);
 }
-not_filled=func {		
+
+var not_filled=func {
 		setprop("consumables/fuel/transfer/level-gal_us",0);
 		setprop("/instrumentation/annunciator/refuel-overload",0);
 		setprop("instrumentation/annunciator/refuel-pump",0);
+                setprop("/controls/flight/probe-refuel",0);
+                ref_switch = 0 ;
+                refueling_time = 0 ;
 		print ("Not filled up, your new capacity is:  ", new_qty );
+                var text_nofilled = "Not Filled_UP , check your Tank level";
+                        var window = screen.window.new(nil, -100, 4, 30);
+                        window.write("");
+                        window.write("");
+                        window.write("");
+                        window.write(text_nofilled);
 }
-delete_f=func {
+
+var refuel_prohibited=func { 
+                print("refuel prohibited");
+                var text_prohib = "Sorry operation prohibited";
+                      var window = screen.window.new(nil, -100, 4, 10);
+                      window.write("");
+                      window.write("");
+                      window.write("");
+                      window.write(text_prohib);
+}
+
+var delete_f=func {
 		print ("operation aborted");
 }
 
 
 
 
-Refuel_Contact=func{
-	if(getprop("/systems/refuel/contact")==1 and getprop("/position/altitude-agl-ft")>7 ) {
-		refuel();
-	}	
-}
-#setlistener("/systems/refuel/contact",Refuel_Contact);
 
 
 

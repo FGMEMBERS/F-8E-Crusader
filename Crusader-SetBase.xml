@@ -175,6 +175,15 @@
                                     <value>0</value>
                                  </binding>
                             </item>
+                            <item>
+                                <label>Refueling on ground</label>
+                                <binding>
+                                    <command>nasal</command>
+                                    <script>
+                                        consumable.refuel();
+                                    </script>
+                                </binding>
+                            </item>
                         </menu>
                     </default>
 	       </menubar>

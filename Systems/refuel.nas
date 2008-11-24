@@ -92,10 +92,17 @@ refuel_ground=func {
 			req_qty = capacity - now_qty;	
 			refueling_time = req_qty / sec_qty;
 			print(refueling_time);
+                        var text1_refueling = "Refueling on Ground";
+                        var text2_refueling =  "Time = " ~ refueling_time;
+                        var window = screen.window.new(nil, -100, 3, refueling_time);
+                        window.write("");
+                        window.write(text1_refueling);
+                        window.write(text2_refueling);
 			ref_switch=1;	
 			full_up();	
 		}else{
 		settimer (refuel_air,1);
+#                        ??????????????
 #FIXME should be =======settimer (refuel_ground,1)==========================
 		}		
 }
@@ -134,6 +141,12 @@ filled=func {
 		setprop("consumables/fuel/transfer/level-gal_us",0);
 		setprop("instrumentation/annunciator/refuel-pump",0);
 		print ("Filled up");
+                var text_filled = "Filled_UP    Good Flight";
+                        var window = screen.window.new(nil, -100, 3, 50);
+                        window.write("");
+                        window.write("");
+                        window.write("");
+                        window.write(text_filled);
 }
 not_filled=func {		
 		setprop("consumables/fuel/transfer/level-gal_us",0);

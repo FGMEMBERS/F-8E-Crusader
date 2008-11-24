@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- Gerard Robin  12-12-2005 , License GPL -->
-<!--Some textures Copied from  T-38 instrument panel , David Culp, davidculp2@comcast.net  -->
+<!--Some textures Copied from  T-38 instrument panel , by David Culp  -->
 
 <!-- Instruments Position -->
 <!--						L3			L2			L1			L0			C			R0			R1			R2			R3
@@ -30,6 +30,18 @@
 	<animation include="../Instruments/Instrument-Light6.xml">
 		<object-name>Couronne</object-name>
 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Inter-Acls-Tacan</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>rotate</type>

@@ -81,7 +81,7 @@
 	</animation>
 
 <!--******************** Hotspots ******************************-->
-	<panel>
+	<!--<panel>
 		<path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-HG.xml</path>
 		<bottom-left>
 			<x-m>0.487737</x-m>
@@ -95,12 +95,12 @@
 		</bottom-right>
 		<top-left>
 			<x-m>0.487737</x-m>
-			<!--<y-m>-0.579549</y-m>--><y-m>-0.8</y-m>
+			<y-m>-0.8</y-m>
 			<z-m>0.000521019</z-m>
 		</top-left>
-     </panel>
+     </panel>-->
 
-     <panel>
+    <!-- <panel>
 	     <path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-HD.xml</path>
 	     <bottom-left>
 		     <x-m>0.487737</x-m>
@@ -114,15 +114,80 @@
 	     </bottom-right>
 	     <top-left>
 		     <x-m>0.487737</x-m>
-		     <!--<y-m>-0.579549</y-m>--><y-m>0.8</y-m>
+		     <y-m>0.8</y-m>
 		     <z-m>0.000521019</z-m>
 	     </top-left>
-     </panel>
-
-
-
-
-
+     </panel>-->
+     
+     
+        <animation>
+            <type>pick</type>
+            <object-name>Manette-WingFld</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/flight/wing-fold-cmd</property>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Cde-Wings</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/flight/wing-incidence</property>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Panel-Base-CoPi</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/sim/cockpit/modules/switch-g99</property>
+                </binding>
+            </action>
+        </animation>
+        
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Trh-AB</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/engines/engine/throttle</property>
+                    <step>0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Trh-AB</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/engines/engine/throttle</property>
+                    <step>-0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
 
 
 	<animation>

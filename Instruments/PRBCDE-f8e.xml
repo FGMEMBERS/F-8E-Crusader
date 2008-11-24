@@ -30,11 +30,19 @@
 	<animation include="Instrument-Light4.xml">
 		<object-name>Probe-Marquage</object-name>
 	</animation>
-
-
-
-
-
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Interrupteur</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>nasal</command>
+                    <script>consumable.refuel();</script>
+                </binding>
+            </action>
+        </animation>
+        
 	<animation>
 		<type>rotate</type>
 		<object-name>Interrupteur</object-name>

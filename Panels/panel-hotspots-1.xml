@@ -82,7 +82,7 @@
 
 
 
-			<action>
+			<!--<action>
 				<name>set range </name>
 				<button>0</button>
 				<x>-100</x>
@@ -112,14 +112,14 @@
 					<min>1</min>
 					<max>5</max>
 				</binding>
-			</action>
+			</action>-->
 
 
-			<action>
+			<!--<action>
 				<name>set altitude scale</name>
 				<button>0</button>
 				<x>-100</x>
-				<!--<y>100</y>-->
+				
 				<y>256</y>
 				<w>36</w>
 				<h>72</h>
@@ -147,13 +147,13 @@
 					<min>1</min>
 					<max>7</max>
 				</binding>
-			</action>
+			</action>-->
 
 
 
 
 <!--===========================================================-->
-			<action>
+			<!--<action>
 				<name>set switch +</name>
 				<button>0</button>
 				<x>60</x>
@@ -185,23 +185,12 @@
 					<min>0</min>
 					<max>6</max>
 				</binding>
-			</action>
+			</action>-->
 
 <!--===========================================================-->
 
+			
 			<!--<action>
-				<name>set mark0</name>
-				<button>0</button>
-				<x>75</x>
-				<y>403</y>
-				<w>10</w>
-				<h>20</h>
-				<binding>
-					<command>property-toggle</command>
-					<property>/instrumentation/radar/aircraft[0]/radar/select</property>
-				</binding>
-			</action>-->
-			<action>
 				<name>set mark0</name>
 				<button>0</button>
 				<x>75</x>
@@ -224,11 +213,11 @@
 					<command>property-toggle</command>
 					<property>/instrumentation/radar/aircraft[1]/radar/select</property>
 				</binding>
-			</action>
+			</action>-->
 
 
 
-			<action>
+			<!--<action>
 				<name>set mark2  MP</name>
 				<button>0</button>
 				<x>75</x>
@@ -277,10 +266,10 @@
 					<command>property-toggle</command>
 					<property>/instrumentation/radar/aircraft[5]/radar/select</property>
 				</binding>
-			</action>
+			</action>-->
 
 
-			<action>
+			<!--<action>
 				<name>set mark6 TACAN</name>
 				<button>0</button>
 				<x>75</x>
@@ -291,14 +280,14 @@
 					<command>property-toggle</command>
 					<property>/instrumentation/radar/aircraft[6]/radar/select</property>
 				</binding>
-			</action>
+			</action>-->
 
 
 
 
 
 <!--*************************************fuel probe********************************-->
-			<action>
+			<!--<action>
 				<name>probe fuel activate</name>
 				<button>0</button>
 				<x>-344</x>
@@ -311,11 +300,11 @@
 						consumable.refuel();
 					</script>
 				</binding>
-			</action>
+			</action>-->
 
 
 <!--*************************************fuel pump********************************-->
-			<action>
+			<!--<action>
 				<name>pump fuel activate</name>
 				<button>0</button>
 				<x>276</x>
@@ -326,7 +315,7 @@
 					<command>property-toggle</command>
 					<property>/controls/flight/fuel-pump</property>
 				</binding>
-			</action>
+			</action>-->
 
 
 <!--*************************************altimeter ********************************-->
@@ -721,7 +710,7 @@
 				      </binding>
 			      </action>
 
-			      <action>
+			     <!-- <action>
 				      <name>Acls-Tacan</name>
 				      <button>0</button>
 				      <x>450</x>
@@ -732,7 +721,7 @@
 					      <command>property-toggle</command>
 					      <property>/instrumentation/heading-indicator/switch-tacan-acls</property>
 				      </binding>
-				</action>
+				</action>-->
 
 
 				<action>

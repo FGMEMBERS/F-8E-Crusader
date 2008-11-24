@@ -5201,7 +5201,7 @@ name "Radar-SelAC"
 loc 0.0420082 0.0380755 -0.0574093
 kids 2
 OBJECT poly
-name "obj"
+name "Radar-Target-Switch"
 loc 0.0344779 -0.0087501 -0.00137581
 crease 45.000000
 numvert 41

@@ -45,7 +45,7 @@
 <!--*********************************************Cde-Wings***************************************-->
 
 
-			<action>
+			<!--<action>
 				<name>Commande incidence</name>
 				<button>0</button>
 				<x>-50</x>
@@ -56,11 +56,11 @@
 					<command>property-toggle</command>
 					<property>/controls/flight/wing-incidence</property>
 				</binding>
-                        </action>
+                        </action>-->
 
 
 <!--*********************************************Cde-Cutoff**************************************-->
-			<action>
+			<!--<action>
 				<name>Commande Cutoff-Verrouillage</name>
 				<button>0</button>
 				<x>300</x>
@@ -71,12 +71,12 @@
 					<command>nasal</command>
 					<script>f8e.Cutoff_Cmd()</script>
 				</binding>
-                        </action>
+                        </action>-->
 
 
 <!--*********************************************Cde-LeDroop***************************************-->
 
-			<action>
+			<!--<action>
 				<name>Commande LeDroop</name>
 				<button>0</button>
 				<x>148</x>
@@ -102,11 +102,11 @@
                                     <property>/fdm/jsbsim/fcs/leflap-cmd-norm</property>
                                     <value>0.0</value>
 				</binding>
-                        </action>
+                        </action>-->
 
 <!--*********************************************Cde-CoPi***************************************-->
 
-			<action>
+			<!--<action>
 				<name>module-G99</name>
 				<button>0</button>
 				<x>-450</x>
@@ -117,12 +117,12 @@
 					<command>property-toggle</command>
 					<property>/sim/cockpit/modules/switch-g99</property>
 				</binding>
-                        </action>
+                        </action>-->
 
 
 
 <!--*********************************************Throttle***************************************-->
-			<action>
+			<!--<action>
 				<name>Throttle</name>
 				<button>0</button>
 				<x>125</x>
@@ -148,7 +148,7 @@
 					<property>/controls/engines/engine/throttle</property>
 					<step>-0.05</step>
 				</binding>
-                        </action>
+                        </action>-->
 
 
 

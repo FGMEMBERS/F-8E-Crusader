@@ -43,7 +43,7 @@
 
 
 <!--*****************************Hook     Gear*******************************************************-->
-	<action>
+	<!--<action>
 		<name>hook cmd</name>
 		<button>0</button>
 		<x>340</x>
@@ -93,11 +93,11 @@
 			<command>property-toggle</command>
 			<property>/controls/gear/gear-down</property>
 		</binding>
-	</action>
+	</action>-->
 
 
 	<!--****************************************Autopilot Heading*******************************************-->
-	<action>
+	<!--<action>
 		<name>Autopilot Heading</name>
 		<button>0</button>
 		<x>-415</x>
@@ -108,7 +108,7 @@
 			<command>property-toggle</command>
 			<property>/autopilot/switch-heading</property>
   		</binding>
-	</action>
+	</action>-->
 
 
 

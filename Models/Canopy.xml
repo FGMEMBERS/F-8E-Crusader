@@ -22,6 +22,19 @@
 		<type>noshadow</type>
 		<object-name></object-name>
 	</animation>-->
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Manette-VerrouCpy</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/flight/canopy</property>
+                </binding>
+            </action>
+        </animation>
+
 
 	<animation>
 		<type>select</type>

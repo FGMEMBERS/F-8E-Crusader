@@ -45,7 +45,7 @@
 <!--*********************************************Cde-Wings-Fold***************************************-->
 
 
-			<action>
+			<!--<action>
 				<name>Commande wing fold</name>
 				<button>0</button>
 				<x>-25</x>
@@ -56,10 +56,10 @@
 					<command>property-toggle</command>
 					<property>/controls/flight/wing-fold-cmd</property>
 				</binding>
-                        </action>
+                        </action>-->
 
 <!--*********************************************Autopilote- Altitude***************************************-->
-
+<!--
 			<action>
 				<name>Autopilot Altitude</name>
 				<button>0</button>
@@ -71,11 +71,11 @@
 					<command>property-toggle</command>
 					<property>/autopilot/switch-altitude</property>
 				</binding>
-                        </action>
+                        </action>-->
 
 <!--*********************************************Cde-Canopy***************************************-->
 
-			<action>
+			<!--<action>
 				<name>Canopy</name>
 				<button>0</button>
 				<x>350</x>
@@ -98,10 +98,10 @@
 					<command>property-toggle</command>
 					<property>/controls/flight/canopy</property>
 				</binding>
-			</action>
+			</action>-->
 
 <!--******************************************Tacan*************************************************-->
-			<action>
+			<!--<action>
 				<name>Tacan-Channel-3</name>
 				<button>0</button>
 				<x>150</x>
@@ -164,7 +164,7 @@
 					<command>property-toggle</command>
 					<property>/instrumentation/tacan/frequencies/valueXY</property>
 				</binding>
-			</action>
+			</action>-->
 
 
 
@@ -173,7 +173,7 @@
 
 <!-- ************************************Instrument Light ********************************-->
 
-			<action>
+			<!--<action>
 				<name>light-up</name>
 				<button>0</button>
 				<x>-250</x>
@@ -202,10 +202,10 @@
 					<min>0</min>
 					<max>1</max>
 				</binding>
-			</action>
+			</action>-->
 	<!--=========================================-->
 
-			<action>
+			<!--<action>
 				<name>light-down</name>
 				<button>0</button>
 				<x>-218</x>
@@ -233,10 +233,10 @@
 					<min>0</min>
 					<max>1</max>
 				</binding>
-			</action>
+			</action>-->
 
 	<!-- 	===============Cockpit Light=============================		 -->
-			<action>
+			<!--<action>
 				<name>light-up</name>
 				<button>0</button>
 				<x>-250</x>
@@ -261,12 +261,12 @@
 					<property>/controls/lighting/</property>
 					<step>-0.1</step>
 				</binding>
-			</action>
+			</action>-->
 
 
 <!--======================Master generator electric supply========================-->
 
-			<action>
+			<!--<action>
 				<name>Electric supply</name>
 				<button>0</button>
 				<x>485</x>
@@ -277,7 +277,7 @@
 					<command>nasal</command>
 					<script>f8e.Electric_Cmt()</script>
 				</binding>
-			</action>
+			</action>-->
 
 
 <!-- ===================================Carte coordonées ==============================================-->

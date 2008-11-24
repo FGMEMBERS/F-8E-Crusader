@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- Gerard Robin  12-12-2005 , License GPL -->
-<!--Some textures Copied from  T-38 instrument panel , David Culp, davidculp2@comcast.net  -->
+<!--Some textures Copied from  T-38 instrument panel , by David Culp,  -->
 
 <!-- Instruments Position -->
 <!--						L3			L2			L1			L0			C			R0			R1			R2			R3
@@ -44,7 +44,7 @@
 		<object-name>Panel-Base</object-name>
 	</animation>-->
 
-	<panel>
+	<!--<panel>
 		<path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-AV.xml</path>
 		<bottom-left>
 			<x-m>0.050372</x-m>
@@ -61,7 +61,7 @@
 			<y-m>-0.478754</y-m>
 			<z-m>0.067672</z-m>
 		</top-left>
-     </panel>
+     </panel>-->
 
 
      <model>
@@ -76,6 +76,18 @@
 	</model>
 
 	<!--****************************************************Landing Gear********************Train ****************************-->
+        
+        <animation>
+            <type>pick</type>
+            <object-name>LG-Cde</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/gear/gear-down</property>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>rotate</type>
@@ -95,6 +107,18 @@
 	</animation>
 
 	<!--*************************************Hook********************Crosse *******************************************-->
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Hook-Cde</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>controls/gear/tailhook</property>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>rotate</type>

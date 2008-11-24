@@ -30,6 +30,19 @@
 		<object-name>Couronne</object-name>
 		<object-name>Couronne1</object-name>
 	</animation>
+        
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Inter-ElecMaitre</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/electric/master-switch</property>
+                </binding>
+            </action>
+        </animation>
 
 
 	<animation>

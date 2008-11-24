@@ -21,6 +21,18 @@
 	<animation include="Instrument-Light6.xml">
 		<object-name>Couronne</object-name>
 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Autopilot-Altitude</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/autopilot/switch-altitude</property>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>select</type>

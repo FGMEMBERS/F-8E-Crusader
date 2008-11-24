@@ -26,16 +26,24 @@
 		<object-name>Module-Base</object-name>
 		<object-name>Cde-LeDroop</object-name>
 	</animation>
-
+        
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Cde-LeDroop</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/fdm/jsbsim/fcs/leflap-cmd-norm</property>
+                </binding>
+            </action>
+        </animation>
 
 
 	<animation>
 		<condition>
 			<and>
-				<equals>
-					<property>/surface-positions/wings-handle-pos-norm</property>
-					<value>0</value>
-				</equals>
 				<equals>
 					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
 					<value>0</value>

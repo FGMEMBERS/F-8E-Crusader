@@ -37,8 +37,9 @@
             <action>
                 <button>0</button>
                 <binding>
-                    <command>property-toggle</command>
-                    <property>/fdm/jsbsim/propulsion/systems/tank/refuel-in_air</property>
+                    <command>property-assign</command>
+                    <property></property>
+                    <value>/fdm/jsbsim/propulsion/systems/tank/refuel-in_air</value>
                 </binding>
             </action>
         </animation>

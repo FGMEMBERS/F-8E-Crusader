@@ -180,7 +180,7 @@
                                 <binding>
                                     <command>nasal</command>
                                     <script>
-                                        consumable.refuel();
+                                        consumable.refuel_ground();
                                     </script>
                                 </binding>
                             </item>

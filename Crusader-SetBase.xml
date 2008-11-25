@@ -127,66 +127,9 @@
                     <cat3-heading-rad>0</cat3-heading-rad>
                     <cat4-heading-rad>0</cat4-heading-rad>
                 </carrier>
-                <menubar>
-                    <default>
-                        <menu n="10">
-                            <label>F-8E</label>
-                            <enabled type="bool">true</enabled>
-                            <item>
-                                <label>Taxi_to Catapult 1</label>
-                                <binding>
-                                    <command>property-assign</command>
-                                    <property>/sim/model/taxi/taxi_to</property>
-                                    <value>1</value>
-                                </binding>
-                            </item>
-                            <item>
-                                <label>Taxi_to Catapult 2</label>
-                                <binding>
-                                    <command>property-assign</command>
-                                    <property>/sim/model/taxi/taxi_to</property>
-                                    <value>2</value>
-                                </binding>
-                            </item> <item>
-                                <label>Taxi_to Catapult 3</label>
-                                <binding>
-                                    <command>property-assign</command>
-                                    <property>/sim/model/taxi/taxi_to</property>
-                                    <value>3</value>
-                                </binding>
-                            </item>
-                            <item>
-                                <label>Taxi_to Catapult 4</label>
-                                <binding>
-                                    <command>property-assign</command>
-                                    <property>/sim/model/taxi/taxi_to</property>
-                                    <value>4</value>
-                                </binding>
-                            </item>
-                            <item>
-                                <label>Go Taxi_to (toggle ON/OFF)</label>
-                                <binding>
-                                    <command>property-toggle</command>
-                                    <property>/sim/model/taxi/linked</property>
-                                </binding>
-                                <binding>
-                                    <command>property-assign</command>
-                                    <property>/controls/gear/brake-parking</property>
-                                    <value>0</value>
-                                 </binding>
-                            </item>
-                            <item>
-                                <label>Refueling on ground</label>
-                                <binding>
-                                    <command>nasal</command>
-                                    <script>
-                                        consumable.refuel_ground();
-                                    </script>
-                                </binding>
-                            </item>
-                        </menu>
-                    </default>
-	       </menubar>
+                
+                
+                <menubar include="Inputs/Crusader-menu.xml"/>
         </sim>
         
 

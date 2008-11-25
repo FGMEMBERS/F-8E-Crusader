@@ -443,7 +443,7 @@
             <contents unit="LBS"> 2900 </contents>
         </tank>
     </propulsion>
-
+    
     <system file="blackout"/>
     <system file="wings"/>
     <system file="BLC"/>
@@ -464,6 +464,8 @@
     <system file="sinking"/>
     <system file="carrier_jbd"/>
     <system file="taxi"/>
+    <system file="fuel"/>
+    <system file="refuel"/>
 
     <flight_control name="FCS: F-8E">
         

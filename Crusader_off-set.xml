@@ -27,10 +27,10 @@
                         <file>Aircraft/F-8E-Crusader/Systems/nav.nas</file>
                         <file>Aircraft/F-8E-Crusader/Systems/aoa.nas</file>
                 </instruments>
-                <consumable>
+                <!--<consumable>
                         <file>Aircraft/F-8E-Crusader/Systems/refuel.nas</file>
                         <file>Aircraft/F-8E-Crusader/Systems/fuel.nas</file>
-                </consumable>
+                </consumable>-->
 		<terrain>
 			<file>Aircraft/F-8E-Crusader/Systems/terrain.nas</file>
 		</terrain>

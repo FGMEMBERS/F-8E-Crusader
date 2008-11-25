@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+
+
+<system name="fuel">
+    
+   
+    <property>/consumables/fuel/tank[0]/level-lb</property>
+    <property>/consumables/fuel/tank[1]/level-lb</property>
+
+    <channel name="fuel">
+        
+        <summer name="propulsion/systems/tank/level-lb">
+            <input>/consumables/fuel/tank[0]/level-lb</input>
+            <input>/consumables/fuel/tank[1]/level-lb</input>
+            <output>/consumables/fuel/total-fuel-lbs</output>
+        </summer>
+       
+       
+       <!--Transfer===============-->
+       
+       <switch name="propulsion/systems/tank/transfer-switch">
+           <default value="0"/>
+           <test  logic="AND" value="1">
+               /controls/flight/fuel-pump == 1
+           </test>
+       </switch>
+       
+       <kinematic name="propulsion/systems/tank/transfer-timer">
+           <input>propulsion/systems/tank/transfer-switch</input>
+           <traverse>
+               <setting>
+                   <position>0.0</position>
+                   <time>0.0</time>
+               </setting>
+               <setting>
+                   <position>1.0</position>
+                   <time>200</time>
+               </setting>
+           </traverse>
+        </kinematic>
+        
+        <switch name="propulsion/systems/tank/transfer-switch">
+            <default value="propulsion/systems/tank/transfer-switch"/>
+            <test  logic="AND" value="0">
+                propulsion/systems/tank/transfer-timer == 1
+            </test>
+       </switch>
+        
+        <switch name="propulsion/systems/tank/transfer-duration_time">
+            <default value="propulsion/systems/tank/transfer-duration_time"/>
+            <test  logic="AND" value="propulsion/systems/tank/transfer-timer">
+                propulsion/tank/contents-lbs   lt 3488
+                propulsion/systems/tank/transfer-switch == 1
+            </test>
+       </switch>
+       
+       
+       <summer name="propulsion/systems/tank/sum-contents-lbs">
+           <input>propulsion/tank[0]/contents-lbs</input>
+           <input>propulsion/tank[1]/contents-lbs</input>
+           <clipto>
+               <min>0</min>
+               <max>9165</max>
+           </clipto>
+           <output> propulsion/tank[1]/contents-lbs</output>
+        </summer>
+        
+         <switch name="propulsion/systems/tank/sum-pos-contents-lbs">
+            <default value="propulsion/systems/tank/sum-contents-lbs"/>
+            <test  logic="AND" value="propulsion/systems/tank/sum-pos-contents-lbs">
+                propulsion/systems/tank/transfer-switch == 1
+            </test>
+       </switch>
+       
+        
+        <pure_gain name="propulsion/systems/tank/transfer">
+            <input>propulsion/systems/tank/transfer-duration_time</input>
+            <gain>20</gain>
+            <output>propulsion/systems/tank/transfer-qty</output>
+        </pure_gain>
+        
+        <summer name="propulsion/systems/tank/main-tank_level">
+            <input>propulsion/systems/tank/transfer-qty</input>
+            <input>propulsion/tank/contents-lbs</input>
+            <clipto>
+                <min>0</min>
+                <max>3488</max>
+            </clipto>
+            <output> propulsion/tank/contents-lbs</output>
+        </summer>
+       
+        <summer name="propulsion/systems/tank/transfert-tank_level">
+            <input>-propulsion/tank/contents-lbs</input>
+            <input>propulsion/systems/tank/sum-pos-contents-lbs</input>
+            <clipto>
+                <min>0</min>
+                <max>5678</max>
+            </clipto>
+            <output>propulsion/tank[1]/contents-lbs</output>
+        </summer>
+
+    </channel>
+
+</system>

@@ -395,7 +395,7 @@
             <damping_coeff unit="LBS/FT/SEC"> 20000 </damping_coeff>
             <max_steer unit="DEG"> 0.0 </max_steer>
             <brake_group> NONE </brake_group>
-            <retractable>0</retractable>
+            <retractable>1</retractable>
         </contact>
     </ground_reactions>
     <propulsion>
@@ -462,6 +462,7 @@
     <system file="light-outdoor"/>
     <system file="electrical"/>
     <system file="sinking"/>
+    <system file="crash"/>
     <system file="carrier_jbd"/>
     <system file="taxi"/>
     <system file="fuel"/>
@@ -810,6 +811,8 @@
                     <value>0.0400</value>
                 </product>
             </function>
+            
+            <!--not realistic , only for animation with crash-->
             <function name="aero/coefficient/CDgear_water">
                 <description>Drag_due_to_crashing_with_gear_in_water</description>
                 <product>
@@ -818,13 +821,11 @@
                         <independentVar>velocities/vc-kts</independentVar>
                         <tableData>
                             0     0
-                            10    100
-                            30    300
-                            50    9000
-                            70    27000
-                            90    100000
-                            110  1000000
-                            220  100000000
+                            30    900
+                            50    2700
+                            90    10000
+                            110  100000
+                            220  10000000
                         </tableData>
                     </table>
                 </product>

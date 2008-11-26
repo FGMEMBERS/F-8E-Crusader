@@ -11,10 +11,10 @@
            
            <switch name="systems/sinking/switch">
                <default value="0"/>
-               <test  value="1">
+               <test logic="AND" value="1">
                    /environment/terrain  == 0
                    position/h-agl-ft lt 40
-                   velocities/vc-fps lt 20
+                   velocities/vc-fps lt 50
                    position/h-sl-ft  lt position/h-agl-ft
                </test>
             </switch>
@@ -28,7 +28,7 @@
                    </setting>
                    <setting>
                        <position>1</position>
-                       <time>100</time>
+                       <time>20</time>
                    </setting>
                </traverse>
                <output>systems/sinking/timer</output>
@@ -89,6 +89,20 @@
                 <rate_limit>0.1</rate_limit>
                 <output>gear/unit[11]/pos-norm</output>
             </actuator>
+            
+            <!--<switch name="Top">
+                <default value="1"/>
+                <test  value="0">
+                    systems/sinking/timer gt 0.50
+                </test>
+                <output>systems/sinking/cptop</output>
+            </switch>
+            
+            <actuator name="Cp Nozzle">
+                <input>systems/sinking/cptop</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[12]/pos-norm</output>
+            </actuator>-->
 
     </channel>
 

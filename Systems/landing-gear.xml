@@ -33,50 +33,6 @@
                 <output>gear/unit[2]/pos-norm</output>
             </actuator>
             
-            
-            <!--<kinematic name="gear/unit[0]/gear-pos-norm">
-                <input>gear/gear-cp0-cmd-norm</input>
-                <traverse>
-                    <setting>
-                        <position>0</position>
-                        <time>0</time>
-                    </setting>
-                    <setting>
-                        <position>1</position>
-                        <time>0.3</time>
-                    </setting>
-                </traverse>
-            </kinematic>
-            
-            <kinematic name="gear/unit[1]/gear-pos-norm">
-                <input>gear/gear-cp-cmd-norm</input>
-                <traverse>
-                    <setting>
-                        <position>0</position>
-                        <time>0</time>
-                    </setting>
-                    <setting>
-                        <position>1</position>
-                        <time>0.3</time>
-                    </setting>
-                </traverse>
-            </kinematic>
-            
-            
-            <kinematic name="gear/unit[2]/gear-pos-norm">
-                <input>gear/gear-cp-cmd-norm</input>
-                <traverse>
-                    <setting>
-                        <position>0</position>
-                        <time>0</time>
-                    </setting>
-                    <setting>
-                        <position>1</position>
-                        <time>0.3</time>
-                    </setting>
-                </traverse>
-            </kinematic>
-            -->
 
             <kinematic name="Gear Surface Position">
                 <input>/controls/gear/gear-down</input>

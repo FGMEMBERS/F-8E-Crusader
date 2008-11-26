@@ -56,7 +56,7 @@
                 <label>Refueling on ground</label>
                 <binding>
                     <command>property-toggle</command>
-                    <property>/fdm/jsbsim/propulsion/systems/tank/refuel-on_ground</property>
+                    <property>/fdm/jsbsim/propulsion/systems/tank/refuel-on_ground-cmd</property>
                 </binding>
             </item>
         </menu>

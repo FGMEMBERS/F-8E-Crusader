@@ -16,7 +16,7 @@
         </summer>
        
        
-       <!--Transfer===============-->
+       <!--Transfer=====From transfer tank to main tank==========-->
        
        <switch name="propulsion/systems/tank/transfer-switch">
            <default value="0"/>

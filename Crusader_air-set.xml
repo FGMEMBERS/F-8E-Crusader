@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPL
+-->
+    <PropertyList include="Crusader-SetBase.xml">
+
+    <!--  LING-TEMCO-VOUGHT   F-8E-Crusader Crusader                 Auteur :      Gerard ROBIN                       Update  FDM 1.0 le 24-09-2008 -->
+
+      
+        <nasal>
+                <electrical>
+                        <file>Aircraft/F-8E-Crusader/Systems/electrical.nas</file>
+                </electrical>
+                <f8e>
+                        <file>Aircraft/F-8E-Crusader/Systems/f8e.nas</file>
+                        <!--<script>init_f8e();</script>-->
+                        <script>init_f8eair();</script>
+                </f8e>
+                <!--<crash>
+                        <file>Aircraft/F-8E-Crusader/Systems/crash.nas</file>
+                </crash>-->
+                <instruments>
+                        <file>Aircraft/F-8E-Crusader/Systems/radar.nas</file>
+                        <file>Aircraft/F-8E-Crusader/Systems/nav.nas</file>
+                        <file>Aircraft/F-8E-Crusader/Systems/aoa.nas</file>
+                </instruments>
+                <!--<consumable>
+                        <file>Aircraft/F-8E-Crusader/Systems/refuel.nas</file>
+                        <file>Aircraft/F-8E-Crusader/Systems/fuel.nas</file>
+                </consumable>-->
+		<terrain>
+			<file>Aircraft/F-8E-Crusader/Systems/terrain.nas</file>
+		</terrain>
+                <tanker>
+                        <file>Aircraft/F-8E-Crusader/Systems/tanker.nas</file>
+                </tanker>
+                <carrier>
+                    <file>Aircraft/F-8E-Crusader/Systems/carrier.nas</file>
+                    <file>Aircraft/F-8E-Crusader/Systems/geo.nas</file>
+                </carrier>
+        </nasal>
+
+
+
+
+</PropertyList>
+
+

@@ -5,7 +5,7 @@
     
     <channel name="refuel">
         
-        
+        <!--Ground refueling-->
         <switch name="propulsion/systems/tank/refuel-on_ground">
             <default value="propulsion/systems/tank/refuel-on_ground-cmd"/>
             <test  logic="OR" value="0">
@@ -15,7 +15,7 @@
             <output>propulsion/systems/tank/refuel-on_ground-cmd</output>
        </switch>
     
-     <!-- Ground refueling and Air refueling-->
+     <!-- Common Ground refueling and Air refueling-->
        <switch name="propulsion/systems/tank/refuel_switch">
            <default value="0"/>
            <test  logic="AND" value="1">

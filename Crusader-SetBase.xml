@@ -152,7 +152,8 @@
         <controls>
     <!-- Start with the Parking Brake on -->
                 <gear>
-                        <brake-parking type="double">1.0</brake-parking>
+                        <!--<brake-parking type="double">1.0</brake-parking>
+                        <gear-down>1</gear-down>-->
                         <tailhook>0</tailhook>
                 </gear>
     <!-- Start with Canopy open-->

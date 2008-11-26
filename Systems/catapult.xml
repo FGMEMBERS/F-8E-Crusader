@@ -133,6 +133,24 @@
              <gain>systems/catapult/side-forcecat</gain>
              <output>external_reactions/cat-hold-side/magnitude</output>
          </pure_gain>
+         
+         <!--During catapulting we lock the elevator and the rudder to  Neutral position-->
+         
+         <switch name="systems/catapult/elevator-lock">
+             <default value="fcs/elevator-cmd-norm"/>
+             <test logic="AND" value="0">
+                 launchbar/launch-bar-state == 1
+             </test>
+             <output>fcs/elevator-cmd-norm</output>
+         </switch>
+         
+         <switch name="systems/catapult/rudder-lock">
+             <default value="fcs/rudder-cmd-norm"/>
+             <test logic="AND" value="0">
+                 launchbar/launch-bar-state == 1
+             </test>
+             <output>fcs/rudder-cmd-norm</output>
+         </switch>
        
          
         

@@ -38,6 +38,7 @@ Loop_update_crusader();
 init_f8e=func{
 setprop("/controls/flight/wing-fold-cmd",1);
 setprop("/sim/model/mule/linked",1);
+setprop("/controls/gear/brake-parking",1);
 }
 
 
@@ -48,16 +49,31 @@ init_f8eflight=func{
 setprop("/controls/electric/master-switch",1);
 print("master-switch_true");
 setprop("/controls/lighting/landing-lights",1);
+setprop("/controls/lighting/instruments-norm",0.15);
 setprop("/controls/flight/wing-incidence",1);
 setprop("/engines/engine/running",1);
 setprop("/controls/flight/canopy",0);
 setprop("/fdm/jsbsim/fcs/cutoff-switch",1);
-setprop("/controls/flight/brake-parking",0);
-setprop("/controls/flight/wing-fold",1);
+setprop("/controls/flight/wing-fold-cmd",0);
+setprop("/controls/gear/brake-parking",1);
 
 
 #interpolate("/controls/flight/elevator-timer",200,1);
 #adjust_elevator();
+}
+
+init_f8eair=func{
+setprop("/controls/electric/master-switch",1);
+print("master-switch_true");
+setprop("/controls/lighting/landing-lights",1);
+setprop("/controls/lighting/instruments-norm",0.15);
+setprop("/controls/flight/wing-incidence",0);
+setprop("/engines/engine/running",1);
+setprop("/controls/flight/canopy",0);
+setprop("/fdm/jsbsim/fcs/cutoff-switch",1);
+setprop("/controls/flight/wing-fold-cmd",0);
+setprop("/controls/gear/brake-parking",0);
+setprop("/controls/gear/gear/gear-down",0);
 }
 
 #Only to simulate a landing, FIX ME===========================

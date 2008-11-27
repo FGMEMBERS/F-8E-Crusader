@@ -188,8 +188,20 @@
                 </binding>
             </action>
         </animation>
-
-
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Cde-FreinSec</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/gear/brake-parking</property>
+                </binding>
+            </action>
+        </animation>
+        
+       <!-- ======================================================================================-->
 	<animation>
 		<type>rotate</type>
 		<object-name>Cde-Wings</object-name>
@@ -470,6 +482,37 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
+	</animation>
+        
+        
+        <animation>
+            <type>rotate</type>
+            <object-name>Cde-FreinSec</object-name>
+            <property>/controls/gear/brake-parking</property>
+            <interpolation>
+                <entry>
+                    <ind>0</ind>
+                    <dep>5</dep>
+                </entry>
+                <entry>
+                    <ind>0.6</ind>
+                    <dep>15</dep>
+                </entry>
+                <entry>
+                    <ind>1</ind>
+                    <dep>30</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>-0.273473</x-m>
+                <y-m>0</y-m>
+                <z-m>-0.0317366</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </axis>
 	</animation>
 
 

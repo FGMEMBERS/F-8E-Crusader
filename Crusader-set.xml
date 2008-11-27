@@ -15,21 +15,13 @@
                 </electrical>
                 <f8e>
                         <file>Aircraft/F-8E-Crusader/Systems/f8e.nas</file>
-                        <!--<script>init_f8e();</script>-->
                         <script>init_f8eflight();</script>
                 </f8e>
-                <!--<crash>
-                        <file>Aircraft/F-8E-Crusader/Systems/crash.nas</file>
-                </crash>-->
                 <instruments>
                         <file>Aircraft/F-8E-Crusader/Systems/radar.nas</file>
                         <file>Aircraft/F-8E-Crusader/Systems/nav.nas</file>
                         <file>Aircraft/F-8E-Crusader/Systems/aoa.nas</file>
                 </instruments>
-                <!--<consumable>
-                        <file>Aircraft/F-8E-Crusader/Systems/refuel.nas</file>
-                        <file>Aircraft/F-8E-Crusader/Systems/fuel.nas</file>
-                </consumable>-->
 		<terrain>
 			<file>Aircraft/F-8E-Crusader/Systems/terrain.nas</file>
 		</terrain>

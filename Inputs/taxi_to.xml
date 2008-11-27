@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+
+
+<PropertyList>
+  <name>Choose your destination</name>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Destination</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+        <layout>vbox</layout>
+        <halign>center</halign>
+        <text>
+        <label>Catapult  Number</label>
+        </text>
+
+    <!--<checkbox>
+      <halign>left</halign>
+      <label>catapult 1</label>
+      <property></property>
+      <binding>
+        <command>property-assign</command>
+        <property>/sim/model/taxi/taxi_to</property>
+        <value>1</value>
+      </binding>
+    </checkbox>
+
+    -->
+        <group>
+                        <layout>vbox</layout>
+                        <halign>left</halign>
+                <text>
+                        <label>Nimitz 1 to 4</label>
+                </text>
+                <text>
+                        <label>Eisenhower  1 to 4</label>
+                </text>
+                <text>
+                        <label>Clemenceau 1-2</label>
+                </text>
+                    <text>
+                        <label>Foch 1-2</label>
+                </text>
+        </group>
+        <group>
+                <layout>vbox</layout>
+                <halign>center</halign>
+                <combo>
+                        <x>120</x>
+                        <y>0</y>
+                        <width>45</width>
+                        <height>25</height>
+                        <command>property-assign</command>
+                        <property>/sim/model/taxi/taxi_to</property>
+                        <value>1</value>
+                        <value>2</value>
+                        <value>3</value>
+                        <value>4</value>
+                </combo>
+                <button>
+                    <legend>OK</legend>
+                    <default>true</default>
+                    <equal>true</equal>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+            </button>
+        </group>
+<!--<group>
+    <layout>vbox</layout>
+    <halign>right</halign>
+    
+    <text>
+        <label>Foch</label>
+    </text>
+    <combo>
+        <x>120</x>
+        <y>0</y>
+        <width>25</width>
+        <height>25</height>
+        <command>property-assign</command>
+        <property>/sim/model/taxi/taxi_to</property>
+        <value>1</value>
+        <value>2</value>
+        
+    </combo>
+    <button>
+        
+        <legend>OK</legend>
+        <default>true</default>
+        <equal>true</equal>
+        <binding>
+            <command>dialog-apply</command>
+        </binding>
+        
+      </button>
+</group>-->
+
+    </group>
+  
+    <group>
+        <layout>hbox</layout>
+        <empty><stretch>true</stretch></empty>
+        <button>
+            <legend>Go Taxi_to Catapult</legend>
+            <default>true</default>
+            <equal>true</equal>
+            <binding>
+                <command>property-assign</command>
+                <property>/sim/model/taxi/linked</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>property-assign</command>
+                <property>/controls/gear/brake-parking</property>
+                <value>0</value>
+            </binding>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+    
+    <hrule/>
+
+    <group>
+            <layout>hbox</layout>
+            <empty><stretch>true</stretch></empty>
+            <button>
+                <legend>Close</legend>
+                <default>true</default>
+                <key>Esc</key>
+                <binding>
+                    <command>dialog-close</command>
+                </binding>
+            </button>
+            <empty><stretch>true</stretch></empty>
+    </group>
+
+</PropertyList>

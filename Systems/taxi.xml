@@ -81,14 +81,21 @@
         </switch>
       
       <!--conditions to start the taxiing-->
-       <switch name="systems/taxi/linked">
+       <switch name="systems/taxi/linked-cmd">
            <default value="0"/>
            <test  logic="AND" value="1">
                /sim/model/taxi/linked == 1
                /gear/gear[1]/compression-norm gt 0.15
                launchbar/launch-bar-engage == 0
+               systems/taxi/distance lt 200
            </test>
+           <test  logic="AND" value="0">
+               launchbar/launch-bar-engage == 1
+           </test>
+           <output>systems/taxi/linked</output>
        </switch>
+       
+       
        
        <!--define and calculate the force which will be used-->
        <kinematic name="systems/taxi/force-gain">
@@ -155,7 +162,7 @@
                <gain>57.29578</gain>
            </pure_gain>
            
-           <!--condition to aplly an aditionnal correction, so that the AC is suppose to point to a position behind the right place-->
+           <!--condition to apply an additionnal correction, so that the AC will to point to a position behind the right place-->
            <switch name="systems/taxi/heading-wp-add">
                <default value="0"/>
                <test logic="AND" value="0">
@@ -198,7 +205,7 @@
            <switch name="fcs/rudder-command-steering">
                <default value="0"/>
                <test logic="AND" value="-fcs/heading-command">
-                   /sim/model/taxi/linked == 1
+                   systems/taxi/linked == 1
                    /controls/gear/brake-parking == 0
                </test>
                <output>fcs/steer_taxi-cmd-norm</output>

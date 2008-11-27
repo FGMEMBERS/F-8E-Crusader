@@ -9,7 +9,7 @@
         <menu n="10">
             <label>F-8E</label>
             <enabled type="bool">true</enabled>
-            <item>
+            <!--<item>
                 <label>Taxi_to Catapult 1</label>
                 <binding>
                     <command>property-assign</command>
@@ -39,8 +39,8 @@
                     <property>/sim/model/taxi/taxi_to</property>
                     <value>4</value>
                 </binding>
-            </item>
-            <item>
+            </item>-->
+            <!--<item>
                 <label>Go Taxi_to (toggle ON/OFF)</label>
                 <binding>
                     <command>property-toggle</command>
@@ -51,7 +51,7 @@
                     <property>/controls/gear/brake-parking</property>
                     <value>0</value>
                 </binding>
-            </item>
+            </item>-->
             <item>
                 <label>Refueling on ground</label>
                 <binding>
@@ -59,6 +59,17 @@
                     <property>/fdm/jsbsim/propulsion/systems/tank/refuel-on_ground-cmd</property>
                 </binding>
             </item>
+            <item>
+                <label>Taxi_to Catapult</label>
+                <binding>
+                    <command>nasal</command>
+                    <script>
+                        var taxi = gui.Dialog.new("/sim/gui/dialogs/F-8E/menu/dialog", 
+                        "Aircraft/F-8E-Crusader/Inputs/taxi_to.xml");
+                        taxi.open();
+                    </script>
+                </binding>
+        </item>
         </menu>
     </default>
 </PropertyList>

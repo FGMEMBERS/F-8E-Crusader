@@ -249,12 +249,18 @@ settimer(taxi_op,1);
 setlistener("/sim/model/taxi/linked",taxi_op);
 
 taxi_message=func{
-          if (getprop("/sim/model/taxi/linked") == 1){
+          if (getprop("/sim/model/taxi/linked") and getprop("/sim/carrier/name") != "none"){
           var taxi_to = getprop("/sim/model/taxi/taxi_to");
           var text_taxi_to = "Your are going to Catapult number  " ~ taxi_to;
           var window = screen.window.new(nil, -100, 3, 50);
                       window.write("");
                       window.write(text_taxi_to);
           }
+          #else{
+          #var text_taxi_to = "Your request is not valid";
+          #var window = screen.window.new(nil, -100, 3, 50);
+          #            window.write("");
+          #            window.write(text_taxi_to);
+          #}
 }
 setlistener("/sim/model/taxi/linked",taxi_message);

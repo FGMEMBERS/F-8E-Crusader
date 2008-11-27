@@ -22,10 +22,20 @@ Update_engine=func{
                 if (getprop("/controls/engines/engine[0]/cutoff-cmd")) { cutoff0 =1; }
                 setprop("/controls/engines/engine[0]/cutoff",cutoff0);
         }
-        
+#============================================================================================================
+#ici on ne peu pas associer une property qui est tratée par JSBSim /fdm/jsbsim/systems/taxi/linked à listener
+#on passe donc par une property externe qui est activé en toggle /sim/model/taxi/linked
+#si l'operation taxi ne peu etre activé pour quelque raisons il faut remettre /sim/model/taxi/linked à Zero
+#============================================================================================================
+Init_taxi_linked=func{
+                if (getprop("/sim/model/taxi/linked") and (getprop("/fdm/jsbsim/systems/taxi/linked") == 0 )){
+                setprop("/sim/model/taxi/linked",0);
+                }
+        }
 Loop_update_crusader=func{
         Update_engine();
-# Refuel();
+        Init_taxi_linked();
+
         settimer ( Loop_update_crusader, 2 );
         }
 Loop_update_crusader();
@@ -33,7 +43,7 @@ Loop_update_crusader();
 
 
 #INIT au démarrage================================================
-#INIT OFF==============
+#INIT OFF TOUT FERMé==============
 
 init_f8e=func{
 setprop("/controls/flight/wing-fold-cmd",1);
@@ -43,7 +53,7 @@ setprop("/controls/gear/brake-parking",1);
 
 
 
-#INIT ON==============
+#INIT ON GROUND==============
 
 init_f8eflight=func{
 setprop("/controls/electric/master-switch",1);
@@ -62,6 +72,8 @@ setprop("/controls/gear/brake-parking",1);
 #adjust_elevator();
 }
 
+
+#INIT IN AIR==============
 init_f8eair=func{
 setprop("/controls/electric/master-switch",1);
 print("master-switch_true");

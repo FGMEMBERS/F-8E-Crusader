@@ -52,7 +52,7 @@
                </setting>
                <setting>
                    <position>3488</position>
-                   <time>1200</time>
+                   <time>48000</time>
                </setting>
            </traverse>
         </kinematic>

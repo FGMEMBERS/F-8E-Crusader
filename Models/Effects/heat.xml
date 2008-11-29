@@ -17,11 +17,10 @@
 
 
  <offsets>
-    <x-m> 0.0 </x-m>
-    <y-m> -0.00 </y-m>
-    <z-m> -0.00 </z-m>
-    <pitch-deg>90</pitch-deg>
-    <z-m>0</z-m>
+    <x-m> 0 </x-m>
+   <!-- <y-m> -0.12 </y-m>
+    <z-m> -0.10 </z-m>-->
+    <!--<pitch-deg>90</pitch-deg>-->
  </offsets>
 
 

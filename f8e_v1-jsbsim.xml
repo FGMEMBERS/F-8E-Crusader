@@ -424,6 +424,7 @@
                 </orient>
             </thruster>
         </engine>
+        
         <tank type="FUEL">    <!-- Tank Main -->
             <location unit="IN">
                 <x> 0 </x>
@@ -441,7 +442,8 @@
             </location>
             <capacity unit="LBS"> 5678 </capacity>
             <contents unit="LBS"> 2900 </contents>
-        </tank>
+        </tank> 
+        
     </propulsion>
     
     <system file="blackout"/>
@@ -458,7 +460,6 @@
     <system file="mule"/>
     <system file="instruments"/>
     <system file="speedbrake"/>
-    <system file="probe-refuel"/>
     <system file="light-outdoor"/>
     <system file="electrical"/>
     <system file="sinking"/>
@@ -467,6 +468,8 @@
     <system file="taxi"/>
     <system file="fuel"/>
     <system file="refuel"/>
+    <system file="probe-refuel"/>
+    <system file="annunciator"/>
 
     <flight_control name="FCS: F-8E">
         

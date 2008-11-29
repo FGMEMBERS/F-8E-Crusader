@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!--
+    Usable with FlightGear
+    <property>gerard robin
+    Copyright License:  GPL
+-->
+   <!--       LING-TEMCO-VOUGHT   F-8E Crusader      Auteur :      Gerard ROBIN               GPL        COPYRIGHT-->
+
+
+
+
+   <particlesystem>
+  <type>normal</type>
+
+ 
+  <name>crusader</name>
+  <attach>local</attach>
+  <texture>particle.rgb</texture>
+  <type>normal</type>
+  <emissive>true</emissive>
+  <lighting>false</lighting>
+  <align>billboard</align>
+  <pass>true</pass>
+  
+  <placer>
+      <type>sector</type>
+      <radius-min-m>0.5</radius-min-m>
+      <radius-max-m>0.5</radius-max-m>
+      <phi-min-deg>1</phi-min-deg>
+      <phi-max-deg>1</phi-max-deg>
+      
+  </placer>
+  
+  <shooter>
+      <theta-min-deg>89.7</theta-min-deg>
+      <theta-max-deg>90.3</theta-max-deg>
+      <phi-min-deg>-0.3</phi-min-deg>
+      <phi-max-deg>0.3</phi-max-deg>
+      <speed-mps>
+          <!--<property>/fdm/jsbsim/systems/animations/heatflux</property>
+          <factor>0.3</factor>-->
+          <value>2.3</value>
+         <!-- <spread>10</spread>-->
+      </speed-mps>
+      <rotation-speed>
+          <!--<x-min-deg-sec>200</x-min-deg-sec>-->
+          <!--<y-min-deg-sec>200</y-min-deg-sec>-->
+         <!-- <z-min-deg-sec>200</z-min-deg-sec>-->
+          <!--<x-max-deg-sec>200</x-max-deg-sec>-->
+          <!--<y-max-deg-sec>200</y-max-deg-sec>-->
+          <!--<z-max-deg-sec>200</z-max-deg-sec>-->
+      </rotation-speed>
+  </shooter>
+  
+  <counter>
+      <particles-per-sec>
+          <!--<property>/fdm/jsbsim/velocities/u-fps</property>
+          <factor>10</factor>-->
+          <value>100</value>
+          <!--<spread>1</spread>-->
+      </particles-per-sec>
+  </counter>
+  
+  
+  <particle>
+      <start>
+          <color>
+              <red>
+                  <value>0.9</value>
+              </red>
+              <green>
+                  <value>0.9</value>
+              </green>
+              <blue>
+                  <value>0.9</value>
+              </blue>
+              <alpha>
+                  <value>0.04</value>
+              </alpha>
+          </color>
+          <size><value>0.8</value></size>
+      </start>
+      <end>
+          <color>
+              <red>
+                  <value>0.9</value>
+              </red>
+              <green>
+                  <value>0.9</value>
+              </green>
+              <blue>
+                  <value>0.9</value>
+              </blue>
+              <alpha>
+                  <value>0.04</value>
+              </alpha>
+          </color>
+          <size><value>1.25</value></size>
+    </end>
+    <life-sec>
+        <!--<property>/fdm/jsbsim/systems/animations/heatflux</property>
+          <factor>1</factor>-->
+          <value>6</value>
+    </life-sec>
+    <radius-m>0.2</radius-m>
+    <mass-kg>10</mass-kg>
+    
+</particle> 
+
+<program>
+    <fluid>water</fluid>
+    <gravity>false</gravity>
+    <wind>false</wind>
+  </program>
+  
+</particlesystem>
+
+ <!--//Gerard Robin  25-09-2007 FlightGear Copyright License:  GPL
+ 
+ Group {
+ UniqueID Group_50
+ 
+ 
+ name "crusader2.osg"
+ nodeMask 0xffffffff
+ DataVariance STATIC
+ cullingActive TRUE
+ 
+ num_children 3
+ osgParticle::ModularEmitter {
+ UniqueID ModularEmitter_51
+ DataVariance DYNAMIC
+ name "ModularEmitter0"
+ nodeMask 0xffffffff
+ cullingActive TRUE
+ osgParticle::ParticleSystem {
+ UniqueID ParticleSystem_52
+ DataVariance DYNAMIC
+ StateSet {
+ UniqueID StateSet_53
+ DataVariance STATIC
+ rendering_hint TRANSPARENT_BIN
+ renderBinMode USE
+ binNumber 1
+ binName DepthSortedBin
+ GL_LIGHTING OFF
+ GL_BLEND ON
+ Material {
+ DataVariance STATIC
+ ColorMode OFF
+ ambientColor 0.2 0.2 0.2 1
+ diffuseColor 0.8 0.8 0.8 1
+ specularColor FRONT 0 0 0 1
+ specularColor BACK  0 0 0 1
+ emissionColor FRONT 0 0 0 1
+ emissionColor BACK  0 0 0 1
+ shininess 0
+ }
+ BlendFunc {
+ DataVariance STATIC
+ source SRC_ALPHA
+ destination ONE_MINUS_SRC_ALPHA
+ }
+ textureUnit 0 {
+ GL_TEXTURE_2D ON
+ Texture2D {
+ UniqueID Texture2D_54
+ DataVariance STATIC
+ file "particle.rgb"
+ wrap_s CLAMP
+ wrap_t CLAMP
+ wrap_r CLAMP
+ min_filter LINEAR
+ mag_filter LINEAR
+ maxAnisotropy 1
+ borderColor 0 0 0 0
+ borderWidth 0
+ useHardwareMipMapGeneration TRUE
+ unRefImageDataAfterApply FALSE
+ internalFormatMode USE_IMAGE_DATA_FORMAT
+ resizeNonPowerOfTwo TRUE
+ }
+ TexEnv {
+ UniqueID TexEnv_55
+ DataVariance STATIC
+ mode MODULATE
+ }
+ }
+ }
+ supportsDisplayList FALSE
+ useDisplayList FALSE
+ useVertexBufferObjects FALSE
+ particleAlignment BILLBOARD
+ alignVectorX 1 0 0
+ alignVectorY 0 1 0
+ alignVectorZ 0 0 1
+ doublePassRendering FALSE
+ frozen FALSE
+ freezeOnCull FALSE
+ defaultBoundingBox -10 -10 -10 10 10 10
+ particleTemplate {
+ shape QUAD
+ lifeTime 2.5
+ sizeRange 1.8 1.7
+ alphaRange 0.02 0.02
+ colorRange 0.8 0.8 0.8 1 1 1 1 1
+ position 0 0 0
+ velocity 3 0 0
+ angle 0 0 0
+ angularVelocity 5 5 5
+ radius 1 1
+ mass 0
+ textureTile 1 1 1
+ sizeInterpolator {
+ osgParticle::LinearInterpolator {
+ UniqueID LinearInterpolator_56
+ DataVariance DYNAMIC
+ }
+ }
+ alphaInterpolator {
+ osgParticle::LinearInterpolator {
+ UniqueID LinearInterpolator_57
+ DataVariance DYNAMIC
+ }
+ }
+ colorInterpolator {
+ osgParticle::LinearInterpolator {
+ UniqueID LinearInterpolator_58
+ DataVariance DYNAMIC
+ }
+ }
+ }
+ }
+ enabled TRUE
+ referenceFrame ABSOLUTE
+ endless TRUE
+ lifeTime 0
+ startTime 0
+ currentTime 0
+ resetTime 0
+ useDefaultTemplate TRUE
+ osgParticle::RandomRateCounter {
+ UniqueID RandomRateCounter_59
+ DataVariance DYNAMIC
+ rateRange 256 256  
+ }
+ osgParticle::PointPlacer {
+ UniqueID PointPlacer_60
+ DataVariance DYNAMIC
+ center 0 0 0
+ }
+ osgParticle::RadialShooter {
+ UniqueID RadialShooter_61
+ DataVariance DYNAMIC
+ thetaRange 0 0
+ phiRange 2 2
+ initialSpeedRange 1 5
+ initialRotationalSpeedRange 0 0 0 0 0 0
+ }
+ }
+ 
+ }
+ 
+ osgParticle::ParticleSystemUpdater {
+ DataVariance DYNAMIC
+ name "ParticleSystemUpdater2"
+ nodeMask 0xffffffff
+ cullingActive TRUE
+ Use ParticleSystem_52
+ }
+ Geode {
+ DataVariance STATIC
+ name "geode1"
+ nodeMask 0xffffffff
+ cullingActive TRUE
+ num_drawables 1
+ Use ParticleSystem_52
+ }
+ 
+  }-->
+
+
+
+</PropertyList>

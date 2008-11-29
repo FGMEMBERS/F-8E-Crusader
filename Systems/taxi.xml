@@ -251,6 +251,18 @@
             </test>
             <output>fcs/rudder-cmd-norm</output>
         </switch>
+        
+        <!-- init taxi  command   to zero -->
+       <!-- incompatible avec Nasal listener-->
+        <!--<switch name="systems/taxi/linked-cmd">
+            <default value="/sim/model/taxi/linked"/>
+           <test logic="AND" value="0">
+               /sim/model/taxi/linked == 1
+               systems/taxi/linked == 0
+           </test>
+           <output>/sim/model/taxi/linked</output>
+        </switch>-->
+       
        
   </channel>
 

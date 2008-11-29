@@ -192,7 +192,7 @@
                                 <level-gal_us >350</level-gal_us>
                         </tank>
                         <tank n="1">
-                                <level-gal_us >450</level-gal_us>
+                                <level-gal_us >550</level-gal_us>
                         </tank>
                 </fuel>
         </consumables>

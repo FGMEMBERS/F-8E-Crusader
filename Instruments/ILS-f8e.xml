@@ -49,6 +49,57 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton-D</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+                    <step>-1</step>
+                    <min>0</min>
+                    <max>360</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton-D</object-name>
+            <action>
+                <button>1</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>360</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/heading-indicator/nav-switch</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>3</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
 
 	<animation include="Instrument-Light4.xml">
 		<object-name>IndicVert-nav</object-name>

@@ -36,6 +36,41 @@ Copyright License:  GPL
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/altimeter/agl-min</property>
+                    <step>-1</step>
+                    <min>0</min>
+                    <max>1000</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/altimeter/agl-min</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>1000</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
 
 
 	<animation include="Instrument-Light4.xml">

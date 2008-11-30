@@ -34,6 +34,40 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/clock/offset-sec</property>
+                    <step>60</step>
+                    <min>0</min>
+                    <max>43200</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/clock/offset-sec</property>
+                    <step>900</step>
+                    <min>0</min>
+                    <max>43200</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
 
 	<animation include="Instrument-Light4.xml">
 		<object-name>SecondHand</object-name>

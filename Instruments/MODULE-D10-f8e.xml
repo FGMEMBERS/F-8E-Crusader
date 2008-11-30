@@ -40,28 +40,11 @@
 	</animation>
 
 
-	<!--<panel>
-		<path>Aircraft/F-8E-Crusader/Instruments/module-d10-hotspots.xml</path>
-		<bottom-left>
-			<x-m>-0.0571498</x-m>
-			<y-m>-0.0690004</y-m>
-			<z-m>0</z-m>
-		</bottom-left>
-		<bottom-right>
-			<x-m>0.0825498</x-m>
-			<y-m>-0.0690004</y-m>
-			<z-m>-0</z-m>
-		</bottom-right>
-		<top-left>
-			<x-m>-0.0571498</x-m>
-			<y-m>0.069000</y-m>
-			<z-m>0</z-m>
-		</top-left>
-     </panel>-->
+	
 
 	<animation>
 		<type>rotate</type>
-		<object-name>Input-Nav-Select</object-name>
+                <object-name>Input-Nav-Master</object-name>
 		<property>/instrumentation/input/input-select</property>
 			<entry>
 				<ind>0</ind>
@@ -69,21 +52,56 @@
 			</entry>
 			<entry>
 				<ind>1</ind>
-				<dep>30</dep>
+				<dep>-30</dep>
 			</entry>
 			<entry>
 				<ind>2</ind>
-				<dep>60</dep>
+				<dep>-60</dep>
 			</entry>
+                        <center>
+                            <x-m>-0.0303007</x-m>
+                            <y-m>0.0354288</y-m>
+                            <z-m>0</z-m>
+		        </center>
 			<axis>
 				<x>0</x>
 				<y>0</y>
 				<z>1</z>
-		</axis>
+		          </axis>
 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Input-Nav-Master</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/input-select</property>
+                    <step>-30</step>
+                    <min>0</min>
+                    <max>60</max>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Input-Nav-Master</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/input-select</property>
+                    <step>30</step>
+                    <min>0</min>
+                    <max>60</max>
+                </binding>
+            </action>
+        </animation>
 
 
-	<!--<animation>
+	<animation>
 		<type>textranslate</type>
 		<object-name>Val-nX-nn-nn</object-name>
 		<property>/instrumentation/input/val-nX-nn-nn</property>
@@ -94,6 +112,24 @@
 			<z>0</z>
 		</axis>
 	</animation>
+        
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nX-nn-nn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nX-nn-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>textranslate</type>
@@ -106,6 +142,23 @@
 			<z>0</z>
 		</axis>
 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-Xn-nn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-Xn-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>textranslate</type>
@@ -118,6 +171,23 @@
 			<z>0</z>
 		</axis>
 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-nX-nn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-nX-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>textranslate</type>
@@ -130,6 +200,23 @@
 			<z>0</z>
 		</axis>
 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-nn-Xn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-nn-Xn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
 
 	<animation>
 		<type>textranslate</type>
@@ -142,7 +229,24 @@
 			<z>0</z>
 		</axis>
 	</animation>
--->
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-nn-nX</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-nn-nX</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
 
 
 

@@ -80,7 +80,7 @@ name "Module-D10"
 loc 0.0399441 -0.00475858 -0.144762
 kids 1
 OBJECT poly
-name "Input-Nav-Select"
+name "Input-Nav-Master"
 loc -0.0702448 0.0141061 0.194532
 texture "knob-1.rgb"
 crease 45.000000
@@ -13170,7 +13170,7 @@ refs 3
 62 0 0
 kids 0
 OBJECT poly
-name "Input-Nav-Select"
+name "Input-Nav-Code"
 loc -0.0702448 0.0141061 0.182329
 texture "knob-1.rgb"
 crease 45.000000

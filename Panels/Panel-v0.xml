@@ -28,7 +28,7 @@
 
 
 <!--******************** Hotspots ******************************-->
-	<panel>
+	<!--<panel>
 		<path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-1.xml</path>
 		<bottom-left>
 			<x-m>0</x-m>
@@ -45,7 +45,7 @@
 			<y-m>-0.431928</y-m>
 			<z-m>0.262778</z-m>
 		</top-left>
-     </panel>
+     </panel>-->
 
 
 

@@ -476,6 +476,33 @@
 			</or>
 		</condition>
 	</animation>
+        
+        
+        <!--********************Hotspot-OSG****************************************************************-->
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Canopy-Jettison</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/jettison/canopy</property>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Hud-Vitre</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/hud/switch</property>
+                </binding>
+            </action>
+        </animation>
 
 
 	<!-- *********Model included*****************Insertion de models  externes****-->

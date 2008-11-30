@@ -25,6 +25,26 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Poussoir</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/instrumentation/annunciator/engine-fire</property>
+                    <value>1</value>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/instrumentation/annunciator/engine-fire</property>
+                        <value>0</value>
+                    </binding>
+                </mod-up>
+            </action>
+        </animation>
 
 
 	<animation>

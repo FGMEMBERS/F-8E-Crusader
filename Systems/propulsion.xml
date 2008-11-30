@@ -82,8 +82,8 @@
             <table>
                 <independentVar>velocities/u-fps</independentVar>
                 <tableData>
-                    0       0
-                    20     0.3
+                    0       0.5
+                    20     0.5
                     60    0.6
                     120     0.8
                     200     1

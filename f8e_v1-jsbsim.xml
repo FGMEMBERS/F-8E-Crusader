@@ -470,6 +470,7 @@
     <system file="refuel"/>
     <system file="probe-refuel"/>
     <system file="annunciator"/>
+    <system file="aoa"/>
 
     <flight_control name="FCS: F-8E">
         

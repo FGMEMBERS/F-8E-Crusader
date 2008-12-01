@@ -80,45 +80,7 @@
 		<object-name>Cde-Wings-Verrou</object-name>
 	</animation>
 
-<!--******************** Hotspots ******************************-->
-	<!--<panel>
-		<path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-HG.xml</path>
-		<bottom-left>
-			<x-m>0.487737</x-m>
-			<y-m>-0.301665</y-m>
-			<z-m>0.000521019</z-m>
-		</bottom-left>
-		<bottom-right>
-			<x-m>-0.486981</x-m>
-			<y-m>-0.301664</y-m>
-			<z-m>0.000521019</z-m>
-		</bottom-right>
-		<top-left>
-			<x-m>0.487737</x-m>
-			<y-m>-0.8</y-m>
-			<z-m>0.000521019</z-m>
-		</top-left>
-     </panel>-->
 
-    <!-- <panel>
-	     <path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-HD.xml</path>
-	     <bottom-left>
-		     <x-m>0.487737</x-m>
-		     <y-m>0.301665</y-m>
-		     <z-m>0.000521019</z-m>
-	     </bottom-left>
-	     <bottom-right>
-		     <x-m>-0.486981</x-m>
-		     <y-m>0.301664</y-m>
-		     <z-m>0.000521019</z-m>
-	     </bottom-right>
-	     <top-left>
-		     <x-m>0.487737</x-m>
-		     <y-m>0.8</y-m>
-		     <z-m>0.000521019</z-m>
-	     </top-left>
-     </panel>-->
-     
      
         <animation>
             <type>pick</type>

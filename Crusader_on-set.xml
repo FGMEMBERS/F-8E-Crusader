@@ -20,7 +20,7 @@
                 <instruments>
                         <file>Aircraft/F-8E-Crusader/Systems/radar.nas</file>
                         <file>Aircraft/F-8E-Crusader/Systems/nav.nas</file>
-                        <file>Aircraft/F-8E-Crusader/Systems/aoa.nas</file>
+                        <!--<file>Aircraft/F-8E-Crusader/Systems/aoa.nas</file>-->
                 </instruments>
 		<terrain>
 			<file>Aircraft/F-8E-Crusader/Systems/terrain.nas</file>
@@ -30,7 +30,6 @@
                 </tanker>
                 <carrier>
                     <file>Aircraft/F-8E-Crusader/Systems/carrier.nas</file>
-                    <file>Aircraft/F-8E-Crusader/Systems/geo.nas</file>
                 </carrier>
         </nasal>
 

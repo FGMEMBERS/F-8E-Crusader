@@ -162,6 +162,9 @@
                         <wing-fold-cmd type="bool">0</wing-fold-cmd>
                         <wing-incidence type="bool">0</wing-incidence>
                 </flight>
+                <jettison>
+                    <canopy type="bool">0</canopy>
+                </jettison>
                 <switches>
                         <flashing-beacon>1</flashing-beacon>
                         <landing-light>true</landing-light>

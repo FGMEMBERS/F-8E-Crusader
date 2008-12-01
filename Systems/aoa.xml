@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+
+<system name="">
+    
+    <!--this only convert to FDM an old nasal script . In spite of answering to the requested spec
+    that AOA process must be fully rebuilt, logicals and  animation part, in a less stupid way-->
+    
+    <property value="5">systems/aoa/ref_approach_speed_add5</property>
+    <property value="3">systems/aoa/ref_approach_speed_add3</property>
+    <property value="-5">systems/aoa/ref_approach_speed_subs5</property>
+    <property value="-3">systems/aoa/ref_approach_speed_subs3</property>
+    
+    <property value="1.5">systems/aoa/ref_approach_angle_add15</property>
+    <property value="0.5">systems/aoa/ref_approach_angle_add15</property>
+    <property value="-1.5">systems/aoa/ref_approach_angle_subs15</property>
+    <property value="-0.5">systems/aoa/ref_approach_angle_subs15</property>
+    
+    <property value="1.5">systems/aoa/ref_approach_angle_coef</property>
+    <property value="7">systems/aoa/ref_approach_angle_corr</property>
+
+    <channel name="aoa">
+        
+        <summer name="systems/aoa/ref_approach_speed-pls5">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>systems/aoa/ref_approach_speed_add5</input>
+            <output>/sim/aoa-indicator/ref-approach-speed-pls5</output>
+        </summer>
+        
+        <summer name="systems/aoa/ref_approach_speed-mns5">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>systems/aoa/ref_approach_speed_subs5</input>
+            <output>/sim/aoa-indicator/ref-approach-speed-mns5</output>
+        </summer>
+        
+        <summer name="systems/aoa/ref_approach_speed-pls3">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>systems/aoa/ref_approach_speed_add3</input>
+            <output>/sim/aoa-indicator/ref-approach-speed-pls3</output>
+        </summer>
+        
+        <summer name="systems/aoa/ref_approach_speed-mns3">
+            <input>/sim/aoa-indicator/speed</input>
+            <input>systems/aoa/ref_approach_speed_subs3</input>
+            <output>/sim/aoa-indicator/ref-approach-speed-mns3</output>
+        </summer>
+        
+        <fcs_function name="systems/aoa/ref_approach_angle">
+            <function>
+                <sum>
+                    <product>
+                        <property>/sim/aoa-indicator/units</property>
+                        <property>systems/aoa/ref_approach_angle_coef</property>
+                    </product>
+                    <property>systems/aoa/ref_approach_angle_corr</property>
+                </sum>
+            </function>
+            <output>/sim/aoa-indicator/ref-approach-angle</output>
+       </fcs_function>
+       
+       <pure_gain name="systems/aoa/asi-marker">
+           <input>/sim/aoa-indicator/speed</input>
+           <gain>1</gain>
+           <output>/instrumentation/airspeed-indicator/landing-speed</output>
+       </pure_gain>
+
+    </channel>
+
+</system>

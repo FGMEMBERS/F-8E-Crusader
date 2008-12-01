@@ -27,28 +27,6 @@
 
 
 
-<!--******************** Hotspots ******************************-->
-	<!--<panel>
-		<path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-1.xml</path>
-		<bottom-left>
-			<x-m>0</x-m>
-			<y-m>-0.431928</y-m>
-			<z-m>-0.169295</z-m>
-		</bottom-left>
-		<bottom-right>
-			<x-m>0</x-m>
-			<y-m>0.431928</y-m>
-			<z-m>-0.169295</z-m>
-		</bottom-right>
-		<top-left>
-			<x-m>0</x-m>
-			<y-m>-0.431928</y-m>
-			<z-m>0.262778</z-m>
-		</top-left>
-     </panel>-->
-
-
-
 	<!-- ************************ Control Lights *******************************-->
 
 	<model>

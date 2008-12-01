@@ -44,26 +44,6 @@
 		<object-name>Panel-Base</object-name>
 	</animation>-->
 
-	<!--<panel>
-		<path>Aircraft/F-8E-Crusader/Panels/panel-hotspots-AV.xml</path>
-		<bottom-left>
-			<x-m>0.050372</x-m>
-			<y-m>-0.478754</y-m>
-			<z-m>-0.0480769</z-m>
-		</bottom-left>
-		<bottom-right>
-			<x-m>0.050372</x-m>
-			<y-m>0.478754</y-m>
-			<z-m>-0.0480769</z-m>
-		</bottom-right>
-		<top-left>
-			<x-m>-0.056315</x-m>
-			<y-m>-0.478754</y-m>
-			<z-m>0.067672</z-m>
-		</top-left>
-     </panel>-->
-
-
      <model>
 	     <name>module-AV-DG</name>
 	     <path>Aircraft/F-8E-Crusader/Instruments/MODULE-AV-DG-f8e.xml</path>

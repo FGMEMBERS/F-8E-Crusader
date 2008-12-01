@@ -486,8 +486,9 @@
             <action>
                 <button>0</button>
                 <binding>
-                    <command>property-toggle</command>
+                    <command>property-assign</command>
                     <property>/controls/jettison/canopy</property>
+                    <value>1</value>
                 </binding>
             </action>
         </animation>

@@ -40,10 +40,10 @@
 		<type>select</type>
 		<object-name>Canopy</object-name>
 		<condition>
-			<not-equals>
+			<equals>
 				<property>controls/jettison/canopy</property>
-				<value>true</value>
-			</not-equals>
+				<value>0</value>
+			</equals>
 		</condition>
 	</animation>
 

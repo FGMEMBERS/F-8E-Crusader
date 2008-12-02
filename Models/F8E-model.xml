@@ -240,7 +240,7 @@
 		<name>Group_Fuselage_noshadow</name>
 		<object-name>Turbine-Cage</object-name>
 		<object-name>E-Air-TurbineInt</object-name>
-		<object-name>Flap-Nozzle</object-name>
+		<!--<object-name>Flap-Nozzle</object-name>-->
 		<object-name>Tuyere-VentilInt</object-name>
 		<object-name>Canons</object-name>
 		<object-name>Crosse-Coffre</object-name>
@@ -2441,7 +2441,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>AOA-Vert-A</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/green</property>
+                </condition>
+		<!--<condition>
 			<or>
 				<greater-than>
 					<property>velocities/airspeed-kt</property>
@@ -2459,7 +2462,7 @@
 				</and>
 			</or>
 
-		</condition>
+		</condition>-->
 	</animation>
 
 
@@ -2474,7 +2477,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>AOA-Rouge-A</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/lg-red</property>
+                </condition>
+		<!--<condition>
 
 			<or>
 				<less-than-equals>
@@ -2493,7 +2499,7 @@
 				</and>
 			</or>
 
-		</condition>
+		</condition>-->
 	</animation>
 
 
@@ -2505,7 +2511,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>AOA-Orange-A</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/orange</property>
+                </condition>
+		<!--<condition>
 			<and>
 				<greater-than>
 					<property>velocities/airspeed-kt</property>
@@ -2525,7 +2534,7 @@
 					<property>sim/aoa-indicator/ref-approach-angle-pls05</property>
 				</less-than-equals>
 			</and>
-		</condition>
+		</condition>-->
 	</animation>
 
 

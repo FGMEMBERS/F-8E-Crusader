@@ -13,7 +13,7 @@
                <default value="0"/>
                <test logic="AND" value="1">
                    /environment/terrain  == 0
-                   position/h-agl-ft lt 40
+                   position/h-agl-ft lt 7
                    velocities/vc-fps lt 50
                    position/h-sl-ft  lt position/h-agl-ft
                </test>

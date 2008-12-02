@@ -19,21 +19,20 @@
             
             <actuator name="Gear Nose Actuator">
                 <input>gear/gear-cmd-norm</input>
-                <rate_limit>0.1</rate_limit>
+                <rate_limit>0.2</rate_limit>
                 <output>gear/unit[0]/pos-norm</output>
             </actuator>
             <actuator name="Gear Left Actuator">
                 <input>gear/gear-cmd-norm</input>
-                <rate_limit>0.1</rate_limit>
+                <rate_limit>0.2</rate_limit>
                 <output>gear/unit[1]/pos-norm</output>
             </actuator>
             <actuator name="Gear Right Actuator">
                 <input>gear/gear-cmd-norm</input>
-                <rate_limit>0.1</rate_limit>
+                <rate_limit>0.2</rate_limit>
                 <output>gear/unit[2]/pos-norm</output>
             </actuator>
             
-
             <kinematic name="Gear Surface Position">
                 <input>/controls/gear/gear-down</input>
                 <traverse>
@@ -48,6 +47,7 @@
                 </traverse>
                 <output>/surface-positions/gear-pos-norm</output>
             </kinematic>
+            
             <switch name="Drag Terrain Factor Switch">
                 <default value="0"/>
                 <test  logic="AND" value="1">

@@ -78,7 +78,7 @@
             
             <pure_gain name="systems/tension/force_weight">
                 <input>inertia/weight-lbs</input>
-                <gain>300000</gain>
+                <gain>50000</gain>
             </pure_gain>
             
             <switch name="systems/tension/force">

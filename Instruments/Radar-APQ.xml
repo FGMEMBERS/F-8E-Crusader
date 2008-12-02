@@ -1719,17 +1719,7 @@
         </animation>-->
 
 
-	<animation>
-		<type>select</type>
-		<object-name>Radar2D</object-name>
-		<condition>
-			<greater-than>
-				<property>/systems/electrical/outputs/radar</property>
-				<value>27</value>
-			</greater-than>
-		</condition>
-	</animation>
-
+	
 	<animation>
 		<type>select</type>
 		<object-name>Masque-Inactif</object-name>
@@ -1754,16 +1744,7 @@
 		</condition>
 	</animation>
 
-	<model>
-		<name>Radar2D</name>
-		<path>Aircraft/F-8E-Crusader/Instruments/Radar-DummyAPQ.xml</path>
-		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
+	
 
         <animation>
 		<condition>

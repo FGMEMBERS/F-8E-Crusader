@@ -16,43 +16,6 @@
 		<object-name>AOA-Boite</object-name>
 	</animation>
 
-	<!--voir nasal aoa.nas-->
-
-	<!--<animation>
-		<type>select</type>
-		<object-name>Vert</object-name>
-		<condition>
-			<equals>
-				<property>/sim/aoa-indicator/upr-chevron</property>
-				<value>1</value>
-			</equals>
-		</condition>
-	</animation>
-
-	<animation>
-		<type>select</type>
-		<object-name>Rouge</object-name>
-		<condition>
-			<equals>
-				<property>/sim/aoa-indicator/dwn-chevron</property>
-				<value>1</value>
-			</equals>
-		</condition>
-	</animation>
-
-	<animation>
-		<type>select</type>
-		<object-name>Orange</object-name>
-		<condition>
-			<equals>
-				<property>/sim/aoa-indicator/mdl-circle</property>
-				<value>1</value>
-			</equals>
-		</condition>
-	</animation>-->
-
-
-
 	<animation>
 		<type>select</type>
 		<object-name>Temoin-AOA</object-name>
@@ -81,7 +44,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>Vert</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/green</property>
+                </condition>
+		<!--<condition>
 				<or>
 					<greater-than>
 						<property>/velocities/airspeed-kt</property>
@@ -98,7 +64,7 @@
 						</greater-than>
 					</and>
 				</or>
-		</condition>
+		</condition>-->
 	</animation>
 
 	<!--Speed =______"minus5"_________"minus3"____________"target"________"plus3"_____v_____"plus5"____________-->
@@ -107,7 +73,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>Vert-M</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/green-medium</property>
+                </condition>
+		<!--<condition>
 			<and>
 				<greater-than>
 					<property>/velocities/airspeed-kt</property>
@@ -136,7 +105,7 @@
 					</and>
 				</or>
 			</and>
-		</condition>
+		</condition>-->
 	</animation>
 
 
@@ -150,7 +119,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>Rouge</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/red</property>
+                </condition>
+		<!--<condition>
 
 				<or>
 					<less-than-equals>
@@ -169,7 +141,7 @@
 					</and>
 				</or>
 
-		</condition>
+		</condition>-->
 	</animation>
 
 	<!--Speed =______"minus5"_____v____"minus3"____________"target"________"plus3"__________"plus5"____________-->
@@ -178,7 +150,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>Rouge-M</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/red-medium</property>
+                </condition>
+		<!--<condition>
 			<and>
 				<less-than-equals>
 					<property>/velocities/airspeed-kt</property>
@@ -207,7 +182,7 @@
 					</and>
 				</or>
 			</and>
-		</condition>
+		</condition>-->
 	</animation>
 
 	<!--Speed =______"minus5"_________"minus3"__________vvv"target"vvv_______"plus3"__________"plus5"____________-->
@@ -216,7 +191,10 @@
 	<animation>
 		<type>select</type>
 		<object-name>Orange</object-name>
-		<condition>
+                <condition>
+                    <property>/sim/aoa-indicator/orange</property>
+                </condition>
+		<!--<condition>
 			<and>
 				<greater-than>
 					<property>/velocities/airspeed-kt</property>
@@ -236,7 +214,7 @@
 					<property>/sim/aoa-indicator/ref-approach-angle-pls05</property>
 				</less-than-equals>
 			</and>
-		</condition>
+		</condition>-->
 	</animation>
 
 

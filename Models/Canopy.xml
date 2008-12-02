@@ -40,10 +40,10 @@
 		<type>select</type>
 		<object-name>Canopy</object-name>
 		<condition>
-			<equals>
-				<property>controls/jettison/canopy</property>
-				<value>0</value>
-			</equals>
+			<not-equals>
+                            <property>fdm/jsbsim/systems/jettison/canopy-pos-norm</property>
+				<value>1</value>
+			</not-equals>
 		</condition>
 	</animation>
 
@@ -53,7 +53,7 @@
 		<condition>
 			<not-equals>
 				<property>controls/jettison/canopy</property>
-				<value>true</value>
+				<value>1</value>
 			</not-equals>
 		</condition>
 	</animation>
@@ -64,7 +64,7 @@
 		<condition>
 			<not-equals>
 				<property>controls/jettison/canopy</property>
-				<value>true</value>
+				<value>1</value>
 			</not-equals>
 		</condition>
 	</animation>
@@ -75,7 +75,7 @@
 		<condition>
 			<not-equals>
 				<property>controls/jettison/canopy</property>
-				<value>true</value>
+				<value>1</value>
 			</not-equals>
 		</condition>
 	</animation>
@@ -366,6 +366,39 @@
 			<z2-m>0.481158</z2-m>
 		</axis>
 	</animation>
+        
+       <!--==================== jettisonning==============================-->
+        
+        <animation>
+            <type>rotate</type>
+            <object-name>Canopy</object-name>
+            <property>fdm/jsbsim/systems/jettison/canopy-pos-norm</property>
+            <interpolation>
+                <entry>
+                    <ind>0.0</ind>
+                    <dep>0.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.4</ind>
+                    <dep>67</dep>
+                </entry>
+                <entry>
+                    <ind>1</ind>
+                    <dep>102</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>3.78142</x-m>
+                <y-m>0.0</y-m>
+                <z-m>-3.033</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </axis>
+        </animation>
+
 
 
 

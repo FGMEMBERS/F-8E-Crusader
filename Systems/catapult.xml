@@ -3,6 +3,8 @@
 <!--Adapted from  F-4N by Dave Culp-->
 
 <system name="catapult">
+    
+    <property>/gear/gear[0]/compression-ft</property>
 
     <channel name="Catapult">
         
@@ -58,7 +60,7 @@
             <output>systems/catapult/side-force</output>
        </fcs_function>
         
-        <!--The catapult when acted ( under condition the launch bar must be ON) will be give the force as long as the AC is on the deck -->
+        <!--The catapult when acted ( under condition the launch bar must be ON) will  give the force as long as the AC is on the deck -->
         
         <switch name="systems/catapult/cat-cmd-norm">
             <default value="0"/>
@@ -107,9 +109,23 @@
         
         <!-- vertical hold -->
         <!--only a guess , to animate the body when tied, and to avoid pitch during catapulting-->
+        <scheduled_gain name="systems/cat-hold/gear-compression">
+            <input>launchbar/launch-bar-state</input>
+            <table>
+                <independentVar>/gear/gear[0]/compression-ft</independentVar>
+                <tableData>
+                    0       0.50
+                    0.5     0.32
+                    0.8     0.2
+                    1          0
+                </tableData>
+            </table>
+        </scheduled_gain>
+        
+        
         <pure_gain name="systems/cat-hold/weight">
             <input>inertia/weight-lbs</input>
-            <gain>0.32</gain>
+            <gain>systems/cat-hold/gear-compression</gain>
          </pure_gain>
          
          <switch name="systems/cat-hold/magnitudet">

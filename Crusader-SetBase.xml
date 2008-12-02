@@ -78,9 +78,6 @@
                         <autopilot>
                                 <path>Aircraft/F-8E-Crusader/Systems//FA-18-autopilot.xml</path>
                         </autopilot>
-                        <electrical>
-                                <path></path>
-                        </electrical>
                         <autoflight>
                                 <serviceable type="bool">true</serviceable>
                         </autoflight>
@@ -163,7 +160,7 @@
                         <wing-incidence type="bool">0</wing-incidence>
                 </flight>
                 <jettison>
-                    <canopy type="bool">0</canopy>
+                    <canopy type="float">0</canopy>
                 </jettison>
                 <switches>
                         <flashing-beacon>1</flashing-beacon>

@@ -22,6 +22,20 @@
                <output>/controls/jettison/canopy</output>
            </switch>
            
+           <kinematic name="systems/jettison/canopy-pos-norm">
+               <input>fcs/canopy-jettison</input>
+               <traverse>
+                   <setting>
+                       <position>0.0000</position>
+                       <time>0</time>
+                   </setting>
+                   <setting>
+                       <position>1.0000</position>
+                       <time>5</time>
+                   </setting>
+               </traverse>
+           </kinematic>
+           
             
             <kinematic name="Canopy Control">
                 <input>/controls/flight/canopy</input>

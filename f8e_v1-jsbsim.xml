@@ -132,7 +132,8 @@
                         Revisited according to JSBSIm V.2.0 with new feature External Reaction.
                         Wants a specific Deck Carrier Description 
                         The FlightGear catapult  info does not 
-                        pass through to the JSBSim FDM.
+                        pass through to the JSBSim FDM. 
+                        A Nasal script calculate in RT the right position of each catapult on the Carrier.
 
 		Inputs:
 		name:          Vought F-8E Crusader
@@ -163,7 +164,7 @@
     <metrics>
         <wingarea unit="FT2"> 375.05 </wingarea>
         <wingspan unit="FT"> 35.17 </wingspan>
-        <wing_incidence unit="DEG">1.0</wing_incidence>
+        <wing_incidence unit="DEG">0.0</wing_incidence>
         <chord unit="FT"> 14.76 </chord>
         <htailarea unit="FT2"> 57 </htailarea>
         <htailarm unit="FT"> 20.8 </htailarm>
@@ -690,6 +691,7 @@
         
         <!--document 19930085859_1993085859.pdf with SviTEPT RACK 35O, ASPECT RATIO 4, TAPER RATIO 0.8,
         AND NACA 65A006 AIRFOIL SECTION.-->
+        <!--Zero-lift drag coefficient: 0.0133-->
        <!--we temporary use the drag values aprox from the wing without fuselage -->
         <axis name="DRAG">
             <function name="aero/coefficient/CD0">

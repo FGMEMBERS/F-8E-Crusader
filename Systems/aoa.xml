@@ -124,6 +124,11 @@
                     aero/alpha-deg GT /sim/aoa-indicator/ref-approach-angle-pls05
                     aero/alpha-deg LE /sim/aoa-indicator/ref-approach-angle-pls15
                 </test>
+                <test  logic="AND" value="1">
+                    velocities/vc-kts LE /sim/aoa-indicator/ref-approach-speed-pls3
+                    velocities/vc-kts GT /sim/aoa-indicator/ref-approach-speed-mns3
+                    aero/alpha-deg GT /sim/aoa-indicator/ref-approach-angle-pls15
+                </test>
             <output>/sim/aoa-indicator/green-medium</output>
         </switch>
         
@@ -163,15 +168,20 @@
                 aero/alpha-deg LE /sim/aoa-indicator/ref-approach-angle-mns05
                 aero/alpha-deg GT /sim/aoa-indicator/ref-approach-angle-mns15
             </test>
+            <test  logic="AND" value="1">
+                velocities/vc-kts LE /sim/aoa-indicator/ref-approach-speed-pls3
+                velocities/vc-kts GT /sim/aoa-indicator/ref-approach-speed-mns3
+                aero/alpha-deg LE /sim/aoa-indicator/ref-approach-angle-mns15
+            </test>
             <output>/sim/aoa-indicator/red-medium</output>
         </switch>
         
         <switch name="systems/aoa/orange-annunciator">
             <default value="0"/>
             <test  logic="AND" value="1">
-                velocities/vc-kts GT /sim/aoa-indicator/ref-approach-speed-mns3
+                velocities/vc-kts GE /sim/aoa-indicator/ref-approach-speed-mns3
                 velocities/vc-kts LE  /sim/aoa-indicator/ref-approach-speed-pls3
-                aero/alpha-deg GT /sim/aoa-indicator/ref-approach-angle-mns05
+                aero/alpha-deg GE /sim/aoa-indicator/ref-approach-angle-mns05
                 aero/alpha-deg LE /sim/aoa-indicator/ref-approach-angle-pls05
             </test>
             <output>/sim/aoa-indicator/orange</output>

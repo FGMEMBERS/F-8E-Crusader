@@ -870,7 +870,7 @@
                           <tableData>
                               -0.2000	-0.6200
                               -0.03490   -0.15
-                              0.0000	0.0000
+                              0.0000	0.08
                               0.03490     0.15
                               0.0698       0.28
                               0.10472     0.39
@@ -916,7 +916,7 @@
             </function>
             
             <!--only UP or DOWN  of  Flaps  synchro with Wing incidence  Flap => 32 degres + wing => 8 deg  = 40-->
-            <!--only a guess  according to doc NACA RM L53J29-->
+            <!--only a guess  according to doc NACA RM L53J29 ===we want lft coef=1   at wing 8 deg ======= we have it ==>> 0.5 wings + 0.5 flap -->
             <function name="aero/coefficient/dCLflap">
                 <description>Delta_Lift_due_to_flaps</description>
                 <product>

@@ -74,7 +74,7 @@
             
             
             <!--forces in order to keep the aircraft sitting at the right Catapult position-->
-            <!--an empiric value is calculated with "weight-lbs X delta-position X 300000   for each x and y coordinate--> 
+            <!--an empiric value is calculated with "weight-lbs X delta-position X 50000   for each x and y coordinate--> 
             
             <pure_gain name="systems/tension/force_weight">
                 <input>inertia/weight-lbs</input>

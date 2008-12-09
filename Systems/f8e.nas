@@ -24,7 +24,7 @@ Update_engine=func{
         }
 #============================================================================================================
 #ici on ne peu pas associer une property qui est tratée par JSBSim /fdm/jsbsim/systems/taxi/linked à listener
-#on passe donc par une property externe qui est activé en toggle /sim/model/taxi/linked
+#on passe donc par une property externe qui est activé /sim/model/taxi/linked
 #si l'operation taxi ne peu etre activé pour quelque raisons il faut remettre /sim/model/taxi/linked à Zero
 #============================================================================================================
 Init_taxi_linked=func{

@@ -1587,25 +1587,9 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Crosse</object-name>
-		<property>fdm/jsbsim/systems/hook/tailhook-pos-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>-2</dep>
-			</entry>
-			<entry>
-				<ind>0.25</ind>
-				<dep>5</dep>
-			</entry>
-			<entry>
-				<ind>0.75</ind>
-				<dep>25</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>32.0</dep>
-			</entry>
-		</interpolation>
+                <property>fdm/jsbsim/systems/hook/tailhook-pos-deg</property>
+                <factor>1</factor>
+                <offset-deg>5</offset-deg>
 		<center>
 			<x-m>5.365</x-m>
 			<y-m>0</y-m>

@@ -818,7 +818,7 @@
                 </product>
             </function>
             
-            <!--not realistic , only for animation with crash-->
+            <!--not realistic , only for animation with crash in water -->
             <function name="aero/coefficient/CDgear_water">
                 <description>Drag_due_to_crashing_with_gear_in_water</description>
                 <product>
@@ -857,7 +857,7 @@
                            CL-max:        1
                            CD-0:          0.021  must be checked with data tunnel 
 			K:             0.09-->
-
+        <!--here from NACA RM No L9B25  curve CL  angle of attack-->
         <axis name="LIFT">
             <function name="aero/coefficient/CLalpha">
                 <description>Lift_due_to_alpha</description>
@@ -869,9 +869,13 @@
                           <independentVar lookup="row">aero/alpha-rad-w-incidence</independentVar>
                           <tableData>
                               -0.2000	-0.6200
-                              0.0000	0.0800
-                              0.0174	0.1409
-                              0.0500	0.2575
+                              -0.03490   -0.15
+                              0.0000	0.0000
+                              0.03490     0.15
+                              0.0698       0.28
+                              0.10472     0.39
+                              0.139626   0.5
+                              0.174533   0.59
                               0.2200	0.8500
                               0.2900	1.0000
                               0.6000	0.4480
@@ -912,13 +916,14 @@
             </function>
             
             <!--only UP or DOWN  of  Flaps  synchro with Wing incidence  Flap => 32 degres + wing => 8 deg  = 40-->
+            <!--only a guess  according to doc NACA RM L53J29-->
             <function name="aero/coefficient/dCLflap">
                 <description>Delta_Lift_due_to_flaps</description>
                 <product>
                     <property>aero/qbar-psf</property>
                     <property>metrics/Sw-sqft</property>
                     <property>fcs/flap-pos-norm</property>
-                    <value>0.035</value>
+                    <value>0.50</value>
                 </product>
             </function>
             <function name="aero/coefficient/dCLBLC">

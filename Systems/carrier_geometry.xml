@@ -12,7 +12,7 @@
     The position,  is a virtual point  of the catapult on the deck, which position, is mesured according to the carrier reference 0 coordinates and heading of the model.
     ==> coord_course,  is the orientation of a line, which link the coordinate Zero of the model, and the virtual point of the catapult 
     ==> coord_dist, is the lengh of that line.-->
-    
+    <!--We experiment  a runway definition which will help ACLS-->
     <!--We don't need to define every carrier only the Class one ,for instance, Eisenhower is not define we will use the Nimitz Class-->
     
     <!-- FIXME That file will feed the carrier.nas file, every new carrier which is added here, must be included within the carrier.nas file.
@@ -29,6 +29,21 @@
                                 <coord_course type="double">-145.3302945064977124</coord_course>
                                 <coord_dist type="double">32.38</coord_dist>
                             </catapult2>
+                            <runway>
+                                <heading_rad type="double">0.13962634</heading_rad>
+                                <coord_course type="double">0</coord_course>
+                                <coord_dist type="double">0</coord_dist>
+                                <approach1>
+                                    <coord_course type="double">0</coord_course>
+                                    <coord_dist type="double">0</coord_dist>
+                                </approach1>
+                                    <coord_course type="double">0</coord_course>
+                                    <coord_dist type="double">0</coord_dist>
+                                <approach2>
+                                    <coord_course type="double">0</coord_course>
+                                    <coord_dist type="double">0</coord_dist>
+                                </approach2>
+                            </runway>
                        </clemenceau>
                        <arromanches>
                            <catapult1>

@@ -65,7 +65,7 @@
 		</condition>
 	</animation>
 
-	<animation>
+	<!--<animation>
 		<type>rotate</type>
 		<object-name>Aiguille</object-name>
 		<property>/orientation/alpha-deg</property>
@@ -88,6 +88,31 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
+	</animation>-->
+        
+        <animation>
+            <type>rotate</type>
+            <object-name>Aiguille</object-name>
+            <property>fdm/jsbsim/aero/alpha-rad-w-incidence</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.7453293</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>-0.12217305</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.66322512</ind>
+                    <dep>270</dep>
+                </entry>
+            </interpolation>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
 	</animation>
 
 </PropertyList>

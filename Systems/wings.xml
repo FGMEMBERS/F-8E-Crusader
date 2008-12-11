@@ -92,26 +92,32 @@
                 <output>/surface-positions/wing-pos-norm</output>
             </pure_gain>
 
-            <!--Some automatic correction for FCS during UP/DOWN -->
-            <!--<scheduled_gain name="Elevator Wings Position">
+            <!--Some automatic correction for pitch during UP/DOWN -->
+            <!--Pitch moment get -0.04189 with wings up at 8 deg (0.13962634 rad)
+            Pitch moment at Mach zero  get -0.8 and at Mach 2 get -0.2  per rad of elevator 
+            the balance will be at Mach zero -0.05236  and at Mach 2 -0.209439 -->
+            <scheduled_gain name="Elevator Wings Balance Position Rad">
                 <input>fcs/wings-pos-norm</input>
                 <table>
-                    <independentVar>velocities/vc-kts</independentVar>
+                    <independentVar>velocities/mach</independentVar>
                     <tableData>
-                        0.0000	-1
-                        150.00	-0.445
-                        250.00	-0
-                        400.00	0.062
+                        0.0000	0.05236
+                        2.0000	0.209439
                     </tableData>
                 </table>
-                <output>fcs/balance-wings-pos-norm</output>
-            </scheduled_gain>-->
+                <output>fcs/elevator-wings-balance-rad</output>
+            </scheduled_gain>
             
-           
+           <!-- will be converted   from 0.30 rad to 1 position -->
+           <!-- 0.17453             0.69813-->
+            <pure_gain name="Elevator Wings Balance Position">
+                <input>fcs/elevator-wings-balance-rad</input>
+                <gain>3.3333333</gain>
+            </pure_gain>
 
             <pure_gain name="Wings Rad ">
                 <input>fcs/wings-pos-norm</input>
-                <gain>0.1222</gain>
+                <gain>0.13962634</gain>
                 <output>fcs/wings-pos-rad</output>
             </pure_gain>
 
@@ -182,22 +188,6 @@
 
             <!--===========Flaps ===============================================-->
 
-             <switch name="systems/flaps/down">
-                <default value="systems/flaps/down"/>
-                <test  logic="AND" value="1">
-                        fcs/wings-pos-norm == 1
-                        systems/wing-incidence/unlock == 1
-                        /controls/flight/wing-incidence == 1
-                        systems/wing-incidence/wgfromto == 0
-                </test>
-                 <test  logic="AND" value="0">
-                        systems/wing-incidence/handle  lt 100
-                         /controls/flight/wing-incidence == 0
-                        systems/wing-incidence/fromto == 0
-                </test>
-            </switch>
-
-
             <switch name="systems/flaps/down">
                 <default value="systems/flaps/down"/>
                 <test  logic="AND" value="1">
@@ -227,8 +217,32 @@
                 </traverse>
                 <output>fcs/flap-pos-norm</output>
             </kinematic>
+           
+            <!--Some automatic correction for pitch during UP/DOWN -->
+            <!--flap effects,  lift and pitch, must be balanced-->
+            <!-- FIXME not the right solution waiting for better information-->
+            <scheduled_gain name="Elevator Flaps Balance Rad">
+                <input>fcs/flap-pos-norm</input>
+                <table>
+                    <independentVar>velocities/mach</independentVar>
+                    <tableData>
+                        0.0000	0.05236
+                        2.0000	0.209439
+                    </tableData>
+                </table>
+            </scheduled_gain>
+            
+            
+            <!-- FIXME not the right solution waiting for better information-->
+            <!-- there is a lost of  0.50 lift coeff which must absorbed smoothly-->
+            <!-- seulement valable en cas de DOWN-->
+            <!-- pour le UP il plonge-->
+            <pure_gain name="Elevator Flaps Balance Position">
+                <input>fcs/elevator-flaps-balance-rad</input>
+                <gain>0.001</gain>
+            </pure_gain>
 
-
+           
 
 
 

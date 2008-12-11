@@ -149,14 +149,14 @@
         <controls>
     <!-- Start with the Parking Brake on -->
                 <gear>
-                        <!--<brake-parking type="double">1.0</brake-parking>
-                        <gear-down>1</gear-down>-->
+                        <brake-parking type="double">1.0</brake-parking>
+                        <gear-down>1</gear-down>
                         <tailhook>0</tailhook>
                 </gear>
     <!-- Start with Canopy open-->
                 <flight>
-                        <canopy type="bool">1</canopy>
-                        <wing-fold-cmd type="bool">0</wing-fold-cmd>
+                        <canopy type="bool">true</canopy>
+                        <wing-fold-cmd type="bool">1</wing-fold-cmd>
                         <wing-incidence type="bool">0</wing-incidence>
                 </flight>
                 <jettison>

@@ -16,7 +16,6 @@
                 </electrical>
                 <f8e>
                         <file>Aircraft/F-8E-Crusader/Systems/f8e.nas</file>
-                        <script>init_f8e();</script>
                 </f8e>
                 <instruments>
                         <file>Aircraft/F-8E-Crusader/Systems/radar.nas</file>

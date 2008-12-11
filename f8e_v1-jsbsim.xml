@@ -475,14 +475,12 @@
 
     <flight_control name="FCS: F-8E">
         
-        <property value="0">fcs/balance-wings-pos-norm</property>
-
         <channel name="Pitch">
-            
             <summer name="Pitch Trim Sum">
                 <input>fcs/elevator-cmd-norm</input>
-                <input>fcs/balance-wings-pos-norm</input>
                 <input>fcs/pitch-trim-cmd-norm</input>
+                <input>fcs/elevator-wings-balance-position</input>
+                <input>fcs/elevator-flaps-balance-position</input>
                 <clipto>
                     <min>-1</min>
                     <max>1</max>
@@ -620,18 +618,10 @@
         <!--FIXME french version Variable incidence wings,   the max incidence 8 deg  0.13962634 rad    -->
         <function name="aero/alpha-rad-w-incidence">
             <description>Addition of incidence due to UP</description>
-            <product>
                 <sum>
                     <property>aero/alpha-rad</property>
-                    <table>
-                        <independentVar>fcs/wing-incidence-up</independentVar>
-                        <tableData>
-                            0.0 0.0
-                            1.0 0.13962634
-                        </tableData>
-                    </table>
+                    <property>fcs/wings-pos-rad</property>
                 </sum>
-            </product>
         </function>
         
        
@@ -703,11 +693,18 @@
                       <table>
                           <independentVar lookup="row">aero/alpha-rad-w-incidence</independentVar>
                           <tableData>
-                              -1.5700	1.5000
-                              -0.2600	0.026
-                              0.0000	0.012
-                              0.2600	0.026
-                              1.5700	1.5000
+                              -1.57000	 1.5000
+                              -0.26000	 0.1900
+                              -0.03490     0.0160
+                              -0.00873     0.0120
+                               0.00000     0.0120
+                               0.03490     0.0140
+                               0.06980     0.0250
+                               0.10472     0.0400
+                               0.139626   0.0610
+                               0.174533   0.0950
+                               0.260000	 0.1900
+                               1.570000	 1.5000
                           </tableData>
                       </table>
                 </product>
@@ -857,7 +854,7 @@
                            CL-max:        1
                            CD-0:          0.021  must be checked with data tunnel 
 			K:             0.09-->
-        <!--here from NACA RM No L9B25  curve CL  angle of attack-->
+        <!--here from NACA RM No L9B25  curve CL  angle of attack   -->
         <axis name="LIFT">
             <function name="aero/coefficient/CLalpha">
                 <description>Lift_due_to_alpha</description>
@@ -868,35 +865,22 @@
                       <table>
                           <independentVar lookup="row">aero/alpha-rad-w-incidence</independentVar>
                           <tableData>
-                              -0.2000	-0.6200
-                              -0.03490   -0.15
-                              0.0000	0.08
-                              0.03490     0.15
-                              0.0698       0.28
-                              0.10472     0.39
-                              0.139626   0.5
-                              0.174533   0.59
-                              0.2200	0.8500
-                              0.2900	1.0000
-                              0.6000	0.4480
+                             -0.2000     -0.6200
+                             -0.03490   -0.1500
+                              0.00000	0.0800
+                              0.03490     0.1500
+                              0.06980     0.2800
+                              0.10472     0.3900
+                              0.139626   0.5000
+                              0.174533   0.5900
+                              0.22000	0.8500
+                              0.29000	1.0000
+                              0.60000	0.4480
                           </tableData>
                       </table>
                 </product>
             </function>
-           <!-- <function name="aero/coefficient/dCLwing">
-                <description>Delta_Lift_due_to_variable_incidence_wings</description>
-                <product>
-                    <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
-                      <table>
-                          <independentVar>fcs/wings-pos-rad</independentVar>
-                          <tableData>
-                              0.0000	0.0000
-                              0.1222	0.4800
-                          </tableData>
-                      </table>
-                </product>
-            </function>-->
+          
             <function name="aero/coefficient/dCLDlef">
                 <description>Delta_Lift_due_to_leading_edge_flap_deflection</description>
                 <product>
@@ -1027,16 +1011,6 @@
         </axis>
 
         <axis name="PITCH">
-            <!--<function name="aero/coefficient/Cmwincd">
-                <description>Pitch_moment_due_to_wings_incidence</description>
-                <product>
-                    <property>aero/qbar-psf</property>
-                    <property>metrics/Sw-sqft</property>
-                    <property>metrics/cbarw-ft</property>
-                    <property>fcs/wings-pos-rad</property>
-                    <value>0.1000</value>
-                </product>
-            </function>-->
             <function name="aero/coefficient/Cmalpha">
                 <description>Pitch_moment_due_to_alpha</description>
                 <product>

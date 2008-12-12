@@ -164,9 +164,11 @@
                 </jettison>
                 <switches>
                         <flashing-beacon>1</flashing-beacon>
-                        <landing-light>true</landing-light>
                         <master-avionics>false</master-avionics>
                 </switches>
+                <lighting>
+                    <landing-lights type="bool">false</landing-lights>
+                </lighting>
                 <electric>
                     <master-switch>false</master-switch>
                     <battery-switch>false</battery-switch>

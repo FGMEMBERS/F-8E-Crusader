@@ -42,13 +42,7 @@
             <output>/controls/engines/engine[0]/fuel-pump</output>
         </switch>
 
-        <!--<pure_gain name="Fuel Pump0">
-            <input>fcs/fuel-pump0-cmd</input>
-            <gain>1</gain>
-            <output>/controls/engines/engine[0]/fuel-pump</output>
-        </pure_gain>-->
-
-
+        
 
         <switch name="Cutoff0 Cmd">
             <default value="1"/>
@@ -60,17 +54,6 @@
             <output>/controls/engines/engine[0]/cutoff-cmd</output>
         </switch>
 
-
-
-
-       <!-- <switch name="systems/propulsion/cutoff-cmd">
-            <default value="0"/>
-            <test value="1">
-               fcs/cutoff0-cmd == 1
-            </test>
-            <output>/controls/engines/engine[0]/cutoff</output>
-        </switch>-->
-        
        <!-- Only for animation-->
         <pure_gain name="systems/animations/heatcolor">
             <input>position/h-sl-ft</input>

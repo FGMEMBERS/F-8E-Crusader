@@ -33,6 +33,17 @@
                 <output>gear/unit[2]/pos-norm</output>
             </actuator>
             
+            <switch name="Control Damage">
+                <default value="fcs/cutoff-switch"/>
+                <test  logic="AND" value="0">
+                    /controls/gear/gear-down  == 0
+                    fcs/cutoff-switch == 1
+                </test>
+                <output>fcs/cutoff-switch</output>
+            </switch>
+                
+          
+            
             <kinematic name="Gear Surface Position">
                 <input>/controls/gear/gear-down</input>
                 <traverse>

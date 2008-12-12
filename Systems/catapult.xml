@@ -154,7 +154,7 @@
          
          <switch name="systems/catapult/elevator-lock">
              <default value="fcs/elevator-cmd-norm"/>
-             <test logic="AND" value="0">
+             <test logic="AND" value="fcs/elevator-wings-balance-position">
                  launchbar/launch-bar-state == 1
              </test>
              <output>fcs/elevator-cmd-norm</output>

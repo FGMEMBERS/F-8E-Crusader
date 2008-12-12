@@ -25,9 +25,7 @@
                 <gain>1</gain>
                 <output>/surface-positions/refueling-pos-norm</output>
             </pure_gain>
-
-
-
+            
     </channel>
 
 </system>

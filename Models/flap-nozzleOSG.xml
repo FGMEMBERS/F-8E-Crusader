@@ -383,7 +383,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-0</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -413,7 +413,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-1</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -443,7 +443,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-2</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -473,7 +473,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-3</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -503,7 +503,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-4</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -535,7 +535,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-15</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -565,7 +565,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-14</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -595,7 +595,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-13</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -625,7 +625,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-12</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -655,7 +655,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-8</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -685,7 +685,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-7</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -715,7 +715,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-6</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -745,7 +745,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-5</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -776,7 +776,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-9</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -806,7 +806,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-10</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>
@@ -836,7 +836,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Nozzle-Flap-11</object-name>
-		<property>/controls/engines/engine/throttle</property>
+		<property>engines/engine/nozzle-pos-norm</property>
 		<interpolation>
 			<entry>
 				<ind>0</ind>

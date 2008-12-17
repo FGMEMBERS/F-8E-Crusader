@@ -7,6 +7,15 @@
     
 
   <channel name="Mule">
+      
+      
+      <switch name="systems/mule/model-linked">
+          <default value="/sim/model/mule/linked"/>
+          <test  logic="AND" value="0">
+              fcs/cutoff-switch == 1
+          </test>
+          <output>/sim/model/mule/linked</output>
+       </switch>
 
         <switch name="systems/mule/linked">
            <default value="0"/>

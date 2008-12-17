@@ -29,7 +29,7 @@
                         </f8e>
                         <mule>
                             <magnitude>0</magnitude>
-                            <linked>0</linked>
+                            <linked>1</linked>
                         </mule>
                         <taxi>
                             <linked >0</linked>
@@ -174,11 +174,6 @@
                     <battery-switch>false</battery-switch>
                     <external-power>false</external-power>
                 </electric>
-                <engines>
-                    <engine n="0">
-                        <cutoff type="bool">true</cutoff>
-                    </engine>
-                </engines>
         </controls>
     <!-- Start with Engine off -->
         <engines>

@@ -51,7 +51,7 @@
                 fcs/fuel-pump0-cmd == 1
                 /systems/electrical/outputs/fuel-pump gt 27
             </test>
-            <output>/controls/engines/engine[0]/cutoff-cmd</output>
+            <output>propulsion/cutoff_cmd</output>
         </switch>
 
        <!-- Only for animation-->

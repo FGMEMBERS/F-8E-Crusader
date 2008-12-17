@@ -14,9 +14,6 @@
                 <electrical>
                         <file>Aircraft/F-8E-Crusader/Systems/electrical.nas</file>
                 </electrical>
-                <f8e>
-                        <file>Aircraft/F-8E-Crusader/Systems/f8e.nas</file>
-                </f8e>
                 <instruments>
                         <file>Aircraft/F-8E-Crusader/Systems/radar.nas</file>
                         <file>Aircraft/F-8E-Crusader/Systems/nav.nas</file>

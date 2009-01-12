@@ -48,7 +48,7 @@
     <!-- holdback -->
     
     <pure_gain name="systems/holdback/total_thrust">
-        <input>forces/fbx-prop-lbs</input>
+        <input>propulsion/engine/thrust-lbs</input>
         <gain>1.6</gain>
      </pure_gain>
      

@@ -4,14 +4,14 @@
 <system name="fuel">
     
    
-    <property>/consumables/fuel/tank[0]/level-lb</property>
-    <property>/consumables/fuel/tank[1]/level-lb</property>
+    <property>/consumables/fuel/tank[0]/level-lbs</property>
+    <property>/consumables/fuel/tank[1]/level-lbs</property>
 
     <channel name="fuel">
         
         <summer name="propulsion/systems/tank/level-lb">
-            <input>/consumables/fuel/tank[0]/level-lb</input>
-            <input>/consumables/fuel/tank[1]/level-lb</input>
+            <input>/consumables/fuel/tank[0]/level-lbs</input>
+            <input>/consumables/fuel/tank[1]/level-lbs</input>
             <output>/consumables/fuel/total-fuel-lbs</output>
         </summer>
        

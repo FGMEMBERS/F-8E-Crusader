@@ -98,20 +98,9 @@
 
 
    <!--============Misc============================-->
-            <key n="68">
-                    <desc>Refueling Probe</desc>
-                    <name>D</name>
-                    <binding>
-                            <command>nasal</command>
-                            <script>
-                                    consumable.refuel();
-                            </script>
-                    </binding>
-            </key>
+            
             <key n="100">
             <name>d</name>
-
-
             <desc>Toggle Canopy</desc>
                             <binding>
                                     <command>property-toggle</command>

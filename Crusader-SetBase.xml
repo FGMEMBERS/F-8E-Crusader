@@ -129,6 +129,8 @@
                 <menubar include="Inputs/Crusader-menu.xml"/>
         </sim>
         
+        
+        
 
         <input include="Inputs/Crusader-input.xml"/>
 
@@ -242,6 +244,12 @@
                 <state type="string">Disengaged</state>
             </launchbar>
         </gear>
+        
+        <environment>
+            <wildfire>
+                <fire-on-crash type="bool" >false</fire-on-crash>
+            </wildfire>
+        </environment>
 
 
      

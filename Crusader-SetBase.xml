@@ -245,15 +245,6 @@
             </launchbar>
         </gear>
         
-        <environment>
-            <wildfire>
-                <fire-on-crash type="bool" >false</fire-on-crash>
-            </wildfire>
-        </environment>
-
-
-     
-
         <fdm include="Systems/jsbsim_init.xml"/>
 
 </PropertyList>

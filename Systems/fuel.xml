@@ -8,11 +8,11 @@
 
     <channel name="fuel">
         
-        <!--<summer name="propulsion/systems/tank/level-lb">
+        <summer name="propulsion/systems/tank/level-lb">
             <input>propulsion/tank[0]/contents-lbs</input>
             <input>propulsion/tank[1]/contents-lbs</input>
             <output>/consumables/fuel/total-fuel-lbs</output>
-        </summer>-->
+        </summer>
        
        
        <!--Transfer=====From transfer tank to main tank==========-->

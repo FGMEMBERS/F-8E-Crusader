@@ -81,7 +81,7 @@
                 <default value="0"/>
                 <test  logic="AND" value="1">
                     /position/altitude-agl-ft lt 11
-                    gear/unit[0]/gear-pos-norm == 1
+                    gear/unit[0]/pos-norm == 1
                 </test>
             </switch>
 

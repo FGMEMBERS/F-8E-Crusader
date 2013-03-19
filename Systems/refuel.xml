@@ -2,6 +2,8 @@
 
 
 <system name="refuel">
+
+    <property>propulsion/systems/tank/refuel-in_air</property>
     
     <channel name="refuel">
         

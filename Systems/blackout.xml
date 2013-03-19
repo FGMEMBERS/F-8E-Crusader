@@ -3,8 +3,6 @@
 
 <system name="Blackout">
     <channel name="Blackout">
-
-             <property value="1">systems/blackout-cst</property>
              
             <summer name="g load">
               <input>accelerations/n-pilot-z-norm</input>
@@ -46,7 +44,7 @@
                     </setting>
                     <setting>
                     <position>1</position>
-                    <time><property>systems/blackout-delay</property></time>
+                    <time>1</time>
                     </setting>
                 </traverse>
             </kinematic>

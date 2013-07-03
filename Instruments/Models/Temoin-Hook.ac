@@ -1,8 +1,8 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0.122 0.102 0.157  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat5" rgb 0 0.863 0.008  amb 0.502 0.502 0.502  emis 0 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.898 1 1  emis 0 0 0  spec 1 0.929 1  shi 90  trans 0
-MATERIAL "ac3dmat5" rgb 0.827 0.863 0.008  amb 0.502 0.502 0.502  emis 0.639 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0.122 0.102 0.157  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat5" rgb 0 0.863 0.008  amb 0 0.863 0.008  emis 0 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 0.929 1  shi 90  trans 0
+MATERIAL "ac3dmat5" rgb 0.827 0.863 0.008  amb 0.827 0.863 0.008  emis 0.639 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -12,7 +12,7 @@ kids 4
 OBJECT poly
 name "Temoin-Hook"
 loc -12.6254 -1.09265 1.34617
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 32
 16.7857 1.34089 -1.65795
@@ -328,7 +328,7 @@ kids 0
 OBJECT poly
 name "Marquage"
 loc 4.16413 0.250567 -0.303045
-texture "Hook.rgb"
+texture "Hook.png"
 crease 45.000000
 numvert 4
 0 -0.0151767 -0.0212967
@@ -352,7 +352,7 @@ kids 0
 OBJECT poly
 name "Lampe"
 loc 4.16721 0.236104 -0.305619
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 32
 0.0057585 0.00852565 -0.00514897
@@ -668,7 +668,7 @@ kids 0
 OBJECT poly
 name "TemoinMHook"
 loc -12.6254 -1.09265 1.34617
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 32
 16.7994 1.33728 -1.65868

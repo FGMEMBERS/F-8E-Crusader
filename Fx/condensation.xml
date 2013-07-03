@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!--
+    Usable with FlightGear
+    <property>gerard robin
+    Copyright License:  GPLv2
+-->
+   <!--    Auteur :      Gerard ROBIN               GPLv2        COPYRIGHT-->
+
+
+ <path>condens.osgt</path>
+
+
+ <offsets>
+    <x-m> 0 </x-m>
+   <!-- <y-m> -0.12 </y-m>
+    <z-m> -0.10 </z-m>-->
+    <pitch-deg>90</pitch-deg>
+ </offsets>
+
+ <!--
+geode name
+     <object-name>fluxturbine</object-name>-->
+<!--nuage idle-->
+
+
+<!--flux altitude-combustion-->
+
+</PropertyList>

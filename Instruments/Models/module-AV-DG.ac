@@ -1,17 +1,17 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.541 0.541 0.541  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
-MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0.749 0.373 0.373  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 1 0 0  emis 0.749 0.373 0.373  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 7
 OBJECT poly
 name "Autopilot-Heading"
 loc 0.0304328 0.0094271 0.371691
-texture "ondul.rgb"
+texture "ondul.png"
 crease 45.000000
 numvert 66
 -0.0180596 0.00279571 0.00943822
@@ -668,7 +668,7 @@ kids 0
 OBJECT poly
 name "Module-BaseG"
 loc 0.0018267 -0.0134096 0.390357
-texture "moduleAVG.rgb"
+texture "moduleAVG.png"
 crease 45.000000
 numvert 26
 0.0856179 0.0187022 -0.0871085
@@ -838,7 +838,7 @@ kids 0
 OBJECT poly
 name "Module-BaseD"
 loc 0.0018267 -0.0141179 -0.390357
-texture "moduleAVD.rgb"
+texture "moduleAVD.png"
 crease 45.000000
 numvert 26
 0.0463049 -0.0188623 0.0779423
@@ -4737,7 +4737,7 @@ kids 2
 OBJECT poly
 name "Inter-AutopilotMaster"
 loc -0.00725091 -0.0128554 0.820196
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 80
 0.0104493 0.0169896 -0.000404716
@@ -5292,7 +5292,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.00727548 -0.016754 0.820175
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 97
 0.0156011 -0.000762461 -9.47714e-06

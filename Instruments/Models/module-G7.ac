@@ -1,11 +1,11 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat4" rgb 1 0.466667 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat0" rgb 0.475 0.49 0.482  amb 0 0 0  emis 0 0 0  spec 0.216 0.216 0.216  shi 29  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat4" rgb 1 0.466667 0  amb 1 0.466667 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0.475 0.49 0.482  amb 0.475 0.49 0.482  emis 0 0 0  spec 0.216 0.216 0.216  shi 29  trans 0
 OBJECT world
 kids 7
 OBJECT poly
@@ -2447,7 +2447,7 @@ kids 0
 OBJECT poly
 name "Module-Base"
 loc 0 -0.00155724 -0.000644505
-texture "module-2Pouces.rgb"
+texture "module-2Pouces.png"
 crease 45.000000
 numvert 10
 0.01905 0.000222511 -0.0696448

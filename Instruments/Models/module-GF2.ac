@@ -1,14 +1,14 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.541 0.541 0.541  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 2
 OBJECT poly
 name "Cde-LeDroop"
 loc -0.014484 0.00270078 -0.00467884
-texture "ondul.rgb"
+texture "ondul.png"
 crease 45.000000
 numvert 66
 0.00954392 -0.0208106 -0.00254346
@@ -665,7 +665,7 @@ kids 0
 OBJECT poly
 name "Module-Base"
 loc -0.00335615 0 0
-texture "moduleGF.rgb"
+texture "moduleGF.png"
 crease 45.000000
 numvert 15
 -0.0221524 0.0336053 0

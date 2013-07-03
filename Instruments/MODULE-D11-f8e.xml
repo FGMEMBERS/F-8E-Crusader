@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -27,8 +27,8 @@
 	<animation include="Instrument-Light4.xml">
 		<object-name>Console-Fleche</object-name>
 	</animation>
-        
-        
+
+
         <animation>
             <type>pick</type>
             <object-name>Eclairage-InstrVol</object-name>
@@ -36,7 +36,7 @@
                 <button>0</button>
                 <binding>
                     <command>property-adjust</command>
-                    <property>/sim/model/f8e/lighting/instrument-lights</property>
+                    <property>/sim/model/f8e/instrument-lights</property>
                     <step>0.05</step>
                     <min>0</min>
                     <max>1</max>
@@ -52,7 +52,7 @@
                 <button>1</button>
                 <binding>
                     <command>property-adjust</command>
-                    <property>/sim/model/f8e/lighting/instrument-lights</property>
+                    <property>/sim/model/f8e/instrument-lights</property>
                     <step>-0.05</step>
                     <min>0</min>
                     <max>1</max>
@@ -65,7 +65,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Eclairage-InstrVol</object-name>
-		<property>/sim/model/f8e/lighting/instrument-lights</property>
+		<property>/sim/model/f8e/instrument-lights</property>
 		<factor>-280</factor>
 		<center>
 			<x-m>0.00881384</x-m>
@@ -78,7 +78,7 @@
 			<z>1</z>
 		</axis>
 	</animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Eclairage-InstrAutre</object-name>
@@ -94,7 +94,7 @@
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Eclairage-InstrAutre</object-name>
@@ -128,10 +128,10 @@
 			<z>1</z>
 		</axis>
 	</animation>
-        
+
         <animation>
             <type>pick</type>
-            <object-name>Eclairage-console</object-name>
+            <object-name>Eclairage-Console</object-name>
             <action>
                 <button>0</button>
                 <binding>
@@ -144,7 +144,7 @@
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Eclairage-Console</object-name>

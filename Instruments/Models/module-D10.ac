@@ -1,15 +1,15 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 5
 OBJECT poly
 name "Module-Base"
 loc 0.0127 -0.00155724 0.000643998
-texture "moduleD10.rgb"
+texture "moduleD10.png"
 crease 45.000000
 numvert 15
 0.0415189 0.00155724 0.0683559
@@ -82,7 +82,7 @@ kids 1
 OBJECT poly
 name "Input-Nav-Master"
 loc -0.0702448 0.0141061 0.194532
-texture "knob-1.rgb"
+texture "knob-1.png"
 crease 45.000000
 numvert 41
 0.0132483 -0.00952879 -0.0797113
@@ -385,7 +385,7 @@ kids 1
 OBJECT poly
 name "disk"
 loc -0.0797893 0.0150687 0.133165
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 82
 0.00697348 -0.00987045 0.00288863
@@ -1641,7 +1641,7 @@ kids 0
 OBJECT poly
 name "Val-nn-nn-nX"
 loc 0.0240217 0.00574602 0.113754
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.00424587 0 -0.00104234
@@ -1660,7 +1660,7 @@ kids 0
 OBJECT poly
 name "Val-nn-nn-Xn"
 loc 0.0240217 0.00574602 0.127754
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.00424587 0 -0.00721816
@@ -1679,7 +1679,7 @@ kids 0
 OBJECT poly
 name "Val-nn-nX-nn"
 loc 0.0240217 0.00574602 0.141755
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.00424587 0 -0.00104234
@@ -1698,7 +1698,7 @@ kids 0
 OBJECT poly
 name "Val-nn-Xn-nn"
 loc 0.0240217 0.00574602 0.155755
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.00424587 0 -0.00721816
@@ -1717,7 +1717,7 @@ kids 0
 OBJECT poly
 name "Val-nX-nn-nn"
 loc 0.0240217 0.00574602 0.172058
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.00424587 0 -0.00104234
@@ -1736,7 +1736,7 @@ kids 0
 OBJECT poly
 name "Val-Xn-nn-nn"
 loc 0.0240217 0.00574602 0.186058
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.00424587 0 -0.00721816
@@ -10155,7 +10155,7 @@ kids 0
 OBJECT poly
 name "disk"
 loc -0.0797893 0.0150687 0.157451
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 82
 0.00424094 0.0103824 0.00113637
@@ -13172,7 +13172,7 @@ kids 0
 OBJECT poly
 name "Input-Nav-Code"
 loc -0.0702448 0.0141061 0.182329
-texture "knob-1.rgb"
+texture "knob-1.png"
 crease 45.000000
 numvert 41
 0.0132483 -0.00952879 -0.00548753

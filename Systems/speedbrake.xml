@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
-
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
 
 <system name="SpeedBrake">
 
-    <property>/controls/flight/speedbrake</property>
+    <!--<property>/controls/flight/speedbrake</property>-->
 
     <channel name="SpeedBrake">
 

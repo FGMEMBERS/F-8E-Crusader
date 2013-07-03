@@ -1,11 +1,11 @@
 AC3Db
-MATERIAL "ac3dmat8" rgb 0.627451 0.752941 0.878431  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat8" rgb 0.627451 0.752941 0.878431  amb 0.627451 0.752941 0.878431  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT poly
 name "Ckpt-BaseInstrument"
 loc -5.38953 -0.00628722 0
-texture "btextu99.rgb"
+texture "btextu99.png"
 crease 45.000000
 numvert 24
 0.865163 0.0593661 -0.584676

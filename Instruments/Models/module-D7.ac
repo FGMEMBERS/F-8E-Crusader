@@ -1,17 +1,17 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 1 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 24
 OBJECT poly
 name "Freq-Xnn-nn"
 loc 0.0153031 0 0.0287739
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.0040421 0 -0.00485041
@@ -30,7 +30,7 @@ kids 0
 OBJECT poly
 name "Module-Base"
 loc 0 -0.00155724 0.000644498
-texture "moduleD7.rgb"
+texture "moduleD7.png"
 crease 45.000000
 numvert 16
 -0.0157656 0.00155724 0.041191
@@ -145,7 +145,7 @@ kids 0
 OBJECT poly
 name "Freq-nnn-nX"
 loc 0.0153031 0 -0.0202668
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.0040421 0 -0.00485041
@@ -164,7 +164,7 @@ kids 0
 OBJECT poly
 name "Freq-nnn-Xn"
 loc 0.0153031 0 -0.0091509
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.0040421 0 -0.00485041
@@ -183,7 +183,7 @@ kids 0
 OBJECT poly
 name "Freq-nnX-nn"
 loc 0.0153031 0 0.0067601
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.0040421 0 -0.00485041
@@ -202,7 +202,7 @@ kids 0
 OBJECT poly
 name "Freq-nXn-nn"
 loc 0.0153031 0 0.017876
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.0040421 0 -0.00485041
@@ -221,7 +221,7 @@ kids 0
 OBJECT poly
 name "Chan-nX"
 loc -0.0268518 0 0.0472912
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.0040421 0 0.00485041
@@ -240,7 +240,7 @@ kids 0
 OBJECT poly
 name "Chan-Xn"
 loc -0.0268518 0 0.0575276
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 -0.0040421 0 -0.00485041
@@ -259,12 +259,12 @@ kids 0
 OBJECT group
 name "Sel-FreqType"
 loc -0.0643473 0.0246251 -0.0740921
-texture "knob-2.rgb"
+texture "knob-2.png"
 kids 2
 OBJECT poly
 name "Corps"
 loc -0.00441928 -0.0261341 0.0234835
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 104
 0.0810245 0.00405991 -0.00374955
@@ -1123,7 +1123,7 @@ kids 0
 OBJECT poly
 name "Fleche"
 loc -0.00441889 -0.0246247 0.0234841
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 12
 0.0796493 0.0121477 0.000293434
@@ -1178,12 +1178,12 @@ kids 0
 OBJECT group
 name "Sel-ManChan"
 loc -0.0643473 0.0246251 -0.0740921
-texture "knob-2.rgb"
+texture "knob-2.png"
 kids 2
 OBJECT poly
 name "Corps"
 loc 0.0779866 -0.0241778 0.0715946
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 104
 0.000265075 0.00145037 0.066048
@@ -2042,7 +2042,7 @@ kids 0
 OBJECT poly
 name "Fleche"
 loc 0.0779861 -0.0228194 0.071595
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 12
 -0.000265086 0.00145037 0.0495424
@@ -2101,7 +2101,7 @@ kids 3
 OBJECT poly
 name "Inter-ModRW"
 loc -0.0449962 0.010046 0.402462
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 48
 0.00578652 0.0210569 -0.000944594
@@ -2434,7 +2434,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.0488948 0.0100773 0.402441
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 81
 0.0142163 -0.000634016 -9.47724e-06
@@ -3011,7 +3011,7 @@ kids 0
 OBJECT poly
 name "FreqType"
 loc 0.0183801 0.00151793 0.0224326
-texture "navtype.rgb"
+texture "navtype.png"
 crease 45.000000
 numvert 4
 -0.0300744 0 -0.0835652
@@ -3425,12 +3425,12 @@ kids 0
 OBJECT group
 name "BIPOL"
 loc 0.038872 -0.0100051 -0.402441
-texture "knob-2.rgb"
+texture "knob-2.png"
 kids 3
 OBJECT poly
 name "Inter-StBy"
 loc -0.0408949 0.010046 0.402462
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 48
 -0.0240936 -0.00068886 -0.0609228
@@ -3763,7 +3763,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.0447935 0.0100773 0.402441
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 81
 -0.0250787 -0.000719698 -0.061394
@@ -4956,7 +4956,7 @@ kids 0
 OBJECT poly
 name "Bt-Preset-Chan"
 loc -0.0327498 0.00120385 -0.0100441
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 33
 0.0314001 0.0179377 0.0500224
@@ -5205,7 +5205,7 @@ kids 0
 OBJECT poly
 name "Bt-Val-nnn-XX"
 loc 0.00569414 0 -0.0974592
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 33
 0.034889 0.0197417 0.0555804
@@ -5454,7 +5454,7 @@ kids 0
 OBJECT poly
 name "Bt-Val-nnX-nn"
 loc 0.00569414 0 -0.0558475
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 33
 0.04221 0.0197417 0.0586129
@@ -5703,7 +5703,7 @@ kids 0
 OBJECT poly
 name "Bt-Val-XXn-nn"
 loc 0.00569414 0 -0.0136896
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 33
 0.034889 0.0197417 0.0555804

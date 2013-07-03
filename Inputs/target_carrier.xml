@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+
+
+<PropertyList>
+  <name>Carrier Selection</name>
+  <layout>vbox</layout>
+  
+  
+   <nasal>
+        <open><![CDATA[
+	
+	var carrier_list = props.globals.getNode("/sim/gui/dialogs/carrier/list", 1);
+	var updateCarriers_list = func {
+	var aicarrier = props.globals.getNode("/ai/models").getChildren("carrier");
+	carrier_list.removeChildren("value"); 
+	var i=0;
+                foreach (var c;aicarrier) {
+                    
+                    if (c.getNode("in_sight").getValue()  ==  0) {
+                      continue; # not_in_sight
+                    }
+		    
+		    var cis = c.getNode("name").getValue(); 
+		    carrier_list.getNode("value["~i~"]", 1).setValue(cis);
+		    i += 1;
+		    }
+		    gui.dialog_update("Carrier Selection","host");
+		  
+	}
+	updateCarriers_list ();
+        ]]>
+        </open>
+        <close>
+        </close>
+    </nasal>
+
+  <text>
+    <label>Carrier</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+        <layout>vbox</layout>
+        <halign>left</halign>
+	<pref-width>360</pref-width>
+        <text>
+        <label>Carrier Name</label>
+        </text>
+        <group>
+		<layout>vbox</layout>
+		<halign>center</halign>
+		<text>
+		    <label>Select a Carrier , which is in sight</label>
+		 </text>   
+		<text>
+		    <label>the closest is</label>
+                </text>
+		<input>
+		    <pref-width>160</pref-width>
+		    <halign>center</halign>
+		    <live>true</live>
+		    <property>/sim/carrier/name</property>
+		    <color>
+			<red>0.8</red>
+			<green>0.80</green>
+			<blue>1.0</blue>
+		    </color>
+		</input>
+                <combo>
+		    <name>host</name>
+		    <layout>hbox</layout>
+		    <halign>left</halign>
+			<colspan>2</colspan>
+                        <pref-width>300</pref-width>
+                        <property>/sim/model/carrier_id/target</property>
+			<editable>false</editable>
+			 <properties>/sim/gui/dialogs/carrier/list</properties>
+                </combo>
+                <button>
+                    <legend>Select Carrier Name</legend>
+                    <default>true</default>
+                    <equal>true</equal>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+		    <binding>
+			<command>property-assign</command>
+			<property>/sim/model/carrier_id/linked</property>
+			<value>1</value>
+		    </binding>
+		    <binding>
+			<command>property-assign</command>
+			<property>/sim/carrier/found</property>
+			<value>0</value>
+		    </binding>
+		</button>
+        </group>
+    
+	<group>
+	    <layout>vbox</layout>
+	    <halign>center</halign>
+	    <button>
+		<legend>Close</legend>
+		<default>true</default>
+		<equal>true</equal>
+		<binding>
+		    <command>dialog-close</command>
+		</binding>
+	    </button>
+	</group>
+
+</PropertyList>

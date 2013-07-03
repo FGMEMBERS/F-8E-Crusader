@@ -2,11 +2,21 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
     <keyboard >
+
+            <key n="69">
+                <name>E</name>
+                <desc>Toggle Rendering Effect.</desc>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/sim/model/rendering/shader-effects</property>
+                </binding>
+            </key>
+
             <key n="1">
             <name>Ctrl-A</name>
             <desc>Toggle autopilot altitude lock.</desc>
@@ -33,6 +43,7 @@
                                     <property>/controls/electric/master-switch</property>
                             </binding>
             </key>
+
             <key n="123">
                     <name>{</name>
                     <desc>Stop Engine</desc>
@@ -46,6 +57,21 @@
                                 <value>0.0</value>
                             </binding>
             </key>
+
+            <key n="115">
+		    <name>s</name>
+		    <desc>Fire Starter on Selected Engine(s)</desc>
+			<binding>
+			<command>nasal</command>
+			<script>controls.startEngine(1)</script>
+			</binding>
+			<mod-up>
+			    <binding>
+				<command>nasal</command>
+				<script>controls.startEngine(1)</script>
+			    </binding>
+			</mod-up>
+	    </key>
 
 
   <!-- =================FCS=====================-->
@@ -98,7 +124,7 @@
 
 
    <!--============Misc============================-->
-            
+
             <key n="100">
             <name>d</name>
             <desc>Toggle Canopy</desc>
@@ -114,20 +140,35 @@
                     <name>C</name>
                     <desc>Catapult Launch Command.</desc>
                     <binding>
-                            <command>property-assign</command>
-                            <property>/fdm/jsbsim/systems/catapult/cat-launch-cmd</property>
-                            <value>1.0</value>
+                        <command>property-assign</command>
+                        <property>/fdm/jsbsim/systems/catapult_free/cat-launch-cmd</property>
+                        <value>1.0</value>
                     </binding>
                     <binding>
                         <command>property-assign</command>
-                        <property>/controls/engines/engine[0]/throttle</property>
+                        <property>controls/engines/engine[0]/throttle</property>
                         <value>1</value>
                     </binding>
-                            <binding>
-                            <command>property-assign</command>
-                            <property>/controls/gear/brake-parking</property>
-                            <value>0.0</value>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>controls/flight/elevator</property>
+                        <value>0</value>
                     </binding>
+		     <binding>
+                        <command>property-assign</command>
+                        <property>controls/flight/elevator-trim</property>
+                        <value>0</value>
+                    </binding>
+		    <binding>
+                        <command>property-assign</command>
+			<property>controls/gear/brake-parking</property>
+                        <value>0</value>
+                    </binding>
+                   <!-- <binding>
+                        <command>property-assign</command>
+                        <property>/fdm/jsbsim/systems/launchbar_free/lock-cmd</property>
+                        <value type="double">0</value>
+                    </binding>-->
             </key>
 
     <!-- =============launch-bar =================-->
@@ -136,29 +177,44 @@
                     <desc>engage holdback</desc>
                     <binding>
                         <command>property-assign</command>
-                        <property>/fdm/jsbsim/systems/launchbar/lock-cmd</property>
+                        <property>/fdm/jsbsim/systems/launchbar_free/lock-cmd</property>
                         <value type="double">1</value>
                     </binding>
                     <binding>
-                            <command>property-assign</command>
-                            <property>/controls/gear/brake-parking</property>
-                            <value>1</value>
-                    </binding>
-                    <binding>
                         <command>property-assign</command>
-                        <property>/controls/engines/engine[0]/throttle</property>
+                        <property>fdm/jsbsim/systems/catapult_free/cat-launch-cmd</property>
                         <value>0</value>
                     </binding>
                     <binding>
                         <command>property-assign</command>
-                        <property>/sim/model/taxi/linked</property>
+                        <property>controls/engines/engine[0]/throttle</property>
                         <value>0</value>
                     </binding>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>sim/model/taxi/linked</property>
+                        <value>0</value>
+                    </binding>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/fdm/jsbsim/systems/launchbar/store-timer</property>
+                        <value>1</value>
+                    </binding>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/fdm/jsbsim/systems/launchbar-locked-time-mem</property>
+                        <value>0</value>
+                    </binding>
+		    <binding>
+			<command>property-assign</command>
+			<property>fdm/jsbsim/gear/NWS/engaged</property>
+			<value>0</value>
+		    </binding>
                     <mod-up>
                         <binding>
                             <command>property-assign</command>
-                            <property>/fdm/jsbsim/systems/launchbar/lock-cmd</property>
-                            <value type="double">0</value>
+                            <property>/fdm/jsbsim/systems/launchbar/store-timer</property>
+                            <value>0</value>
                         </binding>
                      </mod-up>
             </key>
@@ -234,6 +290,11 @@
                         <property>/sim/model/mule/linked</property>
                     </binding>
                     <binding>
+                        <command>property-assign</command>
+                        <property>fdm/jsbsim/gear/NWS/engaged</property>
+                        <value>1</value>
+                    </binding>
+                    <binding>
                             <command>property-assign</command>
                             <property>/sim/model/mule/magnitude</property>
                             <value type="double">0</value>
@@ -248,22 +309,72 @@
                 </binding>
                 <binding>
                     <command>property-assign</command>
+                    <property>fdm/jsbsim/gear/NWS/engaged</property>
+                    <value>1</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
                     <property>/controls/gear/brake-parking</property>
                     <value>0</value>
                     </binding>
             </key>
-
-    <!--=========Carrier=====================-->
-            <key n="37">
-                    <name>%</name>
-                    <desc>Toggle carrier glide-path</desc>
-                    <binding>
-                            <command>property-toggle</command>
-                            <property>/ai/models/carrier/controls/glide-path</property>
-                    </binding>
-
+            <key n="110">
+                <name>n</name>
+                <desc>Nose Wheel Steering</desc>
+                <binding>
+                    <command>property-assign</command>
+                    <property>fdm/jsbsim/gear/NWS/engaged</property>
+                    <value>0</value>
+                </binding>
+            </key>
+            <key n="78">
+                <name>N</name>
+                <desc>Nose Wheel Steering</desc>
+                <binding>
+                    <command>property-assign</command>
+                    <property>fdm/jsbsim/gear/NWS/engaged</property>
+                    <value>1</value>
+                </binding>
+            </key>
+            <key n="117">
+                <name>u</name>
+                <desc>Manual Glide Slope Control </desc>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine/throttle</property>
+                    <value>0.44</value>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>controls/flight/elevator-trim</property>
+                    <value>-0.28</value>
+                </binding>
             </key>
 
+            <key n="105">
+                <name>i</name>
+                <desc>Auto Glide Slope Control</desc>
+               <binding>
+                    <command>property-assign</command>
+                    <property>controls/engines/engine/throttle</property>
+                    <value>0.40</value>
+                </binding>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>autopilot/switch-aoa</property>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <property>sim/aoa-indicator/alpha-rad</property>
+                    <!--<value>0.27227136</value>--> <!--7.6 deg + 8 deg -->
+		    <value>0.2565634</value><!--6.7 deg + 8 deg -->
+                </binding>
+                <!--<binding>
+                    <command>property-assign</command>
+                    <property>controls/flight/elevator-trim</property>
+                    <value>0</value>
+                </binding>-->
+            </key>
 
 	</keyboard>
 </PropertyList>

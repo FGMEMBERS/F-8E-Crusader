@@ -4,7 +4,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -15,19 +15,6 @@
 		<type>noshadow</type>
 		<object-name>HI</object-name>
 	</animation>
-
-	<model>
-		<name>Bezel</name>
-		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
-		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-
-
 
 
 	<animation include="Instrument-Light1.xml">
@@ -48,6 +35,7 @@
 
 	<animation include="Instrument-Light1.xml">
 		<object-name>Cadran</object-name>
+                <object-name>Fond</object-name>
 	</animation>
 
 	<animation include="Instrument-Light3.xml">

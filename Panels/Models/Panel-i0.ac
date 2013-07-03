@@ -1,14 +1,14 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.541 0.541 0.541  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
-MATERIAL "ac3dmat2" rgb 0.224 0.275 0.361  amb 0.145 0.18 0.137  emis 0 0 0  spec 0 0 0  shi 119  trans 0
-MATERIAL "ac3dmat13" rgb 0.431 0.439 0.431  amb 0.792 0.757 1  emis 0 0 0  spec 0.655 0.612 1  shi 105  trans 0
-MATERIAL "ac3dmat3" rgb 1 0.259 0  amb 0.2 0.2 0.2  emis 0.706 0.275 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 1 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
+MATERIAL "ac3dmat2" rgb 0.224 0.275 0.361  amb 0.224 0.275 0.361  emis 0 0 0  spec 0 0 0  shi 119  trans 0
+MATERIAL "ac3dmat13" rgb 0.431 0.439 0.431  amb 0.431 0.439 0.431  emis 0 0 0  spec 0.655 0.612 1  shi 105  trans 0
+MATERIAL "ac3dmat3" rgb 1 0.259 0  amb 1 0.259 0  emis 0.706 0.275 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 8
 OBJECT poly
@@ -48,7 +48,7 @@ kids 0
 OBJECT poly
 name "Rudder-Sec"
 loc -0.0231724 -0.0420506 0.287462
-texture "Jaune-noir.rgb"
+texture "Jaune-noir.png"
 crease 45.000000
 numvert 168
 0.0138851 -0.0361063 0.0127273
@@ -5260,7 +5260,7 @@ kids 0
 OBJECT poly
 name "Cde-Emgcy-Power"
 loc -0.0161112 0.0267543 0.410619
-texture "emergency-power.rgb"
+texture "emergency-power.png"
 crease 45.000000
 numvert 35
 -0.018456 -0.0135426 0.0016627
@@ -5721,7 +5721,7 @@ kids 0
 OBJECT poly
 name "Panel-Base"
 loc 0.489353 -0.15979 -2.24918e-11
-texture "panel-fond.rgb"
+texture "panel-fond.png"
 crease 45.000000
 numvert 36
 -0.517557 0.193648 -0.37183

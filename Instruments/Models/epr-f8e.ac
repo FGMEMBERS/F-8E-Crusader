@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.784 0.812 0.835  emis 0 0 0  spec 0.784 0.784 0.8  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 6
 OBJECT group
@@ -9,7 +9,7 @@ kids 1
 OBJECT poly
 name "Aiguille"
 loc 2.544e-05 0.00860881 -0.00554961
-texture "epr.rgb"
+texture "epr.png"
 crease 45.000000
 numvert 5
 0 0.00901713 -0.00328196
@@ -35,7 +35,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc 0.00593039 0 0
-texture "epr.rgb"
+texture "epr.png"
 crease 45.000000
 numvert 30
 0 -0.00797843 0.0297759
@@ -69,7 +69,7 @@ numvert 30
 0 -0.00692486 6.35664e-11
 0 -0.00692486 0.00728852
 numsurf 6
-SURF 0x20
+SURF 0x0
 mat 0
 refs 7
 17 0.5 1
@@ -79,7 +79,7 @@ refs 7
 21 0.0669873 0.75
 29 0.381781 0.387679
 28 0.5 0.387679
-SURF 0x20
+SURF 0x0
 mat 0
 refs 7
 13 0.933013 0.75
@@ -89,7 +89,7 @@ refs 7
 17 0.5 1
 28 0.5 0.387679
 27 0.618219 0.387679
-SURF 0x20
+SURF 0x0
 mat 0
 refs 7
 29 0.381781 0.387679
@@ -99,7 +99,7 @@ refs 7
 0 0.0170371 0.37059
 1 0.0669873 0.25
 24 0.381781 0.278994
-SURF 0x20
+SURF 0x0
 mat 0
 refs 7
 9 0.933013 0.25
@@ -109,7 +109,7 @@ refs 7
 13 0.933013 0.75
 27 0.618219 0.387679
 26 0.618219 0.278994
-SURF 0x20
+SURF 0x0
 mat 0
 refs 7
 1 0.0669873 0.25
@@ -119,7 +119,7 @@ refs 7
 5 0.5 0
 25 0.5 0.278994
 24 0.381781 0.278994
-SURF 0x20
+SURF 0x0
 mat 0
 refs 7
 5 0.5 0
@@ -133,7 +133,7 @@ kids 0
 OBJECT poly
 name "Index-n-xx"
 loc 0.00533735 0 0
-texture "digit-u.rgb"
+texture "digit-u.png"
 crease 45.000000
 numvert 4
 0 -0.0133481 0.00252793
@@ -141,7 +141,7 @@ numvert 4
 0 -0.00725575 0.00686902
 0 -0.00725575 0.00252793
 numsurf 1
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 3 1.026 0.882877
@@ -152,7 +152,7 @@ kids 0
 OBJECT poly
 name "Index-x-nx"
 loc 0.00533735 0 -0.00467079
-texture "digit-u.rgb"
+texture "digit-u.png"
 crease 45.000000
 numvert 4
 0 -0.00725575 0.00252793
@@ -160,7 +160,7 @@ numvert 4
 0 -0.0133481 0.00686902
 0 -0.0133481 0.00252793
 numsurf 1
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 0 0.988785 0.783677
@@ -171,7 +171,7 @@ kids 0
 OBJECT poly
 name "Index-x-xn"
 loc 0.00533735 0 -0.00945147
-texture "digit-u.rgb"
+texture "digit-u.png"
 crease 45.000000
 numvert 4
 0 -0.0133481 0.00252793
@@ -179,7 +179,7 @@ numvert 4
 0 -0.00725575 0.00686902
 0 -0.00725575 0.00252793
 numsurf 1
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 3 1.00237 0.0866952
@@ -190,7 +190,7 @@ kids 0
 OBJECT poly
 name "Index"
 loc 0.00652343 -0.00097014 0.0278069
-texture "epr.rgb"
+texture "epr.png"
 crease 45.000000
 numvert 6
 -5.54137e-08 -0.00258754 0.00293129
@@ -200,14 +200,14 @@ numvert 6
 0 0.0025876 0.0018931
 0 0 -0.0018931
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 4 0.0413368 0.912194
 1 0.0413368 0.912194
 0 0.0413368 0.912194
 3 0.0413368 0.912194
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 5 0.100913 0.97177

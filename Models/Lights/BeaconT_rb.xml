@@ -1,0 +1,73 @@
+<PropertyList>
+
+
+    <!--
+    Usable with FlightGear
+    Copyright License:  GPLv2
+    -->
+    <!--                   Auteur :      David   GRTHTeam                      GPLv2 COPYRIGHT-->
+	<path>remb-beaconT.ac</path>
+
+
+
+
+        <animation>
+            <type>light</type>
+            <light-type>point</light-type>
+            <name>Beacon_Light</name>
+            <object-name>Beacon-volume</object-name>
+            <position>
+                <x>-0.858337</x>
+                <y></y>
+                <z>1.03153</z>
+            </position>
+            <ambient>
+                <r>0.0</r>
+                <g>0.0</g>
+                <b>0.0</b>
+                <a>1.0</a>
+            </ambient>
+            <diffuse>
+                <r>1.0</r>
+                <g>0.2</g>
+                <b>0.2</b>
+                <a>1.0</a>
+            </diffuse>
+            <specular>
+                <r>0.0</r>
+                <g>0.0</g>
+                <b>0.0</b>
+                <a>1.0</a>
+            </specular>
+            <attenuation>
+                <c>0.10</c>
+                <l>0.000</l>
+                <q>2.0</q>
+            </attenuation>
+            <exponent>4</exponent>
+            <near-m>0.1</near-m>
+            <far-m>3</far-m>
+            <dim-factor>
+                <property>sim/model/f8e/nav-lights</property>
+            </dim-factor>
+        </animation>
+
+
+        <animation>
+            <type>select</type>
+            <object-name>Beacon_Light</object-name>
+            <condition>
+                <and>
+                    <property>sim/multiplay/generic/float[0]</property>
+                    <property>fdm/jsbsim/systems/lights/blinker2_on</property>
+                    <greater-than>
+                        <property>systems/electrical/outputs/beacon</property>
+                        <value>27</value>
+                    </greater-than>
+                </and>
+            </condition>
+        </animation>
+
+        <!--att= 1/(c+ld+qd*d)-->
+
+</PropertyList>

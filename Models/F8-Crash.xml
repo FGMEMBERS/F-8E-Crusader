@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<!--
+    Dedicated only to FlightGear
+    Gerard Robin
+    License:  GPLv2
+-->
+
+
+
+<PropertyList>
+
+	<path>plus-jamais.ac</path>
+	<texture-path>Textures</texture-path>
+
+
+</PropertyList>

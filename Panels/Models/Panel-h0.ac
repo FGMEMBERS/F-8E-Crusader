@@ -1,17 +1,17 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat0" rgb 0.38 0.49 0.639  amb 1 1 1  emis 0 0 0  spec 0.467 0.475 0.482  shi 29  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.541 0.541 0.541  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
-MATERIAL "ac3dmat2" rgb 0.224 0.275 0.361  amb 0.145 0.18 0.137  emis 0 0 0  spec 0 0 0  shi 119  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0.38 0.49 0.639  amb 0.38 0.49 0.639  emis 0 0 0  spec 0.467 0.475 0.482  shi 29  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
+MATERIAL "ac3dmat2" rgb 0.224 0.275 0.361  amb 0.224 0.275 0.361  emis 0 0 0  spec 0 0 0  shi 119  trans 0
 OBJECT world
 kids 15
 OBJECT poly
 name "Cde-FreinSec"
 loc -0.262211 0.0243718 0.434653
-texture "Jaune-noir.rgb"
+texture "Jaune-noir.png"
 crease 45.000000
 numvert 160
 0.00834018 0.0218652 -0.0075703
@@ -1391,7 +1391,7 @@ kids 0
 OBJECT poly
 name "Cde-Wings"
 loc -0.00920476 0.0337195 0.465523
-texture "btextu99pt.rgb"
+texture "btextu99pt.png"
 crease 45.000000
 numvert 176
 -0.0724413 0.0220583 -0.00126934
@@ -2640,7 +2640,7 @@ kids 0
 OBJECT poly
 name "Cde-Wings-Verrou"
 loc 0.0856503 0.0753597 0.482451
-texture "btextu99pt.rgb"
+texture "btextu99pt.png"
 crease 45.000000
 numvert 42
 -0.00265354 0.0660789 -0.00204208
@@ -3002,7 +3002,7 @@ kids 0
 OBJECT poly
 name "Panel-Base-AR"
 loc 0.383517 0.0677605 0.42873
-texture "panel-fond.rgb"
+texture "panel-fond.png"
 crease 45.000000
 numvert 15
 -0.0943452 -0.0665165 -0.730457
@@ -3074,7 +3074,7 @@ kids 0
 OBJECT poly
 name "rect"
 loc 0.000273533 0.0116951 0
-texture "panel-fond.rgb"
+texture "panel-fond.png"
 crease 45.000000
 numvert 6
 -0.116546 -0.0180614 0.447496
@@ -3102,7 +3102,7 @@ kids 0
 OBJECT poly
 name "Wing-Incidence"
 loc 0.0378813 0.0201305 0.469838
-texture "Jaune-noir.rgb"
+texture "Jaune-noir.png"
 crease 45.000000
 numvert 4
 -0.0375631 0.014445 -0.0219298
@@ -3121,7 +3121,7 @@ kids 0
 OBJECT poly
 name "Cde-WingsBase"
 loc 0.0378813 0.0201305 0.469838
-texture "panel-fond.rgb"
+texture "panel-fond.png"
 crease 45.000000
 numvert 42
 0.048581 -0.00110745 0.00138107
@@ -3350,7 +3350,7 @@ loc 0.0980587 0.0520129 -0.4684
 kids 2
 OBJECT poly
 name "Verrou-WingFld"
-texture "Jaune-noir.rgb"
+texture "Jaune-noir.png"
 crease 45.000000
 numvert 57
 0.00601884 0.0435927 -0.0147874
@@ -3970,7 +3970,7 @@ loc -0.0171889 0.0144227 -0.468563
 kids 2
 OBJECT poly
 name "Manette-WingFld"
-texture "Jaune-noir.rgb"
+texture "Jaune-noir.png"
 crease 45.000000
 numvert 12
 -0.0311205 0.0209954 -0.0100451
@@ -5348,7 +5348,7 @@ kids 0
 OBJECT poly
 name "Trh-AB"
 loc -0.167278 0.0284395 0.367925
-texture "panel-fond.rgb"
+texture "panel-fond.png"
 crease 45.000000
 numvert 68
 -0.0127277 0.00168609 0.0213602
@@ -6089,7 +6089,7 @@ kids 0
 OBJECT poly
 name "Panel-Base"
 loc -0.874303 -0.0434051 -0.175793
-texture "panel-fond.rgb"
+texture "panel-fond.png"
 crease 45.000000
 numvert 47
 0.162422 0.053424 -0.442509
@@ -6403,7 +6403,7 @@ kids 0
 OBJECT poly
 name "Panel-Base-CoPi"
 loc 0.383517 0.0677605 0.42873
-texture "panel-fond.rgb"
+texture "panel-fond.png"
 crease 45.000000
 numvert 4
 -0.106922 0.0665165 -0.127003

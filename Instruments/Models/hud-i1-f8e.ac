@@ -1,6 +1,6 @@
 AC3Db
-MATERIAL "ac3dmat6" rgb 0.216 1 0.231  amb 1 1 1  emis 0.114 0.541 0.078  spec 1 1 1  shi 128  trans 0
-MATERIAL "ac3dmat1" rgb 0.231 0.886 0.208  amb 0 0.957 0  emis 0.122 1 0.114  spec 0 1 0  shi 0  trans 0.165
+MATERIAL "ac3dmat6" rgb 0.216 1 0.231  amb 0.216 1 0.231  emis 0.114 0.541 0.078  spec 1 1 1  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 0.231 0.886 0.208  amb 0.231 0.886 0.208  emis 0.122 1 0.114  spec 0 1 0  shi 0  trans 0.165
 OBJECT world
 kids 1
 OBJECT group
@@ -10,7 +10,7 @@ kids 9
 OBJECT poly
 name "alttapeindex2"
 loc -0.00105617 0.0844937 -0.00767223
-texture "hud-number.rgb"
+texture "hud-number.png"
 crease 45.000000
 numvert 14
 0 0 0.00482432
@@ -74,7 +74,7 @@ kids 0
 OBJECT poly
 name "alttapeindex1"
 loc -0.00105617 0.0844937 -0.00767223
-texture "hud-number.rgb"
+texture "hud-number.png"
 crease 45.000000
 numvert 14
 0 0 0.00482432
@@ -138,7 +138,7 @@ kids 0
 OBJECT poly
 name "alttape"
 loc -0.00105617 0.0844937 -0.0198404
-texture "hud-number.rgb"
+texture "hud-number.png"
 crease 45.000000
 numvert 14
 0 0 0.00873639
@@ -202,7 +202,7 @@ kids 0
 OBJECT poly
 name "asitape2"
 loc -0.00105617 0.0844937 0.106122
-texture "hud-number.rgb"
+texture "hud-number.png"
 crease 45.000000
 numvert 14
 0 0 0.0134248
@@ -266,7 +266,7 @@ kids 0
 OBJECT poly
 name "asitape1"
 loc -0.00105617 0.0844937 0.106122
-texture "hud-number.rgb"
+texture "hud-number.png"
 crease 45.000000
 numvert 14
 0 0 0.0134248
@@ -330,7 +330,7 @@ kids 0
 OBJECT poly
 name "ILSVLine"
 loc 0.00180493 -0.591704 0.0420552
-texture "hud-ladder.rgb"
+texture "hud-ladder.png"
 crease 45.000000
 numvert 6
 0 0.676383 0.00252312
@@ -358,7 +358,7 @@ kids 0
 OBJECT poly
 name "ILSHLine"
 loc 0.00260493 0.0828983 -0.257633
-texture "hud-ladder.rgb"
+texture "hud-ladder.png"
 crease 45.000000
 numvert 6
 0 -0.000999996 0.253211
@@ -386,7 +386,7 @@ kids 0
 OBJECT poly
 name "Avion"
 loc 0.00100493 -0.000754446 -0.00726843
-texture "hud-W.rgb"
+texture "hud-W.png"
 crease 45.000000
 numvert 6
 0 0.0838364 0.0378468
@@ -414,7 +414,7 @@ kids 0
 OBJECT poly
 name "attitude"
 loc -0.000133964 0.0945554 0.045786
-texture "hud-ladder.rgb"
+texture "hud-ladder.png"
 crease 45.000000
 numvert 16
 0 -0.0586955 0.0418542

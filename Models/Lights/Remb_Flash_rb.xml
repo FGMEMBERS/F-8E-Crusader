@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>light.ac</path>
+  <nopreview/>
+
+   <animation>
+    <type>light</type>
+    <light-type>point</light-type>
+    <object-name>light</object-name>
+    <position>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </position>
+    <ambient>
+      <r>  0.0 </r>
+      <g>  0.0 </g>
+      <b>  0.0 </b>
+      <a>  1.0 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.8 </r>
+      <g>  0.8 </g>
+      <b>  0.8 </b>
+      <a>  1.0 </a>
+    </diffuse>
+    <specular>
+      <r>  0.5 </r>
+      <g>  0.5 </g>
+      <b>  0.5 </b>
+      <a>  1.0 </a>
+    </specular>
+    <attenuation>
+      <c>  1.0 </c>
+      <l>  0.2 </l>
+      <q>  1.0 </q>
+    </attenuation>
+    <near-m> 0.0  </near-m>
+    <far-m>  8.0  </far-m>
+  </animation>
+
+
+  <animation>
+      <type>select</type>
+      <object-name>light</object-name>
+      <condition>
+          <and>
+              <greater-than>
+                  <property>systems/electrical/outputs/beacon</property>
+                  <value>27</value>
+              </greater-than>
+              <not>
+                  <property>instrumentation/lights/beacon-on</property>
+              </not>
+          </and>
+      </condition>
+  </animation>
+
+</PropertyList>

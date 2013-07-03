@@ -1,11 +1,11 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT poly
 name "module-DF5"
 loc 3.72529e-09 0 0.00298941
-texture "module-2Pouces.rgb"
+texture "module-2Pouces.png"
 crease 45.000000
 numvert 4
 -0.0288966 0 -0.0206163

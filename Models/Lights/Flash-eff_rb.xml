@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of grthteam
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>light_flash-eff.ac</path>
+
+        <effect>
+            <inherits-from>Effects/model-transparent</inherits-from>
+            <object-name>phare</object-name>
+        </effect>
+
+<!--reminder: the object must be drawn at the correct position   parent model related-->
+        <animation>
+            <type>flash</type>
+            <object-name>phare</object-name>
+            <center>
+                <x-m>1.03514</x-m>
+                <y-m>0.983786</y-m>
+                <z-m>-0.691492</z-m>
+            </center>
+            <axis>
+                <x>-1</x>
+                <y>0</y>
+                <z>-0.15</z>
+            </axis>
+            <power>1</power>
+            <factor>1</factor>
+            <offset>0</offset>
+            <two-sides type="bool">false</two-sides>
+            <min>0.1</min>
+            <max>1</max>
+        </animation>
+
+
+</PropertyList>

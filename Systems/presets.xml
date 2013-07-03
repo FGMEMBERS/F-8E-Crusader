@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
 <PropertyList>
-	<preset>
+    <sim>
+        <model>
+            <Zephyr>
+                <navaid>
 		<presets n="0" >
 			<selected>
 				<adf-freq-khz type="float">328</adf-freq-khz>
@@ -286,5 +294,8 @@
 				<comm-freq-mhz type="float">0</comm-freq-mhz>
 			</standby>
 		</presets>
-	</preset>
+        </navaid>
+        </Zephyr>
+        </model>
+        </sim>
 </PropertyList>

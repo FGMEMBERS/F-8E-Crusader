@@ -2,8 +2,8 @@
 
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -38,6 +38,26 @@
 		<object-name>noshadow.AISlip-I</object-name>
 		<object-name>noshadow.AIAvion</object-name>
 	</animation>
+
+        <model>
+            <name>Light</name>
+            <path>Aircraft/F-8E-Crusader/Instruments/Light-AI-f8e.xml</path>
+            <offsets>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+                <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <animation>
+            <type>select</type>
+            <object-name>Light</object-name>
+            <condition>
+                <or><property>sim/rendering/rembrandt</property> <property>sim/rendering/rembrandt/enabled</property> </or>
+            </condition>
+        </animation>
+
 
 	<animation>
 		<type>rotate</type>

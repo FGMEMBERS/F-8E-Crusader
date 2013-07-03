@@ -2,9 +2,9 @@
 
 
 <!--
-    Gerard Robin Copyright License:  GPL
+    Gerard Robin Copyright License:  GPLv2
     Usable with FlightGear
-    
+
 -->
 
 
@@ -14,8 +14,42 @@
  <texture-path>Textures</texture-path>
 
 
-	
 
+ <animation>
+     <type>rotate</type>
+     <object-name>tracteur</object-name>
+     <object-name>barre-traction</object-name>
+     <property>fdm/jsbsim/fcs/steer-pos-deg</property>
+     <factor>-1.2</factor>
+     <center>
+         <x-m>-3</x-m>
+         <y-m>0</y-m>
+         <z-m>0</z-m>
+     </center>
+     <axis>
+         <x>0</x>
+         <y>0</y>
+         <z>1</z>
+     </axis>
+    </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>barre-traction</object-name>
+        <property>fdm/jsbsim/fcs/steer-pos-deg</property>
+        <factor>0.5</factor>
+        <center>
+            <x-m>-1</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation>
 
 
 

@@ -1,13 +1,13 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 79  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.541 0.541 0.541  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.38 0.38 0.38  shi 58  trans 0
 OBJECT world
 kids 2
 OBJECT poly
 name "Pump-Handle"
 loc 0.00458516 -0.00615276 0.0192617
-texture "ondul.rgb"
+texture "ondul.png"
 crease 45.000000
 numvert 66
 0.00276433 -0.0208016 0.00955671
@@ -667,7 +667,7 @@ loc -0.00341502 -0.0020504 0.000296146
 kids 1
 OBJECT poly
 name "Pump-Marquage"
-texture "fuelpump.rgb"
+texture "fuelpump.png"
 crease 45.000000
 numvert 14
 0.00278719 0.018487 -0.015875

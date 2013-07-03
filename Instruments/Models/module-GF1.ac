@@ -1,9 +1,9 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 9
 OBJECT group
@@ -78,7 +78,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.0546119 0.00140146 -0.000247459
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 106
 0.0378086 0.00340704 0.0021688
@@ -764,7 +764,7 @@ kids 0
 OBJECT poly
 name "Module-Base"
 loc -0.00253626 -0.000211978 -0.0186192
-texture "moduleGF.rgb"
+texture "moduleGF.png"
 crease 45.000000
 numvert 25
 0.002536 0.0258592 0.0229916
@@ -996,7 +996,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.086087 0.00140146 -0.000247459
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 106
 0.0378086 -0.00501069 -0.000408541
@@ -1751,7 +1751,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.116658 0.00140146 -0.000247459
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 106
 0.0378086 0.00340704 0.0021688
@@ -2441,7 +2441,7 @@ kids 3
 OBJECT poly
 name "Interrupteur"
 loc -0.0137482 0.0013725 -0.000502502
-texture "moduleGF.rgb"
+texture "moduleGF.png"
 crease 45.000000
 numvert 80
 0.0555196 0.000884422 -0.0318054
@@ -3061,7 +3061,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.00450164 0.00142133 -0.000980477
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 106
 0.0466772 -0.00618603 -0.000504371
@@ -3751,7 +3751,7 @@ kids 1
 OBJECT poly
 name "Interrupteur"
 loc -0.0620607 0.00137264 6.32031e-05
-texture "moduleGF.rgb"
+texture "moduleGF.png"
 crease 45.000000
 numvert 80
 0.0457402 0.00142178 0.000841331
@@ -4310,7 +4310,7 @@ kids 1
 OBJECT poly
 name "Interrupteur"
 loc -0.0935358 0.00137264 6.32031e-05
-texture "moduleGF.rgb"
+texture "moduleGF.png"
 crease 45.000000
 numvert 80
 0.0449708 0.000716382 -0.0257624
@@ -4869,7 +4869,7 @@ kids 1
 OBJECT poly
 name "Interrupteur"
 loc -0.124107 0.00137264 6.32031e-05
-texture "moduleGF.rgb"
+texture "moduleGF.png"
 crease 45.000000
 numvert 80
 0.0457402 0.00142178 0.000841331

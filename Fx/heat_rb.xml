@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!--
+    Usable with FlightGear
+    <property>gerard robin
+    Copyright License:  GPLv2
+-->
+   <!--       LING-TEMCO-VOUGHT   F-8E Crusader      Auteur :      Gerard ROBIN               GPLv2        COPYRIGHT-->
+
+
+
+
+
+
+ <path>heat1.osgt</path>
+
+
+ <offsets>
+    <x-m> 0 </x-m>
+   <!-- <y-m> -0.12 </y-m>
+    <z-m> -0.10 </z-m>-->
+    <!--<pitch-deg>90</pitch-deg>-->
+ </offsets>
+
+
+ <effect>
+     <inherits-from>Effects/model-transparent</inherits-from>
+     <object-name>fluxturbine2</object-name>
+     <object-name>fluxturbine</object-name>
+</effect>
+
+ <!--
+geode name
+     <object-name>fluxturbine</object-name>-->
+<!--nuage idle-->
+ <animation>
+     <type>select</type>
+     <object-name>fluxturbine2</object-name>
+     <condition>
+         <and>
+             <equals>
+                 <property>sim/model/f8e/smoke</property>
+                 <value>99999</value>
+             </equals>
+             <equals>
+                 <property>sim/multiplay/generic/float[5]</property>
+                 <value>1</value>
+             </equals>
+             <less-than>
+                 <property>sim/multiplay/generic/float[6]</property>
+                 <value>62</value>
+            </less-than>
+            <less-than>
+                <property>fdm/jsbsim/velocities/u-fps</property>
+                <value>50</value>
+            </less-than>
+        </and>
+     </condition>
+</animation>
+
+<!--flux post-combustion-->
+<animation>
+    <type>select</type>
+    <object-name>fluxturbine</object-name>
+    <condition>
+        <and>
+        <equals>
+            <property>sim/multiplay/generic/float[5]</property>
+            <value>1</value>
+        </equals>
+        <equals>
+            <property>sim/multiplay/generic/float[4]</property>
+            <value>1</value>
+        </equals>
+        </and>
+    </condition>
+</animation>
+
+
+
+
+
+
+ 
+
+</PropertyList>

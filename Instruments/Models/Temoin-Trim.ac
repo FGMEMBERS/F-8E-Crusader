@@ -5,7 +5,7 @@ kids 2
 OBJECT poly
 name "Temoin-Aileron"
 loc 0.0043583 0.000148449 0.000218765
-texture "Temoin-Trim.rgb"
+texture "Temoin-Trim.png"
 crease 45.000000
 numvert 4
 0 0.0089465 0.0225202
@@ -24,7 +24,7 @@ kids 0
 OBJECT poly
 name "Temoin-Rudder"
 loc 0.0043583 0.000148449 0.000218765
-texture "Temoin-Trim.rgb"
+texture "Temoin-Trim.png"
 crease 45.000000
 numvert 4
 0 -0.0089465 -0.0225202

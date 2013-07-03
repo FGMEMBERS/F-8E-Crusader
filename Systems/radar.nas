@@ -1,4 +1,4 @@
-# $Id$
+# $Id: radar.nas,v 1.4 2008/11/15 23:50:38 gerard Exp $
 # By G ROBIN  , 
 # # this is an old and tricky fashion nasal script which wants to be rewriten or to be replaced by some generic ones
 

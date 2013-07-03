@@ -5,7 +5,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -16,18 +16,7 @@
 		<type>noshadow</type>
 		<object-name>PAR</object-name>
 	</animation>
-
-	<model>
-		<name>Bezel</name>
-		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
-		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
-
+	
 	<model>
 		<name>Bouton</name>
 		<path>Aircraft/F-8E-Crusader/Instruments/Bouton-f8e.xml</path>

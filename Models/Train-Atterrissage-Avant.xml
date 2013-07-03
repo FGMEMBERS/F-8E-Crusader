@@ -2,32 +2,26 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
 <PropertyList>
 
 	<path>train-avant-f8e.ac</path>
 
-	<!--NOTE     RESOLUTION  DEFINITION      -->
-	<!--according to your needs you may choose -->
-	<!-- high resolution  (Textures-hires), or medium resolution (Textures-medres)-->
-	<!-- to do it,  comment out and uncomment out the corresponding following lines-->
 
-
-	<!-- <texture-path>Textures-hires/texture12F</texture-path>-->
-          <texture-path>Textures-medres/texture12F</texture-path>
+          <texture-path>Textures-hires/texture12F</texture-path>
 
 	<!--<animation>
 		<type>noshadow</type>
 		<object-name></object-name>
 	</animation>-->
-        
+
         <!-- MP Animation :
              <property>sim/multiplay/generic/float[0]</property>
              instead of
              <property>surface-positions/gear-pos-norm</property>-->
-    
+
 
 <!--  *************FRONT GEAR******************TRAIN AVANT ****************************-->
 
@@ -271,8 +265,8 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>gear/gear[0]/steering-norm</property>
-		<factor>-2</factor>
+		<property>fdm/jsbsim/fcs/steer-pos-deg</property>
+		<factor>-1</factor>
 		<center>
 			<x-m>-3.86</x-m>
 			<y-m>0.0</y-m>
@@ -287,9 +281,9 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>gear/gear[0]/steering-norm</property>
+		<property>fdm/jsbsim/fcs/steer-pos-deg</property>
 		<offset-deg>0</offset-deg>
-		<factor>-2</factor>
+		<factor>-1</factor>
 		<center>
 			<x-m>-3.86</x-m>
 			<y-m>0.0</y-m>
@@ -305,9 +299,9 @@
 		<type>rotate</type>
 		<object-name>AVTrain-Bielle</object-name>
 		<object-name>AVTrain-JambeBase</object-name>
-		<property>gear/gear[0]/steering-norm</property>
+		<property>fdm/jsbsim/fcs/steer-pos-deg</property>
 		<offset-deg>0</offset-deg>
-		<factor>-2</factor>
+		<factor>-1</factor>
 		<center>
 			<x-m>-3.86</x-m>
 			<y-m>0.0</y-m>
@@ -322,9 +316,9 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>AVTrain-JambeMobile</object-name>
-		<property>gear/gear[0]/steering-norm</property>
+		<property>fdm/jsbsim/fcs/steer-pos-deg</property>
 		<offset-deg>0</offset-deg>
-		<factor>-2</factor>
+		<factor>-1</factor>
 		<center>
 			<x-m>-3.86</x-m>
 			<y-m>0.0</y-m>
@@ -342,167 +336,36 @@
 	<animation>
 		<type>translate</type>
 		<object-name>AVTrain-JambeMobile</object-name>
-		<property>position/altitude-agl-ft</property>
+                <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
 		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-0.04</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-0.08</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-0.08</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>AVTrain-Fourche</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>11</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>24</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>24</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>-3.86</x-m>
-			<y-m>0.0</y-m>
-			<z-m>-1.65183</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>AVTrain-Roue</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>11</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>24</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>24</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>-3.86</x-m>
-			<y-m>0.0</y-m>
-			<z-m>-1.65183</z-m>
-		</center>
-		<axis>
-			<x>0</x>
-			<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>translate</type>
-		<object-name>AVTrain-Fourche</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-0.04</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-0.08</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-0.08</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x>0</x>
-			<y>0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>translate</type>
-		<object-name>AVTrain-Roue</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-0.04</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-0.08</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-0.08</dep>
-			</entry>
+                    <entry>
+                        <ind>3</ind>
+                        <dep>0.2</dep>
+                    </entry>
+                    <entry>
+                        <ind>1.8</ind>
+                        <dep>0.200</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.9</ind>
+                        <dep>0.128</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.5</ind>
+                        <dep>0.086</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.2407</ind>
+                        <dep>0.040</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.071114</ind>
+                        <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.</ind>
+                        <dep>-0.01</dep>
+                    </entry>
 		</interpolation>
 		<axis>
 			<x>0</x>
@@ -511,49 +374,257 @@
 		</axis>
 	</animation>
 
-	<!--                Spring  Compression                Fonction     Compression                    -->
-	<!-- base AGL 4.8857-->
+        <animation>
+            <type>translate</type>
+            <object-name>AVTrain-Fourche</object-name>
+            <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
+            <interpolation>
+                <entry>
+                    <ind>3</ind>
+                    <dep>0.2</dep>
+                </entry>
+                <entry>
+                    <ind>1.8</ind>
+                    <dep>0.200</dep>
+                </entry>
+                <entry>
+                    <ind>0.9</ind>
+                    <dep>0.128</dep>
+                </entry>
+                <entry>
+                    <ind>0.5</ind>
+                    <dep>0.086</dep>
+                </entry>
+                <entry>
+                    <ind>0.2407</ind>
+                    <dep>0.040</dep>
+                </entry>
+                <entry>
+                    <ind>0.071114</ind>
+                    <dep>0.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.</ind>
+                    <dep>-0.01</dep>
+                </entry>
+            </interpolation>
+            <axis>
+                <x>0</x>
+                <y>0</y>
+                <z>1</z>
+            </axis>
+        </animation>
+
+        <animation>
+            <type>translate</type>
+            <object-name>AVTrain-Roue</object-name>
+            <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
+            <interpolation>
+                <entry>
+                    <ind>3</ind>
+                    <dep>0.2</dep>
+                </entry>
+                <entry>
+                    <ind>1.8</ind>
+                    <dep>0.200</dep>
+                </entry>
+                <entry>
+                    <ind>0.9</ind>
+                    <dep>0.128</dep>
+                </entry>
+                <entry>
+                    <ind>0.5</ind>
+                    <dep>0.086</dep>
+                </entry>
+                <entry>
+                    <ind>0.2407</ind>
+                    <dep>0.040</dep>
+                </entry>
+                <entry>
+                    <ind>0.071114</ind>
+                    <dep>0.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.</ind>
+                    <dep>-0.01</dep>
+                </entry>
+            </interpolation>
+            <axis>
+                <x>0</x>
+                <y>0</y>
+                <z>1</z>
+            </axis>
+	</animation>
+
+        <animation>
+            <type>translate</type>
+            <object-name>AVTrain-Bielle</object-name>
+            <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
+            <interpolation>
+                <entry>
+                    <ind>3</ind>
+                    <dep>0.2</dep>
+                </entry>
+                <entry>
+                    <ind>1.8</ind>
+                    <dep>0.200</dep>
+                </entry>
+                <entry>
+                    <ind>0.9</ind>
+                    <dep>0.128</dep>
+                </entry>
+                <entry>
+                    <ind>0.5</ind>
+                    <dep>0.086</dep>
+                </entry>
+                <entry>
+                    <ind>0.2407</ind>
+                    <dep>0.040</dep>
+                </entry>
+                <entry>
+                    <ind>0.071114</ind>
+                    <dep>0.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.</ind>
+                    <dep>-0.01</dep>
+                </entry>
+            </interpolation>
+            <axis>
+                <x>0</x>
+                <y>0</y>
+                <z>1</z>
+            </axis>
+	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>AVTrain-Bielle</object-name>
+            <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
+            <interpolation>
+                <entry>
+                    <ind>3</ind>
+                    <dep>-40</dep>
+                </entry>
+                <entry>
+                    <ind>1.8</ind>
+                    <dep>-40</dep>
+                </entry>
+                <entry>
+                    <ind>0.9</ind>
+                    <dep>-20</dep>
+                </entry>
+                <entry>
+                    <ind>0.5</ind>
+                    <dep>-12</dep>
+                </entry>
+                <entry>
+                    <ind>0.2407</ind>
+                    <dep>-5.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.071114</ind>
+                    <dep>0.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.</ind>
+                    <dep>8</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>-3.86444</x-m>
+                <y-m>0.0</y-m>
+                <z-m>-1.65183</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>AVTrain-Bielle</object-name>
+            <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
+            <interpolation>
+                <entry>
+                    <ind>3</ind>
+                    <dep>-85</dep>
+                </entry>
+                <entry>
+                    <ind>1.8</ind>
+                    <dep>-76</dep>
+                </entry>
+                <entry>
+                    <ind>0.9</ind>
+                    <dep>-46</dep>
+                </entry>
+                <entry>
+                    <ind>0.5</ind>
+                    <dep>-30</dep>
+                </entry>
+                <entry>
+                    <ind>0.2407</ind>
+                    <dep>-16.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.071114</ind>
+                    <dep>0.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.</ind>
+                    <dep>8</dep>
+                </entry>
+		</interpolation>
+            <center>
+                <x-m>-4.0543</x-m>
+                <y-m>0.0</y-m>
+                <z-m>-1.53717</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>-1</y>
+                <z>0</z>
+            </axis>
+	</animation>
 
 	<animation>
-		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>6.5</value>
-				</less-than>
-				<equals>
-					<property>controls/gear/gear-down</property>
-					<value type="double">1.0</value>
-				</equals>
-			</and>
-		</condition>
 		<type>rotate</type>
 		<object-name>AVTrain-Fourche</object-name>
-		<property>orientation/pitch-deg</property>
+                <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
 		<interpolation>
-			<entry>
-				<ind>-8</ind>
-				<dep>-50</dep>
+                        <entry>
+                            <ind>3</ind>
+                            <dep>-40</dep>
+			</entry>
+                        <entry>
+                            <ind>1.8</ind>
+                            <dep>-40</dep>
+			</entry>
+                        <entry>
+                            <ind>0.9</ind>
+                            <dep>-20</dep>
+			</entry>
+                        <entry>
+                            <ind>0.5</ind>
+                            <dep>-12</dep>
 			</entry>
 			<entry>
-				<ind>1.3</ind>
-				<dep>-25</dep>
+                            <ind>0.2407</ind>
+				<dep>-5.0</dep>
+			</entry>
+                        <entry>
+                            <ind>0.071114</ind>
+                            <dep>0.0</dep>
 			</entry>
 			<entry>
-				<ind>2.5</ind>
-				<dep>-13</dep>
-			</entry>
-			<entry>
-				<ind>3.9</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>80</ind>
-				<dep>2</dep>
+                            <ind>0.</ind>
+				<dep>8</dep>
 			</entry>
 		</interpolation>
 		<center>
-			<x-m>-3.86</x-m>
+                    <x-m>-3.86444</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.65183</z-m>
 		</center>
@@ -563,46 +634,43 @@
 			<z>0</z>
 		</axis>
 	</animation>
+
 	<animation>
-		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>6.5</value>
-				</less-than>
-				<equals>
-					<property>controls/gear/gear-down</property>
-					<value type="double">1.0</value>
-				</equals>
-			</and>
-		</condition>
 		<type>rotate</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>orientation/pitch-deg</property>
-		<interpolation>
-			<entry>
-				<ind>-8</ind>
-				<dep>-50</dep>
-			</entry>
-			<entry>
-				<ind>1.3</ind>
-				<dep>-25</dep>
-			</entry>
-			<entry>
-				<ind>2.5</ind>
-				<dep>-13</dep>
-			</entry>
-			<entry>
-				<ind>3.9</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>80</ind>
-				<dep>2</dep>
-			</entry>
+                <property>fdm/jsbsim/gear/unit[0]/compression-ft</property>
+                <interpolation>
+                    <entry>
+                        <ind>3</ind>
+                        <dep>-40</dep>
+                    </entry>
+                    <entry>
+                        <ind>1.8</ind>
+                        <dep>-40</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.9</ind>
+                        <dep>-20</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.5</ind>
+                        <dep>-12</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.2407</ind>
+                        <dep>-5.0</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.071114</ind>
+                        <dep>0.0</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.</ind>
+                        <dep>8</dep>
+                    </entry>
 		</interpolation>
 		<center>
-			<x-m>-3.86</x-m>
+                    <x-m>-3.86444</x-m>
 			<y-m>0.0</y-m>
 			<z-m>-1.65183</z-m>
 		</center>
@@ -613,140 +681,7 @@
 		</axis>
 	</animation>
 
-	<animation>
-		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>6.5</value>
-				</less-than>
-				<equals>
-					<property>controls/gear/gear-down</property>
-					<value type="double">1.0</value>
-				</equals>
-			</and>
-		</condition>
-		<type>translate</type>
-		<object-name>AVTrain-Fourche</object-name>
-		<property>orientation/pitch-deg</property>
-		<interpolation>
-			<entry>
-				<ind>-8</ind>
-				<dep>0.16</dep>
-			</entry>
-			<entry>
-				<ind>1.3</ind>
-				<dep>0.08</dep>
-			</entry>
-			<entry>
-				<ind>2.5</ind>
-				<dep>0.04</dep>
-			</entry>
-			<entry>
-				<ind>3.9</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>80</ind>
-				<dep>0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x>0.0</x>
-			<y>0.0</y>
-			<z>1</z>
-		</axis>
-	</animation>
-	<animation>
-		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>6.5</value>
-				</less-than>
-				<equals>
-					<property>controls/gear/gear-down</property>
-					<value type="double">1.0</value>
-				</equals>
-			</and>
-		</condition>
-		<type>translate</type>
-		<object-name>AVTrain-Roue</object-name>
-		<property>orientation/pitch-deg</property>
-		<interpolation>
-			<entry>
-				<ind>-8</ind>
-				<dep>0.16</dep>
-			</entry>
-			<entry>
-				<ind>1.3</ind>
-				<dep>0.08</dep>
-			</entry>
-			<entry>
-				<ind>2.5</ind>
-				<dep>0.04</dep>
-			</entry>
-			<entry>
-				<ind>3.9</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>80</ind>
-				<dep>0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x>0.0</x>
-			<y>0.0</y>
-			<z>1</z>
-		</axis>
-	</animation>
 
-
-	<animation>
-		<condition>
-			<and>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>6.5</value>
-				</less-than>
-				<equals>
-					<property>controls/gear/gear-down</property>
-					<value type="double">1.0</value>
-				</equals>
-			</and>
-		</condition>
-		<type>translate</type>
-		<object-name>AVTrain-JambeMobile</object-name>
-		<property>orientation/pitch-deg</property>
-		<interpolation>
-			<entry>
-				<ind>-8</ind>
-				<dep>0.16</dep>
-			</entry>
-			<entry>
-				<ind>1.3</ind>
-				<dep>0.08</dep>
-			</entry>
-			<entry>
-				<ind>2.5</ind>
-				<dep>0.04</dep>
-			</entry>
-			<entry>
-				<ind>3.9</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>80</ind>
-				<dep>0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x>0.0</x>
-			<y>0.0</y>
-			<z>1</z>
-		</axis>
-	</animation>
 
 
 
@@ -759,16 +694,16 @@
 					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>5.5</value>
-				</less-than>
+                                <equals>
+                                    <property>fdm/jsbsim/gear/unit/WOW</property>
+                                    <value>1</value>
+				</equals>
 			</and>
 		</condition>
 		<type>spin</type>
 		<object-name>AVTrain-Roue</object-name>
-		<property>velocities/uBody-fps</property>
-		<factor>-10.00</factor>
+                <property>/fdm/jsbsim/gear/unit/wheel-speed-fps</property>
+		<factor>-6.00</factor>
 		<center>
 			<x-m>-3.58282</x-m>
 			<y-m>0</y-m>

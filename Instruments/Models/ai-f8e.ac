@@ -1,11 +1,11 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 116  trans 0
-MATERIAL "ac3dmat4" rgb 0.69 0.584 0.475  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 99  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 1 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 116  trans 0
+MATERIAL "ac3dmat4" rgb 0.69 0.584 0.475  amb 0.69 0.584 0.475  emis 0 0 0  spec 0 0 0  shi 99  trans 0
 OBJECT world
 kids 7
 OBJECT group
@@ -15,7 +15,7 @@ kids 1
 OBJECT poly
 name "object"
 loc 0.0114286 -0.0391284 -0.0022242
-texture "nav3.rgb"
+texture "nav3.png"
 crease 45.000000
 numvert 8
 -0.000112452 -0.00983047 -0.033966
@@ -2076,7 +2076,7 @@ kids 0
 OBJECT poly
 name "Bezel"
 loc 0.0601134 -5.21541e-08 0
-texture "bezel-f8e.rgb"
+texture "bezel-f8e.png"
 crease 45.000000
 numvert 80
 -0.00465148 0.0677287 0.0723954
@@ -2686,7 +2686,7 @@ kids 5
 OBJECT poly
 name "noshadow.AISphere"
 loc -0.0476963 0.0165204 -0.00222422
-texture "AISphere.rgb"
+texture "AISphere.png"
 crease 45.000000
 numvert 994
 -6.75961e-05 8.25692e-09 -0.0629654
@@ -10865,7 +10865,7 @@ kids 0
 OBJECT poly
 name "noshadow.vis"
 loc 0.0179016 0.0163679 -0.00203487
-texture "bezel-f8e.rgb"
+texture "bezel-f8e.png"
 crease 45.000000
 numvert 360
 0.00129575 0.0614331 0.0609927
@@ -13610,7 +13610,7 @@ kids 0
 OBJECT poly
 name "noshadow.AIMasque"
 loc 0.0500922 0.0499757 -1.11759e-08
-texture "AICouronne.rgb"
+texture "AICouronne.png"
 crease 45.000000
 numvert 31
 -0.00255911 -0.00417578 0.0404022
@@ -13835,7 +13835,7 @@ kids 0
 OBJECT poly
 name "noshadow.AICouronne"
 loc 0.0575748 0 0
-texture "AICouronne.rgb"
+texture "AICouronne.png"
 crease 45.000000
 numvert 72
 -0.0274813 0.0276413 0.0481269

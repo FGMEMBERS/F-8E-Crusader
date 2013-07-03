@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!--
+    Usable with FlightGear
+    <property>gerard robin
+    Copyright License:  GPLv2
+-->
+   <!--    Auteur :      Gerard ROBIN               GPLv2        COPYRIGHT-->
+
+ <path>heat1-gen.osgt</path>
+ <offsets>
+    <x-m> 0 </x-m>
+ </offsets>
+
+
+ <effect>
+     <inherits-from>Effects/model-transparent</inherits-from>
+     <object-name>fluxturbine4</object-name>
+     <object-name>fluxturbine3</object-name>
+</effect>
+
+ <!--
+geode name
+     <object-name>fluxturbine</object-name>-->
+<!--nuage idle-->
+ <animation>
+     <type>select</type>
+     <object-name>fluxturbine4</object-name>
+     <condition>
+        <and>
+            <property>sim/rendering/particles</property>
+            <not-equals>
+                <property>sim/multiplay/generic/float[5]</property>
+                <value>1</value>
+            </not-equals>
+            <greater-than>
+                <property>sim/multiplay/generic/float[6]</property>
+                <value>1</value>
+            </greater-than>
+            <less-than>
+                <property>sim/multiplay/generic/float[6]</property>
+                <value>61</value>
+            </less-than>
+        </and>
+     </condition>
+</animation>
+
+<!--flux altitude-combustion-->
+<animation>
+    <type>select</type>
+    <object-name>fluxturbine3</object-name>
+    <condition>
+        <and>
+            <property>sim/rendering/particles</property>
+            <equals>
+                <property>sim/multiplay/generic/float[5]</property>
+                <value>1</value>
+            </equals>
+            <less-than>
+                <property>fdm/jsbsim/velocities/u-fps</property>
+                <value>150</value>
+            </less-than>
+            <less-than>
+                <property>sim/multiplay/generic/float[6]</property>
+                <value>66</value>
+            </less-than>
+            <greater-than>
+                <property>sim/multiplay/generic/float[6]</property>
+                <value>30</value>
+            </greater-than>
+        </and>
+    </condition>
+</animation>
+
+
+
+<animation>
+    <type>material</type>
+    <object-name>fluxturbine4</object-name>
+    <emission>
+        <factor-prop>sim/multiplay/generic/float[6]</factor-prop>
+        <red>0.008</red>
+        <green>0.008</green>
+        <blue>0.008</blue>
+    </emission>
+     <transparency>
+         <alpha-prop>fdm/jsbsim/systems/animations/startsmoke</alpha-prop>
+         <factor-prop>fdm/jsbsim/systems/animations/startsmoke</factor-prop>
+        <min>0.0</min>
+        <max>1</max>
+    </transparency>
+</animation>
+
+</PropertyList>

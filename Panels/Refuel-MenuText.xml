@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPLv2
+-->
+<!--  F-8E            Auteur :      Gerard ROBIN                       COPYRIGHT  2009 2010-->
+<PropertyList>
+
+    <path>support.ac</path>
+	<texture-path>Textures</texture-path>
+        
+        <offsets>
+            <!--<pitch-deg>90</pitch-deg>
+            <heading-deg>0</heading-deg>
+            <roll-deg>90</roll-deg>-->
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </offsets>
+        
+        
+        <text>
+        <axis-alignment>yz-plane</axis-alignment>
+        <name>Menu-text-refuel</name>
+        <font>Helvetica.txf</font>
+        <type type="string">literal</type>
+        <text type="string">Refueling</text>
+        <character-size type="double">0.016</character-size>
+        <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+        <max-height>0.12</max-height>
+        <max-width>0.30</max-width>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+        <alignment>center-top</alignment>
+        </text>
+        
+        <text>
+            <axis-alignment>yz-plane</axis-alignment>
+            <name>Tank-text</name>
+            <font>Helvetica.txf</font>
+            <type type="string">literal</type>
+            <text type="string">Main/Transfer</text>
+            <character-size type="double">0.012</character-size>
+            <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+            <max-height>0.12</max-height>
+            <max-width>0.30</max-width>
+            <font-resolution>
+                <width type="int">32</width>
+                <height type="int">32</height>
+            </font-resolution>
+            <alignment>center-top</alignment>
+        </text>
+        
+        <text>
+            <axis-alignment>yz-plane</axis-alignment>
+            <name>Main-tank</name>
+            <font>Helvetica.txf</font>
+            <type type="string">text-value</type>
+            <property type="string">/fdm/jsbsim/inertia/pointmass-weight-lbs[0]</property>
+            <character-size type="double">0.012</character-size>
+            <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+            <max-height>0.12</max-height>
+            <max-width>0.20</max-width>
+            <font-resolution>
+                <width type="int">32</width>
+                <height type="int">32</height>
+            </font-resolution>
+            <alignment>left-bottom</alignment>
+        </text>
+      
+        <text>
+            <axis-alignment>yz-plane</axis-alignment>
+            <name>Transfer-tank</name>
+            <font>Helvetica.txf</font>
+            <type type="string">text-value</type>
+            <property type="string">/fdm/jsbsim/inertia/pointmass-weight-lbs[1]</property>
+            <character-size type="double">0.012</character-size>
+            <character-aspect-ratio type="double">1.0</character-aspect-ratio>
+            <max-height>0.12</max-height>
+            <max-width>0.20</max-width>
+            <font-resolution>
+                <width type="int">32</width>
+                <height type="int">32</height>
+            </font-resolution>
+            <alignment>right-bottom</alignment>
+        </text>
+        
+        <animation>
+            <type>select</type>
+            <object-name>Menu-text-refuel</object-name>
+            <condition>
+                <equals>
+                    <property>/fdm/jsbsim/propulsion/systems/refuel/refuel-on_ground-cmd</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+ 	</animation>
+        
+        <animation>
+            <type>select</type>
+            <object-name>Tank-text</object-name>
+            <condition>
+                <greater-than>
+                    <property>/fdm/jsbsim/systems/payload/display-timing</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+ 	</animation>
+        
+        <animation>
+            <type>select</type>
+            <object-name>Main-tank</object-name>
+            <condition>
+                <greater-than>
+                    <property>/fdm/jsbsim/systems/payload/display-timing</property>
+                    <value>0</value>
+               </greater-than>
+            </condition>
+ 	</animation>
+        
+        <animation>
+            <type>select</type>
+            <object-name>Transfer-tank</object-name>
+            <condition>
+                <greater-than>
+                    <property>/fdm/jsbsim/systems/payload/display-timing</property>
+                    <value>0</value>
+                </greater-than>
+            </condition>
+ 	</animation>
+        
+        
+        
+</PropertyList>

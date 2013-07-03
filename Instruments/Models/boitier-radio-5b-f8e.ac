@@ -1,5 +1,5 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -469,7 +469,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.0302493 -0.230233 0.115179
-texture "radio-bezel.rgb"
+texture "radio-bezel.png"
 crease 45.000000
 numvert 8
 0 0.183617 -0.181827

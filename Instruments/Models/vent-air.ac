@@ -1,7 +1,7 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -454,7 +454,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.0440572 -0.0538953 -0.00475323
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 72
 -0.0501002 0.069126 0.0140865
@@ -897,7 +897,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc -0.0170339 0.0152307 0.00491494
-texture "Jaune-noir.rgb"
+texture "Jaune-noir.png"
 crease 45.000000
 numvert 96
 0.0171778 0.00460279 -0.00102344

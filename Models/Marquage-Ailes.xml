@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin
+    Copyright License:  GPLv2  
+-->
+<PropertyList>
+
+    <path>marquage-ailes.ac</path>
+ <texture-path>/Textures-hires/texture12F</texture-path>
+
+
+
+</PropertyList>

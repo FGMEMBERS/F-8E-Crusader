@@ -1,8 +1,8 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 116  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.584 0.612 0.663  emis 0 0 0  spec 0.208 0.188 0.18  shi 67  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 116  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 67  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -12,7 +12,7 @@ kids 6
 OBJECT poly
 name "Boule"
 loc -0.0200813 -0.00746361 1.76002e-05
-texture "AISphere.rgb"
+texture "AISphere.png"
 crease 45.000000
 numvert 554
 -1.86265e-09 3.58318e-09 -0.0273245
@@ -4631,84 +4631,84 @@ numvert 30
 0.000259303 0.00145431 0.0051957
 -0.000259303 0.00145431 0.0051957
 numsurf 18
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 20 0 1
 15 1 1
 16 1 0
 19 0 0
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 18 0 1
 17 1 1
 14 1 0
 21 0 0
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 21 0 1
 14 1 1
 15 1 0
 20 0 0
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 19 0 1
 16 1 1
 17 1 0
 18 0 0
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 20 0 1
 19 1 1
 18 1 0
 21 0 0
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 17 0 1
 16 1 1
 15 1 0
 14 0 0
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 27 0 0
 24 1 0
 23 1 1
 28 0 1
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 29 0 0
 22 1 0
 25 1 1
 26 0 1
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 28 0 0
 23 1 0
 22 1 1
 29 0 1
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 26 0 0
 25 1 0
 24 1 1
 27 0 1
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 29 0 0
 26 1 0
 27 1 1
 28 0 1
-SURF 0x20
+SURF 0x0
 mat 2
 refs 4
 22 0 0
@@ -4761,7 +4761,7 @@ kids 0
 OBJECT poly
 name "Couronne"
 loc 0.00731723 -0.00746361 1.75985e-05
-texture "attitude5.rgb"
+texture "attitude5.png"
 crease 45.000000
 numvert 96
 -0.00794318 -1.60838e-09 0.0208558
@@ -5409,7 +5409,7 @@ kids 0
 OBJECT poly
 name "Fleche-Fond"
 loc 0.00368543 -0.00746361 1.76002e-05
-texture "nav3.rgb"
+texture "nav3.png"
 crease 45.000000
 numvert 6
 -0.00431138 0.0201452 -0.00539797
@@ -5419,13 +5419,13 @@ numvert 6
 0.00139447 0.0150161 0.00112071
 -0.00431138 0.0208558 -8.17509e-11
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 0
 refs 3
 2 0.172607 0.230953
 1 0.172607 0.230953
 0 0.172607 0.230953
-SURF 0x20
+SURF 0x0
 mat 0
 refs 3
 3 0.172607 0.230953

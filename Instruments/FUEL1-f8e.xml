@@ -4,7 +4,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -41,8 +41,8 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Aiguille</object-name>
-		<property>/consumables/fuel/tank[1]/level-gal_us</property>
-		<factor>0.297</factor>   <!--52 degres = 1000	lbs = 154.44 gal_us-->
+                <property>fdm/jsbsim/inertia/pointmass-weight-lbs</property>
+		<factor>0.052</factor>   <!--52 degres = 1000	lbs = 154.44 gal_us-->
 		<axis>
 			<x>-1</x>
 			<y>0</y>

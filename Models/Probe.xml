@@ -2,21 +2,15 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
 <PropertyList>
 
-	<path>perche-f8e.ac</path>
+	<path>perche-f8e-v2.ac</path>
 
-	<!--NOTE     RESOLUTION  DEFINITION      -->
-	<!--according to your needs you may choose -->
-	<!-- high resolution  (Textures-hires), or medium resolution (Textures-medres)-->
-	<!-- to do it,  comment out and uncomment out the corresponding following lines-->
-
-
-	<!-- <texture-path>Textures-hires/texture12F</texture-path>-->
-          <texture-path>Textures-medres/texture12F</texture-path>
+	
+          <texture-path>Textures-hires/texture12F</texture-path>
 
 	<!--<animation>
 		<type>noshadow</type>

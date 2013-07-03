@@ -5,7 +5,7 @@ kids 1
 OBJECT poly
 name "Temoin-Wing"
 loc 0.0043583 0.000148449 7.42236e-05
-texture "Temoin-Wings.rgb"
+texture "Temoin-Wings.png"
 crease 45.000000
 numvert 4
 0 0.0089465 -0.0201593

@@ -1,0 +1,147 @@
+Group {
+  DataVariance DYNAMIC
+  name "fumee"
+  nodeMask 0xffffffff
+  cullingActive TRUE
+  num_children 3
+  osgParticle::ModularEmitter {
+    DataVariance STATIC
+    nodeMask 0xffffffff
+    cullingActive FALSE
+    osgParticle::ParticleSystem {
+      UniqueID ParticleSystem_0
+      DataVariance DYNAMIC
+      StateSet {
+        DataVariance STATIC
+        rendering_hint TRANSPARENT_BIN
+        renderBinMode USE
+        binNumber 1
+        binName DepthSortedBin
+        GL_LIGHTING ON
+        GL_BLEND ON
+        Material {
+          DataVariance DYNAMIC
+          ColorMode OFF
+          ambientColor 0.6 0.6 0.6 0.9
+          diffuseColor 0.6 0.6 0.6 0.9
+          specularColor FRONT 0.6 0.6 0.6 1
+          specularColor BACK  0.6 0.6 0.6 1
+          emissionColor FRONT 0 0 0 0
+          emissionColor BACK  0 0 0 0
+          shininess 0.4
+        }
+        BlendFunc {
+          DataVariance STATIC
+          source SRC_ALPHA
+          destination ONE_MINUS_SRC_ALPHA
+        }
+        textureUnit 0 {
+          GL_TEXTURE_2D ON
+          Texture2D {
+            DataVariance DYNAMIC
+            file "particle.rgb"
+            wrap_s CLAMP
+            wrap_t CLAMP
+            wrap_r CLAMP
+            min_filter LINEAR
+            mag_filter LINEAR
+            maxAnisotropy 1
+            borderColor 1 1 1 1
+            borderWidth 1
+            useHardwareMipMapGeneration TRUE
+            unRefImageDataAfterApply TRUE
+            internalFormatMode USE_IMAGE_DATA_FORMAT
+            resizeNonPowerOfTwo TRUE
+            shadowComparison FALSE
+            shadowCompareFunc GL_LEQUAL
+            shadowTextureMode GL_LUMINANCE
+          }
+          TexEnv {
+            DataVariance STATIC
+            mode MODULATE
+          }
+        }
+      }
+      supportsDisplayList FALSE
+      useDisplayList FALSE
+      useVertexBufferObjects FALSE
+      particleAlignment BILLBOARD
+      particleScaleReferenceFrame WORLD_COORDINATES
+      alignVectorX 1 0 0
+      alignVectorY 0 1 0
+      useVertexArray FALSE
+      useShaders FALSE
+      doublePassRendering FALSE
+      frozen FALSE
+      freezeOnCull TRUE
+      defaultBoundingBox -1 -1 -1 1 1 1
+      sortMode NO_SORT
+      visibilityDistance -1
+      particleTemplate {
+        shape QUAD
+        lifeTime 0.6
+        sizeRange 0.15 0.3
+        alphaRange 1 1
+        colorRange 0.9 0.9 0.9 1 0.94 0.94 0.94 1
+        position 0 0 0
+        velocity 0 0 0
+        angle 0 0 0
+        angularVelocity 0 0 0
+        radius 1
+        mass 0.1
+        textureTile 1 1 3
+        sizeInterpolator {
+          osgParticle::LinearInterpolator {
+          }
+        }
+        alphaInterpolator {
+          osgParticle::LinearInterpolator {
+          }
+        }
+        colorInterpolator {
+          osgParticle::LinearInterpolator {
+          }
+        }
+      }
+    }
+    enabled TRUE
+    referenceFrame ABSOLUTE
+    endless TRUE
+    lifeTime 0
+    startTime 0
+    currentTime 0
+    resetTime 0
+    useDefaultTemplate TRUE
+    osgParticle::RandomRateCounter {
+      DataVariance DYNAMIC
+      rateRange 64 64
+    }
+    osgParticle::SectorPlacer {
+      DataVariance DYNAMIC
+      center 0 0 0
+      radiusRange 0 0
+      phiRange 0 0
+    }
+    osgParticle::RadialShooter {
+      DataVariance DYNAMIC
+      thetaRange 1.5708 1.3708
+      phiRange -0.2 0.2
+      initialSpeedRange 7 3
+      initialRotationalSpeedRange 0 0 0 2 2 2
+    }
+  }
+  osgParticle::ParticleSystemUpdater {
+    DataVariance DYNAMIC
+    nodeMask 0xffffffff
+    cullingActive FALSE
+    Use ParticleSystem_0
+  }
+  Geode {
+    DataVariance DYNAMIC
+    name "fumee2-pneu"
+    nodeMask 0xffffffff
+    cullingActive TRUE
+    num_drawables 1
+    Use ParticleSystem_0
+  }
+}

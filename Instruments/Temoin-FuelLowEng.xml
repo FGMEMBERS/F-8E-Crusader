@@ -3,7 +3,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -80,8 +80,8 @@
 		<object-name>Temoin1MActif</object-name>
 		<condition>
 				<less-than>
-					<property>/consumables/fuel/tank[0]/level-gal_us</property>
-					<value>154.44</value>
+                                    <property>fdm/jsbsim/inertia/pointmass-weight-lbs[1]</property>
+					<value>1000</value>
 				</less-than>
 		</condition>
 	</animation>
@@ -91,8 +91,8 @@
 		<object-name>Temoin-Low</object-name>
 		<condition>
 				<less-than>
-					<property>/consumables/fuel/tank[0]/level-gal_us</property>
-					<value>154.44</value>
+                                    <property>fdm/jsbsim/inertia/pointmass-weight-lbs[1]</property>
+					<value>1000</value>
 				</less-than>
 		</condition>
 	</animation>

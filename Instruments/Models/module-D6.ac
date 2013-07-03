@@ -1,14 +1,14 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 11
 OBJECT poly
 name "Base-Module"
 loc 0 -0.00155724 0.000644475
-texture "moduleD6.rgb"
+texture "moduleD6.png"
 crease 45.000000
 numvert 8
 0.03175 0.00155724 -0.0696449
@@ -45,7 +45,7 @@ kids 0
 OBJECT poly
 name "Tacan-Corps"
 loc 0.00431051 5.68121e-05 -0.0105353
-texture "knob-1.rgb"
+texture "knob-1.png"
 crease 45.000000
 numvert 72
 0.0271951 0.0082793 0.0412458
@@ -461,7 +461,7 @@ kids 0
 OBJECT poly
 name "Tacan-Channel-1"
 loc -0.0218874 0.0080473 0.0174468
-texture "digit-s.rgb"
+texture "digit-s.png"
 crease 45.000000
 numvert 4
 -0.0029742 0 -0.00294044
@@ -480,7 +480,7 @@ kids 0
 OBJECT poly
 name "Tacan-Channel-2"
 loc -0.0156206 0.0080473 0.0174468
-texture "digit-s.rgb"
+texture "digit-s.png"
 crease 45.000000
 numvert 4
 -0.0029742 0 0.00294044
@@ -499,7 +499,7 @@ kids 0
 OBJECT poly
 name "Tacan-Channel-3"
 loc -0.00935369 0.0080473 0.0174468
-texture "digit-s.rgb"
+texture "digit-s.png"
 crease 45.000000
 numvert 4
 -0.0029742 0 -0.00294044
@@ -522,7 +522,7 @@ kids 3
 OBJECT poly
 name "Tacan-Channel-XY"
 loc -0.0560833 0.0143717 0.388157
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 48
 -0.00259616 0.0169972 0.0624867
@@ -855,7 +855,7 @@ kids 0
 OBJECT poly
 name "Interrupteur-base"
 loc -0.0561146 0.0104731 0.388136
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 81
 0.00196636 -0.000763834 0.0634218
@@ -1777,7 +1777,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.0218191 0.00693988 -0.0364091
-texture "knob-1.rgb"
+texture "knob-1.png"
 crease 45.000000
 numvert 33
 0.00546129 0.0145679 -0.00482336
@@ -2026,7 +2026,7 @@ kids 0
 OBJECT poly
 name "box"
 loc -0.00718151 0.00909218 -0.0426805
-texture "knob-1.rgb"
+texture "knob-1.png"
 crease 45.000000
 numvert 41
 0.00374585 0.0120966 0.00412689
@@ -2397,7 +2397,7 @@ kids 0
 OBJECT poly
 name "Tacan-Bt-Channel-3"
 loc 0.00564873 0.0117884 0.0119487
-texture "knob-2.rgb"
+texture "knob-2.png"
 crease 45.000000
 numvert 42
 -0.000339315 -0.00269914 -0.000777553

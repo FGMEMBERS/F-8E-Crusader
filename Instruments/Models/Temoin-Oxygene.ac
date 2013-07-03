@@ -1,11 +1,11 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT poly
 name "Temoin-Oxygene"
 loc 0.0043583 0.000148449 7.42238e-05
-texture "Temoin-Refuel.rgb"
+texture "Temoin-Refuel.png"
 crease 45.000000
 numvert 4
 0 0.00997614 -0.014914

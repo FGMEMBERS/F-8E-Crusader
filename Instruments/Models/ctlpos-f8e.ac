@@ -1,12 +1,12 @@
 AC3Db
-MATERIAL "ac3dmat6" rgb 0 0.647 0.682  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.827 0.855 0.843  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.502 0.502 0.502  shi 10  trans 0
+MATERIAL "ac3dmat6" rgb 0 0.647 0.682  amb 0 0.647 0.682  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.827 0.855 0.843  amb 0.827 0.855 0.843  emis 0 0 0  spec 0.502 0.502 0.502  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT group
 name "Control-Pos"
 loc 0.00129431 0.000199334 0.000658092
-texture "ctlpos.rgb"
+texture "ctlpos.png"
 kids 5
 OBJECT poly
 name "Elev-Trim"
@@ -43,7 +43,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc -0.00112882 -0.000199334 -0.000658092
-texture "ctlpos.rgb"
+texture "ctlpos.png"
 crease 45.000000
 numvert 4
 0 0.0189824 -0.0524883

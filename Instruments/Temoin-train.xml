@@ -2,8 +2,8 @@
 
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -23,6 +23,7 @@
 		<type>select</type>
 		<object-name>Temoin-Train</object-name>
 		<object-name>TemoinMTrain</object-name>
+
 		<condition>
 			<greater-than>
 				<property>/systems/electrical/outputs/instr-ignition-switch</property>
@@ -61,13 +62,36 @@
 
 	<animation>
 		<type>select</type>
-		<object-name>Temoin-Actif</object-name>
+		<object-name>Temoin-Brake</object-name>
 		<condition>
+                    <and>
 			<greater-than>
 				<property>/controls/gear/brake-parking</property>
 				<value>0.99</value>
 			</greater-than>
+                        <greater-than>
+                            <property>/systems/electrical/outputs/instr-ignition-switch</property>
+                            <value>27</value>
+			</greater-than>
+                    </and>
 		</condition>
+	</animation>
+
+        <animation>
+            <type>select</type>
+            <object-name>Temoin-NWS</object-name>
+            <condition>
+                <and>
+                    <greater-than>
+                        <property>fdm/jsbsim/gear/NWS/engaged</property>
+                        <value>0.99</value>
+                    </greater-than>
+                    <greater-than>
+                        <property>/systems/electrical/outputs/instr-ignition-switch</property>
+                        <value>27</value>
+                    </greater-than>
+                </and>
+            </condition>
 	</animation>
 
 </PropertyList>

@@ -1,30 +1,87 @@
 <?xml version="1.0"?>
-
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
 
 <system name="fuel">
-    
-   
-    
-
+    <property>propulsion/systems/pump-kinemat-out</property>
+    <!--<property>propulsion/systems/tank/main-tank_level</property>-->
+    <property>/controls/flight/fuel-pump</property>
     <channel name="fuel">
+        <!--Un temporisateur  d'injection -->
+        <switch name="pump-sw">
+            <default value="propulsion/systems/pump-kinemat-in"/>
+            <test logic="AND" value="1">
+                propulsion/systems/pump-kinemat-in == 0
+                propulsion/systems/pump-kinemat-out == 0
+            </test>
+            <test logic="AND" value="0">
+                propulsion/systems/pump-kinemat-in == 1
+                propulsion/systems/pump-kinemat-out == 1
+            </test>
+            <output>propulsion/systems/pump-kinemat-in</output>
+        </switch>
         
-        <summer name="propulsion/systems/tank/level-lb">
+        <kinematic name="pump-blinker-norm">
+            <input>propulsion/systems/pump-kinemat-in</input>
+            <traverse>
+                <setting>
+                    <position>0</position>
+                    <time>0</time>
+                </setting>
+                <setting>
+                    <position>1</position>
+                    <time>1</time>
+                </setting>
+            </traverse>
+            <output>propulsion/systems/pump-kinemat-out</output>
+        </kinematic>
+        
+        <!-- injection sous condition  Tank 0  et Pompe 0-->
+        <switch name="propulsion/systems/tank/pump0-flow">
+            <default value="0"/>
+            <test logic="AND" value="1">
+                inertia/pointmass-weight-lbs[1] gt 1
+                propulsion/tank[0]/contents-lbs lt 2
+            </test>
+            <test logic="AND" value="0">
+                inertia/pointmass-weight-lbs[1] gt 1
+                propulsion/tank[0]/contents-lbs gt 4
+            </test>
+        </switch>
+        
+        <!--Tank Principal================================-->
+        
+        <!-- calcul de quantité tampon  tank 0 -->
+        <summer name="propulsion/systems/tank[0]/contents-lbs">
             <input>propulsion/tank[0]/contents-lbs</input>
-            <input>propulsion/tank[1]/contents-lbs</input>
-            <output>/consumables/fuel/total-fuel-lbs</output>
+            <input>propulsion/systems/tank/pump0-flow</input>
+            <output>propulsion/tank[0]/contents-lbs</output>
         </summer>
-       
+        
+        <!--calcul quantité restant    tank 0-->
+        <summer name="propulsion/systems/tank/main-pointmass">
+            <input>inertia/pointmass-weight-lbs[1]</input>
+            <input>-propulsion/systems/tank/pump0-flow</input>
+            <clipto>
+                <min>0</min>
+                <max>3488</max>
+            </clipto>
+            <output>inertia/pointmass-weight-lbs[1]</output>
+            </summer>
        
        <!--Transfer=====From transfer tank to main tank==========-->
        
-       <switch name="propulsion/systems/tank/fuel-pump">
+       <!--<switch name="propulsion/systems/tank/fuel-pump">
            <default value="/controls/flight/fuel-pump"/>
            <test  logic="OR" value="0">
                propulsion/systems/tank/main-tank_level gt 3487.99
-               propulsion/tank[1]/contents-lbs lt 1
+               inertia/pointmass-weight-lbs lt 1
            </test>
            <output> /controls/flight/fuel-pump</output>
-       </switch>
+       </switch>-->
        
        <switch name="propulsion/systems/tank/transfer-switch">
            <default value="0"/>
@@ -34,8 +91,8 @@
        </switch>
        
        <summer name="propulsion/systems/tank/sum-contents-lbs">
-           <input>propulsion/tank[0]/contents-lbs</input>
-           <input>propulsion/tank[1]/contents-lbs</input>
+           <input>inertia/pointmass-weight-lbs[1]</input>
+           <input>inertia/pointmass-weight-lbs</input>
            <clipto>
                <min>0</min>
                <max>9165</max>
@@ -50,8 +107,8 @@
                    <time>0.0</time>
                </setting>
                <setting>
-                   <position>3488</position>
-                   <time>48000</time>
+                   <position>1</position>
+                   <time>7</time>
                </setting>
            </traverse>
         </kinematic>
@@ -59,38 +116,51 @@
         <switch name="propulsion/systems/tank/transfer-done-qty">
             <default value="propulsion/systems/tank/transfer-done-qty"/>
             <test  logic="AND" value="propulsion/systems/tank/transfer-qty">
-                propulsion/tank[0]/contents-lbs lt 3488
-                propulsion/tank[1]/contents-lbs gt 0.99
+                inertia/pointmass-weight-lbs[1] lt 3488
+                inertia/pointmass-weight-lbs gt 0.99
             </test>
        </switch>
         
         <summer name="propulsion/systems/tank/main-tank_level">
             <input>propulsion/systems/tank/transfer-done-qty</input>
-            <input>propulsion/tank[0]/contents-lbs</input>
+            <input>inertia/pointmass-weight-lbs[1]</input>
             <clipto>
                 <min>0</min>
                 <max>3488</max>
             </clipto>
         </summer>
         
+        <switch name="propulsion/systems/tank/fuel-pump">
+            <default value="/controls/flight/fuel-pump"/>
+            <test  logic="OR" value="0">
+                propulsion/systems/tank/main-tank_level gt 3487.99
+                inertia/pointmass-weight-lbs lt 1
+            </test>
+            <output> /controls/flight/fuel-pump</output>
+       </switch>
+        
         <switch name="propulsion/systems/tank/main">
-            <default value="propulsion/tank[0]/contents-lbs"/>
+            <default value="inertia/pointmass-weight-lbs[1]"/>
             <test  logic="AND" value="propulsion/systems/tank/main-tank_level">
-                propulsion/tank[0]/contents-lbs lt 3488
+                inertia/pointmass-weight-lbs[1] lt 3488
                 propulsion/systems/tank/transfer-switch == 1
             </test>
-            <output>propulsion/tank[0]/contents-lbs</output>
+            <output>inertia/pointmass-weight-lbs[1]</output>
        </switch>
        
-        <summer name="propulsion/systems/tank/transfert-tank_level">
-            <input>-propulsion/tank[0]/contents-lbs</input>
+        <summer name="propulsion/systems/tank/transfer-tank_level">
+            <input>-inertia/pointmass-weight-lbs[1]</input>
             <input>propulsion/systems/tank/sum-contents-lbs</input>
+            <input>propulsion/systems/refuel/transfer-tank_refueled</input>
             <clipto>
                 <min>0</min>
                 <max>5678</max>
             </clipto>
-            <output>propulsion/tank[1]/contents-lbs</output>
+            <output>inertia/pointmass-weight-lbs</output>
         </summer>
+        
+       
+        
 
     </channel>
 

@@ -1,9 +1,9 @@
 AC3Db
-MATERIAL "ac3dmat3" rgb 1 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat0" rgb 0.475 0.49 0.482  amb 0 0 0  emis 0 0 0  spec 0.216 0.216 0.216  shi 29  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.898 0.949 1  amb 0.612 0.604 1  emis 0 0 0  spec 0.62 0.647 0.733  shi 125  trans 0
-MATERIAL "ac3dmat14" rgb 0.561 0.533 0.518  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat3" rgb 1 0 0  amb 1 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat0" rgb 0.475 0.49 0.482  amb 0.475 0.49 0.482  emis 0 0 0  spec 0.216 0.216 0.216  shi 29  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.898 0.949 1  amb 0.898 0.949 1  emis 0 0 0  spec 0.62 0.647 0.733  shi 125  trans 0
+MATERIAL "ac3dmat14" rgb 0.561 0.533 0.518  amb 0.561 0.533 0.518  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 OBJECT world
 kids 6
 OBJECT group
@@ -1413,7 +1413,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.00546401 0.00341241 -0.0271509
-texture "knob-1.rgb"
+texture "knob-1.png"
 crease 45.000000
 numvert 34
 -4.65661e-10 -0.00341241 -0.0227274
@@ -1759,7 +1759,7 @@ kids 0
 OBJECT poly
 name "Module-Base"
 loc 0 -0.00155724 0.000644475
-texture "module-2Pouces.rgb"
+texture "module-2Pouces.png"
 crease 45.000000
 numvert 8
 -0.0127 0.00155724 0.0683559
@@ -1796,7 +1796,7 @@ kids 0
 OBJECT poly
 name "cylinder"
 loc 0.00546401 0.00341241 0.00152945
-texture "knob-1.rgb"
+texture "knob-1.png"
 crease 45.000000
 numvert 34
 0.00315265 0.0068825 -0.0214215

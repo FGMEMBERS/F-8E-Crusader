@@ -2,7 +2,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -16,7 +16,11 @@
                 <desc>Toggle 2 positions Wings Incidence Up/Down</desc>
         </key>
         <key>
-                <name>)/(</name>
+            <name>] / [</name>
+            <desc>Leading Edge Flap Up/Down</desc>
+        </key>
+        <key>
+                <name>) / (</name>
                 <desc>Assign 4 positions Speed Brake Up/Down</desc>
         </key>
         <key>
@@ -32,12 +36,24 @@
                 <desc>Hook Down/Up</desc>
         </key>
         <key>
-                <name>F/f</name>
+                <name>F / f</name>
                 <desc>Wings fold Up/Down</desc>
         </key>
         <key>
-                <name>L and C</name>
-                <desc>Activate Launchbar/Go</desc>
+            <name>N </name>
+            <desc>Nose Wheel steering  ON   upper case </desc>
+        </key>
+        <key>
+            <name>n</name>
+            <desc>Nose Wheel steering  OFF   lower case</desc>
+        </key>
+        <key>
+                <name>L</name>
+                <desc>Act Launchbar</desc>
+        </key>
+        <key>
+            <name>C</name>
+            <desc>Act   Catapult</desc>
         </key>
         <key>
             <name>t</name>
@@ -53,23 +69,43 @@
         </key>
         <key>
                 <name>D</name>
-                <desc>Probe Refueling On/Off</desc>
+                <desc>Toggle Probe Refueling On/Off</desc>
+        </key>
+        <key>
+            <name>M</name>
+            <desc>Taxi to with Mule</desc>
+        </key>
+        <key>
+            <name>u (lower case)</name>
+            <desc>Manual Glide Slope Control with predefined throttle value => 0.44  and trim-elevator value => -0.28</desc>
+        </key>
+        <key>
+            <name>i (lower case)</name>
+            <desc>Glide Slope Control with Autopilot on AOA (4.7)  and predefined throttle value => 0.34</desc>
         </key>
 
         <text>
 
         ================Start Routine=====================-
         Electric Master Switch On (depress "}")-
-        Get the external Air compressor resources  ( "s" )-
-        The engine will spin up to a maximum of about %25 N2 (%5.2 N1)-
-        This simulates the action of a pneumatic starter.-
-        After reaching %15 N2,  Cutoff to False (depress "{")-
+        Get the external Air compressor resources
+        Then simulates the action of a pneumatic starter.-
+        KEEP the "s" key hold down until the engine is running
+        The engine will spin up to % 30 N1
+       AND wait for the Pressure Ratio  instrument to indicate 1.08
+       The Engine has started , release the "s" key.
 
         -==============Take Off ==on Runway or carrier===========
-        The wings fold must be DOWN  key "f"
-        The wings incidences must be UP   key (toggle) " ="
+	    The wings fold must be DOWN  => key "f"
+	    The wings incidences must be UP  => key (toggle) " ="
         your anounciator "WING WHEELS DROOP"  must be light off
-        The canopy must be closed/locked  key (toggle) "d"
+	    The canopy must be closed/locked  => key (toggle) "d"
+	    Don't forget  to disengage the NWS => key"n"
+	    
+	  -=================================================  
+	  
+	  the key sequence  } = s d f n  can do everything you want 
+	  then just disengage the brake-parking and push throttle
 
         -============On Any Carrier================-
         ======Take Off
@@ -78,33 +114,45 @@
         -Don't forget to prepare your Aircraft
         with ==Start Routine== and with ==Take Off ==on Runway or Carrier==
         -Then depress the "C" key  to launch
-        BEWARE BEWARE your stick must remain on neutral during catapulting.
-        If you don't the Aircraft will touch the deck with the rear (to many pitch), and will crash 
+        your stick is being locked  remain on neutral position during catapulting.
         ======Landing
-        -Your approach  is between 130 and 140 Knts ( you can help yourself with the AoA indicator)
+        -Your approach  is between 100 and 110 Knts ( you can help yourself with the AoA indicator)
+
         -The Hook must be down key "O"
         -The Aircraft must be prepared with wings incidences UP and gears DOWN
         -The Hook will operate only if it is in touch on the deck close to the wires center area
+
+        We get the glideslope ~ 3.5 deg   from 3000 ft to sea level
+        with:
+        - n1 between  64 and 65 % ,
+        - pitch trim  between  -0.31 and  -0.29,
+        - stick at neutal position ( we guess you are pointing the right heading ).
+
+        =============Wing Incidence=========================
+        The wing  is two position incidence, UP or DOWN
+        The UP position is being used for approach  landing and take off.
+        The UP position has a huge drag. It should  be acted only under 220 knts speed (toggle key =)
+        We have included an automatic locking above 260 knts
 
         =============Consummables========================
         There is two kind of tanks, Main Tank and Transfer Tank
         The Engine is not feeded with the Transfer tank
         The engine will ONLY pump fuel from that Main Tank.
-        BEWARE these tanks are not filled up (only half) 
+        BEWARE these tanks are not filled up (only half)
         You may full up on ground , see the Menu F-8E.
         If you get the alarm "LOW LEVEL", you can transfer fuel from the Transfer Tank,
-        if there is any fuel in the Transfer Tank (look at the capacity tank instruments) 
-        you can transfer the fuel from Transfer Tank to Main Tank, 
+        if there is any fuel in the Transfer Tank (look at the capacity tank instruments)
+        you can transfer the fuel from Transfer Tank to Main Tank,
         click the "FUEL TRANSFER" switch  on the front Panel (top right)
-        Air refueling can be done, if you are in contact with a Tanker 
+        Air refueling can be done, if you are in contact with a Tanker
         and if you have previously activated the IFR PROBE
         which is the switch on front Panel (top left)
-        
-        During Flight,  REMEMBER, the afterburner  is not economic ,
+
+        During Flight,  REMEMBER, the afterburner  is fuel consummer ,
         you can see the needle of the Main Tank decreasing quickly
-        We recommand to look at the the fuel flow instrument which 
-        indicate the most economic throttle  position.
-        
+        We recommand to look at the the fuel flow instrument which
+        indicate the best economical throttle  position.
+
         =============The Mule=============================
         You may want to experiment the Taxiing with Mule
         To do it:
@@ -112,20 +160,7 @@
         2/ With "m" key  you will notice a mule in front of the Aircraft
         3/ Key "+" or "-" will operate the force of the Mula
         4/ The usual direction Key, Mouse, Joysyick,  will give the direction of the Mule
-        
-        =============The Automatic Taxiing======================
-        Key"M" (upper case)  Taxi ON/OFF
-        Or better see  the menu: F-8E:
-        1/ click on the catapult you want to go to 
-        2/ then click on Go Taxi_to
-        Remember the rules:
-        1/ Nimitz Class has 4 catapults 1,2,3,4
-        2/ Clemenceau Class has 2 catapults only 1,2
-        3/ If you choose a catapult which don't exist on the carrier, the AC will go anywhere.
-        4/ the Aircraft must be, at least parked behind the choosen Taxi_to catapult , NOT in front of.
-        =======Will be improvred ===Will be improved =====Will be improved
-        I hope later on, to do from any position  to any position.
-        
+
     </text>
 
 </PropertyList>

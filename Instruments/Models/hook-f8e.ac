@@ -1,11 +1,11 @@
 AC3Db
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0.122 0.102 0.157  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat5" rgb 0 0.863 0.008  amb 0.502 0.502 0.502  emis 0 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.898 1 1  emis 0 0 0  spec 1 0.929 1  shi 90  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0.31 0.302 0.329  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat5" rgb 0.827 0.863 0.008  amb 0.502 0.502 0.502  emis 0.639 0.639 0  spec 0.502 0.502 0.502  shi 72  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0.122 0.102 0.157  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat5" rgb 0 0.863 0.008  amb 0 0.863 0.008  emis 0 0 0  spec 0 0 0  shi 72  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 90  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0.31 0.302 0.329  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat5" rgb 0.827 0.863 0.008  amb 0.827 0.863 0.008  emis 0 0 0  spec 0 0 0  shi 72  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -15,7 +15,7 @@ kids 7
 OBJECT poly
 name "Temoin-Hook"
 loc -10.4163 -0.612074 0.76745
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 32
 14.5737 0.860202 -1.0636
@@ -331,7 +331,7 @@ kids 0
 OBJECT poly
 name "Marquage"
 loc 4.16413 0.250567 -0.303045
-texture "Hook.rgb"
+texture "Hook.png"
 crease 45.000000
 numvert 4
 0 -0.0151767 -0.0212967
@@ -355,7 +355,7 @@ kids 0
 OBJECT poly
 name "Lampe"
 loc 4.16335 0.240339 -0.292196
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 32
 0.00499965 0.00546933 -0.00330314
@@ -671,7 +671,7 @@ kids 0
 OBJECT poly
 name "TemoinMHook"
 loc -10.4163 -0.612074 0.76745
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 32
 14.5856 0.857883 -1.06407

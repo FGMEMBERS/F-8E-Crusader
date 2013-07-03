@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+
+
+<PropertyList>
+  <name>Air Tanker</name>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Air Tanker</label>
+  </text>
+  <text>
+      <label>Distance,Altitude,Speed</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+        <layout>vbox</layout>
+        <halign>center</halign>
+        <text>
+        <label>Distance</label>
+        </text>
+
+        <group>
+                        <layout>vbox</layout>
+                        <halign>left</halign>
+                        <text>
+                            <label>Distance meters</label>
+                        </text>
+                        <text>
+                                <label>1000 or 20000 or 40000 or 100000</label>
+                        </text>
+        </group>
+        <group>
+                <layout>vbox</layout>
+                <halign>center</halign>
+                <combo>
+                        <x>120</x>
+                        <y>0</y>
+                        <width>45</width>
+                        <height>25</height>
+                        <command>property-assign</command>
+                        <property>/fdm/jsbsim/systems/tanker/distance</property>
+			 <value>100</value>
+                        <value>1000</value>
+                        <value>20000</value>
+                        <value>40000</value>
+                        <value>100000</value>
+                </combo>
+                <button>
+                    <legend>OK</legend>
+                    <default>true</default>
+                    <equal>true</equal>
+                    <binding>
+                        <command>dialog-apply</command>
+                    </binding>
+            </button>
+        </group>
+        <group>
+            <layout>vbox</layout>
+            <halign>left</halign>
+            <text>
+                <label>Altitude ft</label>
+            </text>
+            <text>
+                <label>4000 or 9000 or 15000</label>
+            </text>
+        </group>
+        <group>
+            <layout>vbox</layout>
+            <halign>center</halign>
+            <combo>
+                <x>120</x>
+                <y>0</y>
+                <width>45</width>
+                <height>25</height>
+                <command>property-assign</command>
+                <property>/fdm/jsbsim/systems/tanker/altitude</property>
+                <value>4000</value>
+                <value>9000</value>
+                <value>15000</value>
+            </combo>
+            <button>
+                <legend>OK</legend>
+                <default>true</default>
+                <equal>true</equal>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </button>
+        </group>
+        <group>
+            <layout>vbox</layout>
+            <halign>left</halign>
+            <text>
+                <label>Speed knots</label>
+            </text>
+            <text>
+                <label>260 or 280 or 300</label>
+            </text>
+        </group>
+        <group>
+            <layout>vbox</layout>
+            <halign>center</halign>
+            <combo>
+                <x>120</x>
+                <y>0</y>
+                <width>45</width>
+                <height>25</height>
+                <command>property-assign</command>
+                <property>/fdm/jsbsim/systems/tanker/speed</property>
+                <value>260</value>
+                <value>280</value>
+                <value>300</value>
+            </combo>
+            <button>
+                <legend>OK</legend>
+                <default>true</default>
+                <equal>true</equal>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </button>
+        </group>
+        <group>
+            <layout>vbox</layout>
+            <halign>left</halign>
+            <text>
+                <label>Tacan Channel</label>
+            </text>
+            <text>
+                <label>041X</label>
+            </text>
+        </group>
+        <group>
+            <layout>vbox</layout>
+            <halign>center</halign>
+            <combo>
+                <x>120</x>
+                <y>0</y>
+                <width>45</width>
+                <height>25</height>
+                <command>property-assign</command>
+                <property>/fdm/jsbsim/systems/tanker/tacan</property>
+                <value>041X</value>
+            </combo>
+            <button>
+                <legend>OK</legend>
+                <default>true</default>
+                <equal>true</equal>
+                <binding>
+                    <command>dialog-apply</command>
+                </binding>
+            </button>
+        </group>
+
+
+
+    </group>
+
+    <group>
+        <layout>hbox</layout>
+        <empty><stretch>true</stretch></empty>
+        <button>
+            <legend>Create Air Tanker</legend>
+            <default>true</default>
+            <equal>true</equal>
+            <binding>
+                <command>property-assign</command>
+                <property>/fdm/jsbsim/systems/tanker/enable</property>
+                <value>1</value>
+            </binding>
+            <binding>
+                <command>nasal</command>
+                <script>f8_tanker.CreateTanker();</script>
+            </binding>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
+
+    <hrule/>
+
+    <group>
+            <layout>hbox</layout>
+            <empty><stretch>true</stretch></empty>
+            <button>
+                <legend>Close</legend>
+                <default>true</default>
+                <key>Esc</key>
+                <binding>
+                    <command>dialog-close</command>
+                </binding>
+            </button>
+            <empty><stretch>true</stretch></empty>
+    </group>
+
+</PropertyList>

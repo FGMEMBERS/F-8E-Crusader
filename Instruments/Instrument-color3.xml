@@ -3,7 +3,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 
 <!--fond de cadran Interrupteur-->
@@ -26,9 +26,9 @@
 			<blue>1</blue>
 		</ambient>
 		<specular>
-			<red>1</red>
-			<green>1</green>
-			<blue>1</blue>
+			<red>0</red>
+			<green>0</green>
+			<blue>0</blue>
 		</specular>
-		<shininess> 32</shininess>
+		<shininess>4</shininess>
 </PropertyList>

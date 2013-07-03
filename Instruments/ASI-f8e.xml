@@ -2,8 +2,8 @@
 
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
@@ -23,17 +23,7 @@
 		<object-name>Knot-Ext</object-name>
 		<object-name>Knot-Int</object-name>
 	</animation>
-
- 	<model>
-		<name>Bezel</name>
-		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
-		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
+ 	
 
 	<model>
 		<name>Bouton</name>
@@ -45,7 +35,7 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Bouton</object-name>
@@ -54,15 +44,15 @@
                 <button>0</button>
                 <binding>
                     <command>property-adjust</command>
-                    <property>/instrumentation/airspeed-indicator/landing-speed</property>
+                    <property>sim/aoa-indicator/speed</property>
                     <step>-1</step>
-                    <min>100</min>
-                    <max>200</max>
+                    <min>90</min>
+                    <max>140</max>
                     <wrap>0</wrap>
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Bouton</object-name>
@@ -71,10 +61,10 @@
                 <button>1</button>
                 <binding>
                     <command>property-adjust</command>
-                    <property>/instrumentation/airspeed-indicator/landing-speed</property>
+                    <property>sim/aoa-indicator/speed</property>
                     <step>1</step>
-                    <min>100</min>
-                    <max>200</max>
+                    <min>90</min>
+                    <max>140</max>
                     <wrap>0</wrap>
                 </binding>
             </action>

@@ -3,7 +3,7 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <!--  LING-TEMCO-VOUGHT   F-8E-Crusader Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
 
@@ -22,14 +22,14 @@
 
 	<animation>
 		<type>noshadow</type>
-		<object-name>Cde-Wings-Fold</object-name>
+		<!--<object-name>Cde-Wings-Fold</object-name>
 		<object-name>Cde-Wings-Fold-Verrou</object-name>
 		<object-name>Trh-AB</object-name>
 		<object-name>Cde-WingsBase</object-name>
 		<object-name>Cde-Wings</object-name>
 		<object-name>Cde-Wings-Verrou</object-name>
 		<object-name>Cde-FreinSec</object-name>
-		<object-name>Cmd-Vent-Air</object-name>
+		<object-name>Cmd-Vent-Air</object-name>-->
 		<object-name>module-D1</object-name>
 		<object-name>module-D2</object-name>
 		<object-name>module-D3</object-name>
@@ -81,7 +81,7 @@
 	</animation>
 
 
-     
+
         <animation>
             <type>pick</type>
             <object-name>Manette-WingFld</object-name>
@@ -93,7 +93,7 @@
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Cde-Wings</object-name>
@@ -105,7 +105,7 @@
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Panel-Base-CoPi</object-name>
@@ -117,8 +117,8 @@
                 </binding>
             </action>
         </animation>
-        
-        
+
+
         <animation>
             <type>pick</type>
             <object-name>Trh-AB</object-name>
@@ -134,7 +134,7 @@
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Trh-AB</object-name>
@@ -150,7 +150,7 @@
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Cde-FreinSec</object-name>
@@ -162,7 +162,7 @@
                 </binding>
             </action>
         </animation>
-        
+
        <!-- ======================================================================================-->
 	<animation>
 		<type>rotate</type>
@@ -445,8 +445,8 @@
 			<z>0</z>
 		</axis>
 	</animation>
-        
-        
+
+
         <animation>
             <type>rotate</type>
             <object-name>Cde-FreinSec</object-name>
@@ -548,7 +548,7 @@
 
 	<model>
 		<name>module-D6</name>
-		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D6-f8e.xml</path>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D6v2-f8e.xml</path>
 		<offsets>
 			<x-m>-0.166807</x-m><!---0.167738 -0.166807-->
 			<y-m>0.374</y-m>
@@ -559,7 +559,7 @@
 
 	<model>
 		<name>module-D7</name>
-		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D7-f8e.xml</path>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D7v2-f8e.xml</path>
 		<offsets>
 			<x-m>-0.0830833</x-m><!---0.090286-->
 			<y-m>0.374</y-m>

@@ -1,10 +1,14 @@
 <?xml version="1.0"?>
 
-
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
 <system name="Canopy">
 
     <channel name="Canopy">
-        
+
             <switch name="fcs/canopy-control-lock">
             <default value="/controls/flight/canopy"/>
             <test logic="AND" value="0">
@@ -12,7 +16,7 @@
             </test>
             <output>systems/canopy/canopy-control</output>
            </switch>
-           
+
            <switch name="fcs/canopy-jettison">
                <default value="/controls/jettison/canopy"/>
                <test logic="AND" value="1">
@@ -21,7 +25,7 @@
                </test>
                <output>/controls/jettison/canopy</output>
            </switch>
-           
+
            <kinematic name="systems/jettison/canopy-pos-norm">
                <input>fcs/canopy-jettison</input>
                <traverse>
@@ -35,8 +39,8 @@
                    </setting>
                </traverse>
            </kinematic>
-           
-            
+
+
             <kinematic name="Canopy Control">
                 <input>systems/canopy/canopy-control</input>
                 <traverse>
@@ -56,6 +60,9 @@
                 <input>fcs/canopy-pos-norm</input>
                 <gain>1</gain>
                 <output>/surface-positions/canopy-pos-norm</output>
+                <output>/surface-positions/Cockpit-Step3-r1</output>
+                <output>/surface-positions/Cockpit-Step2</output>
+                <output>/surface-positions/Cockpit-Step1</output>
             </pure_gain>
 
 

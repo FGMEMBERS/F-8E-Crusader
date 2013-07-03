@@ -24,7 +24,7 @@
 <turbine_engine name="PW_J-57-P-20A">
     <milthrust>    10700 </milthrust>
     <maxthrust>    18000 </maxthrust>
-    <bypassratio>     1.0 </bypassratio>
+    <bypassratio>     0.5 </bypassratio>
     <tsfc>            0.8 </tsfc>
     <atsfc>           2.8 </atsfc>
     <bleed>           0.03</bleed>

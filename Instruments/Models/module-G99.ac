@@ -1,7 +1,7 @@
 AC3Db
 MATERIAL "NoName" rgb 1 0.702 0  amb 1 0.702 0  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 MATERIAL "NoName" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 0  trans 0
-MATERIAL "NoName" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
+MATERIAL "NoName" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0.5 0.5 0.5  shi 10  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -11,7 +11,7 @@ kids 4
 OBJECT poly
 name "NoName"
 loc -0.0270845 0.0699524 -0.00284454
-texture "Penguin_beak.rgb"
+texture "Penguin_beak.png"
 crease 45.000000
 numvert 17
 0.0253125 0 -0.0324
@@ -180,7 +180,7 @@ kids 0
 OBJECT poly
 name "NoName"
 loc 0.0286032 0.0162899 0.00631878
-texture "Penguin_body.rgb"
+texture "Penguin_body.png"
 crease 45.000000
 numvert 115
 3.57628e-07 0.0961877 0.0374117
@@ -1653,7 +1653,7 @@ kids 0
 OBJECT poly
 name "NoName"
 loc 0.0286032 0.0162899 0.00631878
-texture "Penguin_body.rgb"
+texture "Penguin_body.png"
 crease 45.000000
 numvert 4
 -0.0202498 0.0135724 0.0429041

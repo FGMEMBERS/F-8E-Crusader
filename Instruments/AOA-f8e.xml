@@ -2,8 +2,8 @@
 
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 
 <PropertyList>
@@ -41,7 +41,7 @@
 			<x-m>0.0161728</x-m>
 			<y-m>-0.0126353</y-m>
 			<z-m>-0.0393354</z-m>
-			<roll-deg>29.5</roll-deg>
+			<roll-deg>0</roll-deg>
 		</offsets>
 	</model>
 
@@ -54,6 +54,40 @@
 		<object-name>Index</object-name>
 	</animation>
 
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>sim/aoa-indicator/alpha-rad</property>
+                    <step>0.0017453293</step>
+                    <min>-1.7453293</min>
+                    <max>0.66322512</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>sim/aoa-indicator/alpha-rad</property>
+                    <step>-0.0017453293</step>
+                    <min>-1.7453293</min>
+                    <max>0.66322512</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
 	<animation>
 		<type>select</type>
 		<object-name>OFF</object-name>
@@ -65,35 +99,11 @@
 		</condition>
 	</animation>
 
-	<!--<animation>
-		<type>rotate</type>
-		<object-name>Aiguille</object-name>
-		<property>/orientation/alpha-deg</property>
-		<interpolation>
-			<entry>
-				<ind>-100</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>-7</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>38</ind>
-				<dep>270</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x>1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>-->
-        
         <animation>
             <type>rotate</type>
             <object-name>Aiguille</object-name>
             <property>fdm/jsbsim/aero/alpha-rad-w-incidence</property>
+            <!--<property>fdm/jsbsim/aero/alpha-rad</property>-->
             <interpolation>
                 <entry>
                     <ind>-1.7453293</ind>
@@ -110,6 +120,48 @@
             </interpolation>
             <axis>
                 <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>Index</object-name>
+            <property>sim/aoa-indicator/alpha-rad</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.7453293</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>-0.12217305</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.66322512</ind>
+                    <dep>270</dep>
+                </entry>
+            </interpolation>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>Bouton</object-name>
+            <property>sim/aoa-indicator/alpha-rad</property>
+            <factor>0.017453293</factor>
+            <center>
+                <x-m>0.0161728</x-m>
+                <y-m>-0.0126353</y-m>
+                <z-m>-0.0393354</z-m>
+            </center>
+            <axis>
+                <x>-1</x>
                 <y>0</y>
                 <z>0</z>
             </axis>

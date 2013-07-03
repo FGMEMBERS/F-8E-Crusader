@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
  <path>Models/module-AV-DG.ac</path>
  <texture-path>Models/Textures</texture-path>
 
- 	<animation>
+ 	<!--<animation>
 		<type>noshadow</type>
 		<object-name>Module-BaseG</object-name>
-	</animation>
+	</animation>-->
 
 	<animation include="Instrument-Light2.xml">
 		<object-name>Module-BaseG</object-name>
@@ -50,7 +50,7 @@
 			<pitch-deg>-90</pitch-deg>
 		</offsets>
 	</model>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Autopilot-Heading</object-name>

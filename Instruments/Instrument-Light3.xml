@@ -2,13 +2,20 @@
 
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin
+    Copyright License:  GPLv2
 -->
 
 <!--fond de cadran Interrupteur-->
 
 <PropertyList>
+    <condition>
+        <and>
+            <not>
+                <or><property>sim/rendering/rembrandt</property> <property>sim/rendering/rembrandt/enabled</property> </or>
+            </not>
+        </and>
+      </condition>
 		<type>material</type>
 		<emission>
 			<factor-prop>controls/lighting/instruments-norm</factor-prop>

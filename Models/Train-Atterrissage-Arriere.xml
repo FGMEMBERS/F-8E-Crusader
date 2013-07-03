@@ -2,31 +2,100 @@
 <!--
     Usable with FlightGear
     Property of Gerard Robin  12-12-2005
-    Copyright License:  GPL
+    Copyright License:  GPLv2
 -->
 <!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
 <PropertyList>
 
 	<path>train-arriere-f8e.ac</path>
 
-	<!--NOTE     RESOLUTION  DEFINITION      -->
-	<!--according to your needs you may choose -->
-	<!-- high resolution  (Textures-hires), or medium resolution (Textures-medres)-->
-	<!-- to do it,  comment out and uncomment out the corresponding following lines-->
 
-
-	<!-- <texture-path>Textures-hires/texture12F</texture-path>-->
-          <texture-path>Textures-medres/texture12F</texture-path>
+          <texture-path>Textures-hires/texture12F</texture-path>
 
 	<!--<animation>
 		<type>noshadow</type>
 		<object-name></object-name>
 	</animation>-->
-        
+
         <!-- MP Animation :
              <property>sim/multiplay/generic/float[0]</property>
              instead of
              <property>surface-positions/gear-pos-norm</property>-->
+
+
+             <model>
+                 <name>AVTrain-Fumee</name>
+                 <path>Aircraft/F-8E-Crusader/Fx/tyre.xml</path>
+                 <offsets>
+                     <x-m>-3.549904</x-m>
+                     <y-m>0</y-m>
+                     <z-m>-2.06248</z-m>
+                     <roll-deg>    0 </roll-deg>
+                     <pitch-deg>   0 </pitch-deg>
+                     <heading-deg> 0 </heading-deg>
+                 </offsets>
+             </model>
+
+
+             <model>
+                 <name>GTrain-Fumee</name>
+                 <path>Aircraft/F-8E-Crusader/Fx/tyre.xml</path>
+                 <offsets>
+                     <x-m>2.093976</x-m>
+                     <y-m>-1.473962</y-m>
+                     <z-m>-1.67005</z-m>
+                     <roll-deg>    0 </roll-deg>
+                     <pitch-deg>   0 </pitch-deg>
+                     <heading-deg> 0 </heading-deg>
+                 </offsets>
+             </model>
+
+             <model>
+                 <name>DTrain-Fumee</name>
+                 <path>Aircraft/F-8E-Crusader/Fx/tyre.xml</path>
+                 <offsets>
+                     <x-m>2.093976</x-m>
+                     <y-m>1.473962</y-m>
+                     <z-m>-1.67005</z-m>
+                     <roll-deg>    0 </roll-deg>
+                     <pitch-deg>   0 </pitch-deg>
+                     <heading-deg> 0 </heading-deg>
+                 </offsets>
+             </model>
+
+             <animation>
+                 <type>select</type>
+                 <object-name>AVTrain-Fumee</object-name>
+                 <condition>
+                     <not-equals>
+                         <property>fdm/jsbsim/systems/gear/gear[0]/tyre-smoke</property>
+                         <value>0</value>
+                     </not-equals>
+                 </condition>
+             </animation>
+
+             <animation>
+                 <type>select</type>
+                 <object-name>GTrain-Fumee</object-name>
+                 <condition>
+                     <not-equals>
+                         <property>fdm/jsbsim/systems/gear/gear[1]/tyre-smoke</property>
+                         <value>0</value>
+                     </not-equals>
+                 </condition>
+             </animation>
+
+             <animation>
+                 <type>select</type>
+                 <object-name>DTrain-Fumee</object-name>
+                 <condition>
+                     <not-equals>
+                         <property>fdm/jsbsim/systems/gear/gear[2]/tyre-smoke</property>
+                         <value>0</value>
+                     </not-equals>
+                 </condition>
+             </animation>
+
 
 
 <!-- *********LEFT GEAR*********************TRAIN COTE GAUCHE*******************************-->
@@ -66,6 +135,7 @@
 			<z>2.188</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-Roue</object-name>
@@ -99,6 +169,7 @@
 			<z>2.188</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-JambeSup</object-name>
@@ -132,6 +203,7 @@
 			<z>2.188</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-Verin</object-name>
@@ -165,6 +237,7 @@
 			<z>2.188</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-Verin</object-name>
@@ -180,7 +253,7 @@
 			</entry>
 			<entry>
 				<ind>0.75</ind>
-				<dep>5</dep>
+                                <dep>5</dep>
 			</entry>
 			<entry>
 				<ind>1.0</ind>
@@ -200,144 +273,153 @@
 	</animation>
 
 	<!--                         Spring Extension            Fonction Extension                     -->
-	<animation>
-		<type>rotate</type>
-		<object-name>GTrain-Tambour</object-name>
-		<object-name>GTrain-JambeInf</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>17</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>-0.227538</y-m>
-			<z-m>-0.729862</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
+
+
+        <animation>
+            <type>rotate</type>
+            <object-name>GTrain-Tambour</object-name>
+            <object-name>GTrain-JambeInf</object-name>
+            <!--<property>fdm/jsbsim/gear/unit[1]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[1]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>17</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-7.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-12.5</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>-0.227538</y-m>
+                <z-m>-0.729862</z-m>
+            </center>
+            <axis>
+                <x>1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
 	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>GTrain-Roue</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>17</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>-0.227538</y-m>
-			<z-m>-0.729862</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>GTrain-Roue</object-name>
+            <!--<property>fdm/jsbsim/gear/unit[1]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[1]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>17</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-7.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-12.5</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>-0.227538</y-m>
+                <z-m>-0.729862</z-m>
+            </center>
+            <axis>
+                <x>1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
 	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>GTrain-JambeSup</object-name>
+           <!-- <property>fdm/jsbsim/gear/unit[1]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[1]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>17</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-7.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-12.5</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>-0.227538</y-m>
+                <z-m>-0.729862</z-m>
+            </center>
+            <axis>
+                <x>1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-JambeSup</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>17</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>-0.227538</y-m>
-			<z-m>-0.729862</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>GTrain-JambeSup</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-0.6</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-1.2</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-1.2</dep>
-			</entry>
-		</interpolation>
+               <!-- <property>fdm/jsbsim/gear/unit[1]/compression-ft</property>-->
+                <property>fdm/jsbsim/systems/gear/gear[1]/compression</property>
+                <interpolation>
+                    <entry>
+                        <ind>-1.0</ind>
+                        <dep>-0.5</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.001</ind>
+                        <dep>-0.3</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.23</ind>
+                        <dep>0</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.722</ind>
+                        <dep>-0.5</dep>
+                    </entry>
+                    <entry>
+                        <ind>1.185</ind>
+                        <dep>-1.1</dep>
+                    </entry>
+            </interpolation>
 		<center>
 			<x-m>0</x-m>
 			<y-m>-1.268</y-m>
@@ -349,31 +431,33 @@
 			<z>0</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>GTrain-Verin</object-name>
-		<property>position/altitude-agl-ft</property>
+                <!--<property>fdm/jsbsim/gear/unit[1]/compression-ft</property>-->
+                <property>fdm/jsbsim/systems/gear/gear[1]/compression</property>
 		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>17</dep>
-			</entry>
+                    <entry>
+                        <ind>-1.0</ind>
+                        <dep>17</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.001</ind>
+                        <dep>3</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.23</ind>
+                        <dep>0</dep>
+                    </entry>
+                    <entry>
+                        <ind>0.722</ind>
+                        <dep>-7.5</dep>
+                    </entry>
+                    <entry>
+                        <ind>1.185</ind>
+                        <dep>-12.5</dep>
+                    </entry>
 		</interpolation>
 		<center>
 			<x-m>0</x-m>
@@ -396,16 +480,16 @@
 					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>5.5</value>
-				</less-than>
+				<equals>
+                                    <property>fdm/jsbsim/gear/unit[1]/WOW</property>
+					<value>1</value>
+				</equals>
 			</and>
 		</condition>
 		<type>spin</type>
 		<object-name>GTrain-Roue</object-name>
-		<property>velocities/uBody-fps</property>
-		<factor>10.00</factor>
+                <property>/fdm/jsbsim/gear/unit[1]/wheel-speed-fps</property>
+		<factor>5.00</factor>
 		<axis>
 			<x1-m>2.09447</x1-m>
 			<y1-m>0.0622693</y1-m>
@@ -456,6 +540,7 @@
 			<z>2.188</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-Roue</object-name>
@@ -489,6 +574,7 @@
 			<z>2.188</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-JambeSup</object-name>
@@ -522,6 +608,7 @@
 			<z>2.188</z>
 		</axis>
 	</animation>
+
 	<animation>
 		<type>rotate</type>
 		<object-name>DTrain-Verin</object-name>
@@ -591,191 +678,201 @@
 
 
 	<!--                          Spring Extension            Fonction Extension                             -->
-	<animation>
-		<type>rotate</type>
-		<object-name>DTrain-Tambour</object-name>
-		<object-name>DTrain-JambeInf</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-17</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0.227538</y-m>
-			<z-m>-0.729862</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>DTrain-Roue</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-17</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0.227538</y-m>
-			<z-m>-0.729862</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>DTrain-JambeSup</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-17</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0.227538</y-m>
-			<z-m>-0.729862</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>DTrain-JambeSup</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>0.6</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>1.2</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>1.2</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>1.268</y-m>
-			<z-m>-1.176</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	<animation>
-		<type>rotate</type>
-		<object-name>DTrain-Verin</object-name>
-		<property>position/altitude-agl-ft</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>4.885787</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>6</ind>
-				<dep>-9</dep>
-			</entry>
-			<entry>
-				<ind>7</ind>
-				<dep>-17</dep>
-			</entry>
-			<entry>
-				<ind>100000</ind>
-				<dep>-17</dep>
-			</entry>
-		</interpolation>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0.227538</y-m>
-			<z-m>-0.729862</z-m>
-		</center>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0</z>
-		</axis>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>DTrain-Tambour</object-name>
+            <object-name>DTrain-JambeInf</object-name>
+            <!--<property>fdm/jsbsim/gear/unit[2]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[2]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>17</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-7.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-12.5</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>0.227538</y-m>
+                <z-m>-0.729862</z-m>
+            </center>
+            <axis>
+                <x>-1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>DTrain-Roue</object-name>
+            <!--<property>fdm/jsbsim/gear/unit[2]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[2]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>17</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-7.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-12.5</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>0.227538</y-m>
+                <z-m>-0.729862</z-m>
+            </center>
+            <axis>
+                <x>-1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>DTrain-JambeSup</object-name>
+            <!--<property>fdm/jsbsim/gear/unit[2]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[2]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>17</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-7.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-12.5</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>0.227538</y-m>
+                <z-m>-0.729862</z-m>
+            </center>
+            <axis>
+                <x>-1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>DTrain-JambeSup</object-name>
+            <!--<property>fdm/jsbsim/gear/unit[2]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[2]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>-0.5</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>-0.3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-0.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-1.1</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>1.268</y-m>
+                <z-m>-1.176</z-m>
+            </center>
+            <axis>
+                <x>-1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
+        </animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>DTrain-Verin</object-name>
+            <!--<property>fdm/jsbsim/gear/unit[2]/compression-ft</property>-->
+            <property>fdm/jsbsim/systems/gear/gear[2]/compression</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.0</ind>
+                    <dep>17</dep>
+                </entry>
+                <entry>
+                    <ind>0.001</ind>
+                    <dep>3</dep>
+                </entry>
+                <entry>
+                    <ind>0.23</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.722</ind>
+                    <dep>-7.5</dep>
+                </entry>
+                <entry>
+                    <ind>1.185</ind>
+                    <dep>-12.5</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>0</x-m>
+                <y-m>0.227538</y-m>
+                <z-m>-0.729862</z-m>
+            </center>
+            <axis>
+                <x>-1.0</x>
+                <y>0.0</y>
+                <z>0</z>
+            </axis>
 	</animation>
 
 	<!--            Spin  the weel              Fonction rotation Roue                -->
@@ -786,16 +883,16 @@
 					<property>controls/gear/gear-down</property>
 					<value type="double">1.0</value>
 				</equals>
-				<less-than>
-					<property>position/altitude-agl-ft</property>
-					<value>5.5</value>
-				</less-than>
+                                <equals>
+                                    <property>fdm/jsbsim/gear/unit[2]/WOW</property>
+                                    <value>1</value>
+				</equals>
 			</and>
 		</condition>
 		<type>spin</type>
 		<object-name>DTrain-Roue</object-name>
-		<property>velocities/uBody-fps</property>
-		<factor>-10.00</factor>
+		<property>/fdm/jsbsim/gear/unit[2]]/wheel-speed-fps</property>
+		<factor>-5.00</factor>
 		<axis>
 			<x1-m>2.09447</x1-m>
 			<y1-m>-0.0622693</y1-m>
@@ -805,6 +902,9 @@
 			<z2-m>-1.29333</z2-m>
 		</axis>
 	</animation>
+
+
+
 
 
 

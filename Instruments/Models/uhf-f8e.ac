@@ -1,7 +1,7 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 116  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 116  trans 0
 OBJECT world
 kids 1
 OBJECT group
@@ -61,7 +61,7 @@ kids 0
 OBJECT poly
 name "Freq-nnn-nX"
 loc -0.000198942 0.000296672 -0.0263895
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 -0.00472397 0.0233507
@@ -80,7 +80,7 @@ kids 0
 OBJECT poly
 name "Freq-nnn-Xn"
 loc -0.000198942 0.000296672 -0.0176431
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 0.00466857 0.0233507
@@ -99,7 +99,7 @@ kids 0
 OBJECT poly
 name "Freq-nnX-nn"
 loc -0.000198942 0.000296672 -0.00521916
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 -0.00472397 0.0233507
@@ -118,7 +118,7 @@ kids 0
 OBJECT poly
 name "Freq-nXn-nn"
 loc -0.000198942 0.000296672 0.00352722
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 0.00466857 0.0233507
@@ -155,7 +155,7 @@ kids 0
 OBJECT poly
 name "Freq-Xnn-nn"
 loc -0.000198942 0.000296672 0.012373
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 -0.00472397 0.0233507
@@ -174,7 +174,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc 0.000862298 0.000289782 0.0200285
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 52
 -0.00488324 0.00573277 1.6933e-09

@@ -1,9 +1,9 @@
 AC3Db
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.502 0.502 0.502  shi 64  trans 0
-MATERIAL "ac3dmat1" rgb 0.353 0.353 0.361  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.353 0.353 0.361  amb 0.353 0.353 0.361  emis 0 0 0  spec 0 0 0  shi 10  trans 0
 MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.984 0.973 1  shi 64  trans 0
 OBJECT world
 kids 2
@@ -14,7 +14,7 @@ kids 7
 OBJECT poly
 name "Panel-GBoite"
 loc 3.25718 -0.0788866 0.188408
-texture "btextu99pt.rgb"
+texture "btextu99pt.png"
 crease 45.000000
 numvert 7
 -7.55725 0.151584 0.406589
@@ -49,7 +49,7 @@ kids 0
 OBJECT poly
 name "Panel-GBoite-ChkL"
 loc 3.25718 -0.0788866 0.188408
-texture "checklist-land.rgb"
+texture "checklist-land.png"
 crease 45.000000
 numvert 7
 -7.5712 0.236749 0.400904
@@ -79,7 +79,7 @@ kids 0
 OBJECT poly
 name "Panel-DBoite-ChkL"
 loc 3.25718 -0.0788866 0.188408
-texture "checklist-takeoff.rgb"
+texture "checklist-takeoff.png"
 crease 45.000000
 numvert 6
 -7.55725 0.151584 -0.480877
@@ -107,7 +107,7 @@ kids 0
 OBJECT poly
 name "Panel-DBoite"
 loc 3.25718 -0.0788866 0.188408
-texture "btextu99pt.rgb"
+texture "btextu99pt.png"
 crease 45.000000
 numvert 8
 -7.72063 0.223558 -0.454786
@@ -1612,7 +1612,7 @@ kids 0
 OBJECT poly
 name "Panel-DBoite-TaAc"
 loc 0.0388034 -0.00953071 -0.394137
-texture "Tacan-Acls.rgb"
+texture "Tacan-Acls.png"
 crease 45.000000
 numvert 4
 -0.0169224 -0.0241352 0

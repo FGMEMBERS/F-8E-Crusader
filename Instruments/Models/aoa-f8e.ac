@@ -1,7 +1,6 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 0.914 0.812  amb 0.69 0.604 0.51  emis 0.682 0.553 0.569  spec 0.706 0.541 0.541  shi 125  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.827 0.82 0.82  emis 0 0 0  spec 0.792 0.784 0.8  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 0.914 0.812  amb 1 0.914 0.812  emis 0 0 0  spec 0 0 0  shi 125  trans 0
 OBJECT world
 kids 3
 OBJECT group
@@ -36,7 +35,7 @@ kids 0
 OBJECT poly
 name "Cadran"
 loc -0.000378064 0.00242983 -0.00237998
-texture "aoa3d-fond.rgb"
+texture "aoa3d-fond.png"
 crease 45.000000
 numvert 30
 -0.000543378 0.014588 0.00602021
@@ -71,7 +70,7 @@ numvert 30
 0 -0.00811168 0.0297508
 numsurf 6
 SURF 0x0
-mat 2
+mat 0
 refs 7
 16 0.931922 0.751889
 15 0.85201 0.855096
@@ -81,7 +80,7 @@ refs 7
 1 0.498899 0.737004
 2 0.595482 0.737458
 SURF 0x0
-mat 2
+mat 0
 refs 7
 12 0.497817 1
 11 0.368483 0.982397
@@ -91,7 +90,7 @@ refs 7
 0 0.402382 0.736548
 1 0.498899 0.737004
 SURF 0x0
-mat 2
+mat 0
 refs 7
 24 0.502182 0
 23 0.631516 0.0176025
@@ -101,7 +100,7 @@ refs 7
 3 0.595757 0.668061
 4 0.49924 0.667607
 SURF 0x0
-mat 2
+mat 0
 refs 7
 28 0.0680768 0.248111
 27 0.147989 0.144904
@@ -111,7 +110,7 @@ refs 7
 4 0.49924 0.667607
 5 0.402652 0.667153
 SURF 0x0
-mat 2
+mat 0
 refs 7
 20 0.934104 0.251889
 19 0.983528 0.372698
@@ -121,7 +120,7 @@ refs 7
 2 0.595482 0.737458
 3 0.595757 0.668061
 SURF 0x0
-mat 2
+mat 0
 refs 7
 0 0.402382 0.736548
 8 0.0658943 0.748111
@@ -133,37 +132,37 @@ refs 7
 kids 0
 OBJECT poly
 name "Index"
-loc 0.00616333 0 0
-texture "aoa3d-index.rgb"
+loc 0.00616333 5.29012e-09 -5.3096e-10
+texture "aoa3d-index.png"
 crease 45.000000
 numvert 6
-0 0.0265693 -0.0156511
-0 0.0216132 -0.0219946
-0 0.0151841 -0.0268392
-0 0.00772029 -0.0298548
-0 -0.000269715 -0.0308358
-0 -6.40213e-07 -1.68554e-07
+0 -0.0268389 -0.0151842
+0 -0.0298545 -0.00772029
+0 -0.0308355 0.000269782
+0 -0.0297152 0.00824144
+0 -0.0265698 0.0156515
+0 1.74135e-07 6.38719e-07
 numsurf 4
 SURF 0x0
-mat 2
+mat 0
 refs 3
 5 0.5 0.5
 1 0.982963 0.62941
 0 0.933013 0.75
 SURF 0x0
-mat 2
+mat 0
 refs 3
 5 0.5 0.5
 2 1 0.5
 1 0.982963 0.62941
 SURF 0x0
-mat 2
+mat 0
 refs 3
 5 0.5 0.5
 3 0.982963 0.37059
 2 1 0.5
 SURF 0x0
-mat 2
+mat 0
 refs 3
 5 0.5 0.5
 4 0.933013 0.25
@@ -172,7 +171,7 @@ kids 0
 OBJECT poly
 name "OFF"
 loc 0.00474659 -0.000436884 -0.0178048
-texture "aoa3d-fond.rgb"
+texture "aoa3d-fond.png"
 crease 45.000000
 numvert 4
 0 0.0109191 0.0120093
@@ -180,7 +179,7 @@ numvert 4
 0 0.0149468 0.0237067
 0 0.0149595 0.0120826
 numsurf 1
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 3 0.158973 0.0850723

@@ -1,75 +1,65 @@
 <?xml version="1.0"?>
 <!--
     Usable with FlightGear
-    Gerard Robin  12-11-2008 
-    Copyright License:  GPL
+    Gerard Robin  12-11-2008
+    Copyright License:  GPLv2
 -->
 <PropertyList>
     <default>
         <menu n="10">
             <label>F-8E</label>
             <enabled type="bool">true</enabled>
-            <!--<item>
-                <label>Taxi_to Catapult 1</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/sim/model/taxi/taxi_to</property>
-                    <value>1</value>
-                </binding>
-            </item>
-            <item>
-                <label>Taxi_to Catapult 2</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/sim/model/taxi/taxi_to</property>
-                    <value>2</value>
-                </binding>
-            </item> <item>
-                <label>Taxi_to Catapult 3</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/sim/model/taxi/taxi_to</property>
-                    <value>3</value>
-                </binding>
-            </item>
-            <item>
-                <label>Taxi_to Catapult 4</label>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/sim/model/taxi/taxi_to</property>
-                    <value>4</value>
-                </binding>
-            </item>-->
-            <!--<item>
-                <label>Go Taxi_to (toggle ON/OFF)</label>
-                <binding>
-                    <command>property-toggle</command>
-                    <property>/sim/model/taxi/linked</property>
-                </binding>
-                <binding>
-                    <command>property-assign</command>
-                    <property>/controls/gear/brake-parking</property>
-                    <value>0</value>
-                </binding>
-            </item>-->
+
             <item>
                 <label>Refueling on ground</label>
                 <binding>
                     <command>property-toggle</command>
-                    <property>/fdm/jsbsim/propulsion/systems/tank/refuel-on_ground-cmd</property>
+                    <property>/fdm/jsbsim/propulsion/systems/refuel/refuel-on_ground-cmd</property>
+                </binding>
+                <binding>
+                    <command>property-assign</command>
+                    <value>1</value>
+                    <property>/controls/flight/fuel-pump</property>
                 </binding>
             </item>
+
             <item>
-                <label>Taxi_to Catapult</label>
+                <label>Emergency fuel dump Transfert-Tank</label>
+                <binding>
+                    <command>property-assign</command>
+                    <property>fdm/jsbsim/inertia/pointmass-weight-lbs</property>
+                    <value>0</value>
+                </binding>
+            </item>
+	    
+	   
+            <item>
+                <label>Air Tanker On</label>
+                <name>tanker-on</name>
+                <enabled>true</enabled>
                 <binding>
                     <command>nasal</command>
                     <script>
-                        var taxi = gui.Dialog.new("/sim/gui/dialogs/F-8E/menu/dialog", 
-                        "Aircraft/F-8E-Crusader/Inputs/taxi_to.xml");
-                        taxi.open();
+                        var tanker = gui.Dialog.new("/sim/gui/dialogs/F-8E/tanker/dialog",
+                        "Aircraft/F-8E-Crusader/Inputs/air_tanker.xml");
+                        tanker.open();
                     </script>
                 </binding>
-        </item>
+            </item>
+            <item>
+                <label>Air Tanker Refresh</label>
+                <name>tanker-off</name>
+                <enabled>true</enabled>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/fdm/jsbsim/systems/tanker/enable</property>
+                    <value>0</value>
+                </binding>
+                <binding>
+                    <command>nasal</command>
+                    <script>f8_tanker.CreateTanker();</script>
+                </binding>
+            </item>
         </menu>
     </default>
 </PropertyList>

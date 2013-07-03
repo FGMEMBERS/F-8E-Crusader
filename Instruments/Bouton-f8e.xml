@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 <PropertyList>
 
 	<path>Models/bouton-f8e.ac</path>
 	<texture-path>Models/Textures</texture-path>
 
-		<animation>
+		<!--<animation>
 			<type>noshadow</type>
 			<object-name>BTN</object-name>
-		</animation>
+		</animation>-->
 
 		<animation include="Instrument-Light3.xml">
 			<object-name>Couronne</object-name>

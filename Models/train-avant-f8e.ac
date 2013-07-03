@@ -1,15 +1,15 @@
 AC3Db
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat14.001" rgb 0.8 0.8 0.8  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "NoName" rgb 1 1 1  amb 0.525 0.525 0.525  emis 0 0 0  spec 0.231 0.231 0.231  shi 53  trans 0
-MATERIAL "ac3dmat0" rgb 0 0 0  amb 0.502 0.502 0.502  emis 0 0 0  spec 0.502 0.502 0.502  shi 72  trans 0
-MATERIAL "Material" rgb 0.431 0.431 0.467  amb 0.51 0.51 0.51  emis 0 0 0  spec 0 0 0  shi 111  trans 0
-MATERIAL "ac3dmat2" rgb 0.82 0.812 0.835  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 12  trans 0
-MATERIAL "ac3dmat2" rgb 0.224 0.275 0.373  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 24  trans 0
-MATERIAL "ac3dmat0" rgb 0.145 0.129 0.18  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 0  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat12" rgb 0.266667 0.266667 0.266667  amb 0.266667 0.266667 0.266667  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat13" rgb 0.533333 0.533333 0.533333  amb 0.533333 0.533333 0.533333  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat14.001" rgb 0.8 0.8 0.8  amb 0.8 0.8 0.8  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "NoName" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.231 0.231 0.231  shi 53  trans 0
+MATERIAL "ac3dmat0" rgb 0 0 0  amb 0 0 0  emis 0 0 0  spec 0.502 0.502 0.502  shi 72  trans 0
+MATERIAL "Material" rgb 0.431 0.431 0.467  amb 0.431 0.431 0.467  emis 0 0 0  spec 0 0 0  shi 111  trans 0
+MATERIAL "ac3dmat2" rgb 0.82 0.812 0.835  amb 0.82 0.812 0.835  emis 0 0 0  spec 0 0 0  shi 12  trans 0
+MATERIAL "ac3dmat2" rgb 0.224 0.275 0.373  amb 0.224 0.275 0.373  emis 0 0 0  spec 1 1 1  shi 24  trans 0
+MATERIAL "ac3dmat0" rgb 0.145 0.129 0.18  amb 0.145 0.129 0.18  emis 0 0 0  spec 0 0 0  shi 0  trans 0
 OBJECT world
 kids 9
 OBJECT poly
@@ -12487,7 +12487,7 @@ name "AVTrain-AVPorteExt"
 loc -4.02223 -1.00145 0
 data 8
 Mesh.094
-texture "fuselagv1.rgb"
+texture "fuselagv1.png"
 crease 30.000000
 numvert 8
 0.0718601 0.00318539 -0.17702
@@ -12541,7 +12541,7 @@ name "AVTrain-AVPorteInt"
 loc -4.02222 -0.996449 0
 data 8
 Mesh.094
-texture "btextu99.rgb"
+texture "btextu99.png"
 crease 30.000000
 numvert 14
 -0.0718551 0.00181198 -0.000123446

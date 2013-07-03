@@ -17,7 +17,7 @@
        <switch name="systems/BLC/switch">
           <default value="0"/>
           <test  logic="AND" value="1">
-               fcs/flap-pos-norm gt 0.51
+              fcs/wing-incidence-up == 1
                propulsion/engine[0]/n2 gt 70.0
           </test>
           <output>systems/BLC/active</output>

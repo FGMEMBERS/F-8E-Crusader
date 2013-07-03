@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <!--
     Usable with FlightGear
-    Property of Gerard Robin  12-12-2005 
-    Copyright License:  GPL
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
 -->
 
 <PropertyList>
@@ -10,16 +10,10 @@
  <path>Models/alt-f8e.ac</path>
  <texture-path>Models/Textures</texture-path>
 
- 	<model>
-		<name>Bezel</name>
-		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
-		<offsets>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-			<pitch-deg>0</pitch-deg>
-		</offsets>
-	</model>
+        <animation>
+            <type>noshadow</type>
+            <object-name>ALT</object-name>
+	</animation>
 
 	<model>
 		<name>Bouton</name>
@@ -31,7 +25,7 @@
 			<pitch-deg>0</pitch-deg>
 		</offsets>
 	</model>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Bouton</object-name>
@@ -48,7 +42,7 @@
                 </binding>
             </action>
         </animation>
-        
+
         <animation>
             <type>pick</type>
             <object-name>Bouton</object-name>
@@ -94,7 +88,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Aiguille</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>-0.36</factor>
 		<axis>
 			<x>1</x>
@@ -106,7 +100,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Ft-m</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.0001</factor>
 		<step>1000</step>
 		<scroll>1</scroll>
@@ -121,32 +115,32 @@
 		<condition>
 			<not>
 				<less-than>
-					<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
 					<value>0</value>
 				</less-than>
 			</not>
 		</condition>
 		<type>select</type>
 		<object-name>Ft-dm</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 	</animation>
 
 	<animation>
 		<condition>
 				<less-than>
-					<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+					<property>instrumentation/altimeter/indicated-altitude-ft</property>
 					<value>0</value>
 				</less-than>
 		</condition>
 		<type>select</type>
 		<object-name>Ft-minus</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 	</animation>
 
 	<animation>
 		<type>textranslate</type>
 		<object-name>Ft-dm</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.00001</factor>
 		<step>10000</step>
 		<scroll>1</scroll>
@@ -235,7 +229,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Tambour</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.36</factor>
 		<center>
 			<x-m>-0.00438288</x-m>

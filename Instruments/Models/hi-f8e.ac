@@ -1,9 +1,9 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.612 0.604 1  emis 0.553 0.541 0.639  spec 0.62 0.647 0.733  shi 125  trans 0
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 1 1 1  shi 128  trans 0
-MATERIAL "ac3dmat1" rgb 0.898 0.949 1  amb 0.612 0.604 1  emis 0 0 0  spec 0.62 0.647 0.733  shi 125  trans 0
-MATERIAL "ac3dmat1" rgb 1 0.992 1  amb 0.69 0.604 0.51  emis 0 0 0  spec 0.706 0.541 0.541  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.898 0.914 1  emis 0 0 0  spec 0 0 0  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 128  trans 0
+MATERIAL "ac3dmat1" rgb 0.898 0.949 1  amb 0.898 0.949 1  emis 0 0 0  spec 0 0 0  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 0.992 1  amb 1 0.992 1  emis 0 0 0  spec 0 0 0  shi 125  trans 0
 OBJECT world
 kids 11
 OBJECT group
@@ -13,7 +13,7 @@ kids 3
 OBJECT poly
 name "UDme"
 loc 0.00590296 0.0046318 -0.0115938
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.000977515 0.0211759 0.00611514
@@ -21,13 +21,13 @@ numvert 4
 0.000977515 0.0108947 0.0135126
 0.000977515 0.0108947 0.00611514
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 2 4.70525e-11 0.00940441
 0 1 0.100939
 1 4.70525e-11 0.100939
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 0 1 0.100939
@@ -37,7 +37,7 @@ kids 0
 OBJECT poly
 name "DDme"
 loc 0.00590296 0.0046318 0.0065067
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.000977515 0.0211759 -0.00370247
@@ -45,13 +45,13 @@ numvert 4
 0.000977515 0.0108947 0.00369498
 0.000977515 0.0108947 -0.00370247
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 2 -1.35853e-10 0.0116489
 0 1 0.10079
 1 -1.35853e-10 0.10079
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 0 1 0.10079
@@ -61,7 +61,7 @@ kids 0
 OBJECT poly
 name "CDme"
 loc 0.00590296 0.0046318 0.00686547
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.000977515 0.0108947 0.00415846
@@ -69,13 +69,13 @@ numvert 4
 0.000977515 0.0211759 0.0115559
 0.000977515 0.0211759 0.00415846
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 3 1 0.100939
 1 4.70525e-11 0.00940441
 0 1 0.00940441
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 1 4.70525e-11 0.00940441
@@ -89,7 +89,7 @@ kids 3
 OBJECT poly
 name "UTacan"
 loc -0.00181227 0.0255355 -0.011326
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.00864692 -0.00966479 0.00602449
@@ -97,13 +97,13 @@ numvert 4
 0.00864692 0.000463972 0.0133123
 0.00864692 0.000463972 0.00602449
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 3 1 0.100939
 1 4.70525e-11 0.00940441
 0 1 0.00940441
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 1 4.70525e-11 0.00940441
@@ -113,7 +113,7 @@ kids 0
 OBJECT poly
 name "DTacan"
 loc -0.00181227 0.0255355 0.00650619
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.00864692 -0.00966479 -0.00364758
@@ -121,13 +121,13 @@ numvert 4
 0.00864692 0.000463972 0.0036402
 0.00864692 0.000463972 -0.00364758
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 3 1 0.10079
 1 -1.35853e-10 0.0116489
 0 1 0.0116489
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 1 -1.35853e-10 0.0116489
@@ -137,7 +137,7 @@ kids 0
 OBJECT poly
 name "CTacan"
 loc -0.00181227 0.0255355 0.00685964
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0.00864692 0.000463972 0.00409681
@@ -145,13 +145,13 @@ numvert 4
 0.00864692 -0.00966479 0.0113846
 0.00864692 -0.00966479 0.00409681
 numsurf 2
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 2 4.70525e-11 0.00940441
 0 1 0.100939
 1 4.70525e-11 0.100939
-SURF 0x20
+SURF 0x0
 mat 1
 refs 3
 0 1 0.100939
@@ -167,7 +167,7 @@ name "Aiguille1-Dummy"
 loc 0.000748487 -6.23634e-05 1.43222e-10
 data 5
 Plane
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 30.000000
 numvert 13
 7.15628e-05 -0.0277673 -0.000487369
@@ -222,7 +222,7 @@ kids 0
 OBJECT poly
 name "Select-Nav"
 loc 0.00789883 0.00736107 0
-texture "hi3d-nav.rgb"
+texture "hi3d-nav.png"
 crease 45.000000
 numvert 4
 0 -0.026188 -0.00991258
@@ -230,7 +230,7 @@ numvert 4
 0 -0.017784 0.00991258
 0 -0.017784 -0.00991258
 numsurf 1
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 3 1.01167 0.993846
@@ -241,7 +241,7 @@ kids 0
 OBJECT poly
 name "Select-Tacan"
 loc 0.00789883 0.00736107 0
-texture "hi3d-nav.rgb"
+texture "hi3d-nav.png"
 crease 45.000000
 numvert 4
 0 -0.017784 -0.00991258
@@ -249,7 +249,7 @@ numvert 4
 0 -0.026188 0.00991258
 0 -0.026188 -0.00991258
 numsurf 1
-SURF 0x20
+SURF 0x0
 mat 0
 refs 4
 0 1.01167 0.189159
@@ -266,7 +266,7 @@ name "Aiguille1-Nav"
 loc 0.000750815 -6.23779e-05 1.43668e-10
 data 5
 Plane
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 30.000000
 numvert 13
 -8.25152e-07 -0.0277672 0.000487369
@@ -323,7 +323,7 @@ name "Aiguille1-Adf"
 loc 0.000750815 -6.23779e-05 1.43668e-10
 data 5
 Plane
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 30.000000
 numvert 13
 -8.25152e-07 -0.0277672 0.000487369
@@ -404,41 +404,41 @@ numvert 23
 1.86265e-09 0.0227441 -0.0350125
 1.86265e-09 0.0186758 -0.0373613
 numsurf 6
-SURF 0x20
+SURF 0x0
 mat 4
 refs 3
 0 1 1
 1 0 1
 2 0 0
-SURF 0x20
+SURF 0x0
 mat 4
 refs 4
 6 1 1
 5 0 1
 4 0 0
 3 1 0
-SURF 0x20
+SURF 0x0
 mat 4
 refs 4
 7 1 1
 8 0 1
 9 0 0
 10 1 0
-SURF 0x20
+SURF 0x0
 mat 4
 refs 4
 14 1 1
 13 0 1
 12 0 0
 11 1 0
-SURF 0x20
+SURF 0x0
 mat 4
 refs 4
 15 1 1
 16 0 1
 17 0 0
 18 1 0
-SURF 0x20
+SURF 0x0
 mat 4
 refs 4
 22 1 1
@@ -451,7 +451,7 @@ name "Aiguille1-Tacan"
 loc 0.000750815 -6.23779e-05 1.43668e-10
 data 5
 Plane
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 30.000000
 numvert 13
 -8.25152e-07 -0.0277672 0.000487369
@@ -506,7 +506,7 @@ kids 0
 OBJECT poly
 name "Fond"
 loc -0.00196357 2.20892e-05 -8.62003e-10
-texture "hi3d-fond.rgb"
+texture "hi3d-fond.png"
 crease 45.000000
 numvert 49
 0 -0.0114579 -0.00995594
@@ -756,7 +756,7 @@ name "Aiguille1"
 loc 0.000750815 -6.23779e-05 1.43668e-10
 data 5
 Plane
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 30.000000
 numvert 13
 -8.25152e-07 0.0215658 0.000468341
@@ -811,12 +811,12 @@ kids 0
 OBJECT group
 name "HI"
 loc 0.0109005 -2.20911e-05 -1.43668e-10
-texture "hi3d-cadran.rgb"
+texture "hi3d-cadran.png"
 kids 1
 OBJECT poly
 name "Cadran"
 loc -0.00101513 2.20892e-05 -8.3452e-10
-texture "hi3d-cadran.rgb"
+texture "hi3d-cadran.png"
 crease 45.000000
 numvert 48
 0 -0.0106842 0.0398739
@@ -1040,7 +1040,7 @@ kids 0
 OBJECT poly
 name "Aiguille2-Nav"
 loc 0.0108723 -0.00237106 0
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 46
 0 -0.0269161 1.16038e-05
@@ -1090,49 +1090,49 @@ numvert 46
 0 0.0329918 -0.000487836
 0 0.0322013 -0.00205995
 numsurf 21
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 0 0.511553 0.367135
 22 0.511553 0.367135
 7 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 1 0.511553 0.367135
 11 0.511553 0.367135
 36 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 2 0.511553 0.367135
 18 0.511553 0.367135
 12 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 3 0.511553 0.367135
 9 0.511553 0.367135
 39 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 4 0.511553 0.367135
 13 0.511553 0.367135
 10 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 5 0.511553 0.367135
 14 0.511553 0.367135
 13 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 6 0.511553 0.367135
 15 0.511553 0.367135
 14 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 16 0.511553 0.367135
@@ -1206,7 +1206,7 @@ refs 3
 45 0.485558 0.653671
 30 0.485558 0.653671
 44 0.485558 0.653671
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 30 0.485558 0.653671
@@ -1230,7 +1230,7 @@ kids 0
 OBJECT poly
 name "Aiguille2-Adf"
 loc 0.0108723 -0.00237106 0
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 46
 0 -0.0269351 -0.00165808
@@ -1294,7 +1294,7 @@ refs 4
 30 0.485558 0.653671
 23 0.485558 0.653671
 14 0.485558 0.653671
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 27 0.485558 0.653671
@@ -1368,49 +1368,49 @@ refs 5
 40 0.575098 0.445121
 22 0.575098 0.445121
 17 0.575098 0.445121
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 4 0.511553 0.367135
 3 0.511553 0.367135
 42 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 5 0.511553 0.367135
 42 0.511553 0.367135
 43 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 6 0.511553 0.367135
 43 0.511553 0.367135
 44 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 7 0.511553 0.367135
 44 0.511553 0.367135
 1 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 8 0.511553 0.367135
 26 0.511553 0.367135
 18 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 9 0.511553 0.367135
 39 0.511553 0.367135
 11 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 10 0.511553 0.367135
 45 0.511553 0.367135
 21 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 41 0.511553 0.367135
@@ -1420,7 +1420,7 @@ kids 0
 OBJECT poly
 name "Aiguille2-Tacan"
 loc 0.0108723 -0.00237106 0
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 46
 0 -0.0269161 1.16038e-05
@@ -1470,49 +1470,49 @@ numvert 46
 0 0.0329918 -0.000487836
 0 0.0322013 -0.00205995
 numsurf 21
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 0 0.511553 0.367135
 22 0.511553 0.367135
 7 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 1 0.511553 0.367135
 11 0.511553 0.367135
 36 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 2 0.511553 0.367135
 18 0.511553 0.367135
 12 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 3 0.511553 0.367135
 9 0.511553 0.367135
 39 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 4 0.511553 0.367135
 13 0.511553 0.367135
 10 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 5 0.511553 0.367135
 14 0.511553 0.367135
 13 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 6 0.511553 0.367135
 15 0.511553 0.367135
 14 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 16 0.511553 0.367135
@@ -1586,7 +1586,7 @@ refs 3
 45 0.485558 0.653671
 30 0.485558 0.653671
 44 0.485558 0.653671
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 30 0.485558 0.653671
@@ -1610,7 +1610,7 @@ kids 0
 OBJECT poly
 name "Aiguille2"
 loc 0.0108723 -0.00237106 0
-texture "blanc-noir.rgb"
+texture "blanc-noir.png"
 crease 45.000000
 numvert 46
 0 -0.0269351 -0.00165808
@@ -1674,7 +1674,7 @@ refs 4
 30 0.485558 0.653671
 23 0.485558 0.653671
 14 0.485558 0.653671
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 27 0.485558 0.653671
@@ -1748,49 +1748,49 @@ refs 5
 40 0.575098 0.445121
 22 0.575098 0.445121
 17 0.575098 0.445121
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 4 0.511553 0.367135
 3 0.511553 0.367135
 42 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 5 0.511553 0.367135
 42 0.511553 0.367135
 43 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 6 0.511553 0.367135
 43 0.511553 0.367135
 44 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 7 0.511553 0.367135
 44 0.511553 0.367135
 1 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 8 0.511553 0.367135
 26 0.511553 0.367135
 18 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 9 0.511553 0.367135
 39 0.511553 0.367135
 11 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 10 0.511553 0.367135
 45 0.511553 0.367135
 21 0.511553 0.367135
-SURF 0x20
+SURF 0x0
 mat 2
 refs 3
 41 0.511553 0.367135

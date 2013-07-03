@@ -1,42 +1,39 @@
 <?xml version="1.0"?>
-
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
 
 <system name="Blackout">
+
     <channel name="Blackout">
-             
+
+
             <summer name="g load">
               <input>accelerations/n-pilot-z-norm</input>
             </summer>
-            <!--===Blackout ==Specific part    ====300 secondes to blackout at 5g ====and over 9 g => 10 sec- transition 4 secondes===-->
-           <!-- ============1 seconde to redout under -4g ===transition 4 secondes ==========================-->
-           
-           <scheduled_gain name="systems/blackout-delay">
-               <input>systems/blackout-cst</input>
-               <table>
-                   <independentVar>fcs/g-load</independentVar>
-                    <tableData>
-                        -9 10
-                        -5 300
-                    </tableData>
-               </table>
-            </scheduled_gain>
             
-            <switch name="systems/blackout">
+            <!--pas de combinaison anti-g-->
+            <!--===Blackout ==Specific part    ====1 secondes to blackout at 5g ====transition 1 secondes=============-->
+           <!-- ============1 seconde to redout under -4g ===transition 1 secondes ==========================-->
+           
+            <switch name="systems/blackout/blackout">
                 <default value="0"/>
                 <test  logic="AND" value="1">
                 fcs/g-load lt -5
                 </test>
             </switch>
 
-            <switch name="systems/redout">
+            <switch name="systems/blackout/redout">
                 <default value="0"/>
                 <test  logic="AND" value="1">
                 fcs/g-load gt 4
                 </test>
             </switch>
 
-            <kinematic name="systems/blackout-cmd">
-                <input>systems/blackout</input>
+            <kinematic name="systems/blackout/blackout-cmd">
+                <input>systems/blackout/blackout</input>
                 <traverse>
                     <setting>
                     <position>0.</position>
@@ -49,16 +46,16 @@
                 </traverse>
             </kinematic>
 
-            <switch name="systems/blackout-start">
+            <switch name="systems/blackout/blackout-start">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                systems/blackout-cmd == 1
+                systems/blackout/blackout-cmd == 1
                 </test>
             </switch>
 
 
-            <kinematic name="systems/redout-cmd">
-                <input>systems/redout</input>
+            <kinematic name="systems/blackout/redout-cmd">
+                <input>systems/blackout/redout</input>
                 <traverse>
                     <setting>
                     <position>0</position>
@@ -71,16 +68,16 @@
                 </traverse>
             </kinematic>
 
-            <switch name="systems/redout-start">
+            <switch name="systems/blackout/redout-start">
                 <default value="0"/>
                 <test  logic="AND" value="0.85">
-                systems/redout-cmd == 1
+                systems/blackout/redout-cmd == 1
                 </test>
             </switch>
 
 
-            <kinematic name="systems/blackout-on">
-                <input>systems/blackout-start</input>
+            <kinematic name="systems/blackout/blackout-on">
+                <input>systems/blackout/blackout-start</input>
                 <traverse>
                     <setting>
                     <position>0</position>
@@ -88,13 +85,13 @@
                     </setting>
                     <setting>
                     <position>1</position>
-                    <time>4</time>
+                    <time>2</time>
                     </setting>
                 </traverse>
             </kinematic>
 
-            <kinematic name="systems/redout-on">
-                <input>systems/redout-start</input>
+            <kinematic name="systems/blackout/redout-on">
+                <input>systems/blackout/redout-start</input>
                 <traverse>
                     <setting>
                     <position>0</position>
@@ -102,43 +99,43 @@
                     </setting>
                     <setting>
                     <position>0.7</position>
-                    <time>4</time>
+                    <time>2</time>
                     </setting>
                      <setting>
                     <position>1</position>
-                    <time>8</time>
+                    <time>4</time>
                     </setting>
                 </traverse>
             </kinematic>
 
 
 
-            <switch name="systems/redout-red">
+            <switch name="systems/blackout/redout-red">
                 <default value="0"/>
                 <test  logic="AND" value="1">
-                systems/redout-start gt 0.7
+                systems/blackout/redout-start gt 0.7
                 </test>
                 <test  logic="AND" value="0">
-                systems/blackout-start == 1
+                systems/blackout/blackout-start == 1
                 </test>
                 <output>/sim/rendering/redout/red</output>
             </switch>
 
-            <summer name="systems/redout-alpha-value">
-              <input>systems/blackout-on</input>
-              <input>systems/redout-on</input>
+            <summer name="systems/blackout/redout-alpha-value">
+              <input>systems/blackout/blackout-on</input>
+              <input>systems/blackout/redout-on</input>
             </summer>
 
-            <switch name="systems/redout-alpha">
+            <switch name="systems/blackout/redout-alpha">
                 <default value="0"/>
-                <test  logic="AND" value="systems/redout-alpha-value">
+                <test  logic="AND" value="systems/blackout/redout-alpha-value">
                 /sim/current-view/internal == 1
                 </test>
                 <output>/sim/rendering/redout/alpha</output>
             </switch>
 
            <!-- locking  the Nasal Redout script on OFF-->
-            <switch name="systems/redout-nasal-off">
+            <switch name="systems/blackout/redout-nasal-off">
                 <default value="0"/>
                 <test  logic="OR" value="0">
                     /sim/aircraft != 999

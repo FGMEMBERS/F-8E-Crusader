@@ -1,6 +1,6 @@
 AC3Db
-MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0 0 0  shi 10  trans 0
-MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.612 0.604 1  emis 0.553 0.541 0.639  spec 0.62 0.647 0.733  shi 125  trans 0
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0 0 0  shi 10  trans 0
+MATERIAL "ac3dmat1" rgb 0.898 0.914 1  amb 0.898 0.914 1  emis 0.553 0.541 0.639  spec 0.62 0.647 0.733  shi 125  trans 0
 OBJECT world
 kids 12
 OBJECT group
@@ -10,7 +10,7 @@ kids 1
 OBJECT poly
 name "001c000-Digit"
 loc -0.00898328 0.00790154 0.00514311
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 0.00530179 -0.0038147
@@ -592,7 +592,7 @@ kids 1
 OBJECT poly
 name "010c000-Digit"
 loc -0.00898328 0.00790154 0.0137678
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 -0.00530179 -0.0038147
@@ -620,7 +620,7 @@ kids 1
 OBJECT poly
 name "100c000-Digit"
 loc -0.00898328 0.00790154 0.0223321
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 0.00530179 -0.0038147
@@ -1202,7 +1202,7 @@ kids 1
 OBJECT poly
 name "000c100-Digit"
 loc -0.00898328 0.00790154 -0.00682747
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 -0.00530179 -0.0038147
@@ -1230,7 +1230,7 @@ kids 1
 OBJECT poly
 name "000c010-Digit"
 loc -0.00898328 0.00790154 -0.0153918
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 0.00530179 -0.0038147
@@ -1812,7 +1812,7 @@ kids 1
 OBJECT poly
 name "000c001-Digit"
 loc -0.00898328 0.00790154 -0.0240165
-texture "digit.rgb"
+texture "digit.png"
 crease 45.000000
 numvert 4
 0 -0.00530179 -0.0038147

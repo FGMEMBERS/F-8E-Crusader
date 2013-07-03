@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<!-- Gerard Robin  12-12-2005 , License GPL -->
+<!-- Gerard Robin  12-12-2005 , License GPLv2 -->
 
 
 <!-- Instruments Position -->
@@ -25,7 +25,32 @@
 		<object-name>Panel-Base</object-name>
 	</animation>
 
+        <model>
+            <name>Refuel-Notification</name>
+            <path>Aircraft/F-8E-Crusader/Panels/Refuel-MenuText.xml</path>
+            <offsets>
+                <x-m>0.10</x-m>
+                <y-m>0.0</y-m>
+                <z-m>0.40</z-m>
+            </offsets>
+        </model>
 
+        <animation>
+            <type>select</type>
+            <object-name>Refuel-Notification</object-name>
+            <condition>
+                <or>
+                    <greater-than>
+                        <property>/fdm/jsbsim/systems/payload/display-timing</property>
+                        <value>0</value>
+                    </greater-than>
+                    <equals>
+                        <property>/fdm/jsbsim/propulsion/systems/refuel/refuel-on_ground-cmd</property>
+                        <value>1</value>
+                    </equals>
+                </or>
+            </condition>
+ 	</animation>
 
 	<!-- ************************ Control Lights *******************************-->
 
@@ -112,7 +137,7 @@
 		</offsets>
 	</model>
 
-	<model>
+	<!--<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/Temoin-Oxygene.xml</path>
 		<offsets>
 			<x-m>0.00589374</x-m>
@@ -120,7 +145,7 @@
 			<z-m>0.056</z-m>
 		</offsets>
 
-	</model>
+	</model>-->
 
 
 <!--**********************Center********************************-->
@@ -136,20 +161,20 @@
 	</model>
 
 
-	<model>
+	<!--<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/CTLPOS-f8e.xml</path>
 		<offsets>
 			<x-m>0.00254548</x-m>
 			<y-m>0.130</y-m>
 			<z-m>-0.11</z-m>
 		</offsets>
-	</model>
+	</model>-->
 
 	<!-- C, H0-->
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/Module-C1-f8e.xml</path>
 		<offsets>
-			<x-m>0.01</x-m>
+			<x-m>0.001</x-m>
 			<y-m>0</y-m>
 			<z-m>-0.0978</z-m>
 		</offsets>
@@ -168,7 +193,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/COMT-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>0.0</x-m>
 			<y-m>-0.060</y-m>
 			<z-m>-0.20</z-m>
 		</offsets>
@@ -190,25 +215,52 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/ALT-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.005</x-m>
 			<y-m>-0.12855</y-m>
 			<z-m>-0.060</z-m>
 		</offsets>
 	</model>
+	<model>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+		<offsets>
+			<x-m>-0.00</x-m>
+			<y-m>-0.12855</y-m>
+			<z-m>-0.060</z-m>
+		</offsets>
+	</model>
+	
 	<!-- L0,H1,big-->
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/ASI-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.12855</y-m>
 			<z-m>0.039</z-m>
 		</offsets>
 	</model>
+	<model>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+		<offsets>
+			<x-m>-0.00</x-m>
+			<y-m>-0.12855</y-m>
+			<z-m>0.039</z-m>
+		</offsets>
+	</model>
+	
 	<!-- L0,H2,big-->
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/AGL-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
+			<y-m>-0.12855</y-m>
+			<z-m>0.138</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+		<offsets>
+			<x-m>-0.00</x-m>
 			<y-m>-0.12855</y-m>
 			<z-m>0.138</z-m>
 		</offsets>
@@ -219,7 +271,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/GMTR-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.219</y-m>
 			<z-m>-0.0792</z-m>
 		</offsets>
@@ -228,7 +280,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/IVSI-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.219</y-m>
 			<z-m>-0.0086</z-m>
 		</offsets>
@@ -238,7 +290,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/AOA-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.219</y-m>
 			<z-m>0.062</z-m>
 		</offsets>
@@ -247,7 +299,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/OIL_P-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.213</y-m>
 			<z-m>0.127</z-m>
 		</offsets>
@@ -258,7 +310,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/EPR-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.293</y-m>
 			<z-m>-0.0792</z-m>
 		</offsets>
@@ -267,7 +319,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/N1-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.293</y-m>
 			<z-m>-0.0086</z-m>
 		</offsets>
@@ -276,7 +328,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/EGT-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>-0.293</y-m>
 			<z-m>0.062</z-m>
 		</offsets>
@@ -296,29 +348,51 @@
 <!--************************Right Side*****************************-->
 
 	<!--R0,H0-->
-	<model>
-		<path>Aircraft/F-8E-Crusader/Instruments/TURN-f8e.xml</path>
-		<offsets>
-			<x-m>0.0119086</x-m>
-			<y-m>0.141</y-m>
-			<z-m>-0.048</z-m>
-		</offsets>
+
+        <model>
+            <name>Turn_rb</name>
+            <path>Aircraft/F-8E-Crusader/Instruments/TURN-f8e_rb.xml</path>
+            <offsets>
+                <x-m>-0.002</x-m>
+                <y-m>0.141</y-m>
+                <z-m>-0.048</z-m>
+            </offsets>
 	</model>
+        
 
 	<!-- R0,H1,big-->
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/HI-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.12855</y-m>
 			<z-m>0.039</z-m>
 		</offsets>
 	</model>
+	
+	<model>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+		<offsets>
+			<x-m>-0.00</x-m>
+			<y-m>0.12855</y-m>
+			<z-m>0.039</z-m>
+		</offsets>
+	</model>
+	
 	<!-- R0,H2,big-->
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/ILS-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
+			<y-m>0.12855</y-m>
+			<z-m>0.138</z-m>
+		</offsets>
+	</model>
+	
+	<model>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel-f8e.xml</path>
+		<offsets>
+			<x-m>-0.00</x-m>
 			<y-m>0.12855</y-m>
 			<z-m>0.138</z-m>
 		</offsets>
@@ -330,7 +404,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/AI_pt-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.219</y-m>
 			<z-m>-0.0792</z-m>
 		</offsets>
@@ -339,7 +413,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/FUEL-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.219</y-m>
 			<z-m>-0.0086</z-m>
 		</offsets>
@@ -348,7 +422,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/CLOCK.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.219</y-m>
 			<z-m>0.062</z-m>
 		</offsets>
@@ -357,7 +431,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/FUPMP-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.218</y-m>
 			<z-m>0.137</z-m>
 		</offsets>
@@ -368,7 +442,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/FUFL-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.293</y-m>
 			<z-m>-0.0792</z-m>
 		</offsets>
@@ -377,7 +451,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/FUEL1-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.293</y-m>
 			<z-m>-0.0086</z-m>
 		</offsets>
@@ -386,7 +460,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/UHF-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.293</y-m>
 			<z-m>0.062</z-m>
 		</offsets>
@@ -396,7 +470,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/DMY_micro-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.357</y-m>
 			<z-m>-0.065</z-m>
 		</offsets>
@@ -405,7 +479,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/DMY_micro-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.357</y-m>
 			<z-m>-0.023</z-m>
 		</offsets>
@@ -414,7 +488,7 @@
 	<model>
 		<path>Aircraft/F-8E-Crusader/Instruments/DMY_micro-f8e.xml</path>
 		<offsets>
-			<x-m>0.0119086</x-m>
+			<x-m>-0.002</x-m>
 			<y-m>0.357</y-m>
 			<z-m>0.019</z-m>
 		</offsets>

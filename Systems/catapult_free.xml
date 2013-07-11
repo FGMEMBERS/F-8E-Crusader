@@ -57,7 +57,7 @@
 
        <pure_gain name="systems/catapult_free/cat-force">
           <input>inertia/weight-lbs</input>
-          <gain>2.6</gain>
+          <gain>2.8</gain>
        </pure_gain>
 
        <switch name="systems/catapult_free/cat-final">

@@ -30,15 +30,9 @@
                 </test>
                 <test  logic="AND" value="0">
                     /environment/terrain-solid == 0
-                    /environment/terrain-hight   LT  1.5
                     /environment/terrain-undefined == 0
                     position/h-agl-ft  LT 8
                 </test>
-               <!-- <test  logic="AND" value="0">
-                    /environment/terrain-solid == 0
-                    position/h-agl-ft lt 40
-                    fcs/agl-sl-difference lt 3
-                </test>-->
                 <output>gear/gear-cp-cmd-norm</output>
             </switch>
 

@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+	<path>Models/ctlpos-f8e.ac</path>
+	<texture-path>Models/Textures/</texture-path>
+		<animation>
+			<type>noshadow</type>
+			<object-name>Control-Pos</object-name>
+		</animation>
+
+		<animation include="Instrument-Light4.xml">
+			<object-name>Cadran</object-name>
+			<object-name>Elev-Trim</object-name>
+			<object-name>Elevator</object-name>
+			<object-name>Rudder</object-name>
+			<object-name>Aileron</object-name>
+		</animation>
+
+
+		<animation>
+			<type>translate</type>
+			<object-name>Elev-Trim</object-name>
+			<property>controls/flight/elevator-trim</property>
+			<factor>0.02</factor>
+			<axis>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.0</z>
+			</axis>
+		</animation>
+
+		<animation>
+			<object-name>Elevator</object-name>
+			<type>translate</type>
+			<property>controls/flight/elevator</property>
+			<factor>0.02</factor>
+			<axis>
+				<x>0.0</x>
+				<y>0.0</y>
+				<z>1.0</z>
+			</axis>
+		</animation>
+
+		<animation>
+		<type>translate</type>
+			<object-name>Rudder</object-name>
+			<property>controls/flight/rudder</property>
+			<factor>0.05</factor>
+			<axis>
+				<x>0.0</x>
+				<y>1.0</y>
+				<z>0.0</z>
+			</axis>
+		</animation>
+
+
+		<animation>
+		<type>translate</type>
+			<object-name>Aileron</object-name>
+			<property>/controls/flight/aileron</property>
+			<factor>0.05</factor>
+			<axis>
+				<x>0.0</x>
+				<y>1.0</y>
+				<z>0.0</z>
+			</axis>
+		</animation>
+
+
+
+ </PropertyList>

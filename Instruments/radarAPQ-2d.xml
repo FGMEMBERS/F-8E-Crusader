@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+ <name>Radar</name>
+ <w-base>256</w-base>
+ <h-base>256</h-base>
+
+
+<params>
+        <aircraft-radar-altitude>/instrumentation/radar/aircraft-target/altitude-ft</aircraft-radar-altitude>
+        <aircraft-radar-velocity>/instrumentation/radar/aircraft-target/airspeed</aircraft-radar-velocity>
+        <aircraft-radar-heading>/instrumentation/radar/aircraft-target/true-heading</aircraft-radar-heading>
+        <aircraft-radar-range>/instrumentation/radar/aircraft-target/range-nm</aircraft-radar-range>
+	<aircraft-radar-callsign>/instrumentation/radar/aircraft-target/callsign</aircraft-radar-callsign>
+</params>
+
+
+
+
+	<layers>
+
+
+
+
+                <!--====================================SWITCH====================================-->
+
+
+
+		<layer>
+			<name>range</name>
+			<type>text</type>
+			<font>led</font>
+			<point-size>5</point-size>
+			<color>
+				<red>1</red>
+				<green>1</green>
+				<blue>1</blue>
+			</color>
+			<chunks>
+				<chunk>
+					<type>number-value</type>
+					<property>/instrumentation/radar/range</property>
+					<scale>1</scale>
+					<format>%1.0f</format>
+				</chunk>
+			</chunks>
+			<transformations>
+				<transformation>
+					<type>x-shift</type>
+					<offset>-65</offset>
+				</transformation>
+				<transformation>
+					<type>y-shift</type>
+					<offset>40</offset>
+				</transformation>
+			</transformations>
+		</layer>
+
+		<layer>
+			<name>alt-range</name>
+			<type>text</type>
+			<font>led</font>
+			<point-size>5</point-size>
+			<color>
+				<red>1</red>
+				<green>1</green>
+				<blue>1</blue>
+			</color>
+			<chunks>
+				<chunk>
+					<type>number-value</type>
+					<property>/instrumentation/radar/alt-range</property>
+					<scale>1</scale>
+					<format>%1.0f</format>
+				</chunk>
+			</chunks>
+			<transformations>
+				<transformation>
+					<type>x-shift</type>
+					<offset>-65</offset>
+				</transformation>
+				<transformation>
+					<type>y-shift</type>
+					<offset>-88</offset>
+				</transformation>
+			</transformations>
+		</layer>
+
+
+
+
+                <!--====================================Altitude====================================-->
+
+		<layer>
+			<condition>
+				<not-equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>0</value>
+				</not-equals>
+		  	</condition>
+			<name>altitude</name>
+			<type>text</type>
+			<font>led</font>
+			<point-size>5</point-size>
+			<color>
+				<red>1</red>
+				<green>1</green>
+                                <blue>1</blue>
+			</color>
+			<chunks>
+				<chunk>
+			                <type>number-value</type>
+                                         <property alias="../../../../../params/aircraft-radar-altitude"/>
+                                         <scale>1</scale>
+                                        <format>%5.0f</format>
+				</chunk>
+			</chunks>
+			<transformations>
+				<transformation>
+					<type>x-shift</type>
+					<offset>70</offset>
+				</transformation>
+				<transformation>
+					<type>y-shift</type>
+					<offset>116</offset>
+				</transformation>
+			</transformations>
+		</layer>
+
+                <layer>
+			<condition>
+				<not-equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>0</value>
+				</not-equals>
+		  	</condition>
+                        <name>velocity</name>
+                        <type>text</type>
+                        <font>led</font>
+                        <point-size>5</point-size>
+                        <color>
+				<red>1</red>
+				<green>1</green>
+                                <blue>1</blue>
+                        </color>
+                        <chunks>
+                                <chunk>
+                                        <type>number-value</type>
+                                        <property alias="../../../../../params/aircraft-radar-velocity"/>
+                                        <scale>1</scale>
+                                        <format>%4.0f</format>
+                                </chunk>
+                        </chunks>
+                        <transformations>
+                                <transformation>
+                                        <type>x-shift</type>
+                                        <offset>0</offset>
+                                </transformation>
+                                <transformation>
+                                        <type>y-shift</type>
+                                        <offset>116</offset>
+                                </transformation>
+                        </transformations>
+		</layer>
+
+                <layer>
+			<condition>
+				<not-equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>0</value>
+				</not-equals>
+		  	</condition>
+                        <name>heading</name>
+                        <type>text</type>
+                        <font>led</font>
+                        <point-size>5</point-size>
+                        <color>
+                                <red>1</red>
+                                <green>1</green>
+                                <blue>1</blue>
+                        </color>
+                        <chunks>
+                                <chunk>
+                                        <type>number-value</type>
+                                        <property alias="../../../../../params/aircraft-radar-heading"/>
+                                        <scale>1</scale>
+                                        <format>%3.0f</format>
+                                </chunk>
+                        </chunks>
+                        <transformations>
+                                <transformation>
+                                        <type>x-shift</type>
+                                        <offset>-82</offset>
+                                </transformation>
+                                <transformation>
+                                        <type>y-shift</type>
+                                        <offset>116</offset>
+                                </transformation>
+                        </transformations>
+		</layer>
+
+                <layer>
+			<condition>
+				<not-equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>0</value>
+				</not-equals>
+		  	</condition>
+                        <name>range</name>
+                        <type>text</type>
+                        <font>led</font>
+                        <point-size>5</point-size>
+                        <color>
+                                <red>1</red>
+                                <green>1</green>
+                                <blue>1</blue>
+                        </color>
+                        <chunks>
+                                <chunk>
+                                        <type>number-value</type>
+                                        <property alias="../../../../../params/aircraft-radar-range"/>
+                                        <scale>1</scale>
+                                        <format>%3.2f</format>
+                                </chunk>
+                        </chunks>
+                        <transformations>
+                                <transformation>
+                                        <type>x-shift</type>
+                                        <offset>-115</offset>
+                                </transformation>
+                                <transformation>
+                                        <type>y-shift</type>
+                                        <offset>116</offset>
+                                </transformation>
+                        </transformations>
+		</layer>
+
+		 <layer>
+			<condition>
+				<not-equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>0</value>
+				</not-equals>
+		  	</condition>
+                        <name>callsign</name>
+                        <type>text</type>
+                        <!--<font>helvetica.txf</font>-->
+                        <point-size>14</point-size>
+                        <color>
+                                <red>0.5</red>
+                                <green>1</green>
+                                <blue>0.2</blue>
+                        </color>
+                        <chunks>
+                                <chunk>
+                                        <type>text-value</type>
+                                        <property alias="../../../../../params/aircraft-radar-callsign"/>
+					<format>%8s</format>
+                                </chunk>
+                        </chunks>
+                        <transformations>
+                                <transformation>
+                                        <type>x-shift</type>
+                                        <offset>-122</offset>
+                                </transformation>
+                                <transformation>
+                                        <type>y-shift</type>
+                                        <offset>90</offset>
+                                </transformation>
+                        </transformations>
+		</layer>
+
+
+
+	</layers>
+
+
+
+
+
+</PropertyList>

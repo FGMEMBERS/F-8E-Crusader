@@ -1,0 +1,42 @@
+AC3Db
+MATERIAL "ac3dmat14" rgb 1 1 1  amb 1 1 1  emis 1 1 1  spec 1 1 1  shi 128  trans 0
+OBJECT world
+kids 2
+OBJECT poly
+name "Temoin-Aileron"
+loc 0.0043583 0.000148449 0.000218765
+texture "Temoin-Trim.png"
+crease 45.000000
+numvert 4
+0 0.0089465 0.0225202
+0 -0.0089465 0.0225202
+0 -0.0089465 0.00264105
+0 0.0089465 0.00264105
+numsurf 1
+SURF 0x20
+mat 0
+refs 4
+3 1.00274 0.998803
+0 0.00308011 0.998803
+1 0.00308011 0.576092
+2 1.00274 0.576092
+kids 0
+OBJECT poly
+name "Temoin-Rudder"
+loc 0.0043583 0.000148449 0.000218765
+texture "Temoin-Trim.png"
+crease 45.000000
+numvert 4
+0 -0.0089465 -0.0225202
+0 0.0089465 -0.0225202
+0 0.0089465 -0.00307877
+0 -0.0089465 -0.00307877
+numsurf 1
+SURF 0x20
+mat 0
+refs 4
+3 -0.00119357 0.00974107
+0 0.99129 0.00974107
+1 0.99129 0.412921
+2 -0.00119357 0.412921
+kids 0

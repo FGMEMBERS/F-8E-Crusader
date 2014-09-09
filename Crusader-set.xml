@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    
+-->
+<PropertyList include="Crusader-SetBase.xml">
+    <!--  LING-TEMCO-VOUGHT   F-8E-Crusader Crusader   
+ Was by   Gerard ROBIN.  Update:     grtux hangar team https://sites.google.com/site/grtuxhangar/       COPYRIGHT-->
+    <!--The first step with a customized air tanker process
+            we start the AI Scenario  demo1  callsign ESSO1
+            It will be positionned according to your instruction
+            See the Menu F8E
+            -->
+    <note>
+        This model was created using publicly available data, publicly available
+        technical reports, textbooks, and guesses. It contains no proprietary or
+        restricted data. It has been validated only to the extent that it seems
+        to "fly right", and possibly to comply to published, publicly known,
+        performance data (maximum speed, endurance, etc.). Thus, this model
+        is meant for educational and entertainment purposes only.
+
+        This simulation model is not endorsed by the manufacturer.
+    </note>
+
+    <sim>
+        <description>Crusader F-8E-Crusader</description>
+        <author>from Gerard Robin, ALVA and grthteam (maintain)
+	    https://sites.google.com/site/grtuxhangar/</author>
+        <status>Production</status>
+        <version>2.1  last update 2013-07-11</version>
+    </sim>
+    <nasal>
+        <instruments>
+            <file>Aircraft/F-8E-Crusader/Systems/radar.nas</file>
+            <file>Aircraft/F-8E-Crusader/Systems/navV3.nas</file>
+        </instruments>
+        <terrain>
+            <file>Aircraft/F-8E-Crusader/Systems/terrain.nas</file>
+        </terrain>
+        <f8_tanker>
+            <file>Aircraft/F-8E-Crusader/Systems/tanker.nas</file>
+            <file>Aircraft/F-8E-Crusader/Systems/refuel_tanker.nas</file>
+        </f8_tanker>
+    </nasal>
+</PropertyList>

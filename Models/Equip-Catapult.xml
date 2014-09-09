@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList>
+
+ <path>catapulte-f8e.ac</path>
+ <texture-path>Textures-hires/texture12F</texture-path>
+
+ <!-- BRIDLE*LAUNCHBAR*HOLDBACK** *BARRE*DE*CATAPULTE*ET*FILIN*DE*TENSION*-->
+
+ <model>
+     <path>Models/Generic/Effects/cat-steam-eng.xml</path>
+     <name>cat-steam-eng</name>
+     <offsets>
+         <x-m>-1.88431</x-m>
+         <y-m>0</y-m>
+         <z-m>-1.96872</z-m>
+         <heading-deg>0</heading-deg>
+     </offsets>
+    </model>
+
+    <animation>
+        <type>select</type>
+        <object-name>cat-steam-eng</object-name>
+        <condition>
+            <and>
+                <greater-than>
+                    <property>surfaces/launch-bar-pos-norm</property>
+                    <value>0.9</value>
+                </greater-than>
+                <equals>
+                    <property>fdm/jsbsim/gear/unit/WOW</property>
+                    <value>1</value>
+                </equals>
+            </and>
+        </condition>
+ </animation>
+ <animation>
+     <type>select</type>
+     <object-name>LaunchBar-cat</object-name>
+     <condition>
+         <and>
+             <greater-than>
+                 <property>surfaces/launch-bar-pos-norm</property>
+                 <value>0</value>
+             </greater-than>
+             <equals>
+                 <property>fdm/jsbsim/gear/unit/WOW</property>
+                 <value>1</value>
+             </equals>
+         </and>
+     </condition>
+ </animation>
+ <animation>
+     <type>rotate</type>
+     <object-name>LaunchBar-cat</object-name>
+     <property>/fdm/jsbsim/animation/holdback-rotation-sw</property>
+     <factor>57.29578</factor>
+     <axis>
+         <x>1</x>
+         <y>0</y>
+         <z>0</z>
+     </axis>
+</animation>
+ <animation>
+	 <type>rotate</type>
+	 <object-name>LaunchBar-cat</object-name>
+         <!--<property>sim/multiplay/generic/float[8]</property>-->
+         <property>surfaces/launch-bar-pos-norm</property>
+	 <!--<property>fdm/jsbsim/launchbar/launch-bar-pos-norm</property>-->
+	 <interpolation>
+             <entry>
+                 <ind>0.0</ind>
+                 <dep>-70</dep>
+             </entry>
+             <entry>
+                 <ind>0.49</ind>
+                 <dep>-70</dep>
+             </entry>
+             <entry>
+                 <ind>0.5</ind>
+                 <dep>-45</dep>
+             </entry>
+             <entry>
+                 <ind>0.75</ind>
+                 <dep>-30</dep>
+             </entry>
+             <entry>
+                 <ind>0.87</ind>
+                 <dep>-15</dep>
+             </entry>
+             <entry>
+                 <ind>1.0</ind>
+                 <dep>0.0</dep>
+		 </entry>
+	 </interpolation>
+	 <center>
+		 <x-m>-1.8501</x-m>
+		 <y-m>0</y-m>
+		 <z-m>-1.93774</z-m>
+	 </center>
+	 <axis>
+		 <x>0</x>
+		 <y>-1</y>
+		 <z>0</z>
+	 </axis>
+ </animation>
+
+ <!--<animation>
+	 <type>select</type>
+	 <object-name>HoldBack</object-name>
+	 <condition>
+		 <and>
+			 <equals>
+                                <property>sim/multiplay/generic/float[9]</property>
+
+				 <value>1</value>
+			 </equals>
+                         <equals>
+                                <property>sim/multiplay/generic/float[10]</property>
+
+                                <value>0</value>
+                         </equals>
+		 </and>
+	 </condition>
+ </animation>-->
+
+ <animation>
+     <type>select</type>
+     <object-name>HoldBack</object-name>
+     <condition>
+         <and>
+             <equals>
+                <property>/surface-positions/holdback</property>
+                <value>1</value>
+             </equals>
+         </and>
+     </condition>
+ </animation>
+
+ <animation>
+     <type>rotate</type>
+     <object-name>HoldBack</object-name>
+     <property>/fdm/jsbsim/animation/holdback-rotation</property>
+     <factor>57.29578</factor>
+     <axis>
+         <x>1</x>
+         <y>0</y>
+         <z>0</z>
+     </axis>
+ </animation>
+ 
+ 
+   <!--******Hook******Crosse  d' Appontage**************-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Crosse</object-name>
+		<object-name>Brin</object-name>
+                <property>fdm/jsbsim/systems/hook/tailhook-pos-deg</property>
+                <factor>1</factor>
+                <offset-deg>5</offset-deg>
+		<center>
+			<x-m>5.365</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.798</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Brin</object-name>
+                <property>fdm/jsbsim/systems/hook/tailhook-pos-deg</property>
+                <factor>-1</factor>
+		<offset-deg>-5</offset-deg>
+		<center>
+			<x-m>6.54508</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.7149</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+            <type>rotate</type>
+            <object-name>Brin</object-name>
+            <property>orientation/roll-deg</property>
+            <factor>1</factor>
+	    <center>
+		<x-m>6.54508</x-m>
+		<y-m>0</y-m>
+		<z-m>-0.7149</z-m>                
+            </center>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+        </animation>
+	
+	<animation>
+            <type>rotate</type>
+            <object-name>Brin</object-name>
+            <property>orientation/pitch-deg</property>
+	    <factor>1</factor>
+            <center>
+		<x-m>6.54508</x-m>
+		<y-m>0</y-m>
+		<z-m>-0.7149</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>-1</y>
+                <z>0</z>
+            </axis>
+        </animation>
+	
+	
+	<animation>
+            <type>rotate</type>
+            <object-name>Brin</object-name>
+	    <property>fdm/jsbsim/systems/hook/wire-heading</property>
+	    <factor>1</factor>
+            <center>
+		<x-m>6.54508</x-m>
+		<y-m>0</y-m>
+		<z-m>-0.7149</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>0</y>
+                <z>1</z>
+            </axis>
+        </animation>
+	
+	
+	
+	
+	
+	<animation>
+		<type>select</type>
+		<object-name>Brin</object-name>
+		<condition>
+                    <and>
+			<property>sim/carrier/use-db</property>
+			<property>fdm/jsbsim/systems/hook/ready</property>
+		       <property>fdm/jsbsim/systems/hook/wire-on</property>
+                    </and>
+		</condition>
+	</animation>
+	
+
+
+
+</PropertyList>

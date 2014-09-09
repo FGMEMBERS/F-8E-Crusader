@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+
+
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/par-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>PAR</object-name>
+	</animation>
+	
+	<model>
+		<name>Bouton</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bouton-f8e.xml</path>
+		<offsets>
+			<x-m>0.0206361</x-m>
+			<y-m>-0.039</y-m>
+			<z-m>-0.039</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Bouton-D</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bouton-f8e.xml</path>
+		<offsets>
+			<x-m>0.0206361</x-m>
+			<y-m>0.039</y-m>
+			<z-m>-0.039</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton-D</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+                    <step>-1</step>
+                    <min>0</min>
+                    <max>360</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton-D</object-name>
+            <action>
+                <button>1</button>
+                <repeatable type="bool">true</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>360</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/heading-indicator/nav-switch</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>3</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>IndicVert-nav</object-name>
+		<object-name>IndicVert-tacan</object-name>
+		<object-name>IndicHoriz</object-name>
+		<object-name>IndicTOFROM</object-name>
+	</animation>
+
+	<!--<animation include="Instrument-Light???.xml">
+		<object-name>Flag-HDG</object-name>
+		<object-name>Flag-GS</object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light3.xml">
+
+		<object-name>CCourse</object-name>
+		<object-name>DCourse</object-name>
+		<object-name>UCourse</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>CCourse-Marker</object-name>
+		<object-name>DCourse-Marker</object-name>
+		<object-name>UCourse-Marker</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Cadran</object-name>
+	</animation>
+
+	<!--<animation>
+		<type>select</type>
+		<object-name>IndicFROM</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/nav[0]/from-flag</property>
+				<value>true</value>
+			</equals>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>IndicTO</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/nav[0]/to-flag</property>
+				<value>true</value>
+			</equals>
+		</condition>
+ 	</animation>-->
+	<animation>
+		<type>select</type>
+		<object-name>Flag-HDG</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>instrumentation/nav[0]/in-range</property>
+					<value>false</value>
+				</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Flag-GS</object-name>
+		<condition>
+			<or>
+				<equals>
+					<property>instrumentation/nav[0]/in-range</property>
+					<value>False</value>
+				</equals>
+				<equals>
+					<property>instrumentation/nav[0]/has-gs</property>
+					<value>false</value>
+				</equals>
+			</or>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>IndicVert-nav</object-name>
+		<condition>
+			<and>
+				<!--<equals>
+					<property>instrumentation/nav[0]/has-gs</property>
+					<value>true</value>
+				</equals>-->
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>IndicVert-tacan</object-name>
+		<condition>
+			<and>
+				<!--<equals>
+					<property>instrumentation/nav[0]/has-gs</property>
+					<value>true</value>
+				</equals>-->
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>UCourse</object-name>
+		<condition>
+			<or>
+				<not-equals>
+					<property>/instrumentation/heading-indicator/nav-switch</property>
+					<value>0</value>
+				</not-equals>
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>DCourse</object-name>
+		<condition>
+			<or>
+				<not-equals>
+					<property>/instrumentation/heading-indicator/nav-switch</property>
+					<value>0</value>
+				</not-equals>
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>CCourse</object-name>
+		<condition>
+			<or>
+				<not-equals>
+					<property>/instrumentation/heading-indicator/nav-switch</property>
+					<value>0</value>
+				</not-equals>
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>0</value>
+				</equals>
+			</or>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>UCourse-Marker</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/instrumentation/heading-indicator/nav-switch</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>DCourse-Marker</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/instrumentation/heading-indicator/nav-switch</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>CCourse-Marker</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/instrumentation/heading-indicator/nav-switch</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+ 	</animation>
+
+
+
+	<animation>
+		<type>translate</type>
+		<object-name>IndicHoriz</object-name>
+		<property>instrumentation/nav[0]/gs-needle-deflection</property>
+		<interpolation>
+			<entry>
+				<ind>-10</ind>
+				<dep>-0.02</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>10</ind>
+				<dep>0.02</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>IndicVert-nav</object-name>
+		<property>instrumentation/nav[0]/heading-needle-deflection</property>
+		<interpolation>
+			<entry>
+				<ind>-10</ind>
+				<dep>-0.02</dep>
+			</entry>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>10</ind>
+				<dep>0.02</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<!--<animation>
+		<type>rotate</type>
+		<object-name>IndicTOFROM</object-name>
+		<property>/orientation/heading-magnetic-deg</property>
+		<factor>1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0033789</y-m>
+			<z-m>-0.0100522</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>IndicTOFROM</object-name>
+		<property>/instrumentation/heading-indicator/fromto-pointer</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0033789</y-m>
+			<z-m>-0.0100522</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Bouton-D</object-name>
+		<property>/instrumentation/heading-indicator/setting-manual-hdg</property>
+		<factor>2</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.039</y-m>
+			<z-m>-0.039</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Bouton</object-name>
+		<property>/instrumentation/heading-indicator/nav-switch</property>
+		<factor>60</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>-0.039</y-m>
+			<z-m>-0.039</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>UCourse</object-name>
+		<property>/instrumentation/heading-indicator/course-pointer</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>DCourse</object-name>
+		<property>/instrumentation/heading-indicator/course-pointer</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>CCourse</object-name>
+		<property>/instrumentation/heading-indicator/course-pointer</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>UCourse-Marker</object-name>
+		<property>/instrumentation/heading-indicator/heading-marker</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>DCourse-Marker</object-name>
+		<property>/instrumentation/heading-indicator/heading-marker</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>CCourse-Marker</object-name>
+		<property>/instrumentation/heading-indicator/heading-marker</property>
+		<factor>0.001</factor>
+		<step>100</step>
+		<scroll>0</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+
+</PropertyList>
+
+

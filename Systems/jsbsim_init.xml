@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
+<PropertyList>
+
+            <jsbsim>
+                <systems>
+                    <launchbar><lock-cmd type="double">0</lock-cmd></launchbar>
+                    <blackout-cst type="double">1</blackout-cst>
+                </systems>
+		<gear>
+		    <NWS>
+			<engaged type="bool">1</engaged>
+		    </NWS>
+		</gear>
+               <!-- <inertia>
+                    <pointmass-weight-lbs type="double">3000</pointmass-weight-lbs>
+                </inertia>-->
+
+            </jsbsim>
+
+
+</PropertyList>

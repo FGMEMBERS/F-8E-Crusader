@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/Temoin-Hook.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>HOOK</object-name>
+	</animation>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name>Couronne</object-name>
+	</animation>-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-Hook</object-name>
+		<condition>
+			<equals>
+				<property>/gear/tailhook/position-norm</property>
+				<value>1.0</value>
+			</equals>
+    		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>TemoinMHook</object-name>
+		<condition>
+			<and>
+				<not-equals>
+					<property>/gear/tailhook/position-norm</property>
+					<value>0</value>
+				</not-equals>
+				<not-equals>
+					<property>/gear/tailhook/position-norm</property>
+					<value>1</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<!--<animation>
+		<type>rotate</type>
+		<object-name>Interrupteur</object-name>
+		<property>/controls/gear/tailhook</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.0201925</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>-->
+
+
+
+</PropertyList>

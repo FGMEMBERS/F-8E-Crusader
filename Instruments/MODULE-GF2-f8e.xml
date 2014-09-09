@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/module-GF2.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+		<object-name>Cde-LeDroop</object-name>
+	</animation>
+        
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Cde-LeDroop</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/fdm/jsbsim/fcs/leflap-cmd-norm</property>
+                </binding>
+            </action>
+        </animation>
+
+
+	<animation>
+		<condition>
+			<and>
+				<equals>
+					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+		<type>rotate</type>
+		<object-name>Cde-LeDroop</object-name>
+		<property>/fdm/jsbsim/fcs/leflap-cmd-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>45</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.00502067</y-m>
+			<z-m>0.0201449</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+</PropertyList>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
+<PropertyList>
+    <sim>
+        <model>
+            <f8e>
+                <navaid>
+		<presets n="0" >
+			<selected>
+				<adf-freq-khz type="float">328</adf-freq-khz>
+				<dme-freq-mhz type="float">109.40</dme-freq-mhz>
+				<nav-freq-mhz type="float">109.90</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+			<id>Orange LFMO</id>
+		</presets>
+		<presets n="1" >
+			<selected>
+				<adf-freq-khz type="float">338</adf-freq-khz>
+				<dme-freq-mhz type="float">109.95</dme-freq-mhz>
+				<nav-freq-mhz type="float">110.70</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+			<id>Nice LFMN</id>
+		</presets>
+		<presets n="2" >
+			<selected>
+				<adf-freq-khz type="float">406</adf-freq-khz>
+				<dme-freq-mhz type="float">108.80</dme-freq-mhz>
+				<nav-freq-mhz type="float">110.30</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">111.15</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+			<id>Marseilles LFML</id>
+		</presets>
+		<presets n="3" >
+			<selected>
+				<adf-freq-khz type="float">322</adf-freq-khz>
+				<dme-freq-mhz type="float">109</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+			<id>Toulon-Hyeres LFTH</id>
+		</presets>
+		<presets n="4" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+                        <id>Quebec CYQB</id>
+		</presets>
+		<presets n="5" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">110.95</dme-freq-mhz>
+				<nav-freq-mhz type="float">110.95</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+                        <id>Toronto CYYZ-33L</id>
+		</presets>
+		<presets n="6" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="7" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="8" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="9" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="10" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="11" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="12" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="13" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="14" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="15" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="16" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="17" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="18" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+		<presets n="19" >
+			<selected>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</selected>
+			<standby>
+				<adf-freq-khz type="float">0</adf-freq-khz>
+				<dme-freq-mhz type="float">0</dme-freq-mhz>
+				<nav-freq-mhz type="float">0</nav-freq-mhz>
+				<comm-freq-mhz type="float">0</comm-freq-mhz>
+			</standby>
+		</presets>
+        </navaid>
+        </f8e>
+        </model>
+        </sim>
+</PropertyList>

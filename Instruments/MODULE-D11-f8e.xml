@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/module-D11.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+	</animation>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>InstrVol-Fleche</object-name>
+	</animation>
+	<animation include="Instrument-Light4.xml">
+		<object-name>InstrNVol-Fleche</object-name>
+	</animation>
+	<animation include="Instrument-Light4.xml">
+		<object-name>Console-Fleche</object-name>
+	</animation>
+
+
+        <animation>
+            <type>pick</type>
+            <object-name>Eclairage-InstrVol</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/sim/model/f8e/instrument-lights</property>
+                    <step>0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Eclairage-InstrVol</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/sim/model/f8e/instrument-lights</property>
+                    <step>-0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Eclairage-InstrVol</object-name>
+		<property>/sim/model/f8e/instrument-lights</property>
+		<factor>-280</factor>
+		<center>
+			<x-m>0.00881384</x-m>
+			<y-m>-0.0284904</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Eclairage-InstrAutre</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/sim/model/f8e/lighting/</property>
+                    <step>0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Eclairage-InstrAutre</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/sim/model/f8e/lighting/</property>
+                    <step>-0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Eclairage-InstrAutre</object-name>
+		<property></property>
+		<factor>-280</factor>
+		<center>
+			<x-m>-0.0166851</x-m>
+			<y-m>0.000291971</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Eclairage-Console</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/sim/model/f8e/lighting/</property>
+                    <step>0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Eclairage-Console</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/sim/model/f8e/lighting/</property>
+                    <step>-0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Eclairage-Console</object-name>
+		<property></property>
+		<factor>-280</factor>
+		<center>
+			<x-m>0.00881357</x-m>
+			<y-m>0.029293</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+
+
+</PropertyList>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/mag-compass.ac</path>
+ <texture-path>Models/Textures</texture-path>
+ 
+ <!--===================GABARIT DE CENTRAGE====ne pas enlever========-->
+        <animation>
+            <type>select</type>
+            <object-name>gabarit</object-name>
+            <condition>
+                <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>999</value>
+                </equals>
+            </condition>
+        </animation>
+    <!--==================================================-->
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name>Mag-Compass</object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>Aiguille</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Cadran</object-name>
+	</animation>
+
+        <model>
+            <name>Light</name>
+            <path>Aircraft/F-8E-Crusader/Instruments/Light-MC-f8e.xml</path>
+            <offsets>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+                <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <animation>
+            <type>select</type>
+            <object-name>Light</object-name>
+            <condition>
+                <or><property>sim/rendering/rembrandt</property> <property>sim/rendering/rembrandt/enabled</property> </or>
+            </condition>
+        </animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Cadran</object-name>
+		<property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

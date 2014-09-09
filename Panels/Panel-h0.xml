@@ -1,0 +1,831 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<!--  LING-TEMCO-VOUGHT   F-8E-Crusader Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
+
+
+
+<PropertyList>
+
+	<path>Models/Panel-h0.ac</path>
+	<texture-path>Models/Textures</texture-path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>Panel-Base</object-name>
+		<object-name>Panel-Base-AR</object-name>
+	</animation>
+
+	<animation>
+		<type>noshadow</type>
+		<!--<object-name>Cde-Wings-Fold</object-name>
+		<object-name>Cde-Wings-Fold-Verrou</object-name>
+		<object-name>Trh-AB</object-name>
+		<object-name>Cde-WingsBase</object-name>
+		<object-name>Cde-Wings</object-name>
+		<object-name>Cde-Wings-Verrou</object-name>
+		<object-name>Cde-FreinSec</object-name>
+		<object-name>Cmd-Vent-Air</object-name>-->
+		<object-name>module-D1</object-name>
+		<object-name>module-D2</object-name>
+		<object-name>module-D3</object-name>
+		<object-name>module-D4</object-name>
+		<object-name>module-D5</object-name>
+		<object-name>module-D6</object-name>
+		<object-name>module-D7</object-name>
+		<object-name>module-D8</object-name>
+		<object-name>module-D10</object-name>
+		<object-name>module-D11</object-name>
+		<object-name>module-D12</object-name>
+		<object-name>module-DF1</object-name>
+		<object-name>module-DF2</object-name>
+		<object-name>module-DF3</object-name>
+		<object-name>module-DF4</object-name>
+		<!--<object-name>module-DF5</object-name>-->
+		<object-name>module-DF6</object-name>
+		<object-name>module-DF7</object-name>
+		<object-name>module-DF8</object-name>
+		<object-name>module-DF9</object-name>
+		<object-name>module-G1</object-name>
+		<object-name>module-G2</object-name>
+		<object-name>module-G4</object-name>
+		<object-name>module-G5</object-name>
+		<object-name>module-G6</object-name>
+		<object-name>module-G7</object-name>
+		<object-name>module-G8</object-name>
+		<object-name>module-G9</object-name>
+		<object-name>module-G99</object-name>
+		<object-name>module-GF1</object-name>
+		<object-name>module-GF2</object-name>
+	</animation>
+
+
+	<animation include="../Instruments/Instrument-Light2.xml">
+		<object-name>Manette-WingFld</object-name>
+	</animation>
+	<animation include="../Instruments/Instrument-Light2.xml">
+		<object-name>Verrou-WingFld</object-name>
+	</animation>
+	<animation include="../Instruments/Instrument-Light2.xml">
+		<object-name>Wing-Incidence</object-name>
+	</animation>
+	<animation include="../Instruments/Instrument-Light1.xml">
+		<object-name>Cde-Wings</object-name>
+	</animation>
+	<animation include="../Instruments/Instrument-Light1.xml">
+		<object-name>Cde-Wings-Verrou</object-name>
+	</animation>
+
+
+
+        <animation>
+            <type>pick</type>
+            <object-name>Manette-WingFld</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/flight/wing-fold-cmd</property>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Cde-Wings</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/flight/wing-incidence</property>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Panel-Base-CoPi</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/sim/cockpit/modules/switch-g99</property>
+                </binding>
+            </action>
+        </animation>
+
+
+        <animation>
+            <type>pick</type>
+            <object-name>Trh-AB</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/engines/engine/throttle</property>
+                    <step>0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Trh-AB</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/controls/engines/engine/throttle</property>
+                    <step>-0.05</step>
+                    <min>0</min>
+                    <max>1</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Cde-FreinSec</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/controls/gear/brake-parking</property>
+                </binding>
+            </action>
+        </animation>
+
+       <!-- ======================================================================================-->
+	<animation>
+		<type>rotate</type>
+		<object-name>Cde-Wings</object-name>
+		<property>/fdm/jsbsim/systems/wing-incidence/handle</property>
+		<interpolation>
+			<entry>
+				<ind>31</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>20</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>20</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.0449643</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.0568019</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Cde-Wings-Verrou</object-name>
+		<property>/fdm/jsbsim/systems/wing-incidence/handle</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>30</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.0449643</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.0568019</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Cde-Wings-Fold</object-name>
+		<property>/fdm/jsbsim/systems/wings-fold/handle</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>35</dep>
+			</entry>
+			<entry>
+				<ind>60</ind>
+				<dep>35</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-0.0210832</x-m>
+			<y-m>0.0</y-m>
+			<z-m>-0.0296959</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Cde-Wings-Fold</object-name>
+		<property>/fdm/jsbsim/systems/wings-fold/handle</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-0.027</dep>
+			</entry>
+			<entry>
+				<ind>31</ind>
+				<dep>-0.027</dep>
+			</entry>
+			<entry>
+				<ind>60</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>-0.39</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Cde-Wings-Fold-Verrou</object-name>
+		<property>/fdm/jsbsim/systems/wings-fold/handle</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>30</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.117254</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.015</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+
+
+	<animation>
+		<condition>
+			<equals>
+				<property>/controls/engines/engine/cutoff</property>
+				<value>0</value>
+			</equals>
+		</condition>
+		<type>translate</type>
+		<object-name>Trh-AB</object-name>
+		<object-name>Cde-SpeedBk</object-name>
+		<property>/controls/engines/engine/throttle</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.83</ind>
+				<dep>-0.108</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-0.15</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<condition>
+			<equals>
+				<property>/controls/engines/engine/cutoff</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<type>translate</type>
+		<object-name>Trh-AB</object-name>
+		<object-name>Cde-SpeedBk</object-name>
+		<property>/controls/engines/engine/throttle</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.83</ind>
+				<dep>-0.135</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-0.17</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Trh-AB</object-name>
+		<object-name>Cde-SpeedBk</object-name>
+		<property>/controls/engines/engine/augmentation</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0.01</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Trh-AB</object-name>
+		<object-name>Cde-SpeedBk</object-name>
+		<property>/controls/engines/engine/cutoff</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>0.02</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>Trh-AB</object-name>
+		<object-name>Cde-SpeedBk</object-name>
+		<property>/engines/engine/running</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-0.02</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+        <animation>
+            <type>rotate</type>
+            <object-name>Cde-FreinSec</object-name>
+            <property>/controls/gear/brake-parking</property>
+            <interpolation>
+                <entry>
+                    <ind>0</ind>
+                    <dep>5</dep>
+                </entry>
+                <entry>
+                    <ind>0.6</ind>
+                    <dep>15</dep>
+                </entry>
+                <entry>
+                    <ind>1</ind>
+                    <dep>30</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>-0.273473</x-m>
+                <y-m>0</y-m>
+                <z-m>-0.0317366</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
+
+
+
+	<model>
+		<name>Cmd-Vent-Air</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/VENT-AIR-f8e.xml</path>
+		<offsets>
+			<x-m>-0.0709437</x-m>
+			<y-m>0.491685</y-m>
+			<z-m>0.0592782</z-m>
+		</offsets>
+	</model>
+
+
+	<model>
+		<name>module-D1</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D1-f8e.xml</path>
+		<offsets>
+			<x-m>-0.46705</x-m>
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D2</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D2-f8e.xml</path>
+		<offsets>
+			<x-m>-0.415136</x-m>
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D3</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D3-f8e.xml</path>
+		<offsets>
+			<x-m>-0.343686</x-m><!---0.343686-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D4</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D4-f8e.xml</path>
+		<offsets>
+			<x-m>-0.291482</x-m><!---0.291482-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D5</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D5-f8e.xml</path>
+		<offsets>
+			<x-m>-0.238546</x-m><!---0.239231 -0.239358-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D6</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D6v2-f8e.xml</path>
+		<offsets>
+			<x-m>-0.166807</x-m><!---0.167738 -0.166807-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D7</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D7v2-f8e.xml</path>
+		<offsets>
+			<x-m>-0.0830833</x-m><!---0.090286-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D8</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D8-f8e.xml</path>
+		<offsets>
+			<x-m>0.00237143</x-m><!---0.0126939-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D10</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D10-f8e.xml</path>
+		<offsets>
+			<x-m>0.0937117</x-m>
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D11</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D11-f8e.xml</path>
+		<offsets>
+			<x-m>0.210905</x-m><!--0.185505-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-D12</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-D12-f8e.xml</path>
+		<offsets>
+			<x-m>0.264333</x-m><!--0.222354</x-m>-->
+			<y-m>0.374</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-DF1</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF1-f8e.xml</path>
+		<offsets>
+			<x-m>-0.216859</x-m>
+			<y-m>0.456949</y-m>
+			<z-m>0.0129063</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-DF2</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF2-f8e.xml</path>
+		<offsets>
+			<x-m>-0.216859</x-m>
+			<y-m>0.481</y-m>
+			<z-m>0.0272327</z-m>
+			<roll-deg>-50</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-DF3</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF3-f8e.xml</path>
+		<offsets>
+			<x-m>-0.216859</x-m>
+			<y-m>0.48</y-m>
+			<z-m>0.09</z-m>
+			<heading-deg>5</heading-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-DF4</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF4-f8e.xml</path>
+		<offsets>
+			<x-m>-0.0701938</x-m>
+			<y-m>0.463535</y-m>
+			<z-m>0.017</z-m>
+		</offsets>
+	</model>
+
+	<!--<model>
+		<name>module-DF5</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF5-f8e.xml</path>
+		<offsets>
+			<x-m>-0.0600668</x-m>
+			<y-m>0.505768</y-m>
+			<z-m>0.005</z-m>
+		</offsets>
+	</model>-->
+
+	<model>
+		<name>module-DF6</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF6-f8e.xml</path>
+		<offsets>
+			<x-m>0.0440311</x-m>
+			<y-m>0.518045</y-m>
+			<z-m>0.017</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-DF7</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF7-f8e.xml</path>
+		<offsets>
+			<x-m>0.135372</x-m>
+			<y-m>0.490118</y-m>
+			<z-m>0.017</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-DF8</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF8-f8e.xml</path>
+		<offsets>
+			<x-m>0.205869</x-m>
+			<y-m>0.502038</y-m>
+			<z-m>0.017</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-DF9</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-DF9-f8e.xml</path>
+		<offsets>
+			<x-m>-0.411821</x-m>
+			<y-m>0.471394</y-m>
+			<z-m>0.017</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G1</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G1-f8e.xml</path>
+		<offsets>
+			<x-m>-0.419276</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G2</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G2-f8e.xml</path>
+		<offsets>
+			<x-m>-0.233942</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G4</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G4-f8e.xml</path>
+		<offsets>
+			<x-m>-0.0912357</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G5</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G5-f8e.xml</path>
+		<offsets>
+			<x-m>-0.0320229</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G6</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G6-f8e.xml</path>
+		<offsets>
+			<x-m>0.0393338</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G7</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G7-f8e.xml</path>
+		<offsets>
+			<x-m>0.0980517</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G8</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G8-f8e.xml</path>
+		<offsets>
+			<x-m>0.15075</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G9</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G9-f8e.xml</path>
+		<offsets>
+			<x-m>0.222632</x-m>
+			<y-m>-0.373</y-m>
+			<z-m>0.011</z-m>
+			<roll-deg>-5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-G99</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-G99-f8e.xml</path>
+		<offsets>
+			<x-m>0.391859</x-m>
+			<y-m>-0.40484</y-m>
+			<z-m>0.258891</z-m>
+		</offsets>
+	</model>
+
+	<model>
+		<name>module-GF1</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-GF1-f8e.xml</path>
+		<offsets>
+			<x-m>-0.216696</x-m>
+			<y-m>-0.48</y-m>
+			<z-m>0.109574</z-m>
+			<heading-deg>-7.8</heading-deg>
+		</offsets>
+	</model>
+
+
+	<model>
+		<name>module-GF2</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/MODULE-GF2-f8e.xml</path>
+		<offsets>
+			<x-m>-0.089250</x-m>
+			<y-m>-0.484391</y-m>
+			<z-m>0.171984</z-m>
+			<heading-deg>-7.8</heading-deg>
+		</offsets>
+	</model>
+
+
+
+
+</PropertyList>

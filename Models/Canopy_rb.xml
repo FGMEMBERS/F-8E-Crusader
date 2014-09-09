@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<!--  LING-TEMCO-VOUGHT   F-8E Crusader                 Auteur :      Gerard ROBIN                       COPYRIGHT-->
+<PropertyList>
+
+	<path>canopy-f8e-v2.ac</path>
+
+          <texture-path>Textures-hires/texture12F</texture-path>
+
+	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>Canopy</object-name>
+		<object-name>Canopy-Dbl</object-name>
+		<object-name>Canopy-Dbl_lr</object-name>
+		<object-name>Canopy-Seam</object-name>
+		<object-name>Pivots</object-name>
+		<object-name>Pivots-Dbl</object-name>
+		<object-name>CanopyVitrage</object-name>
+		<object-name>Temoin-Marquage</object-name>
+		<object-name>TemoinG-Verrou</object-name>
+		<object-name>TemoinD-Verrou</object-name>
+		<object-name>mirrorStrLR</object-name>
+		<object-name>mirrorStrC</object-name>
+		<object-name>mirrorLR</object-name>
+		<object-name>mirrorC</object-name>
+                <property>sim/multiplay/generic/float[1]</property>
+		<!--<property>surface-positions/canopy-pos-norm</property>-->
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.15</ind>
+				<dep>1.5</dep>
+			</entry>
+			<entry>
+				<ind>0.23</ind>
+				<dep>9.0</dep>
+			</entry>
+			<entry>
+				<ind>0.38</ind>
+				<dep>20</dep>
+			</entry>
+			<entry>
+				<ind>0.55</ind>
+				<dep>32.0</dep>
+			</entry>
+			<entry>
+				<ind>0.75</ind>
+				<dep>39.0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>41.0</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-4.30</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.73</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	
+	<!--==================== jettisonning==============================-->
+
+        <animation>
+            <type>rotate</type>
+		<object-name>Canopy</object-name>
+		<object-name>Canopy-Dbl</object-name>
+		<object-name>Canopy-Dbl_lr</object-name>
+		<object-name>Canopy-Seam</object-name>
+		<object-name>Pivots</object-name>
+		<object-name>Pivots-Dbl</object-name>
+		<object-name>CanopyVitrage</object-name>
+		<object-name>Temoin-Marquage</object-name>
+		<object-name>TemoinG-Verrou</object-name>
+		<object-name>TemoinD-Verrou</object-name>
+		<object-name>mirrorStrLR</object-name>
+		<object-name>mirrorStrC</object-name>
+		<object-name>mirrorLR</object-name>
+		<object-name>mirrorC</object-name>
+            <property>fdm/jsbsim/systems/jettison/canopy-pos-norm</property>
+            <interpolation>
+                <entry>
+                    <ind>0.0</ind>
+                    <dep>0.0</dep>
+                </entry>
+                <entry>
+                    <ind>0.4</ind>
+                    <dep>67</dep>
+                </entry>
+                <entry>
+                    <ind>1</ind>
+                    <dep>102</dep>
+                </entry>
+            </interpolation>
+            <center>
+                <x-m>3.78142</x-m>
+                <y-m>0.0</y-m>
+                <z-m>-3.033</z-m>
+            </center>
+            <axis>
+                <x>0</x>
+                <y>1</y>
+                <z>0</z>
+            </axis>
+        </animation>
+	
+	<!--<effect>
+            <inherits-from>Aircraft/F-8E-Crusader/Models/Effects/reflectMirror</inherits-from>
+		<object-name>mirrorLR</object-name>
+		<object-name>mirrorC</object-name>
+        </effect>-->
+
+
+        <animation>
+            <type>shader</type>
+            <shader>chrome</shader>
+            <texture>Aircraft/F-8E-Crusader/Models/Textures-hires/texture12F/shader.png</texture>
+            <object-name>CanopyVitrage</object-name>
+	    <!--<object-name>mirrorLR</object-name>
+	    <object-name>mirrorC</object-name>-->
+	</animation>
+
+        <effect>
+            <inherits-from>Aircraft/F-8E-Crusader/Models/Effects/reflect_rb-Crus</inherits-from>
+            <object-name>Canopy</object-name>
+            <object-name>Pivots</object-name>
+        </effect>
+
+	
+	
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>TemoinD-Verrou</object-name>
+		<property>surface-positions/canopy-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>-5.21308</x1-m>
+			<y1-m>0.527057</y1-m>
+			<z1-m>0.517696</z1-m>
+			<x2-m>-5.19942</x2-m>
+			<y2-m>0.339433</y2-m>
+			<z2-m>0.481158</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>TemoinG-Verrou</object-name>
+		<property>surface-positions/canopy-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.1</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>-5.21308</x1-m>
+			<y1-m>-0.527057</y1-m>
+			<z1-m>0.517696</z1-m>
+			<x2-m>-5.19942</x2-m>
+			<y2-m>-0.339433</y2-m>
+			<z2-m>0.481158</z2-m>
+		</axis>
+	</animation>
+
+       
+
+
+
+
+</PropertyList>

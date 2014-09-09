@@ -1,0 +1,1877 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+	<path>Models/Radar-APQ.ac</path>
+	<texture-path>Models/Textures</texture-path>
+
+
+
+	<params>
+		<aircraft-radar-altitude>/instrumentation/radar/aircraft-target/altitude-ft</aircraft-radar-altitude>
+		<aircraft-radar-velocity>/instrumentation/radar/aircraft-target/airspeed</aircraft-radar-velocity>
+		<aircraft-radar-heading>/instrumentation/radar/aircraft-target/true-heading</aircraft-radar-heading>
+		<aircraft-radar-range>/instrumentation/radar/aircraft-target/range-nm</aircraft-radar-range>
+	</params>
+	<params1>
+		<aircraft-radar-range-nm>/instrumentation/radar/aircraft[0]/radar/range-nm</aircraft-radar-range-nm>
+		<aircraft-radar-x-shift>/ai/models/aircraft[0]/radar/x-shift</aircraft-radar-x-shift>
+		<aircraft-radar-y-shift>/ai/models/aircraft[0]/radar/y-shift</aircraft-radar-y-shift>
+		<aircraft-radar-rotation>/ai/models/aircraft[0]/radar/rotation</aircraft-radar-rotation>
+		<aircraft-radar-mark>/instrumentation/radar/aircraft[0]/radar/mark</aircraft-radar-mark>
+		<aircraft-radar-select>/instrumentation/radar/aircraft[0]/radar/select</aircraft-radar-select>
+	</params1>
+	<params2>
+		<aircraft-radar-range-nm>/instrumentation/radar/aircraft[1]/radar/range-nm</aircraft-radar-range-nm>
+		<aircraft-radar-x-shift>/ai/models/aircraft[1]/radar/x-shift</aircraft-radar-x-shift>
+		<aircraft-radar-y-shift>/ai/models/aircraft[1]/radar/y-shift</aircraft-radar-y-shift>
+		<aircraft-radar-rotation>/ai/models/aircraft[1]/radar/rotation</aircraft-radar-rotation>
+		<aircraft-radar-mark>/instrumentation/radar/aircraft[1]/radar/mark</aircraft-radar-mark>
+		<aircraft-radar-select>/instrumentation/radar/aircraft[1]/radar/select</aircraft-radar-select>
+	</params2>
+	<params3>
+		<aircraft-radar-range-nm>/instrumentation/radar/aircraft[2]/radar/range-nm</aircraft-radar-range-nm>
+		<aircraft-radar-x-shift>/instrumentation/radar/aircraft[2]/radar/x-shift</aircraft-radar-x-shift>
+		<aircraft-radar-y-shift>/instrumentation/radar/aircraft[2]/radar/y-shift</aircraft-radar-y-shift>
+		<aircraft-radar-rotation>/instrumentation/radar/aircraft[2]/radar/rotation</aircraft-radar-rotation>
+		<aircraft-radar-mark>/instrumentation/radar/aircraft[2]/radar/mark</aircraft-radar-mark>
+		<aircraft-radar-select>/instrumentation/radar/aircraft[2]/radar/select</aircraft-radar-select>
+	</params3>
+	<params4>
+		<aircraft-radar-range-nm>/instrumentation/radar/aircraft[3]/radar/range-nm</aircraft-radar-range-nm>
+		<aircraft-radar-x-shift>/instrumentation/radar/aircraft[3]/radar/x-shift</aircraft-radar-x-shift>
+		<aircraft-radar-y-shift>/instrumentation/radar/aircraft[3]/radar/y-shift</aircraft-radar-y-shift>
+		<aircraft-radar-rotation>/instrumentation/radar/aircraft[3]/radar/rotation</aircraft-radar-rotation>
+		<aircraft-radar-mark>/instrumentation/radar/aircraft[3]/radar/mark</aircraft-radar-mark>
+		<aircraft-radar-select>/instrumentation/radar/aircraft[3]/radar/select</aircraft-radar-select>
+	</params4>
+	<params5>
+		<aircraft-radar-range-nm>/instrumentation/radar/aircraft[4]/radar/range-nm</aircraft-radar-range-nm>
+		<aircraft-radar-x-shift>/instrumentation/radar/aircraft[4]/radar/x-shift</aircraft-radar-x-shift>
+		<aircraft-radar-y-shift>/instrumentation/radar/aircraft[4]/radar/y-shift</aircraft-radar-y-shift>
+		<aircraft-radar-rotation>/instrumentation/radar/aircraft[4]/radar/rotation</aircraft-radar-rotation>
+		<aircraft-radar-mark>/instrumentation/radar/aircraft[4]/radar/mark</aircraft-radar-mark>
+		<aircraft-radar-select>/instrumentation/radar/aircraft[4]/radar/select</aircraft-radar-select>
+	</params5>
+	<params6>
+		<aircraft-radar-range-nm>/instrumentation/radar/aircraft[5]/radar/range-nm</aircraft-radar-range-nm>
+		<aircraft-radar-x-shift>/instrumentation/radar/aircraft[5]/radar/x-shift</aircraft-radar-x-shift>
+		<aircraft-radar-y-shift>/instrumentation/radar/aircraft[5]/radar/y-shift</aircraft-radar-y-shift>
+		<aircraft-radar-rotation>/instrumentation/radar/aircraft[5]/radar/rotation</aircraft-radar-rotation>
+		<aircraft-radar-mark>/instrumentation/radar/aircraft[5]/radar/mark</aircraft-radar-mark>
+		<aircraft-radar-select>/instrumentation/radar/aircraft[5]/radar/select</aircraft-radar-select>
+	</params6>
+	<params7>
+		<aircraft-radar-range-nm>/instrumentation/radar/aircraft[6]/radar/range-nm</aircraft-radar-range-nm>
+		<aircraft-radar-x-shift>/instrumentation/radar/aircraft[6]/radar/x-shift</aircraft-radar-x-shift>
+		<aircraft-radar-y-shift>/instrumentation/radar/aircraft[6]/radar/y-shift</aircraft-radar-y-shift>
+		<aircraft-radar-rotation>/instrumentation/radar/aircraft[6]/radar/rotation</aircraft-radar-rotation>
+		<aircraft-radar-mark>/instrumentation/radar/aircraft[6]/radar/mark</aircraft-radar-mark>
+		<aircraft-radar-select>/instrumentation/radar/aircraft[6]/radar/select</aircraft-radar-select>
+	</params7>
+
+
+        <model>
+            <name>Light</name>
+            <path>Aircraft/F-8E-Crusader/Instruments/Light-radar-f8e.xml</path>
+            <offsets>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+                <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <animation>
+            <type>select</type>
+            <object-name>Light</object-name>
+            <condition>
+                <or><property>sim/rendering/rembrandt</property> <property>sim/rendering/rembrandt/enabled</property> </or>
+            </condition>
+        </animation>
+
+
+<!--============================Hot Spots====================================================-->
+
+        <animation>
+            <type>pick</type>
+            <object-name>Radar-range-Com</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/radar/nm-coef</property>
+                    <step>1</step>
+                    <min>1</min>
+                    <max>5</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Radar-range-Com</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/radar/nm-coef</property>
+                    <step>-1</step>
+                    <min>1</min>
+                    <max>5</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Radar-Altitude</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/radar/alt-coef</property>
+                    <step>1</step>
+                    <min>1</min>
+                    <max>7</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Radar-Altitude</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/radar/alt-coef</property>
+                    <step>-1</step>
+                    <min>1</min>
+                    <max>7</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Radar-Target-Switch</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/radar/switch</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>6</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Radar-Target-Switch</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/radar/switch</property>
+                    <step>-1</step>
+                    <min>0</min>
+                    <max>6</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>AI1-NF</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[0]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>AI1-N</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[0]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>AI2-NF</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[1]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>AI2-N</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[1]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>AI3-NF</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[6]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>AI3-N</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[6]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+
+
+        <animation>
+            <type>pick</type>
+            <object-name>MP1-NF</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[2]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>MP1-N</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[2]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>MP2-NF</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[3]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>MP2-N</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[3]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+
+
+        <animation>
+            <type>pick</type>
+            <object-name>MP3-NF</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[4]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>MP3-N</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[4]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>MP4-NF</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[5]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+        <animation>
+            <type>pick</type>
+            <object-name>MP4-N</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/radar/aircraft[5]/radar/select</property>
+                </binding>
+            </action>
+        </animation>
+
+<!--Echo Echo Echo=============================================================-->
+	<animation>
+		<type>select</type>
+		<object-name>Echo1</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params1/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params1/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Echo2</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params2/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params2/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Echo3</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params3/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params3/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Echo4</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params4/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params4/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Echo5</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params5/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params5/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Echo6</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params6/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params6/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<!--*****************Tacan****************-->
+	<animation>
+		<type>select</type>
+		<object-name>Crt3</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params7/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Heading-AC</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params7/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params7/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+	<animation>
+		<type>select</type>
+		<object-name>Echo7</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params7/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params7/aircraft-radar-range-nm"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<!--***********************Altitude*********************-->
+
+	<animation>
+	<type>select</type>
+		<object-name>EchoAlt1</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params1/aircraft-radar-select"/>
+					<value type="double">1</value>
+				</equals>
+				<less-than>
+					<property>/instrumentation/radar/echo[0]/z-shift</property>
+					<value>5000</value>
+				</less-than>
+				<greater-than>
+					<property>/instrumentation/radar/echo[0]/z-shift</property>
+					<value>-5000</value>
+				</greater-than>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+	<type>select</type>
+	<object-name>EchoAlt2</object-name>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+			<equals>
+				<property alias="../../../../../params2/aircraft-radar-select"/>
+				<value type="double">1</value>
+			</equals>
+			<less-than>
+				<property>/instrumentation/radar/echo[1]/z-shift</property>
+				<value>5000</value>
+			</less-than>
+			<greater-than>
+				<property>/instrumentation/radar/echo[1]/z-shift</property>
+				<value>-5000</value>
+			</greater-than>
+		</and>
+	</condition>
+	</animation>
+
+	<animation>
+	<type>select</type>
+	<object-name>EchoAlt3</object-name>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+			<equals>
+				<property alias="../../../../../params3/aircraft-radar-select"/>
+				<value type="double">1</value>
+			</equals>
+			<less-than>
+				<property>/instrumentation/radar/echo[2]/z-shift</property>
+				<value>5000</value>
+			</less-than>
+			<greater-than>
+				<property>/instrumentation/radar/echo[2]/z-shift</property>
+				<value>-5000</value>
+			</greater-than>
+			<not-equals>
+				<property alias="../../../../../params3/aircraft-radar-range-nm"/>
+				<value>0</value>
+			</not-equals>
+		</and>
+	</condition>
+	</animation>
+
+	<animation>
+	<type>select</type>
+	<object-name>EchoAlt4</object-name>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+			<equals>
+				<property alias="../../../../../params4/aircraft-radar-select"/>
+				<value type="double">1</value>
+			</equals>
+			<less-than>
+				<property>/instrumentation/radar/echo[3]/z-shift</property>
+				<value>5000</value>
+			</less-than>
+			<greater-than>
+				<property>/instrumentation/radar/echo[3]/z-shift</property>
+				<value>-5000</value>
+			</greater-than>
+			<not-equals>
+				<property alias="../../../../../params4/aircraft-radar-range-nm"/>
+				<value>0</value>
+			</not-equals>
+		</and>
+	</condition>
+	</animation>
+
+	<animation>
+	<type>select</type>
+	<object-name>EchoAlt5</object-name>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+			<equals>
+				<property alias="../../../../../params5/aircraft-radar-select"/>
+				<value type="double">1</value>
+			</equals>
+			<less-than>
+				<property>/instrumentation/radar/echo[4]/z-shift</property>
+				<value>5000</value>
+			</less-than>
+			<greater-than>
+				<property>/instrumentation/radar/echo[4]/z-shift</property>
+				<value>-5000</value>
+			</greater-than>
+			<not-equals>
+				<property alias="../../../../../params5/aircraft-radar-range-nm"/>
+				<value>0</value>
+			</not-equals>
+		</and>
+	</condition>
+	</animation>
+
+	<animation>
+	<type>select</type>
+	<object-name>EchoAlt6</object-name>
+	<condition>
+		<and>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+			<equals>
+				<property alias="../../../../../params6/aircraft-radar-select"/>
+				<value type="double">1</value>
+			</equals>
+			<less-than>
+				<property>/instrumentation/radar/echo[5]/z-shift</property>
+				<value>5000</value>
+			</less-than>
+			<greater-than>
+				<property>/instrumentation/radar/echo[5]/z-shift</property>
+				<value>-5000</value>
+			</greater-than>
+			<not-equals>
+				<property alias="../../../../../params6/aircraft-radar-range-nm"/>
+				<value>0</value>
+			</not-equals>
+		</and>
+	</condition>
+	</animation>
+
+	<animation>
+		<object-name>Echo1</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[0]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Echo1</object-name>
+		<property>/instrumentation/radar/echo[0]/y-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>EchoAlt1</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[0]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>EchoAlt1</object-name>
+		<property>/instrumentation/radar/echo[0]/z-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-5000</ind>
+				<dep>-0.0315</dep>
+			</entry>
+			<entry>
+				<ind>5000</ind>
+				<dep>0.0315</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<object-name>Echo2</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[1]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Echo2</object-name>
+		<property>/instrumentation/radar/echo[1]/y-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>EchoAlt2</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[1]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>EchoAlt2</object-name>
+		<property>/instrumentation/radar/echo[1]/z-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-5000</ind>
+				<dep>-0.0315</dep>
+			</entry>
+			<entry>
+				<ind>5000</ind>
+				<dep>0.0315</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>Echo3</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[2]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Echo3</object-name>
+		<property>/instrumentation/radar/echo[2]/y-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>EchoAlt3</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[2]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>EchoAlt3</object-name>
+		<property>/instrumentation/radar/echo[2]/z-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-5000</ind>
+				<dep>-0.0315</dep>
+			</entry>
+			<entry>
+				<ind>5000</ind>
+				<dep>0.0315</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<object-name>Echo4</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[3]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Echo4</object-name>
+		<property>/instrumentation/radar/echo[3]/y-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>EchoAlt4</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[3]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>EchoAlt4</object-name>
+		<property>/instrumentation/radar/echo[3]/z-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-5000</ind>
+				<dep>-0.0315</dep>
+			</entry>
+			<entry>
+				<ind>5000</ind>
+				<dep>0.0315</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<object-name>Echo5</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[4]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Echo5</object-name>
+		<property>/instrumentation/radar/echo[4]/y-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>EchoAlt5</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[4]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>EchoAlt5</object-name>
+		<property>/instrumentation/radar/echo[4]/z-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-5000</ind>
+				<dep>-0.0315</dep>
+			</entry>
+			<entry>
+				<ind>5000</ind>
+				<dep>0.0315</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>Echo6</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[5]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Echo6</object-name>
+		<property>/instrumentation/radar/echo[5]/y-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<object-name>EchoAlt6</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[5]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0495507</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0495507</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>EchoAlt6</object-name>
+		<property>/instrumentation/radar/echo[5]/z-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-5000</ind>
+				<dep>-0.0315</dep>
+			</entry>
+			<entry>
+				<ind>5000</ind>
+				<dep>0.0315</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	<!--**********************Tacan***************************-->
+	<!--<property alias="../../params7/aircraft-radar-rotation"/>-->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Heading-AC</object-name>
+		<property>/orientation/heading-deg</property>
+		<factor>-1</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0096210</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+	<animation>
+		<object-name>Echo7</object-name>
+		<type>translate</type>
+		<property>/instrumentation/radar/echo[6]/x-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0312919</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0312919</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>translate</type>
+		<object-name>Echo7</object-name>
+		<property>/instrumentation/radar/echo[6]/y-shift</property>
+		<interpolation>
+			<entry>
+				<ind>-40</ind>
+				<dep>-0.0312919</dep>
+			</entry>
+			<entry>
+				<ind>40</ind>
+				<dep>0.0312919</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+
+
+<!--MarkerMakerMaker=================================-->
+<!--AI=================================================-->
+	<animation>
+		<type>select</type>
+		<object-name>AI1-A</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params1/aircraft-radar-select"/>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params1/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>AI1-P</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params1/aircraft-radar-select"/>
+					<value>0</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params1/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>AI2-A</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params2/aircraft-radar-select"/>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params2/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>AI2-P</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params2/aircraft-radar-select"/>
+					<value>0</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params2/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>AI3-A</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params7/aircraft-radar-select"/>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params7/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>AI3-P</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params7/aircraft-radar-select"/>
+					<value>0</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params7/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>AI1-NF</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>1</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>AI2-NF</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>2</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>AI3-NF</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>99</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>MP1-NF</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>3</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MP2-NF</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>4</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MP3-NF</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>5</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MP4-NF</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property>/instrumentation/radar/switch</property>
+					<value>6</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<!--Test quelconque qui empeche l'affichage des inutiles-->
+
+
+
+	<!--MP=============-->
+
+
+	<animation>
+		<type>select</type>
+		<object-name>MP1-A</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params3/aircraft-radar-select"/>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params3/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MP1-P</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params3/aircraft-radar-select"/>
+					<value>0</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params3/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+
+	<animation>
+		<type>select</type>
+		<object-name>MP2-A</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params4/aircraft-radar-select"/>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params4/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MP2-P</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params4/aircraft-radar-select"/>
+					<value>0</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params4/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+
+
+
+	<animation>
+		<type>select</type>
+		<object-name>MP3-A</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params5/aircraft-radar-select"/>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params5/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MP3-P</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params5/aircraft-radar-select"/>
+					<value>0</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params5/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<animation>
+		<type>select</type>
+		<object-name>MP4-A</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params6/aircraft-radar-select"/>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params6/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>MP4-P</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/radar</property>
+					<value>27</value>
+				</greater-than>
+				<equals>
+					<property alias="../../../../../params6/aircraft-radar-select"/>
+					<value>0</value>
+				</equals>
+				<not-equals>
+					<property alias="../../../../../params6/aircraft-radar-mark"/>
+					<value>0</value>
+				</not-equals>
+			</and>
+		</condition>
+	</animation>
+
+
+
+
+	<!--Test quelconque qui empeche l'affichage des inutiles-->
+	<!--<animation>
+		<type>select</type>
+		<object-name>MP4-A</object-name>
+		<object-name>MP4-P</object-name>
+		<condition>
+			<equals>
+				<property alias="../../../../params1/aircraft-radar-mark"/>
+				<value>99</value>
+			</equals>
+		</condition>
+	</animation>-->
+	<!--==============================================================================================-->
+
+
+
+
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>Radar</object-name>
+	</animation>
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name>Crt2</object-name>
+		<object-name>Crt1</object-name>
+	</animation>-->
+
+       <!-- <animation include="Instrument-Light3.xml">
+                <object-name>Radar-range-ComBde</object-name>
+        </animation>-->
+
+
+       <!-- pour afficher les données 2D sur le radar (range, altitude, target )-->
+
+       <model>
+           <name>Radar2D</name>
+           <path>Aircraft/F-8E-Crusader/Instruments/Radar-DummyAPQ.xml</path>
+           <offsets>
+               <x-m>0</x-m>
+               <y-m>0</y-m>
+               <z-m>0</z-m>
+               <pitch-deg>0</pitch-deg>
+           </offsets>
+	</model>
+
+        <animation>
+            <type>select</type>
+            <object-name>Radar2D</object-name>
+            <condition>
+                <greater-than>
+                    <property>/systems/electrical/outputs/radar</property>
+                    <value>27</value>
+                </greater-than>
+            </condition>
+	</animation>
+
+        <!--===========================================-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Masque-Inactif</object-name>
+		<condition>
+			<less-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27.01</value>
+			</less-than>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Ctr1-I</object-name>
+		<object-name>Ctr2-I</object-name>
+		<object-name>Ctr3-I</object-name>
+		<condition>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>99</value>
+			</greater-than>
+		</condition>
+	</animation>
+
+
+
+        <animation>
+		<condition>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+		</condition>
+                <type>rotate</type>
+                <object-name>Radar-range-Com</object-name>
+                <property>/instrumentation/radar/range</property>
+               <factor>2</factor>
+                <center>
+                        <x-m>0</x-m>
+			<y-m>-0.0583397</y-m>
+			<z-m>0.0293254</z-m>
+                </center>
+                <axis>
+                        <x>-1</x>
+                        <y>0</y>
+                        <z>0</z>
+                </axis>
+	</animation>
+
+	<animation>
+		<condition>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+		</condition>
+		<type>rotate</type>
+		<object-name>Radar-Altitude</object-name>
+		<property>/instrumentation/radar/alt-coef</property>
+		<factor>30</factor>
+		<center>
+			<x-m>0</x-m>
+                        <y-m>-0.0583627</y-m>
+                        <z-m>-0.0719548</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<condition>
+			<greater-than>
+				<property>/systems/electrical/outputs/radar</property>
+				<value>27</value>
+			</greater-than>
+		</condition>
+		<type>rotate</type>
+		<object-name>Radar-SelAC</object-name>
+		<property>/instrumentation/radar/switch</property>
+		<factor>20</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.058785</y-m>
+			<z-m>0.0293254</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-RefCt-Actif</object-name>
+		<condition>
+				<equals>
+					<property>/systems/refuel/contact</property>
+					<value type="bool">1</value>
+				</equals>
+		</condition>
+	</animation>
+
+
+
+</PropertyList>

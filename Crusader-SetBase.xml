@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  12-12-2005
+    
+
+   LING-TEMCO-VOUGHT   F-8E-Crusader Crusader                     -->
+       <PropertyList>
+        <sim>
+                <flight-model>jsb</flight-model>
+                <aero>f8e_v4-jsbsim</aero>
+                <startup>
+                        <splash-texture>Aircraft/F-8E-Crusader/Crusader-splash.png</splash-texture>
+                </startup>
+
+                <model>
+                    <path archive="n">Aircraft/F-8E-Crusader/Models/F8E-Crusader.xml</path>
+                    <fg-ver_min type="string">2.11</fg-ver_min>
+		    <fg-ver_max type="string">2.12</fg-ver_max>
+                    <f8e>
+                            <instrument-lights>0.6</instrument-lights>
+                            <nav-lights>1</nav-lights>
+                    </f8e>
+                    <mule>
+                        <magnitude>0</magnitude>
+                        <linked>0</linked>
+                    </mule>
+                    <taxi>
+                        <linked >0</linked>
+                        <taxi_to>1</taxi_to>  <!--cat-1 = 1, cat-2 = 2, cat-3 = 3, cat-4 = 4-->
+                    </taxi>
+                    <differential-braking>1</differential-braking>
+                    <shader>
+                        <reflection-correction type="float">-0.23</reflection-correction>
+                        <reflection-enabled type="int">1</reflection-enabled>
+                        <reflection-fresnel type="float">0.2</reflection-fresnel>
+                        <reflection-noise type="float">0.1</reflection-noise>
+                        <ambient-correction type="float">0.0</ambient-correction>
+                        <reflection-rainbow type="float">0.30</reflection-rainbow>
+                    </shader>
+		    <carrier_id>
+			<target type="string" >Closest</target>
+		    </carrier_id>
+                </model>
+
+                <sound>
+                        <audible>true</audible>
+                        <path>Aircraft/F-8E-Crusader/Fx/sound.xml</path>
+                </sound>
+                <rendering>                -
+                    <redout>
+                        <red>0</red>
+                        <alpha>0</alpha>
+                        <enabled type="bool">false</enabled>
+                    </redout>
+                </rendering>
+
+                <virtual-cockpit archive="y">true</virtual-cockpit>
+                <hud>
+                        <path n="1">Huds/default.xml</path>
+                        <visibility n="1">false</visibility>
+                        <enable3d n="1">false</enable3d>
+                </hud>
+
+
+                <view>
+                        <internal archive="y">true</internal>
+                        <config>
+                        <!-- x/y/z == right/up/back -->
+                                <x-offset-m archive="y">0</x-offset-m>
+                                <y-offset-m archive="y">0.76</y-offset-m>
+                                <z-offset-m archive="y">-5.3451</z-offset-m>
+                                <pitch-offset-deg archive="y">-18</pitch-offset-deg>
+                                <default-field-of-view-deg type="double">82.0</default-field-of-view-deg>
+                        </config>
+                </view>
+
+
+                <current-view>
+                        <field-of-view type="double">62.0</field-of-view>
+                </current-view>
+                <chase-distance-m type="double">-20.0</chase-distance-m>
+                <systems>
+		    <autopilot>
+			    <path>Aircraft/F-8E-Crusader/Systems/F8autopilot.xml</path>
+		    </autopilot>
+		    <autoflight>
+			    <serviceable type="bool">true</serviceable>
+		    </autoflight>
+		    <electrical>
+			<path>Aircraft/F-8E-Crusader/Systems/dummy-electrical.xml</path>
+		    </electrical>
+                </systems>
+                <cockpit>
+                        <modules>
+                                <switch-g99 type="bool">false</switch-g99>
+                        </modules>
+                </cockpit>
+
+                <!--we get the best glideslope  ~ 3.5 deg    from 3000 ft to 0 ft
+                with, n1 = 64 to 65 , pitch trim -0.31 to -0.29,-->
+
+                <aoa-indicator>
+                    <!--<alpha-rad>0.12915436</alpha-rad>-->
+                    <alpha-rad>0.2687807</alpha-rad>
+                    <speed>105</speed> <!--french model should be 100-->
+                    <units>13.25</units>  <!--should be 13.25       1 unit=1.5 deg          =19.875  deg-->
+                </aoa-indicator>
+
+                <devel>0</devel>
+                <multiplay>
+                    <generic>
+                        <float n="0" alias="/surface-positions/gear-pos-norm"/>
+                        <float n="1" alias="/surface-positions/canopy-pos-norm"/>
+                        <float n="2" alias="/gear/gear[0]/steering-norm"/>
+                        <float n="3" alias="/fdm/jsbsim/fcs/landing-light"/>
+                        <float n="4" alias="/engines/engine[0]/augmentation"/>
+                        <float n="6" alias="/engines/engine[0]/n2"/>
+                        <float n="5" alias="/engines/engine[0]/running"/>
+                        <float n="7" alias="/fdm/jsbsim/launchbar/launch-bar-engage"/>
+                        <float n="8" alias="/fdm/jsbsim/launchbar/launch-bar-pos-norm"/>
+                        <float n="9" alias="/fdm/jsbsim/launchbar/launch-bar-state"/>
+                        <float n="10" alias="/fdm/jsbsim/systems/catapult/cat-launch-cmd/"/>
+                       <!-- <float n="11" alias=""/>-->
+                    </generic>
+                </multiplay>
+		<help include="Help/Crusader-help.xml"/>
+		
+		
+                <carrier>
+                    <enabled type="bool">false</enabled>
+		    <heading-deg>0</heading-deg>
+                    <no-catapult-definition type="bool">true</no-catapult-definition>
+                </carrier>
+                <menubar include="Inputs/Crusader-menu.xml"/>
+                <ai>
+                    <enabled type="bool">true</enabled>
+                    <scenario>clemenceau_demo</scenario>
+                    <scenario>refueling_demo_1</scenario>
+                </ai>
+                <submodels>
+                    <serviceable>true</serviceable>
+                    <path>Aircraft/F-8E-Crusader/Fx/submodels.xml</path>
+                </submodels>
+        </sim>                         -          x
+
+
+
+
+        <input include="Inputs/Crusader-input.xml"/>
+
+
+        <autopilot>
+                <settings>
+                        <target-agl-ft type="float">800</target-agl-ft>
+                        <target-altitude-ft type="float">5000</target-altitude-ft>
+                        <target-aoa-deg type="float">4.7</target-aoa-deg>
+                        <target-pitch-deg type="float">1.5</target-pitch-deg>
+                        <take-off-pitch-deg type="float">9</take-off-pitch-deg>
+                        <climb-out-pitch-deg type="float">6.5</climb-out-pitch-deg>
+                        <target-speed-kt type="float">500.0</target-speed-kt>
+                        <target-mach type="float">0.9</target-mach>
+                        <approach-AoA-deg type="float">12.7</approach-AoA-deg>
+                </settings>
+        </autopilot>
+        <controls>
+    <!-- Start with the Parking Brake on -->
+                <gear>
+                        <brake-parking type="double">1.0</brake-parking>
+                        <gear-down>1</gear-down>
+                        <tailhook>0</tailhook>
+                </gear>
+    <!-- Start with Canopy open-->
+                <flight>
+                        <canopy type="bool">true</canopy>
+                        <wing-fold-cmd type="double">1</wing-fold-cmd>
+                        <wing-incidence type="bool">0</wing-incidence>
+                </flight>
+                <jettison>
+                    <canopy type="float">0</canopy>
+                </jettison>
+                <switches>
+                        <flashing-beacon>1</flashing-beacon>
+                        <master-avionics>false</master-avionics>
+                </switches>
+                <lighting>
+                    <beacon type="bool">true</beacon>
+                    <instruments type="bool">true</instruments>
+                    <landing-lights type="bool">true</landing-lights>
+                    <strobe-lights type="bool">true</strobe-lights>
+                </lighting>
+                <electric>
+                    <master-switch>false</master-switch>
+                    <battery-switch>false</battery-switch>
+                    <external-power>false</external-power>
+                </electric>
+        </controls>
+    <!-- Start with Engine off -->
+        <engines>
+                <engine n="0">
+                        <running type="bool">false</running>
+                </engine>
+        </engines>
+
+        <consumables>
+    <!-- Payload, will  need air refueling .     Beware  =>ATSFC   2.8    and    TSFC   only     0.77 -->
+                <fuel>
+                        <!--<tank n="0" pointmass {1]  -->
+
+                       <!-- <tank n="1"  est le "transfer tank"  defini en pointmass dans le FDM -->
+                </fuel>
+        </consumables>
+
+        <instrumentation>
+                <path>Aircraft/F-8E-Crusader/Systems/instrumentation.xml</path>
+                <radar>
+                        <range type="int">20</range>
+                        <display-mode>arc</display-mode>
+                        <minimized type="bool">false</minimized>
+                        <switch type="double" >0</switch>
+                </radar>
+                <wxradar>
+                        <range type="int">20</range>
+                        <display-mode>arc</display-mode>
+                </wxradar>
+                <dme>
+                        <serviceable type="bool">true</serviceable>
+                        <switch-position type="int">1</switch-position>
+                </dme>
+                <tacan n="0">
+                    <serviceable type="bool" archive="y">true</serviceable>
+                    <switch-position type="int" archive="y">1</switch-position>
+                    <!--this is for Clemenceau-->
+                    <frequencies>
+                            <selected-channel n="1">0</selected-channel>
+                            <selected-channel n="2">2</selected-channel>
+                            <selected-channel n="3">6</selected-channel>
+                            <selected-channel n="4">Y</selected-channel>
+                    </frequencies>
+                </tacan>
+                <heading-indicator>
+                        <nav-switch>1</nav-switch>
+                </heading-indicator>
+                <distance-switch>1</distance-switch>
+                <altimeter>
+                        <agl-min type="double">200</agl-min>
+                </altimeter>
+                <lights></lights>
+        </instrumentation>
+
+        <environment>
+            <params>
+                <control-fdm-atmosphere type="bool">false</control-fdm-atmosphere>
+            </params>
+        </environment>
+
+        <gear>
+            <launchbar>
+                <state type="string">Disengaged</state>
+            </launchbar>
+        </gear>
+
+        <fdm include="Systems/jsbsim_init.xml"/>
+
+</PropertyList>
+
+

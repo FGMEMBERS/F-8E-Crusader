@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+
+
+
+<PropertyList>
+	<name>F-8E Panel</name>
+		<background>Aircraft/F-8E-Crusader/Panels/Textures/transparent-bg.rgb</background>
+			<w>128</w>
+			<h>128</h>
+			<y-offset>0</y-offset>
+			<view-height>128</view-height>
+
+	<instruments>
+
+		<instrument include="radarAPQ-2d.xml">
+			<name>Radar</name>
+			<x>63</x>
+			<y>89</y>
+			<w>146</w>
+			<h>146</h>
+		</instrument>
+
+	</instruments>
+
+</PropertyList>

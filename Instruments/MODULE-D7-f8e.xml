@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/module-D7.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Freq-nnn-nX</object-name>
+		<object-name>Freq-nnn-Xn</object-name>
+		<object-name>Freq-nnX-nn</object-name>
+		<object-name>Freq-nXn-nn</object-name>
+		<object-name>Freq-Xnn-nn</object-name>
+	</animation>
+	<animation include="Instrument-Light3.xml">
+		<object-name>Chan-nX</object-name>
+		<object-name>Chan-Xn</object-name>
+	</animation>
+	<animation include="Instrument-Light6.xml">
+		<object-name>Couronne</object-name>
+		<object-name>Couronne1</object-name>
+	</animation>
+
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+	
+
+    <!-- *******************************************************************************************************************-->
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnn-nX</object-name>
+		<property>/preset/input/val-nnn-XX</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+       
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnn-Xn</object-name>
+		<property>/preset/input/val-nnn-XX</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bt-Val-nnn-XX</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">false</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/val-nnn-XX</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <resolution>1</resolution>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bt-Val-nnn-XX</object-name>
+            <action>
+                <button>1</button>
+                <repeatable type="bool">false</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/val-nnn-XX</property>
+                    <step>10</step>
+                    <min>0</min>
+                    <max>100</max>
+                    <resolution>1</resolution>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nnX-nn</object-name>
+		<property>/preset/input/val-nnX-nn</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bt-Val-nnX-nn</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">false</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/val-nnX-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <resolution>1</resolution>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-nXn-nn</object-name>
+		<property>/preset/input/val-XXn-nn</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bt-Val-XXn-nn</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">false</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/val-XXn-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <resolution>1</resolution>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Freq-Xnn-nn</object-name>
+		<property>/preset/input/val-XXn-nn</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bt-Val-XXn-nn</object-name>
+            <action>
+                <button>1</button>
+                <repeatable type="bool">false</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/val-XXn-nn</property>
+                    <step>10</step>
+                    <min>0</min>
+                    <max>100</max>
+                    <resolution>1</resolution>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        
+
+
+
+	<!--************************************************************************************************************************************************************-->
+
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Chan-nX</object-name>
+		<property>/preset/input/chan-XX</property>
+		<factor>0.1</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Chan-Xn</object-name>
+		<property>/preset/input/chan-XX</property>
+		<factor>0.01</factor>
+		<step>10</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bt-Preset-Chan</object-name>
+            <action>
+                <button>0</button>
+                <repeatable type="bool">false</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/chan-XX</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>21</max>
+                    <resolution>1</resolution>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Bt-Preset-Chan</object-name>
+            <action>
+                <button>1</button>
+                <repeatable type="bool">false</repeatable>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/chan-XX</property>
+                    <step>-1</step>
+                    <min>0</min>
+                    <max>21</max>
+                    <resolution>1</resolution>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>FreqType</object-name>
+		<property>/preset/input/freqtype</property>
+		<factor>0.25</factor>
+		<step>1</step>
+		<scroll>1</scroll>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Sel-FreqType</object-name>
+		<property>/preset/input/freqtype</property>
+		<factor>-45</factor>
+		<center>
+			<x-m>0.0108831</x-m>
+			<y-m>0.0506081</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Sel-FreqType</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/freqtype</property>
+                    <step>-1</step>
+                    <min>0</min>
+                    <max>3</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Sel-FreqType</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/preset/input/freqtype</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>3</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Sel-ManChan</object-name>
+		<property>/preset/input/selector</property>
+		<factor>60</factor>
+		<center>
+			<x-m>0.0136393</x-m>
+			<y-m>-0.0556185</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Sel-ManChan</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/preset/input/selector</property>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>StoreAction</object-name>
+		<property>/preset/input/store</property>
+		<factor>-0.01</factor>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+ 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>StoreAction</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-assign</command>
+                    <property>/preset/input/store</property>
+                    <value>1</value>
+                </binding>
+                <mod-up>
+                    <binding>
+                        <command>property-assign</command>
+                        <property>/preset/input/store</property>
+                        <value>0</value>
+                    </binding>
+                </mod-up>
+            </action>
+        </animation>
+
+	<animation>
+		<condition>
+			<equals>
+				<property>/preset/input/modrw</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<type>select</type>
+		<object-name>base-write</object-name>
+ 	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Inter-ModRW</object-name>
+		<property>/preset/input/modrw</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0013260</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Inter-ModRW</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/preset/input/modrw</property>
+                </binding>
+            </action>
+        </animation>
+        
+        
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Inter-StBy</object-name>
+		<property>/preset/input/sandtby</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>-0.0290509</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0013260</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+</PropertyList>

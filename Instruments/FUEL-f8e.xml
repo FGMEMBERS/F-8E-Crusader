@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/fuel-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>FUEL</object-name>
+	</animation>
+
+
+
+ 	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel_pt-f8e.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>Aiguille</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Cadran</object-name>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Aiguille</object-name>
+                <property>fdm/jsbsim/inertia/pointmass-weight-lbs[1]</property>
+		<!--<factor>0.51800052</factor>-->
+		<!--80 degres=1000lbs=154.44gal_us-->
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>4000</ind>
+				<dep>320</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

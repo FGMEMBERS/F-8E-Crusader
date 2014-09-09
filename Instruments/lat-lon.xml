@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+
+
+<PropertyList>
+
+ <name>Lat-Lon</name>
+
+  <w-base>256</w-base>
+  <h-base>128</h-base>
+
+   <layers>
+
+	   <layer>
+		   <name>Lon</name>
+		   <type>text</type>
+		   <font>led</font>
+		   <point-size>6</point-size>
+		   <color>
+			   <red>0.65</red>
+			   <green>0.75</green>
+			   <blue>0.65</blue>
+		   </color>
+		   <chunks>
+			<chunk>
+				   <type>literal</type>
+				   <text>LON  </text>
+     			</chunk>
+			<chunk>
+				   <type>number-value</type>
+				   <property>/position/longitude-deg</property>
+				   <format>%3.4f</format>
+			</chunk>
+		   </chunks>
+		   <transformations>
+			   <transformation>
+				   <type>x-shift</type>
+				   <offset>-90</offset>
+			   </transformation>
+			   <transformation>
+				   <type>y-shift</type>
+				   <offset>0</offset>
+			   </transformation>
+		   </transformations>
+  	</layer>
+
+	<layer>
+		<name>Lat</name>
+		<type>text</type>
+		<font>led</font>
+		<point-size>6</point-size>
+		<color>
+			<red>0.65</red>
+			<green>0.75</green>
+			<blue>0.65</blue>
+		</color>
+		<chunks>
+			<chunk>
+				<type>literal</type>
+				<text>LAT  </text>
+     			</chunk>
+			<chunk>
+				<type>number-value</type>
+				<property>/position/latitude-deg</property>
+				<scale>-1.0</scale>
+				<format>%3.4f</format>
+			</chunk>
+		</chunks>
+		<transformations>
+			<transformation>
+				<type>x-shift</type>
+				<offset>90</offset>
+			</transformation>
+			<transformation>
+				<type>y-shift</type>
+				<offset>0</offset>
+			</transformation>
+		</transformations>
+	</layer>
+
+  </layers>
+
+</PropertyList>
+
+
+

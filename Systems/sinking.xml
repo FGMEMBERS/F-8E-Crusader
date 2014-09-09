@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Copyright Gerard Robin  31-03-2009
+    Under License:  GPLv2
+-->
+
+<system name="Sink">
+
+    <channel name="Sink">
+
+
+
+           <!-- contact points On/Off-->
+
+           <switch name="systems/sinking/switch">
+               <default value="0"/>
+               <test logic="AND" value="1">
+                   /environment/terrain-solid  == 0
+                   position/h-agl-ft lt 7
+                   velocities/vc-fps lt 50
+                   position/h-sl-ft  lt position/h-agl-ft
+               </test>
+            </switch>
+
+           <kinematic name="Sinking Control">
+               <input>systems/sinking/switch</input>
+               <traverse>
+                   <setting>
+                       <position>0</position>
+                       <time>0</time>
+                   </setting>
+                   <setting>
+                       <position>1</position>
+                       <time>20</time>
+                   </setting>
+               </traverse>
+               <output>systems/sinking/timer</output>
+           </kinematic>
+
+           <switch name="Belly">
+               <default value="1"/>
+               <test  value="0">
+                   systems/sinking/timer gt 0.10
+               </test>
+               <output>systems/sinking/cpbelly</output>
+            </switch>
+
+            <actuator name="Cp Belly">
+                <input>systems/sinking/cpbelly</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[9]/pos-norm</output>
+            </actuator>
+
+            <switch name="Nose">
+                <default value="1"/>
+                <test  value="0">
+                    systems/sinking/timer gt 0.20
+                </test>
+                <output>systems/sinking/cpnose</output>
+            </switch>
+
+            <actuator name="Cp Nose">
+                <input>systems/sinking/cpnose</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[10]/pos-norm</output>
+            </actuator>
+
+            <switch name="Radom">
+                <default value="1"/>
+                <test  value="0">
+                    systems/sinking/timer gt 0.30
+                </test>
+                <output>systems/sinking/cpradom</output>
+            </switch>
+
+            <actuator name="Cp Radom">
+                <input>systems/sinking/cpradom</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[8]/pos-norm</output>
+            </actuator>
+
+            <switch name="Nozzle">
+                <default value="1"/>
+                <test  value="0">
+                    systems/sinking/timer gt 0.40
+                </test>
+                <output>systems/sinking/cpnozzle</output>
+            </switch>
+
+            <actuator name="Cp Nozzle">
+                <input>systems/sinking/cpnozzle</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[11]/pos-norm</output>
+            </actuator>
+
+            <!--<switch name="Top">
+                <default value="1"/>
+                <test  value="0">
+                    systems/sinking/timer gt 0.50
+                </test>
+                <output>systems/sinking/cptop</output>
+            </switch>
+
+            <actuator name="Cp Nozzle">
+                <input>systems/sinking/cptop</input>
+                <rate_limit>0.1</rate_limit>
+                <output>gear/unit[12]/pos-norm</output>
+            </actuator>-->
+
+    </channel>
+
+
+
+
+
+</system>

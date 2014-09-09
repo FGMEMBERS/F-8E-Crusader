@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+
+<PropertyList>
+
+	<path>Models/aoa-f8e.ac</path>
+	<offsets>
+		<roll-deg>-29.5</roll-deg>
+	</offsets>
+	<texture-path>Models/Textures</texture-path>
+
+
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>AOA</object-name>
+	</animation>
+
+
+
+	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bezel_pt-f8e.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<roll-deg>29.5</roll-deg>
+		</offsets>
+	</model>
+
+	<model>
+		<name>Bouton</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Bouton_pt-f8e.xml</path>
+		<offsets>
+			<x-m>0.0161728</x-m>
+			<y-m>-0.0126353</y-m>
+			<z-m>-0.0393354</z-m>
+			<roll-deg>0</roll-deg>
+		</offsets>
+	</model>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>Aiguille</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Cadran</object-name>
+		<object-name>Index</object-name>
+	</animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>sim/aoa-indicator/alpha-rad</property>
+                    <step>0.0017453293</step>
+                    <min>-1.7453293</min>
+                    <max>0.66322512</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+        <animation>
+            <type>pick</type>
+            <object-name>Bouton</object-name>
+            <action>
+                <repeatable type="bool">true</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>sim/aoa-indicator/alpha-rad</property>
+                    <step>-0.0017453293</step>
+                    <min>-1.7453293</min>
+                    <max>0.66322512</max>
+                    <wrap>0</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>OFF</object-name>
+		<condition>
+				<less-than>
+					<property>/systems/electrical/outputs/instr-ignition-switch</property>
+					<value>27</value>
+				</less-than>
+		</condition>
+	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>Aiguille</object-name>
+            <property>fdm/jsbsim/aero/alpha-rad-w-incidence</property>
+            <!--<property>fdm/jsbsim/aero/alpha-rad</property>-->
+            <interpolation>
+                <entry>
+                    <ind>-1.7453293</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>-0.12217305</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.66322512</ind>
+                    <dep>270</dep>
+                </entry>
+            </interpolation>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>Index</object-name>
+            <property>sim/aoa-indicator/alpha-rad</property>
+            <interpolation>
+                <entry>
+                    <ind>-1.7453293</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>-0.12217305</ind>
+                    <dep>0</dep>
+                </entry>
+                <entry>
+                    <ind>0.66322512</ind>
+                    <dep>270</dep>
+                </entry>
+            </interpolation>
+            <axis>
+                <x>1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
+        <animation>
+            <type>rotate</type>
+            <object-name>Bouton</object-name>
+            <property>sim/aoa-indicator/alpha-rad</property>
+            <factor>0.017453293</factor>
+            <center>
+                <x-m>0.0161728</x-m>
+                <y-m>-0.0126353</y-m>
+                <z-m>-0.0393354</z-m>
+            </center>
+            <axis>
+                <x>-1</x>
+                <y>0</y>
+                <z>0</z>
+            </axis>
+	</animation>
+
+</PropertyList>

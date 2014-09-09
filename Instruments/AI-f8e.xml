@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+	<path>Models/ai-f8e.ac</path>
+	<texture-path>Models/Textures</texture-path>
+	<animation>
+		<type>noshadow</type>
+		<object-name>AI-f8e</object-name>
+	</animation>
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>noshadow.AICouronne</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>noshadow.AIMasque</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Bezel</object-name>
+	</animation>
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>noshadow.AISlip</object-name>
+	</animation>
+
+	<animation include="Instrument-Light1.xml">
+		<object-name>noshadow.AISphere</object-name>
+	</animation>
+
+	<animation include="Instrument-Light4.xml">
+		<object-name>noshadow.AISlip-I</object-name>
+		<object-name>noshadow.AIAvion</object-name>
+	</animation>
+
+        <model>
+            <name>Light</name>
+            <path>Aircraft/F-8E-Crusader/Instruments/Light-AI-f8e.xml</path>
+            <offsets>
+                <x-m>0</x-m>
+                <y-m>0</y-m>
+                <z-m>0</z-m>
+                <pitch-deg>0</pitch-deg>
+            </offsets>
+        </model>
+
+        <animation>
+            <type>select</type>
+            <object-name>Light</object-name>
+            <condition>
+                <or><property>sim/rendering/rembrandt</property> <property>sim/rendering/rembrandt/enabled</property> </or>
+            </condition>
+        </animation>
+
+
+	<animation>
+		<type>rotate</type>
+		<object-name>noshadow.AISphere</object-name>
+		<property>/orientation/roll-deg</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>noshadow.AISphere</object-name>
+		<property>/orientation/pitch-deg</property>
+		<center>
+			<x-m>-0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+	<animation>
+		<type>rotate</type>
+		<object-name>noshadow.AIMasque</object-name>
+		<property>/orientation/roll-deg</property>
+		<center>
+			<x-m>-0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+			</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>noshadow.AISlip</object-name>
+		<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+		<factor>1.6</factor>
+		<min-deg>-11</min-deg>
+		<max-deg>11</max-deg>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0.0279031</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>

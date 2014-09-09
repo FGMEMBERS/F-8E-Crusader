@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005   
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/com1-f8e.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>COMT</object-name>
+	</animation>
+
+
+	<animation include="Instrument-Light3.xml">
+		<object-name>Bande</object-name>
+	</animation>
+	<animation include="Instrument-Light3.xml">
+		<object-name>Couronne</object-name>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Corps</object-name>
+		<!--<property>/instrumentation/heading-indicator/nav-switch</property>-->
+		<factor>15</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Bande</object-name>
+		<!--<property>/instrumentation/heading-indicator/nav-switch</property>-->
+		<factor>15</factor>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
+</PropertyList>
+
+

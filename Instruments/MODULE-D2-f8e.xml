@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/module-D2.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+	</animation>
+
+	<animation include="Instrument-Light6.xml">
+		<object-name>Couronne</object-name>
+		<object-name>Couronne1</object-name>
+		<object-name>Couronne2</object-name>
+		<object-name>Couronne3</object-name>
+	</animation>
+
+
+
+</PropertyList>

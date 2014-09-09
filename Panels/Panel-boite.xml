@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!-- Gerard Robin  12-12-2005 , License GPLv2 -->
+<!--Some textures Copied from  T-38 instrument panel , by David Culp  -->
+
+<!-- Instruments Position -->
+<!--						L3			L2			L1			L0			C			R0			R1			R2			R3
+				H4
+				H3					Probe-3D	Egt-3D											FuPump-3D
+				H2					N1-3D		AOA-3D		AGL-3D		Radar-2D	LSI-3D		Clock-3D
+				H1		Flap-3D		OilP-3D		TURN-3D	ASI-3D		AI- 3D		HSI-3D		FuelF-3D	Tk1-3D
+				H0					Noz-3D		G-3D		Alti-3D					VSI-3D		AI_pt-3D	Tk0-3D
+				H-1														Dme-3D
+-->
+<PropertyList>
+
+	<path>Models/Panel-boite.ac</path>
+	<texture-path>Models/Textures</texture-path>
+
+	<animation>
+		<type>noshadow</type>
+		<object-name>panel-Boite</object-name>
+	</animation>
+
+	<animation include="../Instruments/Instrument-Light6.xml">
+		<object-name>Panel-DBoite-ChkL</object-name>
+		<object-name>Panel-GBoite-ChkL</object-name>
+		<object-name>Panel-DBoite-TaAc</object-name>
+	</animation>
+
+	<animation include="../Instruments/Instrument-Light6.xml">
+		<object-name>Couronne</object-name>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Inter-Acls-Tacan</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-toggle</command>
+                    <property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Inter-Acls-Tacan</object-name>
+		<property>/instrumentation/heading-indicator/switch-tacan-acls</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>30</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0.39262</y-m>
+			<z-m>-0.00928764</z-m>
+		</center>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+ 	</animation>
+
+
+
+</PropertyList>

@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/Temoin-Wings.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>Temoin</object-name>
+	</animation>
+
+
+
+	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Temoin-Base.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-Actif</object-name>
+		<condition>
+			<and>
+			<equals>
+                                <property><!--/fdm/jsbsim/fcs/wings-pos-norm--></property>
+				<value>1</value>
+			</equals>
+			<equals>
+				<property><!--/surface-positions/flap-pos-norm--></property>
+				<value>1</value>
+			</equals>
+			</and>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>TemoinMActif</object-name>
+		<object-name>Temoin-Wing</object-name>
+		<condition>
+			<and>
+				<greater-than>
+					<property>/systems/electrical/outputs/instr-ignition-switch</property>
+					<value>27</value>
+				</greater-than>
+			<or>
+			<and>
+				<not-equals>
+                                        <property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+					<value>0</value>
+				</not-equals>
+				<not-equals>
+                                        <property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+					<value>1</value>
+				</not-equals>
+			</and>
+			<and>
+				<not-equals>
+					<property>/gear/gear/position-norm[0]</property>
+					<value>0</value>
+				</not-equals>
+				<not-equals>
+					<property>/gear/gear/position-norm[0]</property>
+					<value>1</value>
+				</not-equals>
+			</and>
+			<and>
+				<not-equals>
+					<property>/surface-positions/flap-pos-norm</property>
+					<value>0</value>
+				</not-equals>
+				<not-equals>
+					<property>/surface-positions/flap-pos-norm</property>
+					<value>1</value>
+				</not-equals>
+			</and>
+			<and>
+				<equals>
+					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+					<value>0</value>
+				</equals>
+				<equals>
+					<property>/gear/gear/position-norm[0]</property>
+					<value>1</value>
+				</equals>
+			</and>
+			<and>
+				<equals>
+					<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/gear/gear/position-norm[0]</property>
+					<value>0</value>
+				</equals>
+			</and>
+			</or>
+			</and>
+		</condition>
+	</animation>
+
+	<!--<animation>
+		<type>material</type>
+		<emission>
+			<factor>1</factor>
+			<red>1</red>
+			<green>1</green>
+			<blue>1</blue>
+		</emission>
+		<object-name>Temoin-Wing</object-name>
+		<condition>
+			<or>
+				<and>
+					<not-equals>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+						<value>0</value>
+					</not-equals>
+					<not-equals>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+						<value>1</value>
+					</not-equals>
+				</and>
+				<and>
+					<not-equals>
+						<property>/gear/gear/position-norm[0]</property>
+						<value>0</value>
+					</not-equals>
+					<not-equals>
+						<property>/gear/gear/position-norm[0]</property>
+						<value>1</value>
+					</not-equals>
+				</and>
+				<and>
+					<not-equals>
+						<property>/surface-positions/flap-pos-norm</property>
+						<value>0</value>
+					</not-equals>
+					<not-equals>
+						<property>/surface-positions/flap-pos-norm</property>
+						<value>1</value>
+					</not-equals>
+				</and>
+				<and>
+					<equals>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/gear/gear/position-norm[0]</property>
+						<value>1</value>
+					</equals>
+				</and>
+				<and>
+					<equals>
+						<property>/fdm/jsbsim/fcs/wings-pos-norm</property>
+						<value>1</value>
+					</equals>
+					<equals>
+						<property>/gear/gear/position-norm[0]</property>
+						<value>0</value>
+					</equals>
+				</and>
+			</or>
+		</condition>
+	</animation>-->
+
+
+
+</PropertyList>

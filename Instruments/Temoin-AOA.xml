@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/Temoin-AOA.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>Temoin-AOA</object-name>
+		<object-name>AOA-Boite</object-name>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-AOA</object-name>
+		<condition>
+			<and>
+				<equals>
+					<property>/gear/gear[1]/position-norm</property>
+					<value>1</value>
+				</equals>
+				<equals>
+					<property>/gear/gear[1]/compression-norm</property>
+					<value>0</value>
+				</equals>
+			</and>
+		</condition>
+	</animation>
+
+
+	<!--Speed =______________________"minus3"______vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv____________
+	and
+	Angle  =______"minus1.5"_______"minus0.5"__________"target"________"plus0.5"_________"plus1.5"______v_____-->
+
+	<!--or-->
+	<!--Speed =______"minus5"_________"minus3"____________"target"________"plus3"__________"plus5"______v______-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Vert</object-name>
+                <condition>
+                    <property>/sim/aoa-indicator/green</property>
+                </condition>
+		<!--<condition>
+				<or>
+					<greater-than>
+						<property>/velocities/airspeed-kt</property>
+						<property>/sim/aoa-indicator/ref-approach-speed-pls5</property>
+					</greater-than>
+					<and>
+						<greater-than>
+							<property>/velocities/airspeed-kt</property>
+							<property>/sim/aoa-indicator/ref-approach-speed-mns3</property>
+						</greater-than>
+						<greater-than>
+							<property>/orientation/alpha-deg</property>
+							<property>/sim/aoa-indicator/ref-approach-angle-pls15</property>
+						</greater-than>
+					</and>
+				</or>
+		</condition>-->
+	</animation>
+
+	<!--Speed =______"minus5"_________"minus3"____________"target"________"plus3"_____v_____"plus5"____________-->
+	<!--Angle  =______"minus1.5"_______"minus0.5"__________"target"________"plus0.5"_____v____"plus1.5"___________-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Vert-M</object-name>
+                <condition>
+                    <property>/sim/aoa-indicator/green-medium</property>
+                </condition>
+		<!--<condition>
+			<and>
+				<greater-than>
+					<property>/velocities/airspeed-kt</property>
+					<property>/sim/aoa-indicator/ref-approach-speed-mns3</property>
+				</greater-than>
+				<or>
+					<and>
+					<greater-than>
+						<property>/velocities/airspeed-kt</property>
+						<property>/sim/aoa-indicator/ref-approach-speed-pls3</property>
+					</greater-than>
+					<less-than-equals>
+						<property>/velocities/airspeed-kt</property>
+						<property>/sim/aoa-indicator/ref-approach-speed-pls5</property>
+					</less-than-equals>
+					</and>
+					<and>
+					<greater-than>
+						<property>/orientation/alpha-deg</property>
+						<property>/sim/aoa-indicator/ref-approach-angle-pls05</property>
+					</greater-than>
+					<less-than-equals>
+						<property>/orientation/alpha-deg</property>
+						<property>/sim/aoa-indicator/ref-approach-angle-pls15</property>
+					</less-than-equals>
+					</and>
+				</or>
+			</and>
+		</condition>-->
+	</animation>
+
+
+	<!--Speed =______vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv__"plus3"_____________________________
+	and
+	Angle  =___v___"minus1.5"_______"minus0.5"__________"target"________"plus0.5"_________"plus1.5"___________-->
+
+	<!--or-->
+	<!--Speed =___v___"minus5"_________"minus3"____________"target"________"plus3"__________"plus5"____________-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Rouge</object-name>
+                <condition>
+                    <property>/sim/aoa-indicator/red</property>
+                </condition>
+		<!--<condition>
+
+				<or>
+					<less-than-equals>
+						<property>/velocities/airspeed-kt</property>
+						<property>/sim/aoa-indicator/ref-approach-speed-mns5</property>
+					</less-than-equals>
+					<and>
+						<less-than-equals>
+							<property>/velocities/airspeed-kt</property>
+							<property>/sim/aoa-indicator/ref-approach-speed-pls3</property>
+						</less-than-equals>
+						<less-than-equals>
+							<property>/orientation/alpha-deg</property>
+							<property>/sim/aoa-indicator/ref-approach-angle-mns15</property>
+						</less-than-equals>
+					</and>
+				</or>
+
+		</condition>-->
+	</animation>
+
+	<!--Speed =______"minus5"_____v____"minus3"____________"target"________"plus3"__________"plus5"____________-->
+	<!--Angle  =______"minus1.5"____v____"minus0.5"__________"target"________"plus0.5"_________"plus1.5"___________-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Rouge-M</object-name>
+                <condition>
+                    <property>/sim/aoa-indicator/red-medium</property>
+                </condition>
+		<!--<condition>
+			<and>
+				<less-than-equals>
+					<property>/velocities/airspeed-kt</property>
+					<property>/sim/aoa-indicator/ref-approach-speed-pls3</property>
+				</less-than-equals>
+				<or>
+					<and>
+						<greater-than>
+							<property>/velocities/airspeed-kt</property>
+							<property>/sim/aoa-indicator/ref-approach-speed-mns5</property>
+						</greater-than>
+						<less-than-equals>
+							<property>/velocities/airspeed-kt</property>
+							<property>/sim/aoa-indicator/ref-approach-speed-mns3</property>
+						</less-than-equals>
+					</and>
+					<and>
+						<greater-than>
+							<property>/orientation/alpha-deg</property>
+							<property>/sim/aoa-indicator/ref-approach-angle-mns15</property>
+						</greater-than>
+						<less-than-equals>
+							<property>/orientation/alpha-deg</property>
+							<property>/sim/aoa-indicator/ref-approach-angle-mns05</property>
+						</less-than-equals>
+					</and>
+				</or>
+			</and>
+		</condition>-->
+	</animation>
+
+	<!--Speed =______"minus5"_________"minus3"__________vvv"target"vvv_______"plus3"__________"plus5"____________-->
+	<!--Angle  =______"minus1.5"________"minus0.5"_________vvv"target"vvv______"plus0.5"_________"plus1.5"___________-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Orange</object-name>
+                <condition>
+                    <property>/sim/aoa-indicator/orange</property>
+                </condition>
+		<!--<condition>
+			<and>
+				<greater-than>
+					<property>/velocities/airspeed-kt</property>
+					<property>/sim/aoa-indicator/ref-approach-speed-mns3</property>
+				</greater-than>
+				<less-than-equals>
+					<property>/velocities/airspeed-kt</property>
+					<property>/sim/aoa-indicator/ref-approach-speed-pls3</property>
+				</less-than-equals>
+
+				<greater-than>
+					<property>/orientation/alpha-deg</property>
+					<property>/sim/aoa-indicator/ref-approach-angle-mns05</property>
+				</greater-than>
+				<less-than-equals>
+					<property>/orientation/alpha-deg</property>
+					<property>/sim/aoa-indicator/ref-approach-angle-pls05</property>
+				</less-than-equals>
+			</and>
+		</condition>-->
+	</animation>
+
+
+</PropertyList>

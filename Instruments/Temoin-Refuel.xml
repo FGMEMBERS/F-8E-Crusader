@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/Temoin-Refuel.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<animation>
+		<type>noshadow</type>
+		<object-name>Temoin</object-name>
+	</animation>
+
+
+
+	<model>
+		<name>Bezel</name>
+		<path>Aircraft/F-8E-Crusader/Instruments/Temoin-BasePt.xml</path>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+			<pitch-deg>0</pitch-deg>
+		</offsets>
+	</model>
+
+	<animation>
+		<type>select</type>
+		<object-name>Temoin-Actif</object-name>
+		<condition>
+				<equals>
+					<property><!----></property>
+					<value>1.0</value>
+				</equals>
+		</condition>
+	</animation>
+
+	<animation>
+		<type>select</type>
+		<object-name>TemoinMActif</object-name>
+		<object-name>Temoin-Pump</object-name>
+		<condition>
+			<equals>
+				<property>/instrumentation/annunciator/refuel-overload</property>
+				<value>1</value>
+			</equals>
+		</condition>
+	</animation>
+
+</PropertyList>

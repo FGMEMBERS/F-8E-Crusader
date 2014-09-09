@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/module-D10.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>-->
+
+
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+
+	<animation include="Instrument-Light2.xml">
+		<object-name>Module-Base</object-name>
+	</animation>
+
+	<animation include="Instrument-Light6.xml">
+		<object-name>Couronne</object-name>
+		<object-name>Couronne1</object-name>
+		<object-name>Couronne2</object-name>
+		<object-name>Couronne3</object-name>
+		<object-name>Couronne4</object-name>
+		<object-name>Couronne5</object-name>
+		<object-name>Couronne6</object-name>
+		<object-name>Couronne7</object-name>
+	</animation>
+
+
+	
+
+	<animation>
+		<type>rotate</type>
+                <object-name>Input-Nav-Master</object-name>
+		<property>/instrumentation/input/input-select</property>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-30</dep>
+			</entry>
+			<entry>
+				<ind>2</ind>
+				<dep>-60</dep>
+			</entry>
+                        <center>
+                            <x-m>-0.0303007</x-m>
+                            <y-m>0.0354288</y-m>
+                            <z-m>0</z-m>
+		        </center>
+			<axis>
+				<x>0</x>
+				<y>0</y>
+				<z>1</z>
+		          </axis>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Input-Nav-Master</object-name>
+            <action>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/input-select</property>
+                    <step>-30</step>
+                    <min>0</min>
+                    <max>60</max>
+                </binding>
+            </action>
+        </animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Input-Nav-Master</object-name>
+            <action>
+                <button>1</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/input-select</property>
+                    <step>30</step>
+                    <min>0</min>
+                    <max>60</max>
+                </binding>
+            </action>
+        </animation>
+
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Val-nX-nn-nn</object-name>
+		<property>/instrumentation/input/val-nX-nn-nn</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nX-nn-nn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nX-nn-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Val-nn-Xn-nn</object-name>
+		<property>/instrumentation/input/val-nn-Xn-nn</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-Xn-nn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-Xn-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Val-nn-nX-nn</object-name>
+		<property>/instrumentation/input/val-nn-nX-nn</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-nX-nn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-nX-nn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Val-nn-nn-Xn</object-name>
+		<property>/instrumentation/input/val-nn-nn-Xn</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-nn-Xn</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-nn-Xn</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>Val-nn-nn-nX</object-name>
+		<property>/instrumentation/input/val-nn-nn-nX</property>
+		<factor>0.1</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+        
+        <animation>
+            <type>pick</type>
+            <object-name>Val-nn-nn-nX</object-name>
+            <action>
+                <repeatable type="bool">false</repeatable>
+                <button>0</button>
+                <binding>
+                    <command>property-adjust</command>
+                    <property>/instrumentation/input/val-nn-nn-nX</property>
+                    <step>1</step>
+                    <min>0</min>
+                    <max>10</max>
+                    <wrap>1</wrap>
+                </binding>
+            </action>
+        </animation>
+
+
+
+
+</PropertyList>

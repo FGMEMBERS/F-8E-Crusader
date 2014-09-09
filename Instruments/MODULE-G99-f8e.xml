@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+    Usable with FlightGear
+    Property of Gerard Robin  12-12-2005 
+    Copyright License:  GPLv2
+-->
+<PropertyList>
+
+ <path>Models/module-G99.ac</path>
+ <texture-path>Models/Textures</texture-path>
+
+ 	<!--<animation>
+		<type>noshadow</type>
+		<object-name></object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light4.xml">
+		<object-name>Marquage</object-name>
+	</animation>-->
+
+	<!--<animation include="Instrument-Light3.xml">
+		<object-name></object-name>
+	</animation>-->
+
+	<animation>
+		<type>select</type>
+		<object-name>Tux</object-name>
+		<condition>
+			<equals>
+				<property>/sim/cockpit/modules/switch-g99</property>
+				<value>true</value>
+			</equals>
+		</condition>
+	</animation>
+
+
+</PropertyList>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>ckpt-light.ac</path>
+  <nopreview/>
+
+  <animation>
+    <type>light</type>
+    <light-type>spot</light-type>
+    <name>Ckpt-Light</name>
+    <object-name>light-volume</object-name>
+    <position>
+      <x> 0.0 </x>
+      <y> 0.0 </y>
+      <z> 0.0 </z>
+    </position>
+    <direction>
+      <x> 0.0 </x>
+      <y> 0.10</y>
+      <z> -1 </z>
+    </direction>
+    <ambient>
+      <r>  0.8 </r>
+      <g>  0.3 </g>
+      <b>  0.3 </b>
+      <a>  1.0 </a>
+    </ambient>
+    <diffuse>
+      <r>  0.5 </r>
+      <g>  0.2 </g>
+      <b>  0.1 </b>
+      <a>  1.0 </a>
+    </diffuse>
+    <specular>
+      <r>  0.5 </r>
+      <g>  0.5 </g>
+      <b>  0.5 </b>
+      <a>  1.0 </a>
+    </specular>
+    <attenuation>
+      <c>  0.60</c>
+      <l>  0.05 </l>
+      <q>  10.00 </q>
+    </attenuation>
+    <exponent> 8.0   </exponent>
+    <cutoff>   180.0   </cutoff>
+    <near-m>    0.0   </near-m>
+    <far-m>     1  </far-m>
+    <dim-factor>
+        <property>controls/lighting/instruments-norm</property>
+    </dim-factor>
+  </animation>
+
+  <animation>
+      <type>select</type>
+      <object-name>Ckpt-Light</object-name>
+      <condition>
+          <and>
+              <property>controls/lighting/instruments</property>
+          </and>
+      </condition>
+  </animation>
+
+
+
+</PropertyList>

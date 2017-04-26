@@ -29,6 +29,22 @@
 	    https://sites.google.com/site/grtuxhangar/</author>
         <status>Production</status>
         <version>2.1  last update 2013-07-11</version>
+	<tags>
+	    <tag>fighter</tag>
+	    <tag>vought</tag>
+	    <tag>1970s</tag>
+	    <tag>1980s</tag>
+	    <tag>1990s</tag>
+	    <tag>vietnam</tag>
+	    <tag>retractable-gear</tag>
+	    <tag>supersonic</tag>
+	    <tag>tail-hook</tag>
+	    <tag>refuel</tag>
+	    <tag>wing-fold</tag>
+	    <tag>jet</tag>
+	    <tag>afterburner</tag>
+	    <tag>single-engine</tag>
+	</tags>
     </sim>
     <nasal>
         <instruments>

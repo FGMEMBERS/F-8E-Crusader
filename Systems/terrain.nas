@@ -95,13 +95,15 @@ var nfg = (fgn2/100)+fgn1;
 #var diff_max = cmp(fg,model_max);    print ("DIFFSTRINGx ",diff_max);
 #if (diff_min == -1 or diff_max == 1){
 
-
-if (nfg < model_min  or  nfg > model_max){
-setprop("fdm/simulation/wrg-ver",1);
-window_lhb.write("WRONG FLIGHTGEAR VERSION");
-window_lhb.write("YOU WANT AT LEAST FG VERSION IN THE RANGE : " "MIN "~ model_min ~" MAX "~model_max);
-}else{
 setprop("fdm/simulation/wrg-ver",0);
 terrain_survol();
-}
+
+#if (nfg < model_min  or  nfg > model_max){
+#setprop("fdm/simulation/wrg-ver",1);
+#window_lhb.write("WRONG FLIGHTGEAR VERSION");
+#window_lhb.write("YOU WANT AT LEAST FG VERSION IN THE RANGE : " "MIN "~ model_min ~" MAX "~model_max);
+#}else{
+#setprop("fdm/simulation/wrg-ver",0);
+#terrain_survol();
+#}
 
